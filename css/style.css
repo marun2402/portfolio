@@ -450,16 +450,6 @@ body.ie ._ibg img {
   transform: translate(0px, 0px);
 }
 
-@media (min-width: 767.98px) {
-  .portfolio {
-    padding: 0px 0px 0px 320px;
-  }
-
-  .toggle {
-    display: none;
-  }
-}
-
 @media (max-width: 767.98px) {
   .acide {
     left: -320px;
