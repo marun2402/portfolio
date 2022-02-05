@@ -1,0 +1,242 @@
+﻿.rs-17 .rs-slider {
+  height: 935px;
+  overflow: hidden;
+  position: relative;
+  background-color: #212121;
+}
+.rs-17 .rs-slider .rs-slider-container {
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+.rs-17 .rs-slider .rs-slider-container.slick-initialized {
+  opacity: 1;
+}
+.rs-17 .rs-slider .slider-item {
+  width: 100%;
+  height: 935px;
+  overflow: hidden;
+  position: relative;
+  outline: none;
+}
+.rs-17 .rs-slider .slider-item-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.rs-17 .rs-slider .slider-item-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: 75% 0;
+}
+
+.rs-17 .rs-slider .slider-info {
+  position: relative;
+  z-index: 2;
+  top: 50%;
+}
+
+.rs-17 .rs-slider .slider-inner {
+  color: #ffffff;
+}
+.rs-17 .rs-slider .slider-inner h2 {
+  color: #ffffff;
+  text-align: left;
+  font-size: 33px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.rs-17 .rs-slider .slider-inner p {
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  letter-spacing: 0.45px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.rs-17 .rs-slider .group-buttons {
+  margin-top: 25px;
+}
+.rs-17 .rs-slider .group-buttons .btn:first-child {
+  margin-right: 30px;
+}
+
+.rs-17 .rs-slider .slick-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  padding: 0;
+  text-align: center;
+}
+.rs-17 .rs-slider .slick-dots li {
+  display: inline-block;
+  margin: 8px;
+  padding: 0;
+}
+.rs-17 .rs-slider .slick-dots li button {
+  font-size: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  outline: none;
+  color: transparent;
+  background-color: transparent;
+  text-indent: -9999px;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  padding: 0;
+}
+.rs-17 .rs-slider .slick-dots li.slick-active button {
+  background-color: #fff;
+}
+.rs-17 .rs-slider .slick-prev,
+.rs-17 .rs-slider .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  opacity: 1;
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 44px;
+  color: #fff;
+  margin-top: -22px;
+  padding: 0;
+  z-index: 200;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.rs-17 .rs-slider .slick-prev {
+  left: 15px;
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  transform: translateX(-50px);
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.7s cubic-bezier(0.56, 0.48, 0, 0.99);
+  -moz-transition: opacity 0.5s linear, -moz-transform 0.7s cubic-bezier(0.56, 0.48, 0, 0.99);
+  -o-transition: opacity 0.5s linear, -o-transform 0.7s cubic-bezier(0.56, 0.48, 0, 0.99);
+  -ms-transition: opacity 0.5s linear, -ms-transform 0.7s cubic-bezier(0.56, 0.48, 0, 0.99);
+  transition: opacity 0.5s linear, transform 0.7s cubic-bezier(0.56, 0.48, 0, 0.99);
+  opacity: 0;
+}
+.rs-17 .rs-slider .slick-next {
+  right: 15px;
+  -webkit-transform: translateX(50px);
+  -moz-transform: translateX(50px);
+  -o-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+  -webkit-transition: opacity 0.5s linear, -webkit-transform 0.7s cubic-bezier(0.56, 0.48, 0, 0.99);
+  -moz-transition: opacity 0.5s linear, -moz-transform 0.7s cubic-bezier(0.56, 0.48, 0, 0.99);
+  -o-transition: opacity 0.5s linear, -o-transform 0.7s cubic-bezier(0.56, 0.48, 0, 0.99);
+  -ms-transition: opacity 0.5s linear, -ms-transform 0.7s cubic-bezier(0.56, 0.48, 0, 0.99);
+  transition: opacity 0.5s linear, transform 0.7s cubic-bezier(0.56, 0.48, 0, 0.99);
+  opacity: 0;
+}
+.rs-17 .rs-slider:hover .slick-next,
+.rs-17 .rs-slider:hover .slick-prev {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+.rs-17 .rs-slider .slick-prev:before,
+.rs-17 .rs-slider .slick-next:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 40px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  line-height: 22px;
+}
+.rs-17 .rs-slider .slick-prev:before {
+  content: '\f104';
+  padding-right: 3px;
+}
+.rs-17 .rs-slider .slick-next:before {
+  content: '\f105';
+  padding-left: 3px;
+}
+.rs-17 .rs-slider .topAnima,
+.rs-17 .rs-slider .bottomAnima {
+  opacity: 0;
+}
+.rs-17 .rs-slider .slick-active .topAnima {
+  opacity: 1 !important;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-delay: 0.7s;
+  visibility: visible !important;
+}
+.rs-17 .rs-slider .slick-active .bottomAnima {
+  opacity: 1 !important;
+  animation-name: fadeInDown;
+  -webkit-animation-name: fadeInDown;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  -webkit-animation-duration: 1s;
+  visibility: visible !important;
+}
+
+@media (max-width: 991px) {
+  .rs-17 .rs-slider .btn {
+    font-size: 12px;
+  }
+  .rs-17 .rs-slider .slider-inner h2 {
+    font-size: 20px;
+  }
+  .rs-17 .rs-slider .slider-inner h3 {
+    font-size: 17px;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .rs-17 .rs-slider .btn {
+    font-size: 14px;
+  }
+  .rs-17 .rs-slider .slider-info .container {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .rs-17 .rs-slider .slick-next,
+  .rs-17 .rs-slider .slick-prev {
+    display: none !important;
+  }
+}
+@media (max-width: 612px) {
+  .rs-17 .rs-slider .group-buttons .btn:first-child {
+    margin-right: 0;
+  }
+  .rs-17 .rs-slider .group-buttons .btn {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+}

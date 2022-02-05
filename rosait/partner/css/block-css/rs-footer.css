@@ -1,0 +1,210 @@
+footer.rs-17 {
+    position: relative;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+footer.rs-17::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: url("../../img/footer_bg.png") left bottom/contain no-repeat;
+    opacity: 0.03;
+    pointer-events: none;
+}
+
+.rs-17 .rs-footer {
+    font-size: 14px;
+    line-height: 178.57143%;
+}
+
+.rs-17 .rs-footer__columns {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.rs-17 .rs-footer__column {
+    padding-top: 120px;
+    padding-bottom: 140px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.rs-17 .rs-footer__column-contacts {
+    padding-left: 0;
+    -ms-flex: 0 1 29%;
+    flex: 0 1 29%;
+}
+
+.rs-17 .rs-footer__column-service {
+    padding-right: 0;
+    -ms-flex: 0 1 29%;
+    flex: 0 1 29%;
+}
+
+.rs-17 .rs-footer__column-about {
+    background-color: #282828;
+    -ms-flex: 0 1 42%;
+    flex: 0 1 42%;
+}
+
+.rs-17 .rs-footer__logo {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.rs-17 .rs-footer a.rs-footer__item:hover {
+    color: #ffde00;
+}
+
+.rs-17 .rs-footer__item {
+    display: block;
+    color: inherit;
+    transition: all 0.3s ease 0s;
+}
+
+.rs-17 .rs-footer__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.rs-17 .rs-footer__item::before {
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    margin-right: 10px;
+    color: #ffde00;
+}
+
+.rs-17 .rs-footer__item-phone::before {
+    content: '\f2c0';
+}
+
+.rs-17 .rs-footer__item-mail::before {
+    content: '\f003';
+}
+
+.rs-17 .rs-footer__item-time::before {
+    content: '\f017';
+}
+
+.rs-17 .rs-footer__item-address::before {
+    content: '\f024';
+}
+
+.rs-17 .rs-footer__title {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 111.11111%;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.rs-17 .rs-footer__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.rs-17 .rs-footer__list li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.rs-17 .rs-footer__item-link {
+    color: inherit;
+}
+
+.rs-17 .rs-footer__item-link::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transition: -webkit-transform 0.3s ease 0s;
+    transition: transform 0.3s ease 0s;
+    transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+    -webkit-transform-origin: right;
+    transform-origin: right;
+}
+
+.rs-17 .rs-footer-bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    line-height: 1.2;
+    padding: 23px 0px;
+}
+
+.rs-17 .rs-footer-bottom__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-17 .rs-footer-bottom__copyright {
+    margin-right: 5px;
+}
+
+.rs-17 .rs-footer-bottom__dev {
+    color: inherit;
+}
+
+.rs-17 .rs-footer-bottom__dev img {
+    width: 64px;
+    margin-left: 5px;
+}
+
+@media (max-width: 1630px) {
+    .rs-17 .rs-footer__column {
+        padding-left: calc(15px + 35 * ((100vw - 320px) / 1310));
+    }
+
+    .rs-17 .rs-footer__column {
+        padding-right: calc(15px + 35 * ((100vw - 320px) / 1310));
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-footer__container {
+        padding-bottom: 60px;
+    }
+
+    .rs-17 .rs-footer__columns {
+        display: block;
+    }
+
+    .rs-17 .rs-footer__column {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin: 0px -15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-17 .rs-footer-bottom__container {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (any-hover: hover) {
+    .rs-17 .rs-footer__item-link:hover::after {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+    }
+}

@@ -1,0 +1,49 @@
+.rs-17 .rs-concept {
+  background-color: #f5f7fa;
+  padding-top: 72px;
+  padding-bottom: 50px;
+}
+.rs-17 .rs-concept .section-title {
+  color: #262a31;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: left;
+  letter-spacing: 1.25px;
+  margin-bottom: 42px;
+  font-weight: 400;
+}
+/* ---------------------------------------- */
+.rs-17 .rs-concept .concept-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px;
+}
+.rs-17 .rs-concept .concept-block {
+  flex: 0 1 25%;
+  margin-bottom: 58px;
+  padding: 0px 15px;
+}
+.rs-17 .rs-concept .concept-item {
+  width: 332px;
+  height: 74px;
+  margin: auto;
+}
+
+@media (max-width: 1449px) {
+  .rs-17 .rs-concept .concept-block {
+    flex: 0 1 33.333%;
+  }
+}
+@media (max-width: 1199px) {
+  .rs-17 .rs-concept .concept-block {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 767px) {
+  .rs-17 .rs-concept .concept-row {
+    display: block;
+  }
+  .rs-17 .rs-concept .concept-block {
+    margin-bottom: 30px;
+  }
+}

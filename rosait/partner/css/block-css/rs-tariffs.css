@@ -1,0 +1,109 @@
+.rs-17 .rs-tariffs {
+    padding: 73px 0px 82px 0px;
+}
+
+.rs-17 .rs-tariffs__title {
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #000000;
+}
+
+.rs-17 .rs-tariffs__table {
+    overflow-x: auto;
+    padding: 61px 0px 33px 0px;
+}
+
+.rs-17 .rs-tariffs__table table {
+    border-collapse: collapse;
+}
+
+.rs-17 .rs-tariffs__table table td,
+.rs-17 .rs-tariffs__table table th {
+    padding: 25px 18px;
+    border: 1px solid #eeeff9;
+}
+
+.rs-17 .rs-tariffs__table table th {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    color: #2a3cb7;
+    text-align: center;
+}
+
+.rs-17 .rs-tariffs__table table td span {
+    display: block;
+    color: #2a3cb7;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.rs-17 .rs-tariffs__table table td:nth-child(1) {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #000000;
+    min-width: 400px;
+}
+
+.rs-17 .rs-tariffs__table table td:nth-child(2),
+.rs-17 .rs-tariffs__table table td:nth-child(3) {
+    background-color: rgba(42, 60, 183, 0.03);
+}
+
+.rs-17 .rs-tariffs__table table tr:nth-child(odd) {
+    background-color: rgba(42, 60, 183, 0.05);
+}
+
+.rs-17 .rs-tariffs__table table tr:nth-child(1),
+.rs-17 .rs-tariffs__table table tr:nth-child(2) td {
+    background-color: transparent !important;
+    white-space: nowrap;
+}
+
+.rs-17 .rs-tariffs__table table tr:nth-child(2) {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #000000;
+    text-align: center;
+}
+
+.rs-17 .rs-tariffs__table table tr:nth-child(2) span {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    color: #000000;
+}
+
+.rs-17 .rs-tariffs__table table a {
+    display: block;
+    width: 149px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #2a3cb7;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    margin-top: 12px;
+}
+
+.rs-17 .rs-tariffs__footnote p {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.025em;
+    color: #000000;
+}

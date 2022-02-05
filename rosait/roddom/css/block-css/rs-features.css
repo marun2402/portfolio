@@ -1,0 +1,46 @@
+﻿.rs-17 .rs-features .features-title h2 {
+  margin-bottom: 50px;
+  color: #538fa5;
+  font-size: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+}
+
+.rs-17 .rs-features .feature-block {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  margin-left: -4px;
+}
+.rs-17 .rs-features .feature-item {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.rs-17 .rs-features .feature-item h4 {
+  color: #1f354f;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 35px;
+}
+.rs-17 .rs-features .feature-item p {
+  color: #60738a;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.rs-17 .rs-features .feature-item--icon {
+  width: 59px;
+  height: 59px;
+  margin: 0 auto;
+  position: relative;
+}
+.rs-17 .rs-features .feature-item--icon img {
+  width: 100%;
+}
+@media (max-width: 470px) {
+  .rs-17 .rs-features .features-title h2 {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,102 @@
+.rs-17 .rs-news {
+    position: relative;
+    padding-top: 75px;
+}
+
+.rs-17 .rs-news .section-title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-17 .rs-news .section-title h2 {
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.rs-17 .rs-news .section-title .btn-link {
+    margin-bottom: 30px;
+}
+
+.rs-17 .rs-news .news-row {
+    position: relative;
+    padding-bottom: 80px;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0px -15px;
+    overflow-x: auto;
+}
+
+.rs-17 .rs-news .news-item {
+    -ms-flex: 0 0 33.333%;
+    flex: 0 0 33.333%;
+    padding: 0px 15px;
+    position: relative;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.rs-17 .rs-news .news-item .item-body {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.rs-17 .rs-news .news-item .item-body .item-date {
+    font-weight: 500;
+    color: #44b1cf;
+    margin-bottom: 26px;
+}
+
+.rs-17 .rs-news .news-item .item-body a {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.rs-17 .rs-news .news-item .item-body p {
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 69px;
+    margin-top: 23px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-news .news-item {
+        -ms-flex: 0 0 45%;
+        flex: 0 0 45%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-17 .rs-news .section-title {
+        display: block;
+    }
+
+    .rs-17 .rs-news .news-item {
+        -ms-flex: 0 0 90%;
+        flex: 0 0 90%;
+    }
+}

@@ -1,0 +1,20 @@
+.rs-17 .rs-text-block {
+    background-color: #fff;
+    padding-top: 59px;
+    text-align: center;
+}
+
+.rs-17 .rs-text-block h2 {
+    margin-bottom: 34px;
+}
+
+.rs-17 .rs-text-block p {
+    font-size: 20px;
+    line-height: 130%;
+    font-weight: 400;
+    color: #235d37;
+}
+
+.rs-17 .rs-text-block p:not(:last-child) {
+    margin-bottom: 15px;
+}

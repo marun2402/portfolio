@@ -1,0 +1,190 @@
+﻿.rs-17 .rs-form {
+  background-color: #bbd6e5;
+  min-height: 250px;
+}
+.rs-17 .rs-form .form-row {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.rs-17 .rs-form .form-title,
+.rs-17 .rs-form .form-title h4 {
+  font-size: 18px;
+  color: #1f354f;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 0;
+}
+.rs-17 .rs-form .col-lg-left,
+.rs-17 .rs-form .col-lg-right {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.rs-17 .rs-form .col-lg-left .form-group {
+  width: 33.3333%;
+  display: block;
+  float: left;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.rs-17 .rs-form .no-padding {
+  padding: 0 !important;
+}
+.rs-17 .rs-form .form-inline .form-control {
+  width: 100%;
+  border-radius: 0;
+  height: 46px;
+  border: none;
+  border-right: 1px solid #cad0d3;
+  box-shadow: none;
+  color: #555555;
+  font-size: 12px;
+  font-weight: 600;
+  transition: none;
+}
+.rs-17 .rs-form .form-inline .form-control:focus {
+  box-shadow: inset 0 0 6px #a5a5a5;
+}
+.rs-17 .rs-form .form-control::-webkit-input-placeholder {
+  color: #8c9193;
+}
+.rs-17 .rs-form .form-control::-moz-placeholder {
+  color: #8c9193;
+}
+.rs-17 .rs-form .form-control:-moz-placeholder {
+  color: #8c9193;
+}
+.rs-17 .rs-form .form-control:-ms-input-placeholder {
+  color: #8c9193;
+}
+
+.rs-17 .rs-form .col-lg-left .form-group:first-child .form-control {
+  border-radius: 5px 0 0 5px;
+}
+.rs-17 .rs-form .col-lg-left .form-group:last-child .form-control {
+  border-right: none;
+}
+.rs-17 .rs-form .form-button {
+  font-size: 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 700;
+  height: 46px;
+  line-height: 1.1;
+  background-color: #538fa5;
+  border-radius: 0 10px 10px 0;
+  -webkit-transition: background-color 0.4s ease-in;
+  -moz-transition: background-color 0.4s ease-in;
+  -o-transition: background-color 0.4s ease-in;
+  -ms-transition: background-color 0.4s ease-in;
+  transition: background-color 0.4s ease-in;
+}
+.rs-17 .rs-form .form-button:hover,
+.rs-17 .rs-form .form-button:focus {
+  background-color: #426e7e;
+}
+.rs-17 .rs-form .form-group input.error,
+.rs-17 .rs-form .form-group input.error:focus {
+  border: 1px solid #d80000;
+}
+.rs-17 .rs-form .form-group input.error::-webkit-input-placeholder {
+  color: #d80000;
+}
+.rs-17 .rs-form .form-group input.error::-moz-placeholder {
+  color: #d80000;
+}
+.rs-17 .rs-form .form-group input.error:-moz-placeholder {
+  color: #d80000;
+}
+.rs-17 .rs-form .form-group input.error:-ms-input-placeholder {
+  color: #d80000;
+}
+.rs-17 .rs-form .col-lg-left .form-group:last-child .form-control.error {
+  border-right: 2px solid #d80000;
+}
+.rs-17 .rs-form .form-group label.error {
+  color: #fff;
+  width: 90%;
+  font-size: 13px;
+  font-weight: 400;
+  background-color: rgba(228, 74, 74, 0.8);
+  padding: 8px 15px;
+  position: absolute;
+  left: 0;
+  top: 55px;
+}
+.rs-17 .rs-form .form-group label.error:before {
+  content: '\f071';
+  color: #fff;
+  padding-right: 5px;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.rs-17 .rs-form .form-group label.error:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  top: -7px;
+  left: 20px;
+  margin-left: -7px;
+  border-width: 0 7px 7px;
+  border-bottom-color: rgba(228, 74, 74, 0.8);
+}
+@media (min-width: 1200px) {
+  .rs-17 .rs-form .col-lg-left,
+  .rs-17 .rs-form .col-lg-right {
+    float: left;
+  }
+  .rs-17 .rs-form .col-lg-left {
+    width: 80%;
+  }
+  .rs-17 .rs-form .col-lg-right {
+    width: 20%;
+  }
+}
+
+@media (max-width: 991px) {
+  .rs-17 .rs-form .col-lg-left .form-group:last-child .form-control {
+    border-radius: 0 5px 5px 0;
+  }
+  .rs-17 .rs-form .form-button {
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .rs-17 .rs-form .form-group label.error {
+    position: relative;
+    top: 10px;
+  }
+  .rs-17 .rs-form .form-title {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .rs-17 .rs-form .col-lg-left .form-group {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .rs-17 .rs-form .form-group label.error {
+    width: 100%;
+  }
+  .rs-17 .rs-form .form-button {
+    margin-top: 0;
+  }
+  .rs-17 .rs-form .col-lg-left .form-group .form-control {
+    border-radius: 5px !important;
+  }
+  .rs-17 .rs-form .col-lg-left .form-group:last-child .form-control.error {
+    border-right-width: 1px;
+  }
+}

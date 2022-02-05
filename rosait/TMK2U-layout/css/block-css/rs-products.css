@@ -1,0 +1,97 @@
+.rs-17 .rs-products {
+    padding-top: 60px;
+}
+
+.rs-17 .rs-products__header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 41px;
+}
+
+.rs-17 .rs-products__header h4 {
+    white-space: nowrap;
+    margin: 0;
+    line-height: 1;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.rs-17 .rs-products__header p {
+    max-width: 621px;
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 400;
+    color: #616161;
+    margin: 0;
+}
+
+.rs-17 .rs-products__items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+}
+
+.rs-17 .rs-products__item {
+    -ms-flex: 0 1 33.3333%;
+    flex: 0 1 33.3333%;
+    padding: 0px 15px;
+    margin-bottom: 30px;
+}
+
+.rs-17 .rs-products__footnote {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-17 .rs-products__sale {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #000000;
+    margin: 10px 15px 10px 0px;
+}
+
+.rs-17 .rs-products__sale::before {
+    content: '\f005';
+    font-family: 'FontAwesome';
+    font-size: 18px;
+    color: #ff7919;
+    margin-right: 5px;
+}
+
+@media (max-width: 1170px) {
+    .rs-17 .rs-products {
+        padding-top: calc(30px + 30 * ((100vw - 320px) / 850));
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-products__header {
+        display: block;
+        text-align: center;
+    }
+
+    .rs-17 .rs-products__header p {
+        margin: 0px auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-17 .rs-products__item {
+        -ms-flex: 0 1 100%;
+        flex: 0 1 100%;
+    }
+}

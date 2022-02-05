@@ -1,0 +1,73 @@
+﻿.rs-17 .rs-parallax {
+  background: url('../../img/paralax_background.jpg') no-repeat center;
+  background-size: cover;
+  min-height: 550px;
+  position: relative;
+  overflow: hidden;
+}
+.rs-17 .rs-parallax .paralax-bg {
+  position: absolute;
+  width: 400px;
+}
+.rs-17 .rs-parallax .paralax-bg:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+.rs-17 .rs-parallax .paralax-bg:nth-child(2) {
+  right: 0;
+  top: 0;
+}
+.rs-17 .rs-parallax .container {
+  position: relative;
+  min-height: 550px;
+}
+.rs-17 .rs-parallax .parallax-title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #000000;
+}
+.rs-17 .rs-parallax .parallax-title h2 {
+  font-size: 50px;
+  line-height: 1.2;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+}
+.rs-17 .rs-parallax .parallax-title h3 {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.rs-17 .rs-parallax .btn-outline {
+  color: #005a46;
+  border: 1px solid #005a46;
+}
+.rs-17 .rs-parallax .btn-border-holder {
+  border: 1px solid rgba(0, 90, 70, 0.5);
+}
+.rs-17 .rs-parallax .btn-top-border,
+.rs-17 .rs-parallax .btn-right-border,
+.rs-17 .rs-parallax .btn-bottom-border,
+.rs-17 .rs-parallax .btn-left-border {
+  background-color: #005a46;
+}
+@media (max-width: 767px) {
+  .rs-17 .rs-parallax .parallax-title h2 {
+    font-size: 24px;
+  }
+  .rs-17 .rs-parallax .parallax-title h3 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 991px) {
+  .rs-17 .rs-parallax .paralax-bg:nth-child(2) {
+    display: none;
+  }
+}

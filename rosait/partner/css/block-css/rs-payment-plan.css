@@ -1,0 +1,147 @@
+.rs-17 .rs-payment-plan {
+    background: #f7f8f9 url("../../img/escort-price/img32_logo1c.png") bottom right no-repeat;
+    padding-top: 87px;
+    padding-bottom: 57px;
+}
+
+.rs-17 .rs-payment-plan_items {
+    padding-left: 50px;
+    counter-reset: payment;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0px -40px;
+}
+
+.rs-17 .rs-payment-plan__title {
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 82px;
+}
+
+.rs-17 .rs-payment-plan__item-block {
+    position: relative;
+    z-index: 2;
+    -ms-flex: 0 1 25%;
+    flex: 0 1 25%;
+    padding: 0px 40px;
+    margin-bottom: 100px;
+}
+
+.rs-17 .rs-payment-plan__item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+    padding-top: 78px;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-bottom: 47px;
+}
+
+.rs-17 .rs-payment-plan__item::before {
+    counter-increment: payment;
+    content: "0" counter(payment);
+    font-size: 120px;
+    font-weight: 900;
+    color: #f1f0f6;
+    position: absolute;
+    top: -60px;
+    left: -60px;
+}
+
+.rs-17 .rs-payment-plan__item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: -webkit-transform 0.3s ease 0s;
+    transition: transform 0.3s ease 0s;
+    transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.rs-17 .rs-payment-plan__item h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #000000;
+}
+
+.rs-17 .rs-payment-plan__item p {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2a3cb7;
+    line-height: 138.88889%;
+    margin-bottom: 20px;
+}
+
+.rs-17 .rs-payment-plan__footnote {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.025em;
+    color: #000000;
+}
+
+.rs-17 .rs-payment-plan__item-block .rs-payment-plan__item::after {
+    -webkit-transform: translate(-30px, 30px);
+    transform: translate(-30px, 30px);
+    background-color: #1c1c1c;
+}
+
+.rs-17 .rs-payment-plan__item-block_yellow .rs-payment-plan__item::after {
+    background-color: #ffdd00;
+}
+
+.rs-17 .rs-payment-plan__item-block_blue .rs-payment-plan__item::after {
+    background-color: #2a3cb7;
+}
+
+@media (max-width: 1630px) {
+    .rs-17 .rs-payment-plan {
+        padding-top: calc(30px + 57 * ((100vw - 320px) / 1310));
+    }
+
+    .rs-17 .rs-payment-plan {
+        padding-bottom: calc(30px + 27 * ((100vw - 320px) / 1310));
+    }
+
+    .rs-17 .rs-payment-plan__title {
+        font-size: calc(28px + 17 * ((100vw - 320px) / 1310));
+    }
+}
+
+@media (max-width: 1300px) {
+    .rs-17 .rs-payment-plan__item-block {
+        -ms-flex: 0 1 50%;
+        flex: 0 1 50%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-payment-plan__item-block .rs-payment-plan__item::after {
+        -webkit-transform: translate(-15px, 15px);
+        transform: translate(-15px, 15px);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-17 .rs-payment-plan__item-block {
+        -ms-flex: 0 1 100%;
+        flex: 0 1 100%;
+    }
+}

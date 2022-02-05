@@ -1,0 +1,33 @@
+﻿.rs-17 .rs-numbers {
+  padding: 55px 0px;
+  position: relative;
+  background-color: #bbd6e5;
+}
+.rs-17 .rs-numbers .numbers-count {
+  color: #ffffff;
+  font-size: 55px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.rs-17 .rs-numbers .numbers-title {
+  color: #538fa5;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .rs-17 .rs-numbers .numbers-count {
+    font-size: 35px;
+  }
+  .rs-17 .rs-numbers .numbers-title {
+    font-size: 12px;
+  }
+}
+@media (max-width: 540px) {
+  .rs-17 .rs-numbers .numbers-count {
+    font-size: 25px;
+  }
+  .rs-17 .rs-numbers .numbers-title {
+    font-size: 11px;
+  }
+}

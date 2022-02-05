@@ -1,0 +1,94 @@
+.rs-17 .rs-top-header {
+  position: absolute;
+  top: 85px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  height: 80px;
+  z-index: 10;
+}
+.rs-17 .rs-top-header .navbar-brand {
+  float: left;
+  padding: 10px 0px;
+  height: auto;
+}
+.rs-17 .rs-top-header .text-block {
+  color: #1f354f;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 21px;
+  text-align: left;
+  letter-spacing: 0.35px;
+  max-width: 365px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.rs-17 .rs-top-header .text-block p {
+  margin-bottom: 0;
+  margin-left: 40px;
+}
+.rs-17 .rs-top-header .contacts-block {
+  max-width: 144px;
+  color: #273c54;
+  font-size: 11px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-right: 35px;
+}
+.rs-17 .rs-top-header .contacts-block span {
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.4px;
+  line-height: normal;
+  color: #538fa5;
+  white-space: nowrap;
+}
+.rs-17 .rs-top-header .header-btn {
+  width: 46px;
+  height: 46px;
+  background-color: #d9879e;
+  border-radius: 50%;
+  outline: none;
+  margin-left: 15px;
+  transition: all 0.3s ease 0s;
+}
+.rs-17 .rs-top-header .header-btn.btn {
+  padding: 0;
+}
+.rs-17 .rs-top-header .header-btn:hover,
+.rs-17 .rs-top-header .header-btn:focus {
+  background-color: #cc728c;
+}
+.rs-17 .rs-top-header .header-btn {
+  outline: none;
+}
+.rs-17 .rs-top-header .header-contacts {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.rs-17 .rs-top-header .btn-color {
+  margin-right: 35px;
+}
+@media (max-width: 1299px) {
+  .rs-17 .rs-top-header .text-block {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .rs-17 .rs-top-header .contacts-block {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .rs-17 .rs-top-header .btn-color {
+    display: none;
+  }
+}
