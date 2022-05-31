@@ -1,0 +1,90 @@
+.rs-callback {
+    position: relative;
+    background-color: #0640A7;
+}
+
+.rs-callback__inner {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.rs-callback__inner h4 {
+    font-family: "Rubik";
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.rs-callback__inner p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    margin-top: 0;
+}
+
+.rs-callback__inner p:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.rs-callback__form {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin-left: 60px;
+}
+
+.rs-callback .callback-form {
+    display: grid;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr auto;
+}
+
+.rs-callback .callback-form p {
+    grid-column: span 4;
+    color: #DEE2E6;
+    line-height: 1.4;
+    font-weight: 300;
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+.rs-callback .callback-form p a {
+    color: #DEE2E6;
+    text-decoration: underline;
+}
+
+@media (max-width: 991.98px) {
+    .rs-callback__inner {
+        display: block;
+    }
+
+    .rs-callback__form {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-callback .callback-form {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .rs-callback .callback-form p {
+        -ms-flex-order: 4;
+        order: 4;
+        margin-bottom: 10px;
+    }
+
+    .rs-callback .callback-form .btn-border {
+        -ms-flex-order: 5;
+        order: 5;
+    }
+}

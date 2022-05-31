@@ -1,0 +1,123 @@
+.rs-about {
+    padding-top: 80px;
+    padding-bottom: 110px;
+}
+
+.rs-about h6 {
+    font-family: "Rubik";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #212121;
+    margin-top: 30px;
+    margin-bottom: 8px;
+}
+
+.rs-about p {
+    line-height: 1.5;
+    color: #636363;
+}
+
+.rs-about p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.rs-about__list {
+    width: 80%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.rs-about__list li {
+    line-height: 1.5;
+    color: #212121;
+    padding-left: 41px;
+    position: relative;
+}
+
+.rs-about__list li::before {
+    content: attr(data-number);
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Rubik";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #0640A7;
+}
+
+.rs-about__list li:not(:last-child) {
+    border-bottom: 1px solid #E9ECEF;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.rs-about__container {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.rs-about__column {
+    position: relative;
+}
+
+.rs-about__column:nth-child(1) {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin-right: 60px;
+}
+
+.rs-about__column:nth-child(2) {
+    -ms-flex: 0 0 44%;
+    flex: 0 0 44%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.rs-about__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.rs-about__img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-about__list {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 991.98px) {
+    .rs-about {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .rs-about__container {
+        display: block;
+    }
+
+    .rs-about__column:nth-child(1) {
+        margin-right: 0;
+    }
+
+    .rs-about__column:nth-child(2) {
+        padding-top: 30%;
+    }
+}

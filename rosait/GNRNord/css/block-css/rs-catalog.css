@@ -1,0 +1,97 @@
+.rs-17 .rs-catalog {
+    padding-bottom: 50px;
+}
+
+.rs-17 .rs-catalog__header {
+    margin-bottom: 56px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid #283C45;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.rs-17 .rs-catalog__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    line-height: 1.2291666667;
+    color: #283C45;
+}
+
+.rs-17 .rs-catalog__type {
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.2333333333;
+    color: #283C45;
+    text-align: center;
+}
+
+.rs-17 .rs-catalog__menu-list {
+    margin-bottom: 0;
+    margin-top: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.rs-17 .rs-catalog__menu-list a {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 41px;
+    padding: 5px 12px;
+    background: linear-gradient(135deg, #138436 0%, #84C98B 100%);
+    border-radius: 26px;
+    font-weight: 500;
+    line-height: 1.2142857143;
+    color: #FFFFFF;
+}
+
+.rs-17 .rs-catalog__menu-list li.active a {
+    background: #dee8ec;
+    color: #4f5c62;
+}
+
+.rs-17 .rs-catalog__items {
+    padding-bottom: 20px;
+    display: grid;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    row-gap: 48px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+@media (min-width: 1790px) {
+    .rs-17 .rs-catalog__title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 320px) {
+    .rs-17 .rs-catalog__title {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1790px) {
+    .rs-17 .rs-catalog__title {
+        font-size: clamp( 30px , 26.0816326531px  +  1.2244897959vw , 48px );
+    }
+}

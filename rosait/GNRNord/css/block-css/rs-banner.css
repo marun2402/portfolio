@@ -1,0 +1,66 @@
+.rs-17 .rs-banner {
+    padding-top: 112px;
+    position: relative;
+    font-weight: 500;
+    line-height: 1.2083333333;
+    color: #FFFFFF;
+    height: 420px;
+}
+
+.rs-17 .rs-banner__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.rs-17 .rs-banner__bg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-17 .rs-banner__container {
+    height: 100%;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-17 .rs-banner__header {
+    margin-bottom: 13px;
+}
+
+.rs-17 .rs-banner__title {
+    padding-bottom: 24px;
+    border-bottom: 2px solid #84C98B;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+@media (min-width: 1790px) {
+    .rs-17 .rs-banner {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 320px) {
+    .rs-17 .rs-banner {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1790px) {
+    .rs-17 .rs-banner {
+        font-size: clamp( 30px , 26.0816326531px  +  1.2244897959vw , 48px );
+    }
+}

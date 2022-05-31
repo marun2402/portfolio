@@ -1,0 +1,384 @@
+.rs-17 .rs-text-advantages {
+    background: #24303f;
+    padding-top: 100px;
+    padding-bottom: 90px;
+}
+
+.rs-17 .rs-text-advantages__content {
+    margin-top: 133px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.rs-17 .rs-text-advantages__wrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.rs-17 .rs-text-advantages__wrapper > p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ECECEC;
+    margin-bottom: 20px;
+}
+
+.rs-17 .rs-text-advantages__wrapper > p span {
+    color: #B38339;
+}
+
+.rs-17 .rs-text-advantages__title {
+    position: relative;
+    margin-bottom: 35px;
+    margin-top: 0;
+}
+
+.rs-17 .rs-text-advantages__title h4 {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 92px;
+    position: relative;
+}
+
+.rs-17 .rs-text-advantages__title h4 span {
+    color: #B38339;
+}
+
+.rs-17 .rs-text-advantages__title .icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 165px;
+    height: 181px;
+}
+
+.rs-17 .rs-text-advantages__title .icon path {
+    -webkit-animation: stroke 5s infinite alternate;
+    animation: stroke 5s infinite alternate;
+}
+
+.rs-17 .rs-text-advantages__submit {
+    margin-top: 60px;
+    border: 1px solid #B38339;
+    padding: 24px 32px;
+    display: grid;
+    -webkit-column-gap: 18px;
+    -moz-column-gap: 18px;
+    column-gap: 18px;
+    row-gap: 15px;
+    grid-template-columns: 1fr auto;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-17 .rs-text-advantages__submit > p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ECECEC;
+}
+
+.rs-17 .rs-text-advantages__submit > p span {
+    display: block;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.rs-17 .rs-text-advantages .service-advantages h4 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #B38339;
+}
+
+.rs-17 .rs-text-advantages .service-advantages h4 span {
+    color: #FFFFFF;
+}
+
+.rs-17 .rs-text-advantages .service-advantages__items {
+    margin-top: 30px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+}
+
+.rs-17 .rs-text-advantages .service-advantages__item {
+    display: block;
+    border: 1px solid #B38339;
+    text-align: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    transition: border-color 0.3s cubic-bezier(0.24, 0.002, 0.002, 1);
+    position: relative;
+}
+
+.rs-17 .rs-text-advantages .service-advantages__item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.24, 0.002, 0.002, 1);
+}
+
+.rs-17 .rs-text-advantages .service-advantages__item span {
+    display: block;
+    font-size: 22px;
+    line-height: 1.3;
+    color: #FFFFFF;
+    margin-top: 16px;
+}
+
+.rs-17 .rs-text-advantages .service-advantages__item svg {
+    fill: none;
+    width: 52px;
+    height: 53px;
+}
+
+.rs-17 .rs-text-advantages .service-advantages__item svg path {
+    stroke: #B38339;
+    stroke-width: 2;
+    transition: stroke 0.3s cubic-bezier(0.24, 0.002, 0.002, 1);
+}
+
+.rs-17 .rs-text-advantages .service-advantages__item:hover {
+    border-color: #FFFFFF;
+}
+
+.rs-17 .rs-text-advantages .service-advantages__item:hover::before {
+    opacity: 0.05;
+}
+
+.rs-17 .rs-text-advantages .service-advantages__item:hover svg path {
+    stroke: #FFFFFF;
+}
+
+.rs-17 .rs-text-advantages .representation-advantages h4 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #B38339;
+}
+
+.rs-17 .rs-text-advantages .representation-advantages h4 span {
+    color: #FFFFFF;
+}
+
+.rs-17 .rs-text-advantages .representation-advantages__items {
+    margin-top: 30px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.rs-17 .rs-text-advantages .representation-advantages__item {
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px solid #B38339;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.rs-17 .rs-text-advantages .representation-advantages__item img {
+    width: 56px;
+    height: 56px;
+}
+
+.rs-17 .rs-text-advantages .representation-advantages__item p {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 24px;
+    display: block;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #FFFFFF;
+}
+
+.rs-17 .rs-text-advantages .bankruptcy-advantages h4 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #B38339;
+}
+
+.rs-17 .rs-text-advantages .bankruptcy-advantages h4 span {
+    color: #FFFFFF;
+}
+
+.rs-17 .rs-text-advantages .bankruptcy-advantages__items {
+    margin-top: 30px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 1fr;
+}
+
+.rs-17 .rs-text-advantages .bankruptcy-advantages__item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid #B38339;
+    text-align: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 44px;
+    padding-bottom: 44px;
+    transition: border-color 0.3s cubic-bezier(0.24, 0.002, 0.002, 1);
+    position: relative;
+}
+
+.rs-17 .rs-text-advantages .bankruptcy-advantages__item::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.24, 0.002, 0.002, 1);
+}
+
+.rs-17 .rs-text-advantages .bankruptcy-advantages__item span {
+    display: block;
+    font-size: 22px;
+    line-height: 1.3;
+    color: #FFFFFF;
+    margin-top: 16px;
+}
+
+.rs-17 .rs-text-advantages .bankruptcy-advantages__item svg {
+    fill: none;
+    width: 52px;
+    height: 53px;
+}
+
+.rs-17 .rs-text-advantages .bankruptcy-advantages__item svg path {
+    stroke: #B38339;
+    stroke-width: 2;
+    transition: stroke 0.3s cubic-bezier(0.24, 0.002, 0.002, 1);
+}
+
+.rs-17 .rs-text-advantages .bankruptcy-advantages__item:hover {
+    border-color: #FFFFFF;
+}
+
+.rs-17 .rs-text-advantages .bankruptcy-advantages__item:hover::before {
+    opacity: 0.05;
+}
+
+.rs-17 .rs-text-advantages .bankruptcy-advantages__item:hover svg path {
+    stroke: #FFFFFF;
+}
+
+@media (min-width: 1570px) {
+    .rs-17 .rs-text-advantages__content {
+        gap: 120px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .rs-17 .rs-text-advantages__submit {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .rs-17 .rs-text-advantages__content {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-text-advantages__content {
+        display: block;
+    }
+
+    .rs-17 .rs-text-advantages .service-advantages__items {
+        display: -ms-flexbox;
+        display: flex;
+        overflow-x: auto;
+        gap: 0;
+    }
+
+    .rs-17 .rs-text-advantages .service-advantages__item {
+        -ms-flex: 0 0 290px;
+        flex: 0 0 290px;
+    }
+
+    .rs-17 .rs-text-advantages .service-advantages__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .rs-17 .rs-text-advantages .representation-advantages__items {
+        display: -ms-flexbox;
+        display: flex;
+        overflow-x: auto;
+        gap: 0;
+    }
+
+    .rs-17 .rs-text-advantages .representation-advantages__item {
+        -ms-flex: 0 0 290px;
+        flex: 0 0 290px;
+    }
+
+    .rs-17 .rs-text-advantages .representation-advantages__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .rs-17 .rs-text-advantages .bankruptcy-advantages__items {
+        display: -ms-flexbox;
+        display: flex;
+        overflow-x: auto;
+        gap: 0;
+    }
+
+    .rs-17 .rs-text-advantages .bankruptcy-advantages__item {
+        -ms-flex: 0 0 290px;
+        flex: 0 0 290px;
+    }
+
+    .rs-17 .rs-text-advantages .bankruptcy-advantages__item:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .rs-17 .rs-text-advantages__title h4 {
+        padding-left: 0;
+    }
+
+    .rs-17 .rs-text-advantages__title .icon {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1570px) {
+    .rs-17 .rs-text-advantages__content {
+        gap: clamp( 30px , -124.4636678201px  +  15.5709342561vw , 120px );
+    }
+}

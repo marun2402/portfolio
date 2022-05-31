@@ -1,0 +1,197 @@
+.rs-17 .rs-content-slider {
+    background-color: #2c2f31;
+}
+
+.rs-17 .rs-content-slider__header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.rs-17 .rs-content-slider__header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    line-height: 1.2291666667;
+    color: #FFFFFF;
+}
+
+.rs-17 .rs-content-slider__slider {
+    padding-top: 48px;
+    padding-bottom: 73px;
+}
+
+.rs-17 .rs-content-slider__slide {
+    position: relative;
+}
+
+.rs-17 .rs-content-slider__controls {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.rs-17 .rs-content-slider__pagging .swiper-pagination-bullet {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 40px;
+    padding: 20px 0px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2142857143;
+    color: #FFFFFF;
+    text-align: center;
+    opacity: 0.55;
+    transition: opacity 0.3s ease 0s;
+}
+
+.rs-17 .rs-content-slider__pagging .swiper-pagination-bullet::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(135deg, #138436 0%, #84C98B 100%);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    transition: all 0s ease 0s;
+}
+
+.rs-17 .rs-content-slider__pagging .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.rs-17 .rs-content-slider__pagging .swiper-pagination-bullet-active::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    transition: all 0.5s ease 0s;
+}
+
+.rs-17 .rs-content-slider__navigation {
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 18px;
+    -moz-column-gap: 18px;
+    column-gap: 18px;
+}
+
+.rs-17 .rs-content-slider__arrow {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: block;
+    opacity: 0.55;
+    transition: opacity 0.3s ease 0s;
+}
+
+.rs-17 .rs-content-slider__arrow:hover {
+    opacity: 1;
+}
+
+.reviews-card {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 24px;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+}
+
+.reviews-card__column:last-child {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    padding-top: 25px;
+}
+
+.reviews-card__image-ibg {
+    max-width: 100%;
+    display: block;
+    width: 323px;
+    height: 456px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.reviews-card__title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.reviews-card__title:hover {
+    color: inherit;
+}
+
+.reviews-card__text {
+    opacity: 0.85;
+    margin-bottom: 24px;
+}
+
+.letters-card__image-ibg {
+    height: 456px;
+}
+
+@media (min-width: 1790px) {
+    .rs-17 .rs-content-slider {
+        padding-bottom: 96px;
+    }
+
+    .rs-17 .rs-content-slider {
+        padding-top: 76px;
+    }
+
+    .rs-17 .rs-content-slider__header h3 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .reviews-card {
+        display: block;
+    }
+}
+
+@media (max-width: 320px) {
+    .rs-17 .rs-content-slider {
+        padding-bottom: 15px;
+    }
+
+    .rs-17 .rs-content-slider {
+        padding-top: 15px;
+    }
+
+    .rs-17 .rs-content-slider__header h3 {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1790px) {
+    .rs-17 .rs-content-slider {
+        padding-bottom: clamp( 15px , -2.6326530612px  +  5.5102040816vw , 96px );
+    }
+
+    .rs-17 .rs-content-slider {
+        padding-top: clamp( 15px , 1.7210884354px  +  4.1496598639vw , 76px );
+    }
+
+    .rs-17 .rs-content-slider__header h3 {
+        font-size: clamp( 30px , 26.0816326531px  +  1.2244897959vw , 48px );
+    }
+}

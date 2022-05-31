@@ -132,6 +132,7 @@ body._lock {
   left: 0;
   -o-object-fit: cover;
   object-fit: cover;
+  object-position: top;
 }
 
 body.ie ._ibg {

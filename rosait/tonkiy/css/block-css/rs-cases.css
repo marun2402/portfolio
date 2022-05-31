@@ -1,0 +1,32 @@
+.rs-17 .rs-cases {
+    padding-top: 120px;
+    padding-bottom: 150px;
+}
+
+.rs-17 .rs-cases > p {
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+    color: #818181;
+}
+
+.rs-17 .rs-cases__slider {
+    margin-top: 40px;
+}
+
+@media (min-width: 1600px) {
+    .rs-17 .rs-cases__slider {
+        padding-left: calc((100vw - 1570px) / 2);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-cases {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}

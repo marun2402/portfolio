@@ -1,0 +1,21 @@
+.rs-17 .rs-sertificates {
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.rs-17 .rs-sertificates__slider {
+    margin-top: 40px;
+}
+
+@media (min-width: 1600px) {
+    .rs-17 .rs-sertificates__slider {
+        padding-left: calc((100vw - 1570px) / 2);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-sertificates {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}

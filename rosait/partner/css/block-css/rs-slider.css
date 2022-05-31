@@ -138,6 +138,19 @@
     margin-bottom: 17px;
 }
 
+
+.rs-17 .rs-slider_inner-page  .rs-slider__item::before {
+	display: none;
+}
+.rs-17 .rs-slider_inner-page .rs-slider__numbers {   
+    display: none
+}
+.rs-17 .rs-slider_inner-page .rs-slider__bg {    
+    min-height: auto;
+	height: 620px;
+}
+
+
 @media (max-width: 1300px) {
     .rs-17 .rs-slider__numbers-item {
         padding: 10px;

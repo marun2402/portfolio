@@ -1,0 +1,249 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600,700&display=swap);
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 320px;
+}
+
+body {
+    line-height: 1;
+    font-family: "Montserrat";
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+    font-family: "Montserrat";
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
+    color: inherit;
+    background-color: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+body {
+    background-color: #F5F5F7;
+    color: #2D2A26;
+}
+
+body._lock {
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+.wrapper,
+.site {
+    min-height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.wrapper > main,
+.wrapper .site-content,
+.site > main,
+.site .site-content {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.wrapper > *,
+.site > * {
+    min-width: 0;
+}
+
+header {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+main {
+    margin-top: 107px;
+}
+
+[class*=__container] {
+    max-width: 70.875rem;
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 0 0.9375rem;
+}
+
+[class*=-ibg] {
+    position: relative;
+}
+
+[class*=-ibg] img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.swiper {
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.swiper-vertical .swiper-wrapper {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.swiper-autoheight .swiper-wrapper {
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.swiper-initialized .swiper-slide {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.swiper-android .swiper-slide,
+.swiper-android .swiper-wrapper {
+    -webkit-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0);
+}
+
+.swiper-button-lock {
+    display: none !important;
+}
+
+.btn-color {
+    position: relative;
+    background: transparent;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #e5edf5;
+    height: 41px;
+    padding: 0px 36px;
+    overflow: hidden;
+}
+
+.btn-color__title {
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2142857143;
+    color: #FFFFFF;
+    transition: color 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.btn-color::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: #005CB9;
+    width: 120%;
+    left: -10%;
+    -webkit-transform: skew(30deg);
+    transform: skew(30deg);
+    transition: -webkit-transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1), -webkit-transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.btn-color:hover .btn-color__title {
+    color: #005CB9;
+}
+
+.btn-color:hover::before {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.no-scroll::-webkit-scrollbar {
+    width: 0;
+}
+
+.no-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@media (max-width: 991.98px) {
+    main {
+        margin-top: 73px;
+    }
+}
