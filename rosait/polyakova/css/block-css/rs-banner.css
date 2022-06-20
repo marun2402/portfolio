@@ -1,0 +1,53 @@
+.rs-17 .rs-banner {
+    position: relative;
+    font-size: 10px;
+    padding-top: 145px;
+    padding-bottom: 130px;
+}
+
+.rs-17 .rs-banner__container {
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rs-17 .rs-banner__container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: "CormorantInfant";
+    font-size: 4.9em;
+    font-weight: 500;
+    letter-spacing: 3.67px;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.rs-17 .rs-banner__container p {
+    margin-top: 0;
+    margin-bottom: 55px;
+    font-size: 1.8em;
+    color: #131313;
+    letter-spacing: 0.9px;
+    line-height: 2;
+}
+
+@media (max-width: 1630px) {
+    .rs-17 .rs-banner {
+        font-size: calc(7px + 3 * ((100vw - 320px) / 1310));
+    }
+
+    .rs-17 .rs-banner {
+        padding-top: calc(35px + 110 * ((100vw - 320px) / 1310));
+    }
+
+    .rs-17 .rs-banner {
+        padding-bottom: calc(35px + 95 * ((100vw - 320px) / 1310));
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-banner .ball {
+        display: none;
+    }
+}

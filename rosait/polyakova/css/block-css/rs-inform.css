@@ -1,0 +1,152 @@
+.rs-17 .rs-inform {
+    position: relative;
+    padding-top: 115px;
+    padding-bottom: 72px;
+    font-size: 10px;
+}
+
+.rs-17 .rs-inform__container {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    background: url("../../img/inform_hand.png") center bottom no-repeat;
+}
+
+.rs-17 .rs-inform__content {
+    position: relative;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    padding-right: 110px;
+    padding-top: 110px;
+    padding-left: 15px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.rs-17 .rs-inform__content h2 {
+    font-family: "CormorantInfant";
+    font-size: 4.9em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+    line-height: normal;
+}
+
+.rs-17 .rs-inform__content p {
+    color: #000000;
+    font-size: 1.8em;
+    line-height: 1.9;
+    letter-spacing: 0.45px;
+    margin-bottom: 15px;
+}
+
+.rs-17 .rs-inform__photo {
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    padding: 0px 10px;
+}
+
+.rs-17 .rs-inform__photo-holder {
+    position: relative;
+    padding-bottom: 105%;
+}
+
+.rs-17 .rs-inform__photo-holder img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top center;
+    object-position: top center;
+}
+
+@media (max-width: 1630px) {
+    .rs-17 .rs-inform {
+        padding-top: calc(35px + 80 * ((100vw - 320px) / 1310));
+    }
+
+    .rs-17 .rs-inform {
+        padding-bottom: calc(35px + 37 * ((100vw - 320px) / 1310));
+    }
+
+    .rs-17 .rs-inform {
+        font-size: calc(6px + 4 * ((100vw - 320px) / 1310));
+    }
+}
+
+@media (max-width: 1550px) {
+    .rs-17 .rs-inform__content {
+        padding-right: 35px;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .rs-17 .rs-inform .ball {
+        display: none;
+    }
+
+    .rs-17 .rs-inform__content p {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-inform__content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .rs-17 .rs-inform__photo {
+        margin-top: 55px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-17 .rs-inform {
+        font-size: 8px;
+    }
+
+    .rs-17 .rs-inform__container {
+        display: block;
+    }
+}
+
+@media (min-width: 767.98px) and (max-width: 1200px) {
+    .rs-inform__photo {
+        margin-left: -250px;
+    }
+
+    .rs-inform__content {
+        position: relative;
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+        margin-right: -250px;
+        margin-bottom: -80px;
+        z-index: 2;
+    }
+
+    .rs-inform__content::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+    }
+}

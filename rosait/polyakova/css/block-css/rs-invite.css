@@ -1,0 +1,108 @@
+.rs-17 .rs-invite {
+    position: relative;
+    background-color: #faf9f8;
+    padding-top: 115px;
+    padding-bottom: 72px;
+    font-size: 10px;
+}
+
+.rs-17 .rs-invite__container {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.rs-17 .rs-invite__content {
+    position: relative;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    padding-right: 110px;
+    padding-top: 55px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.rs-17 .rs-invite__content h2 {
+    font-family: "CormorantInfant";
+    font-size: 4.9em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: normal;
+}
+
+.rs-17 .rs-invite__content p {
+    color: #000000;
+    font-size: 1.8em;
+    line-height: 1.8;
+    letter-spacing: 0.45px;
+}
+
+.rs-17 .rs-invite__content ul {
+    margin-bottom: 60px;
+}
+
+.rs-17 .rs-invite__photo {
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+}
+
+.rs-17 .rs-invite__photo-holder {
+    position: relative;
+    padding-bottom: 86%;
+    background: url("../../img/invite/invite_bacgkorund.jpg") 0 0/cover no-repeat;
+}
+
+.rs-17 .rs-invite__photo-holder img {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 70%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+@media (max-width: 1630px) {
+    .rs-17 .rs-invite {
+        padding-top: calc(35px + 80 * ((100vw - 320px) / 1310));
+    }
+
+    .rs-17 .rs-invite {
+        padding-bottom: calc(35px + 37 * ((100vw - 320px) / 1310));
+    }
+
+    .rs-17 .rs-invite {
+        font-size: calc(6px + 4 * ((100vw - 320px) / 1310));
+    }
+}
+
+@media (max-width: 1550px) {
+    .rs-17 .rs-invite__content {
+        padding-right: 35px;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-invite .ball,
+  #invite-path {
+        display: none;
+    }
+
+    .rs-17 .rs-invite {
+        font-size: 8px;
+    }
+
+    .rs-17 .rs-invite__container {
+        display: block;
+    }
+
+    .rs-17 .rs-invite__photo {
+        margin-top: 55px;
+    }
+}

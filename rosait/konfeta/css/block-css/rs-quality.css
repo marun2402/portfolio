@@ -1,0 +1,108 @@
+.rs-quality {
+    padding-top: 165px;
+    padding-bottom: 60px;
+    background-color: #F8F6F9;
+    overflow: hidden;
+}
+
+.rs-quality__slider {
+    margin-top: 0px;
+}
+
+.rs-quality h2 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: #181618;
+    max-width: 490px;
+}
+
+.rs-quality .quality-card {
+    position: relative;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.rs-quality .quality-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: #efdaef;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+.rs-quality .quality-card__img {
+    width: 100%;
+    height: 236px;
+    position: relative;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+}
+
+.rs-quality .quality-card__img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-quality .quality-card__wrapper {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 24px;
+    position: relative;
+    background: #FFFFFF;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;
+}
+
+.rs-quality .quality-card h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #181618;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.rs-quality .quality-card p {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #817B80;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rs-quality .quality-card a {
+    font-size: 0;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.rs-quality .quality-card:hover::before {
+    -webkit-transform: rotate(-8.47deg);
+    transform: rotate(-8.47deg);
+}
+
+@media (max-width: 991.98px) {
+    .rs-quality .quality-card {
+        width: 280px;
+    }
+}

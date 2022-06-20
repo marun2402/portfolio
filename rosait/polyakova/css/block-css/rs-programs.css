@@ -1,0 +1,117 @@
+.rs-17 .rs-programs {
+    font-size: 10px;
+}
+
+.rs-17 .rs-programs__nds {
+    bottom: -60px;
+    color: #424242;
+    font-family: "CormorantInfant";
+    font-size: 1.8em;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.rs-17 .rs-programs__container {
+    position: relative;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.rs-17 .rs-programs__container h2 {
+    margin: 50px auto;
+    max-width: 880px;
+    color: #131313;
+    font-family: "CormorantInfant";
+    font-size: 4.9em;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3.67px;
+}
+
+.rs-17 .rs-programs__items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.rs-17 .rs-programs__item {
+    -ms-flex: 0 1 33.333%;
+    flex: 0 1 33.333%;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;
+    padding-top: 75px;
+    padding-bottom: 90px;
+    padding-right: 75px;
+    padding-left: 70px;
+}
+
+.rs-17 .rs-programs__num {
+    -ms-flex: 0 0 58px;
+    flex: 0 0 58px;
+    font-size: 6.8em;
+}
+
+.rs-17 .rs-programs__body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-left: 18px;
+}
+
+.rs-17 .rs-programs__body h4 {
+    color: #000000;
+    font-family: "CormorantInfant";
+    font-size: 2.3em;
+    text-transform: uppercase;
+}
+
+.rs-17 .rs-programs__body p {
+    color: #252525;
+    font-size: 1.5em;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.rs-17 .rs-programs__body .rs-programs__price {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    font-family: "CormorantInfant";
+    font-size: 1.9em;
+    font-style: italic;
+    letter-spacing: 0.47px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1630px) {
+    .rs-17 .rs-programs {
+        font-size: calc(6px + 4 * ((100vw - 320px) / 1310));
+    }
+
+    .rs-17 .rs-programs__nds {
+        bottom: calc(-20px + -40 * ((100vw - 320px) / 1310));
+    }
+}
+
+@media (max-width: 1600px) {
+    .rs-17 .rs-programs__item {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-programs {
+        font-size: 7px;
+    }
+
+    .rs-17 .rs-programs__items {
+        display: block;
+    }
+}

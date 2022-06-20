@@ -1,0 +1,35 @@
+.rs-17 .rs-baner-inner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.rs-17 .rs-baner-inner__container {
+    position: relative;
+    padding-top: 147px;
+    padding-bottom: 149px;
+}
+
+.rs-17 .rs-baner-inner__body h1 {
+    max-width: 800px;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.rs-17 .rs-baner-inner .outer-text {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+
+@media (max-width: 1600px) {
+    .rs-17 .rs-baner-inner__body h1 {
+        font-size: calc(36px + 24 * ((100vw - 320px) / 1280));
+    }
+}

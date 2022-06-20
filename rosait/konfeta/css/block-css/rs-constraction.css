@@ -1,0 +1,270 @@
+.rs-constraction {
+    padding-top: 95px;
+    padding-bottom: 0px;
+    overflow: hidden;
+}
+
+.rs-constraction__tabs {
+    margin-top: 30px;
+}
+
+.rs-constraction__tabs > ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow-x: auto;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.rs-constraction__tabs > ul li {
+    text-align: center;
+}
+
+.rs-constraction__tabs > ul li:not(:last-child) {
+    margin-right: 32px;
+}
+
+.rs-constraction__tabs > ul li a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #817B80;
+    transition: color 0.3s cubic-bezier(0.24, 0.002, 0.002, 1);
+    white-space: nowrap;
+}
+
+.rs-constraction__tabs > ul li a::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #940491;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.rs-constraction__tabs > ul li.active a {
+    color: #940491;
+}
+
+.rs-constraction__tabs > ul li.active a::after {
+    opacity: 1;
+}
+
+.rs-constraction .constraction-item {
+    position: relative;
+}
+
+.rs-constraction .constraction-item__slider {
+    margin-left: -32px;
+    margin-right: -32px;
+    padding-top: 32px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.rs-constraction .constraction-item__arrows {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: -26px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: calc(100% + 52px);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-constraction .constraction-item__arrows .arrow {
+    pointer-events: auto;
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    transition-duration: 0.4s;
+}
+
+.rs-constraction .constraction-item__arrows .arrow:before {
+    content: url("../../img/icons/CaretLeft.svg");
+}
+
+.rs-constraction .constraction-item__arrows .arrow_next {
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+.rs-constraction .constraction-item__arrows .arrow:hover {
+    box-shadow: 0px 8px 32px rgba(148, 4, 145, 0.2);
+}
+
+.rs-constraction .constraction-item__pagging {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.rs-constraction .constraction-item__pagging .swiper-pagination-bullet {
+    cursor: pointer;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #940491;
+    opacity: 0.15;
+}
+
+.rs-constraction .constraction-item__pagging .swiper-pagination-bullet:not(:last-child) {
+    margin-right: 12px;
+}
+
+.rs-constraction .constraction-item__pagging .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.rs-constraction .constraction-slide {
+    border: 1px solid #E4E4E4;
+    border-radius: 12px;
+    height: 100%;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+}
+
+.rs-constraction .constraction-slide a {
+    font-size: 0;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.rs-constraction .constraction-slide h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #181618;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.rs-constraction .constraction-slide p {
+    line-height: 1.4;
+    color: #817B80;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin-bottom: 0;
+}
+
+.rs-constraction .constraction-slide button {
+    margin-top: 24px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    color: #940491;
+    border: 1px solid #940491;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.4s;
+    line-height: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.rs-constraction .constraction-slide button::before,
+.rs-constraction .constraction-slide button span {
+    margin: 0 auto;
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+    transition-duration: 0.4s;
+}
+
+.rs-constraction .constraction-slide button::before {
+    content: attr(data-sm-link-text);
+    color: #FFFFFF;
+    position: absolute;
+    margin: auto;
+    -webkit-transform: translateY(500%) scale(-0.1, 20);
+    transform: translateY(500%) scale(-0.1, 20);
+}
+
+.rs-constraction .constraction-slide__img {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.rs-constraction .constraction-slide__img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-constraction .constraction-slide__wrapper {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 24px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.rs-constraction .constraction-slide:hover {
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.rs-constraction .constraction-slide:hover button::before {
+    -webkit-transform: translateY(0) scale(1, 1);
+    transform: translateY(0) scale(1, 1);
+}
+
+.rs-constraction .constraction-slide:hover button {
+    color: #940491;
+    background-color: #940491;
+}
+
+.rs-constraction .constraction-slide:hover button span {
+    -webkit-transform: translateY(-400%) scale(-0.1, 20);
+    transform: translateY(-400%) scale(-0.1, 20);
+}
+
+@media (max-width: 991.98px) {
+    .rs-constraction .constraction-item__arrows {
+        display: none;
+    }
+
+    .rs-constraction .constraction-slide {
+        width: 264px;
+    }
+}

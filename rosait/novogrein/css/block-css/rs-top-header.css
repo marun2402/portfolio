@@ -1,0 +1,72 @@
+.rs-17 .rs-top-header {
+    position: relative;
+    color: #fff;
+}
+
+.rs-17 .rs-top-header__container {
+    height: 86px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-17 .rs-top-header__logo {
+    width: 300px;
+    height: 69px;
+    margin-right: auto;
+}
+
+.rs-17 .rs-top-header__item {
+    position: relative;
+    display: block;
+    padding-left: 44px;
+    margin-right: 54px;
+}
+
+.rs-17 .rs-top-header__item span,
+.rs-17 .rs-top-header__item a {
+    display: block;
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 400;
+    color: currentColor;
+    transition: all 0.3s ease 0s;
+}
+
+.rs-17 .rs-top-header__item a:hover {
+    color: #0fafeb;
+}
+
+.rs-17 .rs-top-header__item_loc span {
+    max-width: 205px;
+}
+
+.rs-17 .rs-top-header__item-icon {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    fill: #fff;
+}
+
+@media (max-width: 1170px) {
+    .rs-17 .rs-top-header__item {
+        margin-right: calc(0px + 54 * ((100vw - 320px) / 850));
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-top-header__item {
+        display: none;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .rs-17 .rs-top-header__btn {
+        display: none;
+    }
+}

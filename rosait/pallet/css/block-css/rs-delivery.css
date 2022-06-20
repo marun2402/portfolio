@@ -1,0 +1,112 @@
+.rs-17 .rs-delivery {
+    background-color: #f2f6f9;
+    position: relative;
+    padding-top: 88px;
+    padding-bottom: 82px;
+}
+
+.rs-17 .rs-delivery .section-head {
+    margin-bottom: 29px;
+}
+
+.rs-17 .rs-delivery__container {
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    gap: 40px;
+}
+
+.rs-17 .rs-delivery__head {
+    position: relative;
+    z-index: 10;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-preferred-size: 400px;
+    flex-basis: 400px;
+}
+
+.rs-17 .rs-delivery__spoller {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.rs-17 .rs-delivery .spoller__item {
+    padding: 32px 0px;
+    border-bottom: 1px solid #d2d2d4;
+}
+
+.rs-17 .rs-delivery .spoller__item-header {
+    padding-right: 22px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #030925;
+}
+
+.rs-17 .rs-delivery .spoller__item-inner {
+    margin-top: 32px;
+    font-size: 14px;
+    line-height: 171.42857%;
+    font-weight: 400;
+    color: #616161;
+}
+
+.rs-17 .rs-delivery ._init .spoller__item-header {
+    width: 100%;
+    position: relative;
+}
+
+.rs-17 .rs-delivery ._init .spoller__item-header::after,
+.rs-17 .rs-delivery ._init .spoller__item-header::before {
+    content: "";
+    position: absolute;
+    background-color: #030925;
+    transition: all 0.3s ease 0s;
+}
+
+.rs-17 .rs-delivery ._init .spoller__item-header::after {
+    top: 0;
+    right: 8px;
+    width: 1px;
+    height: 17px;
+}
+
+.rs-17 .rs-delivery ._init .spoller__item-header::before {
+    top: 8px;
+    right: 0;
+    height: 1px;
+    width: 17px;
+}
+
+.rs-17 .rs-delivery ._init .spoller__item-header._active::after,
+.rs-17 .rs-delivery ._init .spoller__item-header._active::before {
+    background-color: #ff7029;
+}
+
+.rs-17 .rs-delivery ._init .spoller__item-header._active::after {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+@media (max-width: 1170px) {
+    .rs-17 .rs-delivery {
+        padding-top: calc(35px + 53 * ((100vw - 320px) / 850));
+    }
+
+    .rs-17 .rs-delivery {
+        padding-bottom: calc(35px + 47 * ((100vw - 320px) / 850));
+    }
+
+    .rs-17 .rs-delivery__head {
+        -ms-flex-preferred-size: calc(350px + 50 * ((100vw - 320px) / 850));
+        flex-basis: calc(350px + 50 * ((100vw - 320px) / 850));
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-delivery__container {
+        display: block;
+    }
+}

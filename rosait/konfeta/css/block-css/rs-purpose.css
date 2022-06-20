@@ -1,0 +1,73 @@
+.rs-purpose {
+    padding-top: 95px;
+    padding-bottom: 90px;
+    overflow: hidden;
+}
+
+.rs-purpose__slider {
+    margin-top: 0px;
+}
+
+.rs-purpose .purpose-card {
+    position: relative;
+    height: 100%;
+    background: #f8f6f9;
+    border-radius: 8px;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.rs-purpose .purpose-card__img {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.rs-purpose .purpose-card__img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-purpose .purpose-card__wrapper {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding-top: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 14px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.rs-purpose .purpose-card h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #181618;
+}
+
+.rs-purpose .purpose-card a {
+    font-size: 0;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+    .rs-purpose .purpose-card {
+        width: 264px;
+    }
+}

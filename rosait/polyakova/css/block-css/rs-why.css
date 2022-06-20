@@ -1,0 +1,114 @@
+.rs-17 .rs-why {
+    font-size: 10px;
+}
+
+.rs-17 .rs-why h2 {
+    margin: 0 auto;
+    max-width: 1000px;
+    color: #131313;
+    font-family: "CormorantInfant";
+    font-size: 4.9em;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3.67px;
+}
+
+.rs-17 .rs-why h6 {
+    margin: 0;
+    color: #000000;
+    font-family: "CormorantInfant";
+    font-size: 2.3em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.rs-17 .rs-why .block-list li {
+    font-size: 1.6em;
+    color: #424242;
+    margin-bottom: 14px;
+}
+
+.rs-17 .rs-why p {
+    color: #424242;
+    font-size: 1.6em;
+    letter-spacing: 0.4px;
+    line-height: 1.5;
+    margin-bottom: 7px;
+}
+
+.rs-17 .rs-why__head {
+    padding-top: 85px;
+    padding-bottom: 50px;
+}
+
+.rs-17 .rs-why__container {
+    position: relative;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.rs-17 .rs-why__items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.rs-17 .rs-why__item {
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+
+.rs-17 .rs-why__item:nth-child(1) {
+    border-right: 1px solid #d8d8d8;
+    padding-right: 80px;
+}
+
+.rs-17 .rs-why__item:nth-child(2) {
+    padding-left: 95px;
+}
+
+.rs-17 .rs-why__btn {
+    margin-top: 55px;
+}
+
+@media (max-width: 1630px) {
+    .rs-17 .rs-why {
+        font-size: calc(6px + 4 * ((100vw - 320px) / 1310));
+    }
+
+    .rs-17 .rs-why__head {
+        padding-top: calc(25px + 60 * ((100vw - 320px) / 1310));
+    }
+
+    .rs-17 .rs-why__head {
+        padding-bottom: calc(15px + 35 * ((100vw - 320px) / 1310));
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-why {
+        font-size: 7px;
+    }
+
+    .rs-17 .rs-why__items {
+        display: block;
+    }
+
+    .rs-17 .rs-why__item {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .rs-17 .rs-why__item:nth-child(1) {
+        border-right: none;
+        padding-right: 15px;
+    }
+
+    .rs-17 .rs-why__item:nth-child(2) {
+        padding-left: 15px;
+    }
+}

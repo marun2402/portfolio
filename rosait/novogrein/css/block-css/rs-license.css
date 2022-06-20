@@ -1,0 +1,90 @@
+.rs-17 .rs-license {
+    padding-bottom: 44px;
+}
+
+.rs-17 .rs-license__head {
+    margin-bottom: 41px;
+}
+
+.rs-17 .rs-license__items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+}
+
+.rs-17 .rs-license__item {
+    -ms-flex: 0 1 33.333%;
+    flex: 0 1 33.333%;
+    margin-bottom: 28px;
+    padding: 0px 15px;
+}
+
+.rs-17 .rs-license .license-link {
+    overflow: hidden;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 185px;
+    background-color: #0b2e5d;
+    border-radius: 4px;
+    padding: 15px 23px;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 400;
+    color: #9da8b8;
+}
+
+.rs-17 .rs-license .license-link::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0fafeb;
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: all 0.5s ease 0s;
+}
+
+.rs-17 .rs-license .license-link:hover::before {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.rs-17 .rs-license .license-link:hover .license-link__icon img {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.rs-17 .rs-license .license-link__icon {
+    position: absolute;
+    bottom: 15px;
+    right: 23px;
+}
+
+.rs-17 .rs-license .license-link__icon img {
+    transition: all 0.5s ease 0s;
+}
+
+@media (max-width: 991.98px) {
+    .rs-17 .rs-license__item {
+        -ms-flex: 0 1 50%;
+        flex: 0 1 50%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-17 .rs-license__item {
+        -ms-flex: 0 1 100%;
+        flex: 0 1 100%;
+    }
+}

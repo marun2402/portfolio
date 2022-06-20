@@ -1,0 +1,129 @@
+.rs-17 .rs-contacts {
+    color: #ffffff;
+}
+
+.rs-17 .rs-contacts__items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 63px;
+    padding-bottom: 126px;
+    row-gap: 35px;
+}
+
+.rs-17 .rs-contacts__item {
+    position: relative;
+    min-width: 190px;
+    padding-left: 53px;
+}
+
+.rs-17 .rs-contacts__item:not(:last-child) {
+    margin-right: 90px;
+}
+
+.rs-17 .rs-contacts__item-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 26px;
+}
+
+.rs-17 .rs-contacts__item-icon img {
+    width: 100%;
+}
+
+.rs-17 .rs-contacts__item-inner {
+    margin-bottom: 8px;
+}
+
+.rs-17 .rs-contacts__item-inner h6 {
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+.rs-17 .rs-contacts__item-inner span {
+    display: block;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.rs-17 .rs-contacts__item-inner a {
+    position: relative;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #83cdf1;
+}
+
+.rs-17 .rs-contacts__item-inner a::before,
+.rs-17 .rs-contacts__item-inner a::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -0.1rem;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #83cdf1;
+    transition: 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.rs-17 .rs-contacts__item-inner a::before {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+}
+
+.rs-17 .rs-contacts__item-inner a::after {
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    transition-delay: 0.25s;
+}
+
+.rs-17 .rs-contacts__item-inner a:hover::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    transition-delay: 0.25s;
+}
+
+.rs-17 .rs-contacts__item-inner a:hover::after {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transition-delay: 0s;
+}
+
+.rs-17 .rs-contacts__map {
+    position: relative;
+    width: 100%;
+    height: 478px;
+    top: 0;
+    right: 0;
+}
+
+.rs-17 .rs-contacts__map iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+    .rs-17 .rs-contacts__item {
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+    }
+
+    .rs-17 .rs-contacts__item:not(:last-child) {
+        margin-right: 0;
+    }
+}
