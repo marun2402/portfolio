@@ -1,0 +1,240 @@
+.rs-portfolio {
+    padding-top: 108px;
+    padding-bottom: 140px;
+    overflow: hidden;
+}
+
+.rs-portfolio__tabs-nav {
+    margin-top: 60px;
+    margin-bottom: 35px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rs-portfolio__tabs-nav > ul {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 100px);
+    grid-auto-rows: 100px;
+    margin-top: 0px;
+}
+
+.rs-portfolio__tabs-nav > ul li {
+    padding: 0px 60px 0px 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-portfolio__tabs-nav > ul li a {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    font-size: 12px;
+    line-height: 1.5833333333;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.rs-portfolio__tabs-nav > ul li a img {
+    margin-right: 20px;
+}
+
+.rs-portfolio__tabs-nav > ul li.active a {
+    color: #FCD462;
+}
+
+.rs-portfolio .tabs-lines__horisontal {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    -webkit-transform: translate(-100%, 0px);
+    transform: translate(-100%, 0px);
+    transition-duration: 0s;
+    transition-delay: 0s;
+}
+
+.rs-portfolio .tabs-lines__horisontal img {
+    width: 100%;
+}
+
+.rs-portfolio .tabs-lines__vertical {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    -webkit-transform: translate(0px, -100%);
+    transform: translate(0px, -100%);
+    transition-duration: 0s;
+    transition-delay: 0s;
+}
+
+.rs-portfolio .tabs-lines__vertical img {
+    height: 100%;
+}
+
+.rs-portfolio .tabs-lines__vertical:nth-of-type(2) {
+    left: 25%;
+}
+
+.rs-portfolio .tabs-lines__vertical:nth-of-type(3) {
+    left: 50%;
+}
+
+.rs-portfolio .tabs-lines__vertical:nth-of-type(4) {
+    left: 75%;
+}
+
+.rs-portfolio__tabs.in-viewport .tabs-lines__horisontal {
+    -webkit-transform: none;
+    transform: none;
+    transition-duration: 0.5s;
+    transition-delay: 0.3s;
+}
+
+.rs-portfolio__tabs.in-viewport .tabs-lines__vertical {
+    -webkit-transform: none;
+    transform: none;
+    transition-duration: 0.5s;
+    transition-delay: 0.3s;
+}
+
+.rs-portfolio .portfolio-item {
+    position: relative;
+}
+
+.rs-portfolio .portfolio-item__slide {
+    border: 1px solid transparent;
+    transition: border-color 0.3s linear;
+    position: relative;
+}
+
+.rs-portfolio .portfolio-item__slide:before {
+    cursor: pointer;
+    pointer-events: none;
+    content: url("../../img/icons/zoom.png");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.rs-portfolio .portfolio-item__slide a {
+    display: block;
+    height: 100%;
+    padding-bottom: 131%;
+    position: relative;
+}
+
+.rs-portfolio .portfolio-item__slide a img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-portfolio .portfolio-item__slide:hover {
+    border-color: #FFFFFF;
+}
+
+.rs-portfolio .portfolio-item__slide:hover::before {
+    opacity: 1;
+}
+
+.rs-portfolio .portfolio-item__controls {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 62px;
+}
+
+.rs-portfolio .portfolio-item__arrows {
+    pointer-events: none;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.rs-portfolio .portfolio-item__arrows .arrow {
+    pointer-events: auto;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    background-color: #12181F;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transition-duration: 0.3s;
+}
+
+.rs-portfolio .portfolio-item__arrows .arrow:before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: block;
+    -webkit-mask-image: url(../../img/icons/pagination_arrow.svg);
+    mask-image: url(../../img/icons/pagination_arrow.svg);
+    background: #FFFFFF;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transition-duration: 0.3s;
+}
+
+.rs-portfolio .portfolio-item__arrows .arrow_prev {
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    margin-right: 20px;
+}
+
+.rs-portfolio .portfolio-item__arrows .arrow:hover {
+    background-color: #FCD462;
+    box-shadow: 0px 14px 24px rgba(190, 173, 142, 0.3);
+}
+
+.rs-portfolio .portfolio-item__arrows .arrow:hover::before {
+    background-color: #12181F;
+}
+
+@media (max-width: 991.98px) {
+    .rs-portfolio__tabs-nav > ul {
+        display: -ms-flexbox;
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .rs-portfolio .tabs-lines {
+        display: none;
+    }
+
+    .rs-portfolio .portfolio-item {
+        margin-right: -15px;
+    }
+
+    .rs-portfolio .portfolio-item__slide {
+        width: 264px;
+    }
+
+    .rs-portfolio .portfolio-item__arrows {
+        display: none;
+    }
+}
