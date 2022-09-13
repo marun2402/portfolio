@@ -1,0 +1,74 @@
+.rs-catalog {
+    padding-top: 85px;
+    padding-bottom: 10px;
+}
+
+.rs-catalog__items {
+    padding-bottom: 20px;
+    padding-top: 40px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
+
+.catalog-item {
+    background-color: #f2f2f2;
+    display: block;
+    position: relative;
+    padding: 41px 20px 20px 20px;
+    text-align: center;
+    min-height: 200px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    transition-duration: 0.3s;
+    -webkit-clip-path: polygon(49% 0, 100% 0, 100% 100%, 0 100%, 0 29%);
+    clip-path: polygon(49% 0, 100% 0, 100% 100%, 0 100%, 0 29%);
+}
+
+.catalog-item h4 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #222222;
+    transition-duration: 0.3s;
+}
+
+.catalog-item:hover:nth-child(12n+1),
+.catalog-item:hover:nth-child(12n+12) {
+    background-color: #7bbe47;
+}
+
+.catalog-item:hover:nth-child(12n+2),
+.catalog-item:hover:nth-child(12n+11) {
+    background-color: #ffc700;
+}
+
+.catalog-item:hover:nth-child(12n+3),
+.catalog-item:hover:nth-child(12n+10) {
+    background-color: #f78e16;
+}
+
+.catalog-item:hover:nth-child(12n+4),
+.catalog-item:hover:nth-child(12n+9) {
+    background-color: #3893d5;
+}
+
+.catalog-item:hover:nth-child(12n+5),
+.catalog-item:hover:nth-child(12n+8) {
+    background-color: #5109ab;
+}
+
+.catalog-item:hover:nth-child(12n+6),
+.catalog-item:hover:nth-child(12n+7) {
+    background-color: #78dbe2;
+}
+
+.catalog-item:hover h4 {
+    color: #ffffff;
+}

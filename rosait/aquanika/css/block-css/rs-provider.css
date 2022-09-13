@@ -1,0 +1,24 @@
+.rs-provider .provider-form {
+    margin-bottom: 80px;
+    border: 1px solid #ebebeb;
+    padding: 40px;
+    max-width: 770px;
+}
+
+.rs-provider .provider-form h4 {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 29px;
+    color: #222222;
+    margin-top: 0;
+    margin-bottom: 27px;
+}
+
+.rs-provider .provider-form p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #666666;
+    margin-top: 0;
+    margin-bottom: 30px;
+}

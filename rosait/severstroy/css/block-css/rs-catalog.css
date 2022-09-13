@@ -1,0 +1,122 @@
+.rs-catalog {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.rs-catalog__items {
+    padding-top: 50px;
+    display: grid;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    row-gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+}
+
+.rs-catalog .catalog-item {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    transition-duration: 0.3s;
+    height: 100%;
+}
+
+.rs-catalog .catalog-item__photo {
+    position: relative;
+    width: 100%;
+    padding-bottom: 124%;
+    margin-bottom: 24px;
+}
+
+.rs-catalog .catalog-item__photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-catalog .catalog-item h4 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.3;
+    color: #101B22;
+    letter-spacing: 0.8px;
+    transition-duration: 0.3s;
+    border-bottom: 1px solid #101B22;
+    padding-bottom: 16px;
+    padding-right: 32px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.rs-catalog .catalog-item h4::after {
+    content: url(../../img/icons/link_button_icon.svg);
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 16px;
+    width: 10px;
+    height: 10px;
+    -webkit-mask-image: url(../../img/icons/link_button_icon.svg);
+    mask-image: url(../../img/icons/link_button_icon.svg);
+    background: #101B22;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    z-index: 2;
+    transition-duration: 0.3s;
+}
+
+.rs-catalog .catalog-item p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #535C62;
+    margin-top: 0;
+    margin-bottom: auto;
+}
+
+.rs-catalog .catalog-item a {
+    font-size: 0;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.rs-catalog .catalog-item:hover h4 {
+    color: #347CCA;
+    border-color: #347CCA;
+}
+
+.rs-catalog .catalog-item:hover h4::after {
+    background: #347CCA;
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+}
+
+@media (max-width: 991.98px) {
+    .rs-catalog__items {
+        display: -ms-flexbox;
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .rs-catalog__item {
+        width: 290px;
+        -ms-flex: 0 0 290px;
+        flex: 0 0 290px;
+    }
+}

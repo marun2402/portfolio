@@ -1,0 +1,129 @@
+.rs-contacts .contacts__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 66px;
+    -moz-column-gap: 66px;
+    column-gap: 66px;
+    -ms-flex-align: start;
+    align-items: start;
+}
+
+.rs-contacts .contacts__body {
+    padding-right: 10px;
+}
+
+.rs-contacts .contacts__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 24px;
+}
+
+.rs-contacts .contacts__item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.rs-contacts .contacts__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.rs-contacts .contacts__item h6 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: #999999;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.rs-contacts .contacts__item a,
+.rs-contacts .contacts__item p {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #222222;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.rs-contacts .contacts__item img {
+    margin-right: 16px;
+}
+
+.rs-contacts .contacts__about {
+    margin-top: 60px;
+}
+
+.rs-contacts .contacts__about h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.rs-contacts .contacts__about p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #666666;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.rs-contacts .contacts__scheme {
+    position: relative;
+    padding-bottom: 77%;
+}
+
+.rs-contacts .contacts__scheme img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-contacts .contacts__map {
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+.rs-contacts .contacts__map iframe {
+    width: 100%;
+    height: 450px;
+}
+
+@media (max-width: 1450px) {
+    .rs-contacts .contacts__content {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .rs-contacts .contacts__body {
+        -ms-flex-order: 2;
+        order: 2;
+    }
+
+    .rs-contacts .contacts__scheme {
+        -ms-flex-order: 1;
+        order: 1;
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-contacts .contacts__columns {
+        grid-template-columns: 1fr;
+    }
+}
