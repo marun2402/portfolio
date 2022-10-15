@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="556" height="771" viewBox="0 0 556 771">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #e1c38b;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <path id="обводка" class="cls-1" d="M277.5,0.5h1a277,277,0,0,1,277,277v493a0,0,0,0,1,0,0H0.5a0,0,0,0,1,0,0v-493A277,277,0,0,1,277.5.5Z"/>
+</svg>

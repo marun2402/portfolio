@@ -1,0 +1,118 @@
+.rs-reviews {
+    padding-top: 80px;
+    padding-bottom: 140px;
+}
+
+.rs-reviews__container {
+    position: relative;
+}
+
+.rs-reviews__icon {
+    width: 360px;
+    height: 360px;
+    border: 1px solid rgba(201, 171, 128, 0.5);
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: 120px;
+    left: 0;
+}
+
+.rs-reviews__wrapper {
+    margin-left: 313px;
+}
+
+.rs-reviews__slider {
+    margin-top: 80px;
+}
+
+.rs-reviews__slide {
+    color: #262626;
+}
+
+.rs-reviews__slide h6 {
+    font-family: "Bona Nova";
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    color: #262626;
+    margin-bottom: 0;
+    margin-top: 25px;
+}
+
+.rs-reviews__slide p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rs-reviews__navigation {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.rs-reviews__arrow {
+    width: 32px;
+    height: 32px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.rs-reviews__arrow:hover::before {
+    background: #262626;
+}
+
+.rs-reviews__arrow:before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    display: block;
+    -webkit-mask-image: url(../../img/icons/arrow.svg);
+    mask-image: url(../../img/icons/arrow.svg);
+    background: #a5a5a5;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    z-index: 2;
+    transition-duration: 0.3s;
+}
+
+.rs-reviews__arrow_prev {
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    left: 30px;
+}
+
+.rs-reviews__arrow_next {
+    -webkit-transform: none;
+    transform: none;
+    right: 30px;
+}
+
+@media (max-width: 991.98px) {
+    .rs-reviews__icon {
+        display: none;
+    }
+
+    .rs-reviews__wrapper {
+        margin-left: 0;
+    }
+}
