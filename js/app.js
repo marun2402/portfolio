@@ -63,25 +63,3 @@ if (document.querySelector('.wrapper')) {
 
 let unlock = true;
 ;
-
-// blocks
-let cards = document.querySelectorAll('.card');
-
-for (let index = 0; index < cards.length; index++) {
-  const card = cards[index];
-  card.addEventListener('mouseenter', function (e) {
-    x = e.pageX - this.offsetLeft;
-    y = e.pageY - this.offsetTop;
-    let span = this.querySelector('.tilt');
-    span.style.left = `${x}px`;
-    span.style.top = `${y}px`;
-  });
-  card.addEventListener('mouseleave', function (e) {
-    x = e.pageX - this.offsetLeft;
-    y = e.pageY - this.offsetTop;
-    let span = this.querySelector('.tilt');
-    span.style.left = `${x}px`;
-    span.style.top = `${y}px`;
-  });
-}
-;
