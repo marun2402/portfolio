@@ -4,404 +4,408 @@
 		<title>Portfolio</title>
 		<meta charset="UTF-8" />
 		<meta name="format-detection" content="telephone=no" />
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style1.css" />
 		<link rel="shortcut icon" href="favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="js/gsap.min.js" defer></script>
+		<script src="js/Draggable.min.js" defer></script>
+		<script src="js/InertiaPlugin.min.js" defer></script>
+		<script src="js/app.js" defer></script>
+
+		<style>
+			.portfolio { opacity: 0; visibility: hidden; }
+		</style>
 	</head>
 	<body>
-		<div class="wrapper">			
-			<main class="page">
-				<div class="portfolio">
-					<div class="portfolio__content">
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/concept.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/concept/index.html" target="_blank" class="card__link">index.html</a>													
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/wedding.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/wedding/index.html" target="_blank" class="card__link">index.html</a>													
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/severstroy.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/severstroy/index.html" target="_blank" class="card__link">index.html</a>
-										<a href="rosait/severstroy/service.html" target="_blank" class="card__link">service.html</a>
-										<a href="rosait/severstroy/project.html" target="_blank" class="card__link">project.html</a>
-										<a href="rosait/severstroy/news.html" target="_blank" class="card__link">news.html</a>
-										<a href="rosait/severstroy/jobs.html" target="_blank" class="card__link">jobs.html</a>								
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/aquanika.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/aquanika/index.html" target="_blank" class="card__link">index.html</a>
-										<a href="rosait/aquanika/category.html" target="_blank" class="card__link">category.html</a>
-										<a href="rosait/aquanika/product.html" target="_blank" class="card__link">product.html</a>
-										<a href="rosait/aquanika/delivery.html" target="_blank" class="card__link">delivery.html</a>
-										<a href="rosait/aquanika/about.html" target="_blank" class="card__link">about.html</a>
-										<a href="rosait/aquanika/contacts.html" target="_blank" class="card__link">contacts.html</a>
-										<a href="rosait/aquanika/provider.html" target="_blank" class="card__link">provider.html</a>										
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/steel.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/steel/index.html" target="_blank" class="card__link">index.html</a>										
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/konfeta.png" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/konfeta/index.html" target="_blank" class="card__link">index.html</a>										
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/GNRNord.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/GNRNord/index.html" target="_blank" class="card__link">index.html</a>
-										<a href="rosait/GNRNord/catalog.html" target="_blank" class="card__link">catalog.html</a>
-										<a href="rosait/GNRNord/product.html" target="_blank" class="card__link">product.html</a>
-										<a href="rosait/GNRNord/support.html" target="_blank" class="card__link">support.html</a>
-										<a href="rosait/GNRNord/about.html" target="_blank" class="card__link">about.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/RSA.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/RSA/index.html" target="_blank" class="card__link">index.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/ATO.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/ATO/index.html" target="_blank" class="card__link">index.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/AVFARM.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/AVFARM/index.html" target="_blank" class="card__link">index.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/RTA.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/RTA/index.html" target="_blank" class="card__link">index.html</a>
-										<a href="rosait/RTA/order.html" target="_blank" class="card__link">order.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/kristall.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/kristall/index.html" target="_blank" class="card__link">index.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/tonkiy.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/tonkiy/index.html" target="_blank" class="card__link">index.html</a>
-										<a href="rosait/tonkiy/service.html" target="_blank" class="card__link">service.html</a>
-										<a href="rosait/tonkiy/representation.html" target="_blank" class="card__link">representation.html</a>
-										<a href="rosait/tonkiy/bankruptcy.html" target="_blank" class="card__link">bankruptcy.html</a>
-										<a href="rosait/tonkiy/about.html" target="_blank" class="card__link">about.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/partner.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/partner/index.html" target="_blank" class="card__link">index.html</a>
-										<a href="rosait/partner/integration.html" target="_blank" class="card__link">integration.html</a>
-										<a href="rosait/partner/price.html" target="_blank" class="card__link">price.html</a>
-										<a href="rosait/partner/programs.html" target="_blank" class="card__link">programs.html</a>
-										<a href="rosait/partner/services.html" target="_blank" class="card__link">services.html</a>
-										<a href="rosait/partner/supports.html" target="_blank" class="card__link">supports.html</a>
-										<a href="rosait/partner/tariffs.html" target="_blank" class="card__link">tariffs.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/shineray.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/shineray/index.html" target="_blank" class="card__link">index.html</a>
-										<a href="rosait/shineray/catalog.html" target="_blank" class="card__link">catalog.html</a>
-										<a href="rosait/shineray/product.html" target="_blank" class="card__link">product.html</a>
-										<a href="rosait/shineray/about.html" target="_blank" class="card__link">about.html</a>
-										<a href="rosait/shineray/shipping.html" target="_blank" class="card__link">shipping.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/fsd-layout.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="layouts/fsd-layout/index.html" target="_blank" class="card__link">index.html</a>
-										<a href="layouts/fsd-layout/registration.html" target="_blank" class="card__link">registration.html</a>
-										<a href="layouts/fsd-layout/room-details.html" target="_blank" class="card__link">room-details.html</a>
-										<a href="layouts/fsd-layout/search-room.html" target="_blank" class="card__link">search-room.html</a>
-										<a href="layouts/fsd-layout/signin.html" target="_blank" class="card__link">signin.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/novogrein.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/novogrein/index.html" target="_blank" class="card__link">index.html</a>										
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/morin.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/MP_T/index.html" target="_blank" class="card__link">index.html</a>
-										<a href="rosait/MP_T/career.html" target="_blank" class="card__link">career.html</a>
-										<a href="rosait/MP_T/projects.html" target="_blank" class="card__link">projects.html</a>
-										<a href="rosait/MP_T/services.html" target="_blank" class="card__link">services.html</a>										
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/bulat.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/bulat/index.html" target="_blank" class="card__link">index.html</a>												
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/container.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/container/index.html" target="_blank" class="card__link">index.html</a>												
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/pallet.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/pallet/index.html" target="_blank" class="card__link">index.html</a>
-										<a href="rosait/pallet/catalog.html" target="_blank" class="card__link">catalog.html</a>
-										<a href="rosait/pallet/product.html" target="_blank" class="card__link">product.html</a>
-										<a href="rosait/pallet/shipping.html" target="_blank" class="card__link">shipping.html</a>	
-										<a href="rosait/pallet/delivery.html" target="_blank" class="card__link">delivery.html</a>
-										<a href="rosait/pallet/about.html" target="_blank" class="card__link">about.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/polyakova.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/polyakova/" target="_blank" class="card__link">index.html</a>										
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/2U.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/-2U/" target="_blank" class="card__link">index.html</a>										
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/fitpipe.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/fitpipe/index.html" target="_blank" class="card__link">index.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/arrfa.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>									
-										<a href="rosait/arrfa/index.html" target="_blank" class="card__link">index.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/grinpark.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="rosait/grinpark/index.html" target="_blank" class="card__link">index.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/restaurant.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>									
-										<a href="layouts/restaurant-layout/index.html" target="_blank" class="card__link">index.html</a>
-									</div>
-								</div>
-							</div>
-						</div>						
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/prime-one.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="layouts/primeOne-layout/index.html" target="_blank" class="card__link">index.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/template14.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="layouts/template14-layout/index.html" target="_blank" class="card__link">index.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/money-test.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="layouts/money-test/index.html" target="_blank" class="card__link">index.html</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio__item">
-							<div class="card">
-								<span class="tilt"></span>
-								<div class="card__image _ibg"><img src="img/layouts/free-landing-layout.jpg" alt="" /></div>
-								<div class="card__content">
-									<div>										
-										<a href="layouts/free-landing-layout/index.html" target="_blank" class="card__link">index.html</a>
-									</div>
-								</div>
-							</div>
+		
+		<h1 class="header">Портфолио <span>Загрузка...</span></h1>
+		
+
+		<div class="portfolio">
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/concept.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/concept/index.html" target="_blank" class="card__link">index.html</a>													
 						</div>
 					</div>
 				</div>
-			</main>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/wedding.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/wedding/index.html" target="_blank" class="card__link">index.html</a>													
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/severstroy.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/severstroy/index.html" target="_blank" class="card__link">index.html</a>
+							<a href="rosait/severstroy/service.html" target="_blank" class="card__link">service.html</a>
+							<a href="rosait/severstroy/project.html" target="_blank" class="card__link">project.html</a>
+							<a href="rosait/severstroy/news.html" target="_blank" class="card__link">news.html</a>
+							<a href="rosait/severstroy/jobs.html" target="_blank" class="card__link">jobs.html</a>								
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/aquanika.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/aquanika/index.html" target="_blank" class="card__link">index.html</a>
+							<a href="rosait/aquanika/category.html" target="_blank" class="card__link">category.html</a>
+							<a href="rosait/aquanika/product.html" target="_blank" class="card__link">product.html</a>
+							<a href="rosait/aquanika/delivery.html" target="_blank" class="card__link">delivery.html</a>
+							<a href="rosait/aquanika/about.html" target="_blank" class="card__link">about.html</a>
+							<a href="rosait/aquanika/contacts.html" target="_blank" class="card__link">contacts.html</a>
+							<a href="rosait/aquanika/provider.html" target="_blank" class="card__link">provider.html</a>										
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/steel.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/steel/index.html" target="_blank" class="card__link">index.html</a>										
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/konfeta.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/konfeta/index.html" target="_blank" class="card__link">index.html</a>										
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/GNRNord.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/GNRNord/index.html" target="_blank" class="card__link">index.html</a>
+							<a href="rosait/GNRNord/catalog.html" target="_blank" class="card__link">catalog.html</a>
+							<a href="rosait/GNRNord/product.html" target="_blank" class="card__link">product.html</a>
+							<a href="rosait/GNRNord/support.html" target="_blank" class="card__link">support.html</a>
+							<a href="rosait/GNRNord/about.html" target="_blank" class="card__link">about.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/RSA.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/RSA/index.html" target="_blank" class="card__link">index.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/ATO.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/ATO/index.html" target="_blank" class="card__link">index.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/AVFARM.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/AVFARM/index.html" target="_blank" class="card__link">index.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/RTA.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/RTA/index.html" target="_blank" class="card__link">index.html</a>
+							<a href="rosait/RTA/order.html" target="_blank" class="card__link">order.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/kristall.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/kristall/index.html" target="_blank" class="card__link">index.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/tonkiy.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/tonkiy/index.html" target="_blank" class="card__link">index.html</a>
+							<a href="rosait/tonkiy/service.html" target="_blank" class="card__link">service.html</a>
+							<a href="rosait/tonkiy/representation.html" target="_blank" class="card__link">representation.html</a>
+							<a href="rosait/tonkiy/bankruptcy.html" target="_blank" class="card__link">bankruptcy.html</a>
+							<a href="rosait/tonkiy/about.html" target="_blank" class="card__link">about.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/partner.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/partner/index.html" target="_blank" class="card__link">index.html</a>
+							<a href="rosait/partner/integration.html" target="_blank" class="card__link">integration.html</a>
+							<a href="rosait/partner/price.html" target="_blank" class="card__link">price.html</a>
+							<a href="rosait/partner/programs.html" target="_blank" class="card__link">programs.html</a>
+							<a href="rosait/partner/services.html" target="_blank" class="card__link">services.html</a>
+							<a href="rosait/partner/supports.html" target="_blank" class="card__link">supports.html</a>
+							<a href="rosait/partner/tariffs.html" target="_blank" class="card__link">tariffs.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/shineray.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/shineray/index.html" target="_blank" class="card__link">index.html</a>
+							<a href="rosait/shineray/catalog.html" target="_blank" class="card__link">catalog.html</a>
+							<a href="rosait/shineray/product.html" target="_blank" class="card__link">product.html</a>
+							<a href="rosait/shineray/about.html" target="_blank" class="card__link">about.html</a>
+							<a href="rosait/shineray/shipping.html" target="_blank" class="card__link">shipping.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/fsd-layout.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="layouts/fsd-layout/index.html" target="_blank" class="card__link">index.html</a>
+							<a href="layouts/fsd-layout/registration.html" target="_blank" class="card__link">registration.html</a>
+							<a href="layouts/fsd-layout/room-details.html" target="_blank" class="card__link">room-details.html</a>
+							<a href="layouts/fsd-layout/search-room.html" target="_blank" class="card__link">search-room.html</a>
+							<a href="layouts/fsd-layout/signin.html" target="_blank" class="card__link">signin.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/novogrein.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/novogrein/index.html" target="_blank" class="card__link">index.html</a>										
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/morin.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/MP_T/index.html" target="_blank" class="card__link">index.html</a>
+							<a href="rosait/MP_T/career.html" target="_blank" class="card__link">career.html</a>
+							<a href="rosait/MP_T/projects.html" target="_blank" class="card__link">projects.html</a>
+							<a href="rosait/MP_T/services.html" target="_blank" class="card__link">services.html</a>										
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/bulat.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/bulat/index.html" target="_blank" class="card__link">index.html</a>												
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/container.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/container/index.html" target="_blank" class="card__link">index.html</a>												
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/pallet.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/pallet/index.html" target="_blank" class="card__link">index.html</a>
+							<a href="rosait/pallet/catalog.html" target="_blank" class="card__link">catalog.html</a>
+							<a href="rosait/pallet/product.html" target="_blank" class="card__link">product.html</a>
+							<a href="rosait/pallet/shipping.html" target="_blank" class="card__link">shipping.html</a>	
+							<a href="rosait/pallet/delivery.html" target="_blank" class="card__link">delivery.html</a>
+							<a href="rosait/pallet/about.html" target="_blank" class="card__link">about.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/polyakova.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/polyakova/" target="_blank" class="card__link">index.html</a>										
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/2U.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/-2U/" target="_blank" class="card__link">index.html</a>										
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/fitpipe.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/fitpipe/index.html" target="_blank" class="card__link">index.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/arrfa.webp" alt="" /></div>
+					<div class="card__content">
+						<div>									
+							<a href="rosait/arrfa/index.html" target="_blank" class="card__link">index.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/grinpark.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="rosait/grinpark/index.html" target="_blank" class="card__link">index.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/restaurant.webp" alt="" /></div>
+					<div class="card__content">
+						<div>									
+							<a href="layouts/restaurant-layout/index.html" target="_blank" class="card__link">index.html</a>
+						</div>
+					</div>
+				</div>
+			</div>						
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/prime-one.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="layouts/primeOne-layout/index.html" target="_blank" class="card__link">index.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/template14.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="layouts/template14-layout/index.html" target="_blank" class="card__link">index.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/money-test.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="layouts/money-test/index.html" target="_blank" class="card__link">index.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio__item">
+				<div class="card">
+					<span class="tilt"></span>
+					<div class="card__image _ibg"><img src="img/layouts/free-landing-layout.webp" alt="" /></div>
+					<div class="card__content">
+						<div>										
+							<a href="layouts/free-landing-layout/index.html" target="_blank" class="card__link">index.html</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<script src="js/gsap.min.js"></script>
-		<script src="js/Draggable.min.js"></script>
-		<script src="js/InertiaPlugin.min.js"></script>
-		<script src="js/app.js"></script>
+
+
 	</body>
 </html>
