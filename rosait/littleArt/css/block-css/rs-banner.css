@@ -1,0 +1,117 @@
+.rs-banner {
+    position: relative;
+}
+
+.rs-banner__container {
+    padding-top: 62px;
+    padding-bottom: 62px;
+    padding-left: 0;
+    padding-right: 0;
+    background: #fff9d9;
+    border-radius: 40px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 41% 1fr;
+    -webkit-column-gap: 202px;
+    -moz-column-gap: 202px;
+    column-gap: 202px;
+    row-gap: 35px;
+}
+
+.rs-banner__container::before {
+    content: url("../../img/dots3_bg.svg");
+    position: absolute;
+    left: -225px;
+    top: 25px;
+    -webkit-animation: rotate 13s linear infinite;
+    animation: rotate 13s linear infinite;
+}
+
+.rs-banner__col {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-banner__photo {
+    height: 100%;
+    position: relative;
+}
+
+.rs-banner__photo img {
+    width: 100%;
+}
+
+.rs-banner__content {
+    position: relative;
+    padding-right: 124px;
+}
+
+.rs-banner__content > h4 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    color: #241e46;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+.rs-banner__content > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: #6d7fa8;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+.rs-banner__content::before {
+    content: url("../../img/dots4_bg.svg");
+    position: absolute;
+    right: 50px;
+    top: -50px;
+    -webkit-animation: moving 12s linear infinite;
+    animation: moving 12s linear infinite;
+}
+
+.rs-banner__content::after {
+    content: url("../../img/dots5_bg.svg");
+    position: absolute;
+    right: 50px;
+    bottom: -70px;
+    -webkit-animation: rotate 15s linear infinite;
+    animation: rotate 15s linear infinite;
+}
+
+@media (max-width: 991.98px) {
+    .rs-banner__container {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-banner__col:nth-child(1) {
+        grid-row: 2/3;
+    }
+
+    .rs-banner__content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .rs-banner__content::before {
+        display: none;
+    }
+
+    .rs-banner__content::after {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-banner__content > h4 {
+        font-size: 28px;
+    }
+}
