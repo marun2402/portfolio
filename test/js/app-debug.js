@@ -6630,7 +6630,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
   function animatePage() {
     var pageObserver = new IntersectionObserver(animateElement, {
-      root: document,
+      root: null,
       threshold: [0.3]
     });
     var elements = document.querySelectorAll('[data-animate]');
