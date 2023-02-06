@@ -1,0 +1,233 @@
+.rs-about {
+    padding-top: 185px;
+}
+
+.rs-about__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 90px;
+    -moz-column-gap: 90px;
+    column-gap: 90px;
+}
+
+.rs-about .about-info__content {
+    margin-top: 30px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 137%;
+    letter-spacing: 0.04em;
+    color: #231f20;
+}
+
+.rs-about .about-info__content p {
+    margin-bottom: 30px;
+}
+
+.rs-about .about-info__content p.selected {
+    font-weight: 400;
+    border-radius: 5px;
+    padding-left: 190px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-right: 45px;
+    background: #f8f8f8 url("../../img/rs-about/about_can.png") 45px center no-repeat;
+}
+
+.rs-about .about-info__img {
+    margin-right: -90px;
+}
+
+.rs-about .about-info__img img {
+    width: 100%;
+}
+
+.rs-about .about-types {
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+}
+
+.rs-about .about-types__head {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.rs-about .about-types__title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-about .about-types__title h6 {
+    max-width: 265px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 137%;
+    letter-spacing: 0.04em;
+    color: #231f20;
+}
+
+.rs-about .about-types__img {
+    margin-top: 30px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 36%;
+}
+
+.rs-about .about-types__img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-about .about-types__list {
+    padding-left: 50px;
+    margin-bottom: 0;
+}
+
+.rs-about .about-types__list li:not(:last-child) {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.rs-about .about-types__list li a {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 60px;
+}
+
+.rs-about .about-types__list li a h4 {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 137%;
+    letter-spacing: 0.04em;
+    color: #231f20;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rs-about .about-types__list li a .btn-link {
+    -ms-flex: 0 0 38px;
+    flex: 0 0 38px;
+    margin-left: 40px;
+}
+
+.rs-about .about-types__list li a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 721px;
+    height: 721px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    background-color: #f8f8f8;
+    z-index: -1;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.8s ease;
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+}
+
+.rs-about .about-types__list li a:hover:before {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.rs-about .about-types__list li a:hover .btn-link {
+    background-color: #ff0015;
+    border-color: transparent;
+}
+
+.rs-about .about-types__list li a:hover .btn-link::after {
+    background-color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+    .rs-about__container {
+        -webkit-column-gap: 30px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+    }
+
+    .rs-about .about-info__content {
+        font-size: 13px;
+    }
+
+    .rs-about .about-info__content p.selected {
+        padding: 19px;
+        background: #f8f8f8;
+    }
+
+    .rs-about .about-info__img {
+        margin-right: -30px;
+    }
+
+    .rs-about .about-types__head {
+        padding: 19px;
+    }
+
+    .rs-about .about-types__list {
+        padding-left: 19px;
+    }
+
+    .rs-about .about-types__list li a {
+        padding-right: 19px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .rs-about .about-types__list li a h4 {
+        font-size: 13px;
+    }
+
+    .rs-about .about-types__list li a .btn-link {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-about {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .rs-about__container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .rs-about .about-types__title {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .rs-about .about-types__title h6 {
+        -ms-flex-order: 2;
+        order: 2;
+        margin-top: 17px;
+    }
+}
