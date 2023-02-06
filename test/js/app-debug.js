@@ -7653,6 +7653,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
   }
 
   function animatePage() {
+    IntersectionObserver.prototype.POLL_INTERVAL = 100; // Time in milliseconds.
+
+    IntersectionObserver.prototype.USE_MUTATION_OBSERVER = false; // Globally
+
     var pageObserver = new IntersectionObserver(animateElement, {
       root: null,
       threshold: [0.3]
