@@ -246,6 +246,104 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     }
   };
 
+  var phoneInputs = document.querySelectorAll('input[data-tel-input]');
+
+  function getInputNumbersValue(input) {
+    return input.value.replace(/\D/g, '');
+  }
+
+  function onPhoneInput(event) {
+    var input = event.target;
+    var inputNumbersValue = getInputNumbersValue(input);
+    var formatedInputValue = '';
+    var selectionStart = input.selectionStart;
+
+    if (!inputNumbersValue) {
+      return input.value = '';
+    }
+
+    if (input.value.length != selectionStart) {
+      if (event.data && /\D/g.test(event.data)) {
+        input.value = inputNumbersValue;
+      }
+
+      return;
+    }
+
+    if (['7', '8', '9'].indexOf(inputNumbersValue[0]) > -1) {
+      //Russian phone number
+      if (inputNumbersValue[0] == '9') inputNumbersValue = '7' + inputNumbersValue;
+      var firstSymbols = inputNumbersValue[0] == '8' ? '8' : '+7';
+      formatedInputValue = firstSymbols + ' ';
+
+      if (inputNumbersValue.length > 1) {
+        formatedInputValue += '(' + inputNumbersValue.substring(1, 4);
+      }
+
+      if (inputNumbersValue.length >= 5) {
+        formatedInputValue += ') ' + inputNumbersValue.substring(4, 7);
+      }
+
+      if (inputNumbersValue.length >= 8) {
+        formatedInputValue += '-' + inputNumbersValue.substring(7, 9);
+      }
+
+      if (inputNumbersValue.length >= 10) {
+        formatedInputValue += '-' + inputNumbersValue.substring(9, 11);
+      }
+    } else {
+      //Not Russian phone number
+      formatedInputValue = '+' + inputNumbersValue;
+    }
+
+    input.value = formatedInputValue;
+  }
+
+  function onPhoneKeyDown(event) {
+    var input = event.target;
+
+    if (event.keyCode == 8 && getInputNumbersValue(input).length == 1) {
+      input.value = '';
+    }
+  }
+
+  function onPhonePaste(event) {
+    var pasted = event.clipboardData || window.clipboardData;
+    var input = event.target;
+    var inputNumbersValue = getInputNumbersValue(input);
+
+    if (pasted) {
+      var pastedText = pasted.getData('Text');
+
+      if (/\D/g.test(pastedText)) {
+        input.value = inputNumbersValue;
+      }
+    }
+  }
+
+  for (var i = 0; i < phoneInputs.length; i++) {
+    var input = phoneInputs[i];
+    input.oninput = onPhoneInput;
+    input.onkeydown = onPhoneKeyDown;
+    input.onpaste = onPhonePaste; // input.addEventListener('input', onPhoneInput);
+    // input.addEventListener('keydown', onPhoneKeyDown);
+    // input.addEventListener('paste', onPhonePaste);
+  } //scroll to top
+
+
+  $('#scroll-top').on('click', function (e) {
+    e.preventDefault();
+    $('html,body').animate({
+      scrollTop: 0
+    }, 700);
+  }); // document.addEventListener('scroll', function() {
+  //   if (window.pageYOffset > 300) {
+  //     $('#scroll-top').addClass('is-active')
+  //   } else {
+  //     $('#scroll-top').removeClass('is-active')
+  //   }
+  // });
+
   function mainClickActions() {
     document.addEventListener('click', clickActions);
   }
@@ -560,8 +658,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   function arrayUnique(arr) {
     var uniqueArray = [];
 
-    for (var i = 0; i < arr.length; i += 1) {
-      if (uniqueArray.indexOf(arr[i]) === -1) uniqueArray.push(arr[i]);
+    for (var _i = 0; _i < arr.length; _i += 1) {
+      if (uniqueArray.indexOf(arr[_i]) === -1) uniqueArray.push(arr[_i]);
     }
 
     return uniqueArray;
@@ -576,14 +674,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var a = [];
     var res = context.querySelectorAll(selector);
 
-    for (var i = 0; i < res.length; i += 1) {
-      a.push(res[i]);
+    for (var _i2 = 0; _i2 < res.length; _i2 += 1) {
+      a.push(res[_i2]);
     }
 
     return a;
   }
 
-  function $(selector, context) {
+  function $$1(selector, context) {
     var window = getWindow();
     var document = getDocument();
     var arr = [];
@@ -609,8 +707,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var tempParent = document.createElement(toCreate);
         tempParent.innerHTML = _html;
 
-        for (var i = 0; i < tempParent.childNodes.length; i += 1) {
-          arr.push(tempParent.childNodes[i]);
+        for (var _i3 = 0; _i3 < tempParent.childNodes.length; _i3 += 1) {
+          arr.push(tempParent.childNodes[_i3]);
         }
       } else {
         arr = qsa(selector.trim(), context || document);
@@ -626,7 +724,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return new Dom7(arrayUnique(arr));
   }
 
-  $.fn = Dom7.prototype; // eslint-disable-next-line
+  $$1.fn = Dom7.prototype; // eslint-disable-next-line
 
   function addClass() {
     for (var _len3 = arguments.length, classes = new Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
@@ -698,15 +796,16 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     } // Set attrs
 
 
-    for (var i = 0; i < this.length; i += 1) {
+    for (var _i4 = 0; _i4 < this.length; _i4 += 1) {
       if (arguments.length === 2) {
         // String
-        this[i].setAttribute(attrs, value);
+        this[_i4].setAttribute(attrs, value);
       } else {
         // Object
         for (var attrName in attrs) {
-          this[i][attrName] = attrs[attrName];
-          this[i].setAttribute(attrName, attrs[attrName]);
+          this[_i4][attrName] = attrs[attrName];
+
+          this[_i4].setAttribute(attrName, attrs[attrName]);
         }
       }
     }
@@ -715,24 +814,24 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   }
 
   function removeAttr(attr) {
-    for (var i = 0; i < this.length; i += 1) {
-      this[i].removeAttribute(attr);
+    for (var _i5 = 0; _i5 < this.length; _i5 += 1) {
+      this[_i5].removeAttribute(attr);
     }
 
     return this;
   }
 
   function transform(transform) {
-    for (var i = 0; i < this.length; i += 1) {
-      this[i].style.transform = transform;
+    for (var _i6 = 0; _i6 < this.length; _i6 += 1) {
+      this[_i6].style.transform = transform;
     }
 
     return this;
   }
 
   function transition$1(duration) {
-    for (var i = 0; i < this.length; i += 1) {
-      this[i].style.transitionDuration = typeof duration !== 'string' ? "".concat(duration, "ms") : duration;
+    for (var _i7 = 0; _i7 < this.length; _i7 += 1) {
+      this[_i7].style.transitionDuration = typeof duration !== 'string' ? "".concat(duration, "ms") : duration;
     }
 
     return this;
@@ -766,12 +865,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         eventData.unshift(e);
       }
 
-      if ($(target).is(targetSelector)) listener.apply(target, eventData);else {
-        var _parents = $(target).parents(); // eslint-disable-line
+      if ($$1(target).is(targetSelector)) listener.apply(target, eventData);else {
+        var _parents = $$1(target).parents(); // eslint-disable-line
 
 
         for (var k = 0; k < _parents.length; k += 1) {
-          if ($(_parents[k]).is(targetSelector)) listener.apply(_parents[k], eventData);
+          if ($$1(_parents[k]).is(targetSelector)) listener.apply(_parents[k], eventData);
         }
       }
     }
@@ -789,8 +888,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var events = eventType.split(' ');
     var j;
 
-    for (var i = 0; i < this.length; i += 1) {
-      var el = this[i];
+    for (var _i8 = 0; _i8 < this.length; _i8 += 1) {
+      var el = this[_i8];
 
       if (!targetSelector) {
         for (j = 0; j < events.length; j += 1) {
@@ -843,8 +942,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     if (!capture) capture = false;
     var events = eventType.split(' ');
 
-    for (var i = 0; i < events.length; i += 1) {
-      var event = events[i];
+    for (var _i9 = 0; _i9 < events.length; _i9 += 1) {
+      var event = events[_i9];
 
       for (var j = 0; j < this.length; j += 1) {
         var el = this[j];
@@ -888,8 +987,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var events = args[0].split(' ');
     var eventData = args[1];
 
-    for (var i = 0; i < events.length; i += 1) {
-      var event = events[i];
+    for (var _i10 = 0; _i10 < events.length; _i10 += 1) {
+      var event = events[_i10];
 
       for (var j = 0; j < this.length; j += 1) {
         var el = this[j];
@@ -957,7 +1056,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return null;
   }
 
-  function offset() {
+  function offset$1() {
     if (this.length > 0) {
       var _window = getWindow();
 
@@ -1027,7 +1126,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
   function filter(callback) {
     var result = arrayFilter(this, callback);
-    return $(result);
+    return $$1(result);
   }
 
   function html(html) {
@@ -1035,8 +1134,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       return this[0] ? this[0].innerHTML : null;
     }
 
-    for (var i = 0; i < this.length; i += 1) {
-      this[i].innerHTML = html;
+    for (var _i11 = 0; _i11 < this.length; _i11 += 1) {
+      this[_i11].innerHTML = html;
     }
 
     return this;
@@ -1047,8 +1146,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       return this[0] ? this[0].textContent.trim() : null;
     }
 
-    for (var i = 0; i < this.length; i += 1) {
-      this[i].textContent = text;
+    for (var _i12 = 0; _i12 < this.length; _i12 += 1) {
+      this[_i12].textContent = text;
     }
 
     return this;
@@ -1066,7 +1165,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       if (el.matches) return el.matches(selector);
       if (el.webkitMatchesSelector) return el.webkitMatchesSelector(selector);
       if (el.msMatchesSelector) return el.msMatchesSelector(selector);
-      compareWith = $(selector);
+      compareWith = $$1(selector);
 
       for (i = 0; i < compareWith.length; i += 1) {
         if (compareWith[i] === el) return true;
@@ -1118,16 +1217,16 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var length = this.length;
 
     if (index > length - 1) {
-      return $([]);
+      return $$1([]);
     }
 
     if (index < 0) {
       var returnIndex = length + index;
-      if (returnIndex < 0) return $([]);
-      return $([this[returnIndex]]);
+      if (returnIndex < 0) return $$1([]);
+      return $$1([this[returnIndex]]);
     }
 
-    return $([this[index]]);
+    return $$1([this[index]]);
   }
 
   function append() {
@@ -1137,20 +1236,20 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     for (var k = 0; k < arguments.length; k += 1) {
       newChild = k < 0 || arguments.length <= k ? undefined : arguments[k];
 
-      for (var i = 0; i < this.length; i += 1) {
+      for (var _i13 = 0; _i13 < this.length; _i13 += 1) {
         if (typeof newChild === 'string') {
           var tempDiv = document.createElement('div');
           tempDiv.innerHTML = newChild;
 
           while (tempDiv.firstChild) {
-            this[i].appendChild(tempDiv.firstChild);
+            this[_i13].appendChild(tempDiv.firstChild);
           }
         } else if (newChild instanceof Dom7) {
           for (var j = 0; j < newChild.length; j += 1) {
-            this[i].appendChild(newChild[j]);
+            this[_i13].appendChild(newChild[j]);
           }
         } else {
-          this[i].appendChild(newChild);
+          this[_i13].appendChild(newChild);
         }
       }
     }
@@ -1186,36 +1285,36 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   function next(selector) {
     if (this.length > 0) {
       if (selector) {
-        if (this[0].nextElementSibling && $(this[0].nextElementSibling).is(selector)) {
-          return $([this[0].nextElementSibling]);
+        if (this[0].nextElementSibling && $$1(this[0].nextElementSibling).is(selector)) {
+          return $$1([this[0].nextElementSibling]);
         }
 
-        return $([]);
+        return $$1([]);
       }
 
-      if (this[0].nextElementSibling) return $([this[0].nextElementSibling]);
-      return $([]);
+      if (this[0].nextElementSibling) return $$1([this[0].nextElementSibling]);
+      return $$1([]);
     }
 
-    return $([]);
+    return $$1([]);
   }
 
   function nextAll(selector) {
     var nextEls = [];
     var el = this[0];
-    if (!el) return $([]);
+    if (!el) return $$1([]);
 
     while (el.nextElementSibling) {
       var _next = el.nextElementSibling; // eslint-disable-line
 
       if (selector) {
-        if ($(_next).is(selector)) nextEls.push(_next);
+        if ($$1(_next).is(selector)) nextEls.push(_next);
       } else nextEls.push(_next);
 
       el = _next;
     }
 
-    return $(nextEls);
+    return $$1(nextEls);
   }
 
   function prev(selector) {
@@ -1223,63 +1322,63 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var el = this[0];
 
       if (selector) {
-        if (el.previousElementSibling && $(el.previousElementSibling).is(selector)) {
-          return $([el.previousElementSibling]);
+        if (el.previousElementSibling && $$1(el.previousElementSibling).is(selector)) {
+          return $$1([el.previousElementSibling]);
         }
 
-        return $([]);
+        return $$1([]);
       }
 
-      if (el.previousElementSibling) return $([el.previousElementSibling]);
-      return $([]);
+      if (el.previousElementSibling) return $$1([el.previousElementSibling]);
+      return $$1([]);
     }
 
-    return $([]);
+    return $$1([]);
   }
 
   function prevAll(selector) {
     var prevEls = [];
     var el = this[0];
-    if (!el) return $([]);
+    if (!el) return $$1([]);
 
     while (el.previousElementSibling) {
       var _prev = el.previousElementSibling; // eslint-disable-line
 
       if (selector) {
-        if ($(_prev).is(selector)) prevEls.push(_prev);
+        if ($$1(_prev).is(selector)) prevEls.push(_prev);
       } else prevEls.push(_prev);
 
       el = _prev;
     }
 
-    return $(prevEls);
+    return $$1(prevEls);
   }
 
   function parent(selector) {
     var parents = []; // eslint-disable-line
 
-    for (var i = 0; i < this.length; i += 1) {
-      if (this[i].parentNode !== null) {
+    for (var _i14 = 0; _i14 < this.length; _i14 += 1) {
+      if (this[_i14].parentNode !== null) {
         if (selector) {
-          if ($(this[i].parentNode).is(selector)) parents.push(this[i].parentNode);
+          if ($$1(this[_i14].parentNode).is(selector)) parents.push(this[_i14].parentNode);
         } else {
-          parents.push(this[i].parentNode);
+          parents.push(this[_i14].parentNode);
         }
       }
     }
 
-    return $(parents);
+    return $$1(parents);
   }
 
   function parents(selector) {
     var parents = []; // eslint-disable-line
 
-    for (var i = 0; i < this.length; i += 1) {
-      var _parent = this[i].parentNode; // eslint-disable-line
+    for (var _i15 = 0; _i15 < this.length; _i15 += 1) {
+      var _parent = this[_i15].parentNode; // eslint-disable-line
 
       while (_parent) {
         if (selector) {
-          if ($(_parent).is(selector)) parents.push(_parent);
+          if ($$1(_parent).is(selector)) parents.push(_parent);
         } else {
           parents.push(_parent);
         }
@@ -1288,14 +1387,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }
     }
 
-    return $(parents);
+    return $$1(parents);
   }
 
   function closest(selector) {
     var closest = this; // eslint-disable-line
 
     if (typeof selector === 'undefined') {
-      return $([]);
+      return $$1([]);
     }
 
     if (!closest.is(selector)) {
@@ -1308,36 +1407,36 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   function find(selector) {
     var foundElements = [];
 
-    for (var i = 0; i < this.length; i += 1) {
-      var found = this[i].querySelectorAll(selector);
+    for (var _i16 = 0; _i16 < this.length; _i16 += 1) {
+      var found = this[_i16].querySelectorAll(selector);
 
       for (var j = 0; j < found.length; j += 1) {
         foundElements.push(found[j]);
       }
     }
 
-    return $(foundElements);
+    return $$1(foundElements);
   }
 
   function children(selector) {
     var children = []; // eslint-disable-line
 
-    for (var i = 0; i < this.length; i += 1) {
-      var childNodes = this[i].children;
+    for (var _i17 = 0; _i17 < this.length; _i17 += 1) {
+      var childNodes = this[_i17].children;
 
       for (var j = 0; j < childNodes.length; j += 1) {
-        if (!selector || $(childNodes[j]).is(selector)) {
+        if (!selector || $$1(childNodes[j]).is(selector)) {
           children.push(childNodes[j]);
         }
       }
     }
 
-    return $(children);
+    return $$1(children);
   }
 
   function remove() {
-    for (var i = 0; i < this.length; i += 1) {
-      if (this[i].parentNode) this[i].parentNode.removeChild(this[i]);
+    for (var _i18 = 0; _i18 < this.length; _i18 += 1) {
+      if (this[_i18].parentNode) this[_i18].parentNode.removeChild(this[_i18]);
     }
 
     return this;
@@ -1359,7 +1458,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     outerWidth: outerWidth,
     outerHeight: outerHeight,
     styles: styles,
-    offset: offset,
+    offset: offset$1,
     css: css,
     each: each,
     html: html,
@@ -1382,7 +1481,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     remove: remove
   };
   Object.keys(Methods).forEach(function (methodName) {
-    Object.defineProperty($.fn, methodName, {
+    Object.defineProperty($$1.fn, methodName, {
       value: Methods[methodName],
       writable: true
     });
@@ -1496,8 +1595,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var to = Object(arguments.length <= 0 ? undefined : arguments[0]);
     var noExtend = ['__proto__', 'constructor', 'prototype'];
 
-    for (var i = 1; i < arguments.length; i += 1) {
-      var nextSource = i < 0 || arguments.length <= i ? undefined : arguments[i];
+    for (var _i19 = 1; _i19 < arguments.length; _i19 += 1) {
+      var nextSource = _i19 < 0 || arguments.length <= _i19 ? undefined : arguments[_i19];
 
       if (nextSource !== undefined && nextSource !== null && !isNode(nextSource)) {
         var keysArray = Object.keys(Object(nextSource)).filter(function (key) {
@@ -1828,8 +1927,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       if (swiper.params.observeParents) {
         var containerParents = swiper.$el.parents();
 
-        for (var i = 0; i < containerParents.length; i += 1) {
-          attach(containerParents[i]);
+        for (var _i20 = 0; _i20 < containerParents.length; _i20 += 1) {
+          attach(containerParents[_i20]);
         }
       } // Observe container
 
@@ -2104,20 +2203,20 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       return typeof params.breakpoints[key].slidesPerView !== 'undefined';
     }).length > 0;
 
-    for (var i = 0; i < slidesLength; i += 1) {
+    for (var _i21 = 0; _i21 < slidesLength; _i21 += 1) {
       slideSize = 0;
 
-      var _slide = slides.eq(i);
+      var _slide = slides.eq(_i21);
 
       if (gridEnabled) {
-        swiper.grid.updateSlide(i, _slide, slidesLength, getDirectionLabel);
+        swiper.grid.updateSlide(_i21, _slide, slidesLength, getDirectionLabel);
       }
 
       if (_slide.css('display') === 'none') continue; // eslint-disable-line
 
       if (params.slidesPerView === 'auto') {
         if (shouldResetSlideSize) {
-          slides[i].style[getDirectionLabel('width')] = "";
+          slides[_i21].style[getDirectionLabel('width')] = "";
         }
 
         var slideStyles = getComputedStyle(_slide[0]);
@@ -2166,21 +2265,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         slideSize = (swiperSize - (params.slidesPerView - 1) * spaceBetween) / params.slidesPerView;
         if (params.roundLengths) slideSize = Math.floor(slideSize);
 
-        if (slides[i]) {
-          slides[i].style[getDirectionLabel('width')] = "".concat(slideSize, "px");
+        if (slides[_i21]) {
+          slides[_i21].style[getDirectionLabel('width')] = "".concat(slideSize, "px");
         }
       }
 
-      if (slides[i]) {
-        slides[i].swiperSlideSize = slideSize;
+      if (slides[_i21]) {
+        slides[_i21].swiperSlideSize = slideSize;
       }
 
       slidesSizesGrid.push(slideSize);
 
       if (params.centeredSlides) {
         slidePosition = slidePosition + slideSize / 2 + prevSlideSize / 2 + spaceBetween;
-        if (prevSlideSize === 0 && i !== 0) slidePosition = slidePosition - swiperSize / 2 - spaceBetween;
-        if (i === 0) slidePosition = slidePosition - swiperSize / 2 - spaceBetween;
+        if (prevSlideSize === 0 && _i21 !== 0) slidePosition = slidePosition - swiperSize / 2 - spaceBetween;
+        if (_i21 === 0) slidePosition = slidePosition - swiperSize / 2 - spaceBetween;
         if (Math.abs(slidePosition) < 1 / 1000) slidePosition = 0;
         if (params.roundLengths) slidePosition = Math.floor(slidePosition);
         if (index % params.slidesPerGroup === 0) snapGrid.push(slidePosition);
@@ -2217,11 +2316,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     if (!params.centeredSlides) {
       var newSlidesGrid = [];
 
-      for (var _i = 0; _i < snapGrid.length; _i += 1) {
-        var slidesGridItem = snapGrid[_i];
+      for (var _i22 = 0; _i22 < snapGrid.length; _i22 += 1) {
+        var slidesGridItem = snapGrid[_i22];
         if (params.roundLengths) slidesGridItem = Math.floor(slidesGridItem);
 
-        if (snapGrid[_i] <= swiper.virtualSize - swiperSize) {
+        if (snapGrid[_i22] <= swiper.virtualSize - swiperSize) {
           newSlidesGrid.push(slidesGridItem);
         }
       }
@@ -2355,7 +2454,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
     if (swiper.params.slidesPerView !== 'auto' && swiper.params.slidesPerView > 1) {
       if (swiper.params.centeredSlides) {
-        (swiper.visibleSlides || $([])).each(function (slide) {
+        (swiper.visibleSlides || $$1([])).each(function (slide) {
           activeSlides.push(slide);
         });
       } else {
@@ -2386,8 +2485,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var swiper = this;
     var slides = swiper.slides;
 
-    for (var i = 0; i < slides.length; i += 1) {
-      slides[i].swiperSlideOffset = swiper.isHorizontal() ? slides[i].offsetLeft : slides[i].offsetTop;
+    for (var _i23 = 0; _i23 < slides.length; _i23 += 1) {
+      slides[_i23].swiperSlideOffset = swiper.isHorizontal() ? slides[_i23].offsetLeft : slides[_i23].offsetTop;
     }
   }
 
@@ -2410,8 +2509,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     swiper.visibleSlidesIndexes = [];
     swiper.visibleSlides = [];
 
-    for (var i = 0; i < slides.length; i += 1) {
-      var _slide2 = slides[i];
+    for (var _i24 = 0; _i24 < slides.length; _i24 += 1) {
+      var _slide2 = slides[_i24];
       var slideOffset = _slide2.swiperSlideOffset;
 
       if (params.cssMode && params.centeredSlides) {
@@ -2421,20 +2520,20 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var slideProgress = (offsetCenter + (params.centeredSlides ? swiper.minTranslate() : 0) - slideOffset) / (_slide2.swiperSlideSize + params.spaceBetween);
       var originalSlideProgress = (offsetCenter - snapGrid[0] + (params.centeredSlides ? swiper.minTranslate() : 0) - slideOffset) / (_slide2.swiperSlideSize + params.spaceBetween);
       var slideBefore = -(offsetCenter - slideOffset);
-      var slideAfter = slideBefore + swiper.slidesSizesGrid[i];
+      var slideAfter = slideBefore + swiper.slidesSizesGrid[_i24];
       var isVisible = slideBefore >= 0 && slideBefore < swiper.size - 1 || slideAfter > 1 && slideAfter <= swiper.size || slideBefore <= 0 && slideAfter >= swiper.size;
 
       if (isVisible) {
         swiper.visibleSlides.push(_slide2);
-        swiper.visibleSlidesIndexes.push(i);
-        slides.eq(i).addClass(params.slideVisibleClass);
+        swiper.visibleSlidesIndexes.push(_i24);
+        slides.eq(_i24).addClass(params.slideVisibleClass);
       }
 
       _slide2.progress = rtl ? -slideProgress : slideProgress;
       _slide2.originalProgress = rtl ? -originalSlideProgress : originalSlideProgress;
     }
 
-    swiper.visibleSlides = $(swiper.visibleSlides);
+    swiper.visibleSlides = $$1(swiper.visibleSlides);
   }
 
   function updateProgress(translate) {
@@ -2562,15 +2661,15 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var snapIndex;
 
     if (typeof activeIndex === 'undefined') {
-      for (var i = 0; i < slidesGrid.length; i += 1) {
-        if (typeof slidesGrid[i + 1] !== 'undefined') {
-          if (translate >= slidesGrid[i] && translate < slidesGrid[i + 1] - (slidesGrid[i + 1] - slidesGrid[i]) / 2) {
-            activeIndex = i;
-          } else if (translate >= slidesGrid[i] && translate < slidesGrid[i + 1]) {
-            activeIndex = i + 1;
+      for (var _i25 = 0; _i25 < slidesGrid.length; _i25 += 1) {
+        if (typeof slidesGrid[_i25 + 1] !== 'undefined') {
+          if (translate >= slidesGrid[_i25] && translate < slidesGrid[_i25 + 1] - (slidesGrid[_i25 + 1] - slidesGrid[_i25]) / 2) {
+            activeIndex = _i25;
+          } else if (translate >= slidesGrid[_i25] && translate < slidesGrid[_i25 + 1]) {
+            activeIndex = _i25 + 1;
           }
-        } else if (translate >= slidesGrid[i]) {
-          activeIndex = i;
+        } else if (translate >= slidesGrid[_i25]) {
+          activeIndex = _i25;
         }
       } // Normalize slideIndex
 
@@ -2621,15 +2720,15 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   function updateClickedSlide(e) {
     var swiper = this;
     var params = swiper.params;
-    var slide = $(e).closest(".".concat(params.slideClass))[0];
+    var slide = $$1(e).closest(".".concat(params.slideClass))[0];
     var slideFound = false;
     var slideIndex;
 
     if (slide) {
-      for (var i = 0; i < swiper.slides.length; i += 1) {
-        if (swiper.slides[i] === slide) {
+      for (var _i26 = 0; _i26 < swiper.slides.length; _i26 += 1) {
+        if (swiper.slides[_i26] === slide) {
           slideFound = true;
-          slideIndex = i;
+          slideIndex = _i26;
           break;
         }
       }
@@ -2639,7 +2738,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       swiper.clickedSlide = slide;
 
       if (swiper.virtual && swiper.params.virtual.enabled) {
-        swiper.clickedIndex = parseInt($(slide).attr('data-swiper-slide-index'), 10);
+        swiper.clickedIndex = parseInt($$1(slide).attr('data-swiper-slide-index'), 10);
       } else {
         swiper.clickedIndex = slideIndex;
       }
@@ -3006,19 +3105,19 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     swiper.updateProgress(translate); // Normalize slideIndex
 
     if (params.normalizeSlideIndex) {
-      for (var i = 0; i < slidesGrid.length; i += 1) {
+      for (var _i27 = 0; _i27 < slidesGrid.length; _i27 += 1) {
         var normalizedTranslate = -Math.floor(translate * 100);
-        var normalizedGrid = Math.floor(slidesGrid[i] * 100);
-        var normalizedGridNext = Math.floor(slidesGrid[i + 1] * 100);
+        var normalizedGrid = Math.floor(slidesGrid[_i27] * 100);
+        var normalizedGridNext = Math.floor(slidesGrid[_i27 + 1] * 100);
 
-        if (typeof slidesGrid[i + 1] !== 'undefined') {
+        if (typeof slidesGrid[_i27 + 1] !== 'undefined') {
           if (normalizedTranslate >= normalizedGrid && normalizedTranslate < normalizedGridNext - (normalizedGridNext - normalizedGrid) / 2) {
-            slideIndex = i;
+            slideIndex = _i27;
           } else if (normalizedTranslate >= normalizedGrid && normalizedTranslate < normalizedGridNext) {
-            slideIndex = i + 1;
+            slideIndex = _i27 + 1;
           }
         } else if (normalizedTranslate >= normalizedGrid) {
-          slideIndex = i;
+          slideIndex = _i27;
         }
       }
     } // Directions locks
@@ -3356,7 +3455,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
     if (params.loop) {
       if (swiper.animating) return;
-      realIndex = parseInt($(swiper.clickedSlide).attr('data-swiper-slide-index'), 10);
+      realIndex = parseInt($$1(swiper.clickedSlide).attr('data-swiper-slide-index'), 10);
 
       if (params.centeredSlides) {
         if (slideToIndex < swiper.loopedSlides - slidesPerView / 2 || slideToIndex > swiper.slides.length - swiper.loopedSlides + slidesPerView / 2) {
@@ -3398,7 +3497,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var params = swiper.params,
         $wrapperEl = swiper.$wrapperEl; // Remove duplicated slides
 
-    var $selector = $wrapperEl.children().length > 0 ? $($wrapperEl.children()[0].parentNode) : $wrapperEl;
+    var $selector = $wrapperEl.children().length > 0 ? $$1($wrapperEl.children()[0].parentNode) : $wrapperEl;
     $selector.children(".".concat(params.slideClass, ".").concat(params.slideDuplicateClass)).remove();
     var slides = $selector.children(".".concat(params.slideClass));
 
@@ -3406,8 +3505,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var blankSlidesNum = params.slidesPerGroup - slides.length % params.slidesPerGroup;
 
       if (blankSlidesNum !== params.slidesPerGroup) {
-        for (var i = 0; i < blankSlidesNum; i += 1) {
-          var blankNode = $(document.createElement('div')).addClass("".concat(params.slideClass, " ").concat(params.slideBlankClass));
+        for (var _i28 = 0; _i28 < blankSlidesNum; _i28 += 1) {
+          var blankNode = $$1(document.createElement('div')).addClass("".concat(params.slideClass, " ").concat(params.slideBlankClass));
           $selector.append(blankNode);
         }
 
@@ -3426,7 +3525,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var prependSlides = [];
     var appendSlides = [];
     slides.each(function (el, index) {
-      var slide = $(el);
+      var slide = $$1(el);
 
       if (index < swiper.loopedSlides) {
         appendSlides.push(el);
@@ -3439,12 +3538,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       slide.attr('data-swiper-slide-index', index);
     });
 
-    for (var _i2 = 0; _i2 < appendSlides.length; _i2 += 1) {
-      $selector.append($(appendSlides[_i2].cloneNode(true)).addClass(params.slideDuplicateClass));
+    for (var _i29 = 0; _i29 < appendSlides.length; _i29 += 1) {
+      $selector.append($$1(appendSlides[_i29].cloneNode(true)).addClass(params.slideDuplicateClass));
     }
 
-    for (var _i3 = prependSlides.length - 1; _i3 >= 0; _i3 -= 1) {
-      $selector.prepend($(prependSlides[_i3].cloneNode(true)).addClass(params.slideDuplicateClass));
+    for (var _i30 = prependSlides.length - 1; _i30 >= 0; _i30 -= 1) {
+      $selector.prepend($$1(prependSlides[_i30].cloneNode(true)).addClass(params.slideDuplicateClass));
     }
   }
 
@@ -3567,7 +3666,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
     var e = event;
     if (e.originalEvent) e = e.originalEvent;
-    var $targetEl = $(e.target);
+    var $targetEl = $$1(e.target);
 
     if (params.touchEventsTarget === 'wrapper') {
       if (!$targetEl.closest(swiper.wrapperEl).length) return;
@@ -3581,7 +3680,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var swipingClassHasValue = !!params.noSwipingClass && params.noSwipingClass !== '';
 
     if (swipingClassHasValue && e.target && e.target.shadowRoot && event.path && event.path[0]) {
-      $targetEl = $(event.path[0]);
+      $targetEl = $$1(event.path[0]);
     }
 
     var noSwipingSelector = params.noSwipingSelector ? params.noSwipingSelector : ".".concat(params.noSwipingClass);
@@ -3638,7 +3737,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         }
       }
 
-      if (document.activeElement && $(document.activeElement).is(data.focusableElements) && document.activeElement !== $targetEl[0]) {
+      if (document.activeElement && $$1(document.activeElement).is(data.focusableElements) && document.activeElement !== $targetEl[0]) {
         document.activeElement.blur();
       }
 
@@ -3688,7 +3787,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     }
 
     if (!swiper.allowTouchMove) {
-      if (!$(e.target).is(data.focusableElements)) {
+      if (!$$1(e.target).is(data.focusableElements)) {
         swiper.allowClick = false;
       }
 
@@ -3719,7 +3818,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     }
 
     if (data.isTouchEvent && document.activeElement) {
-      if (e.target === document.activeElement && $(e.target).is(data.focusableElements)) {
+      if (e.target === document.activeElement && $$1(e.target).is(data.focusableElements)) {
         data.isMoved = true;
         swiper.allowClick = false;
         return;
@@ -3960,16 +4059,16 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var stopIndex = 0;
     var groupSize = swiper.slidesSizesGrid[0];
 
-    for (var i = 0; i < slidesGrid.length; i += i < params.slidesPerGroupSkip ? 1 : params.slidesPerGroup) {
-      var _increment = i < params.slidesPerGroupSkip - 1 ? 1 : params.slidesPerGroup;
+    for (var _i31 = 0; _i31 < slidesGrid.length; _i31 += _i31 < params.slidesPerGroupSkip ? 1 : params.slidesPerGroup) {
+      var _increment = _i31 < params.slidesPerGroupSkip - 1 ? 1 : params.slidesPerGroup;
 
-      if (typeof slidesGrid[i + _increment] !== 'undefined') {
-        if (currentPos >= slidesGrid[i] && currentPos < slidesGrid[i + _increment]) {
-          stopIndex = i;
-          groupSize = slidesGrid[i + _increment] - slidesGrid[i];
+      if (typeof slidesGrid[_i31 + _increment] !== 'undefined') {
+        if (currentPos >= slidesGrid[_i31] && currentPos < slidesGrid[_i31 + _increment]) {
+          stopIndex = _i31;
+          groupSize = slidesGrid[_i31 + _increment] - slidesGrid[_i31];
         }
-      } else if (currentPos >= slidesGrid[i]) {
-        stopIndex = i;
+      } else if (currentPos >= slidesGrid[_i31]) {
+        stopIndex = _i31;
         groupSize = slidesGrid[slidesGrid.length - 1] - slidesGrid[slidesGrid.length - 2];
       }
     }
@@ -4320,10 +4419,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       return parseInt(a.value, 10) - parseInt(b.value, 10);
     });
 
-    for (var i = 0; i < points.length; i += 1) {
-      var _points$i = points[i],
-          point = _points$i.point,
-          value = _points$i.value;
+    for (var _i32 = 0; _i32 < points.length; _i32 += 1) {
+      var _points$_i = points[_i32],
+          point = _points$_i.point,
+          value = _points$_i.value;
 
       if (base === 'window') {
         if (window.matchMedia("(min-width: ".concat(value, "px)")).matches) {
@@ -4416,7 +4515,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       if (callback) callback();
     }
 
-    var isPicture = $(imageEl).parent('picture')[0];
+    var isPicture = $$1(imageEl).parent('picture')[0];
 
     if (!isPicture && (!imageEl.complete || !checkForComplete)) {
       if (src) {
@@ -4458,8 +4557,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }
     }
 
-    for (var i = 0; i < swiper.imagesToLoad.length; i += 1) {
-      var imageEl = swiper.imagesToLoad[i];
+    for (var _i33 = 0; _i33 < swiper.imagesToLoad.length; _i33 += 1) {
+      var imageEl = swiper.imagesToLoad[_i33];
       swiper.loadImage(imageEl, imageEl.currentSrc || imageEl.getAttribute('src'), imageEl.srcset || imageEl.getAttribute('srcset'), imageEl.sizes || imageEl.getAttribute('sizes'), true, onReady);
     }
   }
@@ -4709,9 +4808,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       params = extend({}, params);
       if (el && !params.el) params.el = el;
 
-      if (params.el && $(params.el).length > 1) {
+      if (params.el && $$1(params.el).length > 1) {
         var swipers = [];
-        $(params.el).each(function (containerEl) {
+        $$1(params.el).each(function (containerEl) {
           var newParams = extend({}, params, {
             el: containerEl
           });
@@ -4767,7 +4866,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       } // Save Dom lib
 
 
-      swiper.$ = $; // Extend Swiper
+      swiper.$ = $$1; // Extend Swiper
 
       Object.assign(swiper, {
         enabled: swiper.params.enabled,
@@ -4775,7 +4874,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         // Classes
         classNames: [],
         // Slides
-        slides: $(),
+        slides: $$1(),
         slidesGrid: [],
         snapGrid: [],
         slidesSizesGrid: [],
@@ -4960,17 +5059,17 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           var slideSize = slides[activeIndex].swiperSlideSize;
           var breakLoop;
 
-          for (var i = activeIndex + 1; i < slides.length; i += 1) {
-            if (slides[i] && !breakLoop) {
-              slideSize += slides[i].swiperSlideSize;
+          for (var _i34 = activeIndex + 1; _i34 < slides.length; _i34 += 1) {
+            if (slides[_i34] && !breakLoop) {
+              slideSize += slides[_i34].swiperSlideSize;
               spv += 1;
               if (slideSize > swiperSize) breakLoop = true;
             }
           }
 
-          for (var _i4 = activeIndex - 1; _i4 >= 0; _i4 -= 1) {
-            if (slides[_i4] && !breakLoop) {
-              slideSize += slides[_i4].swiperSlideSize;
+          for (var _i35 = activeIndex - 1; _i35 >= 0; _i35 -= 1) {
+            if (slides[_i35] && !breakLoop) {
+              slideSize += slides[_i35].swiperSlideSize;
               spv += 1;
               if (slideSize > swiperSize) breakLoop = true;
             }
@@ -4978,8 +5077,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         } else {
           // eslint-disable-next-line
           if (view === 'current') {
-            for (var _i5 = activeIndex + 1; _i5 < slides.length; _i5 += 1) {
-              var slideInView = exact ? slidesGrid[_i5] + slidesSizesGrid[_i5] - slidesGrid[activeIndex] < swiperSize : slidesGrid[_i5] - slidesGrid[activeIndex] < swiperSize;
+            for (var _i36 = activeIndex + 1; _i36 < slides.length; _i36 += 1) {
+              var slideInView = exact ? slidesGrid[_i36] + slidesSizesGrid[_i36] - slidesGrid[activeIndex] < swiperSize : slidesGrid[_i36] - slidesGrid[activeIndex] < swiperSize;
 
               if (slideInView) {
                 spv += 1;
@@ -4987,8 +5086,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
             }
           } else {
             // previous
-            for (var _i6 = activeIndex - 1; _i6 >= 0; _i6 -= 1) {
-              var _slideInView = slidesGrid[activeIndex] - slidesGrid[_i6] < swiperSize;
+            for (var _i37 = activeIndex - 1; _i37 >= 0; _i37 -= 1) {
+              var _slideInView = slidesGrid[activeIndex] - slidesGrid[_i37] < swiperSize;
 
               if (_slideInView) {
                 spv += 1;
@@ -5089,7 +5188,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var swiper = this;
         if (swiper.mounted) return true; // Find el
 
-        var $el = $(el || swiper.params.el);
+        var $el = $$1(el || swiper.params.el);
         el = $el[0];
 
         if (!el) {
@@ -5104,7 +5203,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
         var getWrapper = function getWrapper() {
           if (el && el.shadowRoot && el.shadowRoot.querySelector) {
-            var res = $(el.shadowRoot.querySelector(getWrapperSelector())); // Children needs to return slot items
+            var res = $$1(el.shadowRoot.querySelector(getWrapperSelector())); // Children needs to return slot items
 
             res.children = function (options) {
               return $el.children(options);
@@ -5114,7 +5213,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           }
 
           if (!$el.children) {
-            return $($el).children(getWrapperSelector());
+            return $$1($el).children(getWrapperSelector());
           }
 
           return $el.children(getWrapperSelector());
@@ -5128,7 +5227,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
           var wrapper = _document2.createElement('div');
 
-          $wrapperEl = $(wrapper);
+          $wrapperEl = $$1(wrapper);
           wrapper.className = swiper.params.wrapperClass;
           $el.append(wrapper);
           $el.children(".".concat(swiper.params.slideClass)).each(function (slideEl) {
@@ -5359,7 +5458,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var $el;
 
       if (el) {
-        $el = $(el);
+        $el = $$1(el);
 
         if (swiper.params.uniqueNavElements && typeof el === 'string' && $el.length > 1 && swiper.$el.find(el).length === 1) {
           $el = swiper.$el.find(el);
@@ -5485,7 +5584,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           $prevEl = _swiper$navigation4.$prevEl;
       var targetEl = e.target;
 
-      if (swiper.params.navigation.hideOnClick && !$(targetEl).is($prevEl) && !$(targetEl).is($nextEl)) {
+      if (swiper.params.navigation.hideOnClick && !$$1(targetEl).is($prevEl) && !$$1(targetEl).is($nextEl)) {
         if (swiper.pagination && swiper.params.pagination && swiper.params.pagination.clickable && (swiper.pagination.el === targetEl || swiper.pagination.el.contains(targetEl))) return;
         var isHidden;
 
@@ -5657,7 +5756,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
         if ($el.length > 1) {
           bullets.each(function (bullet) {
-            var $bullet = $(bullet);
+            var $bullet = $$1(bullet);
             var bulletIndex = $bullet.index();
 
             if (bulletIndex === current) {
@@ -5687,14 +5786,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
             var $firstDisplayedBullet = bullets.eq(firstIndex);
             var $lastDisplayedBullet = bullets.eq(lastIndex);
 
-            for (var i = firstIndex; i <= lastIndex; i += 1) {
-              bullets.eq(i).addClass("".concat(params.bulletActiveClass, "-main"));
+            for (var _i38 = firstIndex; _i38 <= lastIndex; _i38 += 1) {
+              bullets.eq(_i38).addClass("".concat(params.bulletActiveClass, "-main"));
             }
 
             if (swiper.params.loop) {
               if (bulletIndex >= bullets.length) {
-                for (var _i7 = params.dynamicMainBullets; _i7 >= 0; _i7 -= 1) {
-                  bullets.eq(bullets.length - _i7).addClass("".concat(params.bulletActiveClass, "-main"));
+                for (var _i39 = params.dynamicMainBullets; _i39 >= 0; _i39 -= 1) {
+                  bullets.eq(bullets.length - _i39).addClass("".concat(params.bulletActiveClass, "-main"));
                 }
 
                 bullets.eq(bullets.length - params.dynamicMainBullets - 1).addClass("".concat(params.bulletActiveClass, "-prev"));
@@ -5771,9 +5870,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           numberOfBullets = slidesLength;
         }
 
-        for (var i = 0; i < numberOfBullets; i += 1) {
+        for (var _i40 = 0; _i40 < numberOfBullets; _i40 += 1) {
           if (params.renderBullet) {
-            paginationHTML += params.renderBullet.call(swiper, i, params.bulletClass);
+            paginationHTML += params.renderBullet.call(swiper, _i40, params.bulletClass);
           } else {
             paginationHTML += "<".concat(params.bulletElement, " class=\"").concat(params.bulletClass, "\"></").concat(params.bulletElement, ">");
           }
@@ -5814,7 +5913,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
       var params = swiper.params.pagination;
       if (!params.el) return;
-      var $el = $(params.el);
+      var $el = $$1(params.el);
       if ($el.length === 0) return;
 
       if (swiper.params.uniqueNavElements && typeof params.el === 'string' && $el.length > 1) {
@@ -5822,7 +5921,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
         if ($el.length > 1) {
           $el = $el.filter(function (el) {
-            if ($(el).parents('.swiper')[0] !== swiper.el) return false;
+            if ($$1(el).parents('.swiper')[0] !== swiper.el) return false;
             return true;
           });
         }
@@ -5851,7 +5950,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       if (params.clickable) {
         $el.on('click', classesToSelector(params.bulletClass), function onClick(e) {
           e.preventDefault();
-          var index = $(this).index() * swiper.params.slidesPerGroup;
+          var index = $$1(this).index() * swiper.params.slidesPerGroup;
           if (swiper.params.loop) index += swiper.loopedSlides;
           swiper.slideTo(index);
         });
@@ -5932,7 +6031,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var targetEl = e.target;
       var $el = swiper.pagination.$el;
 
-      if (swiper.params.pagination.el && swiper.params.pagination.hideOnClick && $el.length > 0 && !$(targetEl).hasClass(swiper.params.pagination.bulletClass)) {
+      if (swiper.params.pagination.el && swiper.params.pagination.hideOnClick && $el.length > 0 && !$$1(targetEl).hasClass(swiper.params.pagination.bulletClass)) {
         if (swiper.navigation && (swiper.navigation.nextEl && targetEl === swiper.navigation.nextEl || swiper.navigation.prevEl && targetEl === swiper.navigation.prevEl)) return;
         var isHidden = $el.hasClass(swiper.params.pagination.hiddenClass);
 
@@ -6314,8 +6413,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         swiper.animating = false;
         var triggerEvents = ['webkitTransitionEnd', 'transitionend'];
 
-        for (var i = 0; i < triggerEvents.length; i += 1) {
-          $wrapperEl.trigger(triggerEvents[i]);
+        for (var _i41 = 0; _i41 < triggerEvents.length; _i41 += 1) {
+          $wrapperEl.trigger(triggerEvents[_i41]);
         }
       });
     }
@@ -6336,8 +6435,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var slides = swiper.slides;
       var params = swiper.params.fadeEffect;
 
-      for (var i = 0; i < slides.length; i += 1) {
-        var $slideEl = swiper.slides.eq(i);
+      for (var _i42 = 0; _i42 < slides.length; _i42 += 1) {
+        var $slideEl = swiper.slides.eq(_i42);
         var _offset = $slideEl[0].swiperSlideOffset;
         var tx = -_offset;
         if (!swiper.params.virtualTranslate) tx -= swiper.translate;
@@ -6605,9 +6704,27 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return cardSlider;
   }();
 
-  document.querySelector('header');
+  function stickyHeader() {
+    document.addEventListener('scroll', stickyHeaderAction);
+  }
+
+  var header = document.querySelector('header');
   var menu = document.querySelector('.rs-header');
-  menu.offsetTop;
+  var offset = menu.offsetTop;
+
+  function stickyHeaderAction(e) {
+    var scrolled = window.pageYOffset; //sticky header
+
+    if (window.pageYOffset > offset && scrolled > 341) {
+      header.classList.add('sticky');
+      setTimeout(function () {
+        header.classList.add('out');
+      }, 200);
+    } else {
+      header.classList.remove('sticky');
+      header.classList.remove('out');
+    }
+  }
 
   function gsapAnimations() {
     gsap.registerPlugin(ScrollTrigger); //parallax
@@ -6629,8 +6746,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   }
 
   function animatePage() {
+    IntersectionObserver.prototype.POLL_INTERVAL = 100; // Time in milliseconds.
+
+    IntersectionObserver.prototype.USE_MUTATION_OBSERVER = false; // Globally
+
     var pageObserver = new IntersectionObserver(animateElement, {
-      root: document,
+      root: null,
       threshold: [0.3]
     });
     var elements = document.querySelectorAll('[data-animate]');
@@ -6688,17 +6809,22 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   }
 
   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   window.addEventListener('load', function (e) {
     mainClickActions();
     initSliders(); //preloader();
 
     checkViewport();
-    animatePage(); //stickyHeader();
-    //customCursor();
+    animatePage();
+    stickyHeader(); //customCursor();
 
     gsapAnimations(); // $('.counter').counterUp({
     // 	delay: 10,
     // 	time: 1000,
     // });
+
+    if (isSafari) {
+      document.body.classList.remove('page-animate');
+    }
   });
 });

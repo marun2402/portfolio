@@ -5,9 +5,13 @@
 .rs-about__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    -webkit-column-gap: 90px;
-    -moz-column-gap: 90px;
-    column-gap: 90px;
+    -webkit-column-gap: 35px;
+    -moz-column-gap: 35px;
+    column-gap: 35px;
+}
+
+.rs-about .about-info {
+    padding-right: 55px;
 }
 
 .rs-about .about-info__content {
@@ -27,14 +31,14 @@
     font-weight: 400;
     border-radius: 5px;
     padding-left: 190px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 50px;
+    padding-bottom: 47px;
     padding-right: 45px;
     background: #f8f8f8 url("../../img/rs-about/about_can.png") 45px center no-repeat;
 }
 
 .rs-about .about-info__img {
-    margin-right: -90px;
+    margin-right: -85px;
 }
 
 .rs-about .about-info__img img {

@@ -29,7 +29,7 @@
     color: #424242;
     transition: 0.3s ease;
     padding-left: 55px;
-    padding-right: 55px;
+    padding-right: 40px;
     padding-top: 45px;
     padding-bottom: 55px;
     position: relative;
@@ -47,6 +47,10 @@
     color: #231f20;
     margin-top: 0;
     margin-bottom: 10px;
+}
+
+.rs-services .services-item p {
+    margin-bottom: 25px;
 }
 
 .rs-services .services-item::before {

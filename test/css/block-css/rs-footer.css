@@ -33,9 +33,9 @@
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-    -webkit-column-gap: 40px;
-    -moz-column-gap: 40px;
-    column-gap: 40px;
+    -webkit-column-gap: 0px;
+    -moz-column-gap: 0px;
+    column-gap: 0px;
 }
 
 .rs-footer {
@@ -130,7 +130,7 @@
 .rs-footer .footer-contacts {
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.2;
+    line-height: 1.4;
     letter-spacing: 0.025em;
     color: #231f20;
 }
@@ -153,6 +153,7 @@
     max-width: 219px;
     margin-top: 46px;
     margin-bottom: 0;
+    line-height: 1.2;
 }
 
 .rs-footer .footer-contacts__logo {
@@ -160,6 +161,7 @@
 }
 
 .rs-footer .footer-bottom {
+    font-family: "Rubik";
     color: #b1b1b1;
     font-weight: 600;
     font-size: 12px;
@@ -184,6 +186,7 @@
 }
 
 .rs-footer .footer-bottom a {
+    font-weight: 400;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: baseline;
@@ -246,7 +249,7 @@
 
     .rs-footer .footer-wrapper {
         padding-bottom: 30px;
-        padding-top: 30px;
+        padding-top: 0px;
     }
 
     .rs-footer .footer-title {
@@ -277,5 +280,21 @@
     .rs-footer .footer-bottom a {
         -ms-flex-pack: center;
         justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-footer .footer-contacts a[href^="tel:"] {
+        font-size: 13px;
+    }
+
+    .rs-footer .footer-contacts a[href^="mailto:"] {
+        font-size: 13px;
+    }
+
+    .rs-footer .footer-contacts p {
+        font-size: 13px;
+        max-width: none;
+        margin-top: 12px;
     }
 }

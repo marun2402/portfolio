@@ -1,6 +1,6 @@
 .rs-mission {
-    padding-top: 86px;
-    padding-bottom: 92px;
+    padding-top: 85px;
+    padding-bottom: 85px;
     background: #ffda2d;
 }
 
@@ -53,8 +53,9 @@
 }
 
 .rs-mission__wrapper {
+    margin-top: 15px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 54%;
     -ms-flex-align: center;
     align-items: center;
 }

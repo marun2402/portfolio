@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 
+@import url(https://fonts.googleapis.com/css?family=Rubik:regular,600);
+
 * {
     padding: 0px;
     margin: 0px;
@@ -208,6 +210,34 @@ main {
     }
 }
 
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-50px, 0, 0);
+        transform: translate3d(-50px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-50px, 0, 0);
+        transform: translate3d(-50px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 @-webkit-keyframes fadeIn {
     from {
         opacity: 0;
@@ -322,6 +352,11 @@ main {
     color: #FF0015;
 }
 
+.section-title_big h2 {
+    font-size: 45px;
+    line-height: 54px;
+}
+
 .form-group {
     position: relative;
     font-size: 14px;
@@ -341,7 +376,7 @@ main {
     border: 1px solid #e6e6e6;
     border-radius: 5px;
     width: 100%;
-    padding: 19px 28px;
+    padding: 15px 28px;
     font-weight: 400;
     font-size: 16px;
     line-height: 137%;
@@ -413,6 +448,7 @@ main {
 .form-group textarea {
     height: 100%;
     resize: none;
+    min-height: 137px;
 }
 
 .form-group label {
@@ -503,30 +539,23 @@ main {
 }
 
 #scroll-top {
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
+    background: url("../../img/icons/scroll-top-arrow.svg") center no-repeat;
     width: 56px;
     height: 56px;
-    opacity: 0;
-    visibility: hidden;
-    transition: background 0.3s ease-out;
-    z-index: 29;
+    position: absolute;
+    bottom: 28px;
+    right: 15px;
+    z-index: 1;
     border: 1.47048px solid #231f20;
     border-radius: 50%;
 }
 
-#scroll-top.is-active {
-    opacity: 1;
-    visibility: visible;
-}
-
 @media (min-width: 767.98px) {
-    [data-animate] {
+    .page-animate [data-animate] {
         visibility: hidden;
     }
 
-    [data-animate].in-view {
+    .page-animate [data-animate].in-view {
         visibility: visible;
         -webkit-animation-name: var(--animateName);
         animation-name: var(--animateName);
@@ -538,11 +567,11 @@ main {
         animation-timing-function: ease-out;
     }
 
-    [data-animate-stager] > * {
+    .page-animate [data-animate-stager] > * {
         visibility: hidden;
     }
 
-    [data-animate-stager].in-view > * {
+    .page-animate [data-animate-stager].in-view > * {
         visibility: visible;
         -webkit-animation-name: var(--animateName);
         animation-name: var(--animateName);
@@ -556,7 +585,7 @@ main {
         animation-timing-function: ease-out;
     }
 
-    .section-title h2 {
+    .page-animate .section-title h2 {
         -webkit-transform: translateY(100%);
         transform: translateY(100%);
         transition: -webkit-transform 0.5s ease-out;
@@ -564,15 +593,25 @@ main {
         transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
     }
 
-    .section-title.in-view h2 {
+    .page-animate .section-title.in-view h2 {
         -webkit-transform: none;
         transform: none;
+    }
+}
+
+@media (min-width: 1600px) {
+    #scroll-top {
+        right: calc((100% - 1570px) / 2);
     }
 }
 
 @media (max-width: 991.98px) {
     main {
         padding-top: 68px;
+    }
+
+    #scroll-top {
+        display: none;
     }
 }
 
@@ -583,6 +622,11 @@ main {
 
     .section-title h2 {
         font-size: 18px;
+    }
+
+    .section-title_big h2 {
+        font-size: 18px;
+        line-height: 130%;
     }
 }
 

@@ -9,9 +9,13 @@
     background: #ffda2d;
     padding-top: 70px;
     padding-bottom: 70px;
-    padding-right: 130px;
+    padding-right: 180px;
     padding-left: 15px;
-    margin-right: 210px;
+    margin-right: 170px;
+}
+
+.rs-fos .section-title {
+    padding-left: 40px;
 }
 
 .rs-fos .fos-form {
@@ -48,7 +52,7 @@
 @media (min-width: 1600px) {
     .rs-fos__form {
         padding-left: calc((100% - 1570px) / 2);
-        margin-right: calc((100% - 1570px) / 2 + 210px);
+        margin-right: calc((100% - 1570px) / 2 + 170px);
     }
 }
 
@@ -80,5 +84,9 @@
         max-width: 375px;
         margin: 0 auto;
         grid-template-columns: 1fr;
+    }
+
+    .rs-fos .fos-form__submit .btn-border {
+        width: 100%;
     }
 }

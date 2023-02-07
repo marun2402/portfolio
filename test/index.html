@@ -9,7 +9,7 @@
 	<title>Pro Guard</title>
 </head>
 
-  <body class="page-type-default">     
+  <body class="page-type-default page-animate">     
 
     <div class="wrapper">
       
@@ -73,7 +73,14 @@
 					<li><a href="#"><span>Силиконовые покрытия</span></a></li>
 				</ul>
 			</li>
-			<li><a href="#"><span>Область применения</span></a></li>
+			<li class="menu__dropdown">
+				<a href="#"><span>Область применения</span></a>
+				<button type="button" class="menu__dropdown-arrow" data-spoller><img src="img/icons/arrow_menu.svg" alt=""></button>
+				<ul class="menu__dropdown-list">
+					<li><a href="#"><span>Пункт 1</span></a></li>
+					<li><a href="#"><span>Пункт 1</span></a></li>					
+				</ul>
+			</li>
 			<li><a href="#"><span>О компании</span></a></li>
 			<li><a href="#"><span>Контакты</span></a></li>
 		</ul>
@@ -85,14 +92,17 @@
 	</div>
 </nav>
 
+		<a href="#" class="menu-sticky-distributor"><span>Эксклюзивный дистрибьютор</span><img src="img/icons/logo_kanat.svg" alt=""></a>
 		<div class="rs-header__mobile-contacts">
+			
 <div class="header-contacts-mobile">
 	<ul class="header-contacts-mobile__list">		
 		<li><a href="mailto:inbox@pfguard.com"></a></li>
 		<li><a href="tel:+74993943035"></a></li>
 	</ul>	
 </div>
-</div>
+
+		</div>
 		<div class="rs-header__btn">
 <a href="#" class="btn-border ">
 	<span>Оставить заявку</span> 	
@@ -270,7 +280,7 @@
 			</picture>
 		</div>		
 	</div>
-	<ul class="about-types__list">
+	<ul class="about-types__list" data-animate-stager="fadeInLeft">
 		<li>
 			<a href="#">
 				<h4>Классические эпоксидные и полиуретановые покрытия. Мультиполимерные покрытия.</h4>
@@ -322,7 +332,7 @@
 	<div class="rs-catalog__container">
 		<div class="rs-catalog__head">
 			
-<div class="section-title ">	
+<div class="section-title section-title_big">	
 	<h2>Целевые сегменты: выберите свою отрасль</h2>	
 </div>
 
@@ -502,7 +512,7 @@
 	<div class="rs-benefit__wrapper">
 		<div class="rs-benefit__mobile-title">
 <div class="section-title ">	
-	<h2><b>Преимущества</b> сотрудничества с нашей компанией</h2>	
+	<h2><span>Преимущества</span> сотрудничества с нашей компанией</h2>	
 </div>
 </div>
 		<div class="rs-benefit__content swiper">
@@ -574,7 +584,9 @@
 
 
 <link rel="stylesheet" href="css/block-css/rs-fos.css" />
-<section class="rs-fos" data-animate="fadeInUp">		
+<section class="rs-fos" data-animate="fadeInUp">
+	<button id="scroll-top" type="button">  
+</button>	
 	<div class="rs-fos__container">
 		
 <div class="section-title ">	
@@ -602,7 +614,7 @@
 					
 <div class="form-group">
      
-  <input type="tel" class="form-control " id="fosPhone" name="fosPhone" placeholder="Телефон" data-tel-input maxlength="18" required>  
+  <input type="tel" class="form-control " id="fosPhone" name="fosPhone" placeholder="Телефон" data-tel-input maxlength="18" required data-tel-input>  
 </div>
 
 					
@@ -678,19 +690,19 @@
     
     <li><a href="#">Промышленная инфраструктура</a></li>
     
-    <li><a href="#">Металлургия и металлопроцесинг</a></li>
-    
     <li><a href="#">Нефтегазовая отрасль</a></li>
     
-    <li><a href="#">Индустриальный сегмент покрытий</a></li>
-    
     <li><a href="#">Транспортная инфраструктура</a></li>
-    
-    <li><a href="#">Гидротехнические сооружения, офшорные сооружения</a></li>
     
     <li><a href="#">Газохимия/Химия/Нефтехимия</a></li>
     
     <li><a href="#">Энергетика</a></li>
+    
+    <li><a href="#">Металлургия и металлопроцесинг</a></li>
+    
+    <li><a href="#">Индустриальный сегмент покрытий</a></li>
+    
+    <li><a href="#">Гидротехнические сооружения, офшорные сооружения</a></li>
        
   </ul>
 </nav>
