@@ -1,0 +1,118 @@
+.rs-callback {
+    position: relative;
+}
+
+.rs-callback h3 {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 117%;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.rs-callback p {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 140%;
+    color: #3d3d3d;
+    margin-bottom: 0;
+}
+
+.rs-callback__wrapper {
+    border-radius: 25px;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.rs-callback__col:nth-child(1) {
+    -ms-flex: 0 0 41%;
+    flex: 0 0 41%;
+    padding: 93px 88px;
+    background-color: #FF9A00;
+}
+
+.rs-callback__col:nth-child(2) {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 93px 117px;
+    background-color: #ebf2ef;
+    background-image: url("../../img/logo_FOS_bg.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+.rs-callback__form {
+    margin-top: 56px;
+}
+
+.rs-callback .callback-form__submit {
+    margin-top: 10px;
+}
+
+.rs-callback .callback-contacts > h4 {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 117%;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 33px;
+}
+
+.rs-callback .callback-contacts__list {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rs-callback .callback-contacts__list li:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.rs-callback .callback-contacts__list li h6 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.rs-callback .callback-contacts__list li a {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.rs-callback .callback-contacts__list li a[href^="tel:"]:before {
+    content: url(../../img/icons/phone.svg);
+    margin-right: 5px;
+}
+
+.rs-callback .callback-contacts__list li a[href^="mailto:"]:before {
+    content: url(../../img/icons/mail.svg);
+    margin-right: 5px;
+}
+
+@media (max-width: 991.98px) {
+    .rs-callback__col:nth-child(1) {
+        padding: 45px 30px;
+    }
+
+    .rs-callback__col:nth-child(2) {
+        padding: 45px 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-callback__wrapper {
+        display: block;
+    }
+}

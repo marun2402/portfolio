@@ -1,0 +1,300 @@
+.footer-menu {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 137%;
+    letter-spacing: 0.04em;
+    color: #231f20;
+}
+
+.footer-menu__list {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footer-menu__list li:not(:last-child) {
+    margin-bottom: 1.3571428571em;
+}
+
+.footer-menu__list li a {
+    max-width: 310px;
+    display: inline-block;
+    font-size: 1em;
+    color: #231f20;
+    transition: color 0.3s ease;
+    background: url("../../img/icons/arrow.svg") left center/12px 9px no-repeat;
+    padding-left: 24px;
+}
+
+.footer-menu__list li a:hover {
+    color: #FF0015;
+}
+
+.footer-menu_grid .footer-menu__list {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 0px;
+    -moz-column-gap: 0px;
+    column-gap: 0px;
+}
+
+.rs-footer {
+    background: #f8f8f8;
+}
+
+.rs-footer__top {
+    padding-top: 70px;
+    padding-bottom: 60px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.rs-footer__menu {
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+}
+
+.rs-footer__menu:not(:last-child) {
+    margin-right: 100px;
+}
+
+.rs-footer__contacts {
+    width: 305px;
+    margin-right: auto;
+    padding-right: 15px;
+}
+
+.rs-footer._init .footer-title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+}
+
+.rs-footer._init .footer-title::after,
+.rs-footer._init .footer-title::before {
+    content: "";
+    position: absolute;
+    background-color: #ff0015;
+    transition: -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.002, 1);
+    transition: transform 0.3s cubic-bezier(0.42, 0, 0.002, 1);
+    transition: transform 0.3s cubic-bezier(0.42, 0, 0.002, 1), -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.002, 1);
+}
+
+.rs-footer._init .footer-title::after {
+    right: 18px;
+    width: 2px;
+    height: 14px;
+}
+
+.rs-footer._init .footer-title::before {
+    top: 50%;
+    right: 12px;
+    height: 2px;
+    width: 14px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.rs-footer._init .footer-title._active::after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.rs-footer._init .footer-title._active::before {
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.rs-footer._init .not-spoller.footer-title::after,
+.rs-footer._init .not-spoller.footer-title::before {
+    display: none;
+}
+
+.rs-footer .footer-title {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 134.5%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #231f20;
+}
+
+.rs-footer .footer-contacts {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.025em;
+    color: #231f20;
+}
+
+.rs-footer .footer-contacts a {
+    display: block;
+}
+
+.rs-footer .footer-contacts a[href^="tel:"] {
+    font-weight: 500;
+    font-size: 27px;
+}
+
+.rs-footer .footer-contacts a[href^="mailto:"] {
+    font-weight: 500;
+    font-size: 21px;
+}
+
+.rs-footer .footer-contacts p {
+    max-width: 219px;
+    margin-top: 46px;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+.rs-footer .footer-contacts__logo {
+    margin-bottom: 15px;
+}
+
+.rs-footer .footer-bottom {
+    font-family: "Rubik";
+    color: #b1b1b1;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.2;
+    padding-top: 38px;
+    padding-bottom: 36px;
+    border-top: 1px solid #e6e6e6;
+}
+
+.rs-footer .footer-bottom__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-footer .footer-bottom p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.rs-footer .footer-bottom a {
+    font-weight: 400;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    color: #b1b1b1;
+}
+
+.rs-footer .footer-bottom a img {
+    margin-left: 8px;
+}
+
+@media (min-width: 991.98px) {
+    .rs-footer .footer-contacts .footer-title {
+        display: none;
+    }
+}
+
+@media (max-width: 1500px) {
+    .footer-menu_grid .footer-menu__list {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media (max-width: 1450px) {
+    .rs-footer__top {
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 1200px) {
+    .rs-footer__menu:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-footer__top {
+        display: block;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .rs-footer__menu {
+        border-bottom: 1px solid #d6d8d9;
+    }
+
+    .rs-footer__menu:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .rs-footer__contacts {
+        padding-right: 0;
+        margin-right: 0 !important;
+        width: auto;
+        border-bottom: 1px solid #d6d8d9;
+    }
+
+    .rs-footer .footer-wrapper {
+        padding-bottom: 30px;
+        padding-top: 0px;
+    }
+
+    .rs-footer .footer-title {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.03em;
+        text-transform: none;
+    }
+
+    .rs-footer .footer-bottom {
+        border-top: none;
+    }
+
+    .rs-footer .footer-bottom__container {
+        -ms-flex-align: center;
+        align-items: center;
+        display: block;
+        max-width: none;
+    }
+
+    .rs-footer .footer-bottom p {
+        text-align: center;
+    }
+
+    .rs-footer .footer-bottom a {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-footer .footer-contacts a[href^="tel:"] {
+        font-size: 13px;
+    }
+
+    .rs-footer .footer-contacts a[href^="mailto:"] {
+        font-size: 13px;
+    }
+
+    .rs-footer .footer-contacts p {
+        font-size: 13px;
+        max-width: none;
+        margin-top: 12px;
+    }
+}

@@ -1,0 +1,111 @@
+.rs-services {
+    padding-top: 122px;
+    padding-bottom: 46px;
+}
+
+.rs-services__container {
+    position: relative;
+}
+
+.rs-services__items {
+    display: grid;
+    gap: 33px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.rs-services .services-item {
+    overflow: hidden;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 137%;
+    letter-spacing: 0.04em;
+    color: #424242;
+    transition: 0.3s ease;
+    padding-left: 55px;
+    padding-right: 40px;
+    padding-top: 45px;
+    padding-bottom: 55px;
+    position: relative;
+}
+
+.rs-services .services-item .btn-link {
+    margin-top: auto;
+}
+
+.rs-services .services-item h3 {
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #231f20;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.rs-services .services-item p {
+    margin-bottom: 25px;
+}
+
+.rs-services .services-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 721px;
+    height: 721px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    background-color: #f8f8f8;
+    z-index: -1;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.8s ease;
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+}
+
+.rs-services .services-item:hover:before {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.rs-services .services-item:hover .btn-link {
+    background-color: #ff0015;
+    border-color: transparent;
+}
+
+.rs-services .services-item:hover .btn-link::after {
+    background-color: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+    .rs-services__items {
+        gap: 15px;
+    }
+
+    .rs-services .services-item {
+        padding: 19px;
+        font-size: 13px;
+    }
+
+    .rs-services .services-item h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-services {
+        padding-top: 46px;
+    }
+
+    .rs-services__items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

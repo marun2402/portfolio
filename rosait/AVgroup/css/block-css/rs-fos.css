@@ -1,0 +1,168 @@
+.rs-fos {
+    position: relative;
+}
+
+.rs-fos__border {
+    position: relative;
+}
+
+.rs-fos__wrapper {
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.rs-fos__col:nth-child(1) {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    padding: 99px 59px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.rs-fos__col:nth-child(2) {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 30px 0px;
+}
+
+.rs-fos__map {
+    margin-top: 71px;
+}
+
+.rs-fos__map * {
+    width: 100%;
+    height: 100%;
+}
+
+.rs-fos__contacts {
+    margin-top: auto;
+    margin-bottom: 118px;
+}
+
+.rs-fos .fos-form__holder {
+    position: relative;
+}
+
+.rs-fos .fos-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.rs-fos .fos-form__submit {
+    padding-right: 95px;
+    text-align: right;
+    margin-top: 70px;
+}
+
+.rs-fos .fos-contacts {
+    color: #ffffff;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    text-align: right;
+    padding-left: 71px;
+    padding-right: 120px;
+}
+
+.rs-fos .fos-contacts a {
+    display: block;
+    text-align: left;
+    transition-duration: 0.3s;
+}
+
+.rs-fos .fos-contacts a:hover,
+.rs-fos .fos-contacts a:focus {
+    color: #ff0022;
+}
+
+.rs-fos .fos-contacts .fos-contacts__loc {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 79px;
+}
+
+.rs-fos .fos-contacts .fos-contacts__loc:before {
+    content: url(../../img/icons/location-icon.svg);
+    margin-right: 7px;
+}
+
+.rs-fos .fos-contacts a[href^="tel:"] {
+    font-family: "DM Sans";
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.rs-fos .fos-contacts a[href^="mailto:"] {
+    font-size: 24px;
+}
+
+@media (min-width: 1920px) {
+    .rs-fos__map {
+        height: 790px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .rs-fos__col:nth-child(1) {
+        padding: 30px 25px;
+    }
+
+    .rs-fos .fos-contacts {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-fos__wrapper {
+        display: block;
+    }
+
+    .rs-fos__map {
+        margin-top: 0;
+    }
+
+    .rs-fos__contacts {
+        margin-bottom: 30px;
+    }
+
+    .rs-fos .fos-form__row {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-fos .fos-form__submit {
+        margin-top: 33px;
+        text-align: center;
+    }
+
+    .rs-fos .fos-contacts .fos-contacts__loc {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-fos .fos-contacts a[href^="tel:"] {
+        font-size: 16px;
+    }
+
+    .rs-fos .fos-contacts a[href^="mailto:"] {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .rs-fos__map {
+        height: 290px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1920px) {
+    .rs-fos__map {
+        height: clamp( 290px , 190px  +  31.25vw , 790px );
+    }
+}

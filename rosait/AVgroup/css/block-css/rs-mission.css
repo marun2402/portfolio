@@ -1,0 +1,129 @@
+.rs-mission {
+    position: relative;
+}
+
+.rs-mission__border {
+    position: relative;
+}
+
+.rs-mission__slider {
+    overflow: visible !important;
+}
+
+.rs-mission__content {
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0.03em;
+    padding: 75px 35px 0px;
+    position: relative;
+}
+
+.rs-mission__content h3 {
+    font-size: 30px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 26px;
+    word-break: break-word;
+}
+
+.rs-mission__content p {
+    font-size: 14px;
+    line-height: 148.7%;
+    margin-bottom: 0;
+}
+
+.rs-mission__img {
+    position: relative;
+}
+
+.rs-mission__img img {
+    width: 100%;
+}
+
+.rs-mission .slider-arrows {
+    position: absolute;
+    bottom: 0;
+    right: 1px;
+    border: none;
+    background: #131a22;
+    z-index: 5;
+}
+
+.rs-mission__slide .rs-mission__content h3 {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    transition-duration: 0s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.rs-mission__slide .rs-mission__content p {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    transition-duration: 0s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.rs-mission__slide.swiper-slide-active.is-active .rs-mission__content h3 {
+    transition-duration: 1.8s;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+}
+
+.rs-mission__slide.swiper-slide-active.is-active .rs-mission__content p {
+    transition-duration: 1.8s;
+    transition-delay: 0.2s;
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+}
+
+@media (min-width: 991.98px) {
+    .rs-mission__content h3 {
+        font-size: 70px;
+    }
+
+    .rs-mission__content p {
+        position: absolute;
+        max-width: 629px;
+        top: 100%;
+        right: 110px;
+        font-size: 18px;
+        z-index: 2;
+    }
+
+    .rs-mission__img {
+        margin-top: -12%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .rs-mission__content h3 {
+        font-size: 100px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .rs-mission__content h3 {
+        font-size: 130px;
+    }
+}
+
+@media (min-width: 1650px) {
+    .rs-mission__content p {
+        right: 7.5%;
+    }
+}
+
+@media (min-width: 1800px) {
+    .rs-mission__content {
+        padding: 115px 80px 0px;
+    }
+
+    .rs-mission__content h3 {
+        font-size: 180px;
+    }
+}

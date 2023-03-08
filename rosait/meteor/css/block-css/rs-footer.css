@@ -1,0 +1,125 @@
+.rs-footer {
+    background: #021527;
+}
+
+.rs-footer__top {
+    padding-top: 80px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5d1c1;
+}
+
+.rs-footer__bottom {
+    padding-bottom: 63px;
+    padding-top: 40px;
+}
+
+.rs-footer .footer-contacts {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    color: #e5d1c1;
+}
+
+.rs-footer .footer-contacts a {
+    color: inherit;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 25px;
+    white-space: nowrap;
+}
+
+.rs-footer .footer-contacts a::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #e5d1c1;
+    display: block;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.rs-footer .footer-contacts a:hover::after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.rs-footer .footer-contacts p {
+    margin-top: 0;
+    margin-bottom: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.rs-footer .footer-bottom {
+    font-size: 14px;
+    line-height: 21px;
+    color: #e5d1c1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.rs-footer .footer-bottom p {
+    margin-top: 0;
+    margin-bottom: 17px;
+    margin-right: 17px;
+}
+
+.rs-footer .footer-bottom p span {
+    margin-right: 17px;
+}
+
+.rs-footer .footer-bottom a {
+    color: inherit;
+    margin-bottom: 17px;
+}
+
+.rs-footer .footer-bottom a span {
+    text-decoration: underline;
+}
+
+@media (max-width: 767.98px) {
+    .rs-footer__top {
+        padding-top: 20px;
+        padding-bottom: 1px;
+    }
+
+    .rs-footer__bottom {
+        padding-top: 26px;
+        padding-bottom: 3px;
+    }
+
+    .rs-footer .footer-contacts {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .rs-footer .footer-bottom {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .rs-footer .footer-bottom p {
+        margin-right: 0;
+    }
+}

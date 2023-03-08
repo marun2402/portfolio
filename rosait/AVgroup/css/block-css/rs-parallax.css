@@ -1,0 +1,50 @@
+.rs-parallax__wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.rs-parallax__photo {
+    position: relative;
+    width: 106.6%;
+    height: 204%;
+}
+
+.rs-parallax__photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-parallax__logo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+}
+
+.rs-parallax__logo img {
+    width: 100%;
+    mix-blend-mode: darken;
+}
+
+@media (min-width: 1920px) {
+    .rs-parallax__wrapper {
+        height: 605px;
+    }
+}
+
+@media (max-width: 320px) {
+    .rs-parallax__wrapper {
+        height: 210px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1920px) {
+    .rs-parallax__wrapper {
+        height: clamp( 210px , 131px  +  24.6875vw , 605px );
+    }
+}

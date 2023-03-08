@@ -1,0 +1,112 @@
+.rs-mission {
+    padding-top: 85px;
+    padding-bottom: 85px;
+    background: #ffda2d;
+}
+
+.rs-mission__logo svg {
+    overflow: visible;
+}
+
+.rs-mission__logo svg path {
+    transition: stroke-dashoffset 2.5s ease, fill 1.8s ease 1.3s, -webkit-transform 1.8s ease;
+    transition: transform 1.8s ease, stroke-dashoffset 2.5s ease, fill 1.8s ease 1.3s;
+    transition: transform 1.8s ease, stroke-dashoffset 2.5s ease, fill 1.8s ease 1.3s, -webkit-transform 1.8s ease;
+}
+
+.rs-mission__logo svg path:nth-child(1) {
+    stroke: #FF0015;
+    fill: transparent;
+    stroke-dasharray: 158.1916351318;
+    stroke-dashoffset: 158.1916351318;
+}
+
+.rs-mission__logo svg path:nth-child(2) {
+    stroke: #231F20;
+    fill: transparent;
+    stroke-dasharray: 162.4111480713;
+    stroke-dashoffset: 162.4111480713;
+}
+
+.rs-mission__logo svg path:nth-child(3),
+.rs-mission__logo svg path:nth-child(4) {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+}
+
+.rs-mission__logo.in-view svg path:nth-child(1) {
+    stroke-dashoffset: 0;
+    fill: #FF0015;
+}
+
+.rs-mission__logo.in-view svg path:nth-child(2) {
+    stroke-dashoffset: 0;
+    fill: #231F20;
+}
+
+.rs-mission__logo.in-view svg path:nth-child(3),
+.rs-mission__logo.in-view svg path:nth-child(4) {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+.rs-mission__wrapper {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 54%;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-mission__title {
+    padding-right: 145px;
+}
+
+.rs-mission__text {
+    border-left: 1px solid #231f20;
+    padding-left: 145px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 137%;
+    letter-spacing: 0.04em;
+    color: #231f20;
+}
+
+.rs-mission__text p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1400px) {
+    .rs-mission__title {
+        padding-right: 35px;
+    }
+
+    .rs-mission__text {
+        padding-left: 35px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-mission {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .rs-mission__wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .rs-mission__title {
+        padding-right: 0;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .rs-mission__text {
+        font-size: 13px;
+        padding-left: 0;
+        border: none;
+    }
+}
