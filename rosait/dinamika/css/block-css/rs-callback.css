@@ -1,0 +1,132 @@
+.rs-callback {
+    position: relative;
+    background: #f2f2f7;
+    border-bottom: 1px solid #e2e2e2;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.rs-callback__inner {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.rs-callback__inner h4 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 120%;
+    color: #111111;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rs-callback__wrapper {
+    max-width: 418px;
+}
+
+.rs-callback__form {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin-left: 116px;
+}
+
+.rs-callback .callback-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    -ms-flex-align: start;
+    align-items: start;
+}
+
+.rs-callback .callback-form input {
+    height: 56px;
+    background: #ffffff;
+    border-left: 1px solid #e2e2e2;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    border-right: none;
+    border-radius: 0;
+    font-size: 16px;
+    line-height: 160%;
+    color: #999999;
+    padding-left: 16px;
+}
+
+.rs-callback .callback-form p {
+    grid-column: span 4;
+    color: #666666;
+    line-height: 1.4;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 16px;
+}
+
+.rs-callback .callback-form p a {
+    color: #666666;
+    text-decoration: underline;
+}
+
+.rs-callback .callback-form .btn-color {
+    height: 56px;
+}
+
+@media (min-width: 767.98px) {
+    .rs-callback .callback-form input:first-child {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    .rs-callback .callback-form .btn-color {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-callback__inner {
+        display: block;
+    }
+
+    .rs-callback__form {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-callback {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rs-callback__inner h4 {
+        font-size: 18px;
+    }
+
+    .rs-callback .callback-form {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .rs-callback .callback-form input {
+        border-right: 1px solid #e2e2e2;
+        margin-bottom: 20px;
+    }
+
+    .rs-callback .callback-form p {
+        -ms-flex-order: 4;
+        order: 4;
+        margin-bottom: 10px;
+        font-size: 12px;
+        margin-top: 0px;
+    }
+
+    .rs-callback .callback-form .btn-color {
+        -ms-flex-order: 5;
+        order: 5;
+        margin-top: 15px;
+        width: 100%;
+    }
+}

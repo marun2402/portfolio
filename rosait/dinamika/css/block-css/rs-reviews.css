@@ -1,0 +1,115 @@
+.rs-reviews {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.rs-reviews__header {
+    padding-right: 120px;
+}
+
+.rs-reviews .reviews-slider {
+    position: relative;
+}
+
+.rs-reviews .reviews-slider__slider {
+    position: relative;
+    padding-top: 40px;
+}
+
+.rs-reviews .reviews-slider__nav {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+}
+
+.rs-reviews .reviews-item__content {
+    background: #f2f2f7;
+    border-radius: 8px;
+    padding: 40px 30px;
+    position: relative;
+}
+
+.rs-reviews .reviews-item__content h5 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: #111111;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.rs-reviews .reviews-item__content p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #666666;
+    margin-bottom: 0;
+}
+
+.rs-reviews .reviews-item__content::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 40px;
+    border: 15px solid transparent;
+    border-top: 20px solid #F2F2F7;
+}
+
+.rs-reviews .reviews-item__profile {
+    margin-left: 24px;
+    margin-top: 52px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-reviews .reviews-item__profile-photo {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    position: relative;
+    background: url("../../img/rs-feedback/feed_back_1.png") center/contain no-repeat;
+}
+
+.rs-reviews .reviews-item__profile-photo img {
+    width: 100%;
+}
+
+.rs-reviews .reviews-item__profile-wrapper {
+    margin-left: 16px;
+}
+
+.rs-reviews .reviews-item__profile-date {
+    font-size: 13px;
+    line-height: 17px;
+    color: #666666;
+}
+
+.rs-reviews .reviews-item__profile-name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+    color: #111111;
+}
+
+@media (max-width: 767.98px) {
+    .rs-reviews {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rs-reviews .reviews-slider__slider {
+        padding-top: 22px;
+    }
+
+    .rs-reviews .reviews-item__content h5 {
+        font-size: 16px;
+    }
+
+    .rs-reviews .reviews-item__content p {
+        font-size: 13px;
+    }
+}

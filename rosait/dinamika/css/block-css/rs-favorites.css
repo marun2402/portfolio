@@ -1,0 +1,112 @@
+.rs-favorites {
+    padding-top: 80px;
+    padding-bottom: 10px;
+}
+
+.rs-favorites__header {
+    padding-right: 120px;
+}
+
+.rs-favorites .favorites-slider {
+    position: relative;
+}
+
+.rs-favorites .favorites-slider__slider {
+    position: relative;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.rs-favorites .favorites-slider__nav {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+}
+
+.rs-favorites .favorites-item {
+    transition: box-shadow 0.3s ease-out;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    height: 100%;
+    padding: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.rs-favorites .favorites-item__img {
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin-bottom: 12px;
+}
+
+.rs-favorites .favorites-item__img img {
+    width: 100%;
+}
+
+.rs-favorites .favorites-item__wrapper {
+    margin-bottom: auto;
+}
+
+.rs-favorites .favorites-item__wrapper span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #f86f33;
+}
+
+.rs-favorites .favorites-item__wrapper h4 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #111111;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+.rs-favorites .favorites-item__wrapper ul {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #999999;
+    margin-bottom: 20px;
+}
+
+.rs-favorites .favorites-item:hover {
+    box-shadow: 0px 19px 24px #ededf3;
+}
+
+@media (max-width: 991.98px) {
+    .rs-favorites .favorites-item {
+        width: 288px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-favorites {
+        padding-top: 30px;
+    }
+
+    .rs-favorites__header {
+        padding-right: 0;
+    }
+
+    .rs-favorites .favorites-slider__slider {
+        overflow: visible;
+        padding-top: 22px;
+    }
+
+    .rs-favorites .favorites-slider__nav {
+        display: none;
+    }
+}

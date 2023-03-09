@@ -1,0 +1,152 @@
+.rs-benefit {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.rs-benefit__container {
+    position: relative;
+}
+
+.rs-benefit__header {
+    padding-right: 120px;
+}
+
+.rs-benefit__inner {
+    position: relative;
+    min-width: 0;
+}
+
+.rs-benefit__content {
+    padding-top: 40px;
+    position: relative;
+}
+
+.rs-benefit__arrows {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+}
+
+.rs-benefit .benefit-item {
+    position: relative;
+    height: 100%;
+}
+
+.rs-benefit .benefit-item__icon {
+    position: relative;
+    width: 95px;
+    height: 125px;
+}
+
+.rs-benefit .benefit-item__icon span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #f86f33;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transition: background 0.3s ease-out;
+}
+
+.rs-benefit .benefit-item__icon::before {
+    content: url("../../img/rs-benefit/benefit_bg_1.svg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    transition: opacity 0.3s ease-out;
+}
+
+.rs-benefit .benefit-item__icon::after {
+    content: url("../../img/rs-benefit/benefit_bg_2.svg");
+    position: absolute;
+    top: -27px;
+    right: -31px;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.rs-benefit .benefit-item > h4 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    color: #111111;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.rs-benefit .benefit-item > p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    -webkit-font-feature-settings: "pnum" on, "lnum" on;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #666666;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rs-benefit .benefit-item > a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    font-size: 0;
+}
+
+.rs-benefit .benefit-item:hover .benefit-item__icon span {
+    background: #ffffff;
+}
+
+.rs-benefit .benefit-item:hover .benefit-item__icon::before {
+    opacity: 1;
+}
+
+.rs-benefit .benefit-item:hover .benefit-item__icon::after {
+    opacity: 1;
+    top: -5px;
+    right: 10px;
+}
+
+@media (max-width: 767.98px) {
+    .rs-benefit {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rs-benefit__header {
+        padding-right: 0;
+    }
+
+    .rs-benefit__content {
+        padding-top: 20px;
+    }
+
+    .rs-benefit__media-slider-items {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .rs-benefit__arrows {
+        display: none;
+    }
+
+    .rs-benefit .benefit-item__icon {
+        float: left;
+        margin-right: 24px;
+    }
+
+    .rs-benefit .benefit-item > h4 {
+        font-size: 14px;
+    }
+
+    .rs-benefit .benefit-item > p {
+        font-size: 13px;
+    }
+}

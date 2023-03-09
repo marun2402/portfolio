@@ -1,0 +1,128 @@
+.rs-partners {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.rs-partners__container {
+    position: relative;
+}
+
+.rs-partners__header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.rs-partners__header a {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+    color: #999999;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-partners__header a span {
+    position: relative;
+}
+
+.rs-partners__header a span::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.rs-partners__header a::after {
+    content: "";
+    margin-left: 12px;
+    width: 16px;
+    height: 16px;
+    -webkit-mask-image: url("../../img/icons/arrow-right.svg");
+    mask-image: url("../../img/icons/arrow-right.svg");
+    background: #999999;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transition: background 0.3s ease-out;
+}
+
+.rs-partners__header a:hover {
+    color: #ee713f;
+}
+
+.rs-partners__header a:hover span::after {
+    background-color: #ee713f;
+    bottom: -4px;
+}
+
+.rs-partners__header a:hover::after {
+    background: #ee713f;
+}
+
+.rs-partners__content {
+    overflow: visible;
+    padding-top: 40px;
+    position: relative;
+}
+
+.rs-partners .partners-item {
+    height: 152px;
+    display: block;
+    outline: 1px solid #e2e2e2;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-partners .partners-item img {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    opacity: 0.3;
+    transition: 0.3s ease-out;
+}
+
+.rs-partners .partners-item:hover img {
+    opacity: 1;
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+@media (min-width: 767.98px) {
+    .rs-partners__media-slider-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-partners {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rs-partners__content {
+        padding-top: 20px;
+    }
+
+    .rs-partners .partners-item {
+        width: 192.78px;
+        height: 112.34px;
+    }
+}
