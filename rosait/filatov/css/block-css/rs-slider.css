@@ -1,0 +1,319 @@
+.rs-slider {
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.rs-slider__container {
+    position: relative;
+}
+
+.rs-slider__slider {
+    height: 833px;
+    background: rgba(187, 228, 250, 0.3);
+    border-radius: 75px;
+    overflow: hidden;
+}
+
+.rs-slider__swiper {
+    height: 100%;
+}
+
+.rs-slider .banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.rs-slider .banner__bg-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.rs-slider .banner__bg-mobile img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: right center;
+    object-position: right center;
+}
+
+.rs-slider .banner__content {
+    position: absolute;
+    z-index: 3;
+    top: 177px;
+    left: 10%;
+}
+
+.rs-slider .banner__content .line {
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 33px;
+}
+
+.rs-slider .banner__content .content-logo {
+    margin-right: 20px;
+}
+
+.rs-slider .banner__content .content-logo img {
+    width: 100%;
+}
+
+.rs-slider .banner__content .content-logo_1 {
+    -ms-flex: 0 0 115 px;
+    flex: 0 0 115 px;
+}
+
+.rs-slider .banner__content .content-logo_2 {
+    -ms-flex: 0 0 212px;
+    flex: 0 0 212px;
+}
+
+.rs-slider .banner__content .content-logo_3 {
+    -ms-flex: 0 0 150px;
+    flex: 0 0 150px;
+}
+
+.rs-slider .banner__content h1 {
+    font-family: "Rubik";
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 117%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #04324b;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 8px;
+}
+
+.rs-slider .banner__content h1 span {
+    font-weight: 700;
+    font-size: 56px;
+    letter-spacing: 0.065em;
+    line-height: 1.45;
+}
+
+.rs-slider .banner__labels {
+    position: absolute;
+    z-index: 3;
+    bottom: 38px;
+    width: 100%;
+    padding-right: 312px;
+    padding-left: 10%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-slider .banner__labels p:first-child {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 98%;
+    letter-spacing: 0.03em;
+    color: #ff5e00;
+}
+
+.rs-slider .banner__labels p:last-child {
+    font-family: "Rubik";
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 114.4%;
+    text-align: center;
+    letter-spacing: 0.07em;
+    color: #04324b;
+}
+
+.rs-slider .banner__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+}
+
+.rs-slider .banner__photos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.rs-slider .banner__photos .photo {
+    position: absolute;
+    z-index: 2;
+}
+
+.rs-slider .banner__photos .photo-bg {
+    top: -138px;
+    right: -243px;
+    -webkit-transform: translateZ(-35px);
+    transform: translateZ(-35px);
+}
+
+.rs-slider .banner__photos .photo-3 {
+    bottom: 127px;
+    right: 199px;
+    -webkit-transform: translateZ(45px);
+    transform: translateZ(45px);
+}
+
+.rs-slider .banner__photos .photo-4 {
+    bottom: 588px;
+    right: 161px;
+    -webkit-transform: translateZ(15px);
+    transform: translateZ(15px);
+}
+
+.rs-slider .banner__photos .photo-1 {
+    bottom: 127px;
+    right: 1159px;
+    -webkit-transform: translateZ(-30px);
+    transform: translateZ(-30px);
+}
+
+.rs-slider .banner__photos .photo-2 {
+    bottom: 127px;
+    right: 906px;
+    -webkit-transform: translateZ(-15px);
+    transform: translateZ(-15px);
+}
+
+@media (min-width: 991.98px) {
+    .rs-slider .banner__bg-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1860px) {
+    .rs-slider .banner__content {
+        left: 15px;
+    }
+
+    .rs-slider .banner__labels {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 1800px) {
+    .rs-slider {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .rs-slider .banner__content h1 {
+        font-size: 24px;
+    }
+
+    .rs-slider .banner__content h1 span {
+        font-size: 34px;
+    }
+
+    .rs-slider .banner__labels {
+        padding-right: 15px;
+    }
+
+    .rs-slider .banner__bg {
+        -webkit-transform: scale(0.85);
+        transform: scale(0.85);
+    }
+}
+
+@media (max-width: 1200px) {
+    .rs-slider .banner__content {
+        top: 38px;
+    }
+
+    .rs-slider .banner__bg {
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-slider__slider {
+        height: 493px;
+        border-radius: 0;
+    }
+
+    .rs-slider .banner__content .content-logo {
+        margin-right: 7px;
+    }
+
+    .rs-slider .banner__content .content-logo_1 {
+        -ms-flex: 0 0 59px;
+        flex: 0 0 59px;
+    }
+
+    .rs-slider .banner__content .content-logo_2 {
+        -ms-flex: 0 0 108px;
+        flex: 0 0 108px;
+    }
+
+    .rs-slider .banner__content .content-logo_3 {
+        -ms-flex: 0 0 60px;
+        flex: 0 0 60px;
+    }
+
+    .rs-slider .banner__content h1 {
+        font-size: 14px;
+    }
+
+    .rs-slider .banner__content h1 span {
+        font-size: 19px;
+    }
+
+    .rs-slider .banner__labels {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+
+    .rs-slider .banner__labels p:first-child {
+        -ms-flex-order: 2;
+        order: 2;
+        font-size: 12px;
+    }
+
+    .rs-slider .banner__labels p:first-child br {
+        display: none;
+    }
+
+    .rs-slider .banner__labels p:last-child {
+        font-size: 20px;
+        -ms-flex-order: 1;
+        order: 1;
+        text-align: left;
+    }
+
+    .rs-slider .banner__labels p:last-child br {
+        display: none;
+    }
+
+    .rs-slider .banner__photos {
+        display: none;
+    }
+}

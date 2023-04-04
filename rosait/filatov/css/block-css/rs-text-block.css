@@ -1,0 +1,32 @@
+.rs-text-block {
+    text-align: center;
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+
+.rs-text-block__content {
+    max-width: 950px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rs-text-block__content p {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 131.5%;
+    text-align: center;
+    color: #3d577b;
+}
+
+@media (max-width: 767.98px) {
+    .rs-text-block {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rs-text-block__content p {
+        font-size: 13px;
+    }
+}

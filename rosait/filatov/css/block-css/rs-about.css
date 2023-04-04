@@ -1,0 +1,65 @@
+.rs-about {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-top: 54px;
+    padding-bottom: 54px;
+    text-align: center;
+    background: #ebf7fe;
+    border-radius: 75px 75px 0px 0px;
+}
+
+.rs-about__items {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.rs-about .about-item {
+    height: 100%;
+}
+
+.rs-about .about-item a {
+    display: block;
+    border-radius: 43px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 63%;
+}
+
+.rs-about .about-item a img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-about .about-item p {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 135%;
+    color: #04324b;
+    margin-bottom: 16px;
+    margin-top: 22px;
+}
+
+@media (max-width: 767.98px) {
+    .rs-about {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 0;
+    }
+
+    .rs-about__items {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-about .about-item p {
+        font-size: 13px;
+    }
+}
