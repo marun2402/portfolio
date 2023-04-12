@@ -260,6 +260,60 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
   //   }
   // });
 
+  function getBrowser$1() {
+    var userAgent = navigator.userAgent;
+    var browser = 'unkown'; // Detect browser name
+
+    browser = /ucbrowser/i.test(userAgent) ? 'UCBrowser' : browser;
+    browser = /edg/i.test(userAgent) ? 'Edge' : browser;
+    browser = /googlebot/i.test(userAgent) ? 'GoogleBot' : browser;
+    browser = /chromium/i.test(userAgent) ? 'Chromium' : browser;
+    browser = /firefox|fxios/i.test(userAgent) && !/seamonkey/i.test(userAgent) ? 'Firefox' : browser;
+    browser = /; msie|trident/i.test(userAgent) && !/ucbrowser/i.test(userAgent) ? 'IE' : browser;
+    browser = /chrome|crios/i.test(userAgent) && !/opr|opera|chromium|edg|ucbrowser|googlebot/i.test(userAgent) ? 'Chrome' : browser;
+    browser = /safari/i.test(userAgent) && !/chromium|edg|ucbrowser|chrome|crios|opr|opera|fxios|firefox/i.test(userAgent) ? 'Safari' : browser;
+    browser = /opr|opera/i.test(userAgent) ? 'Opera' : browser; // detect browser version
+
+    switch (browser) {
+      case 'UCBrowser':
+        return "".concat(browser, "/").concat(browserVersion(userAgent, /(ucbrowser)\/([\d\.]+)/i));
+
+      case 'Edge':
+        return "".concat(browser, "/").concat(browserVersion(userAgent, /(edge|edga|edgios|edg)\/([\d\.]+)/i));
+
+      case 'GoogleBot':
+        return "".concat(browser, "/").concat(browserVersion(userAgent, /(googlebot)\/([\d\.]+)/i));
+
+      case 'Chromium':
+        return "".concat(browser, "/").concat(browserVersion(userAgent, /(chromium)\/([\d\.]+)/i));
+
+      case 'Firefox':
+        return "".concat(browser, "/").concat(browserVersion(userAgent, /(firefox|fxios)\/([\d\.]+)/i));
+
+      case 'Chrome':
+        return "".concat(browser, "/").concat(browserVersion(userAgent, /(chrome|crios)\/([\d\.]+)/i));
+
+      case 'Safari':
+        return "".concat(browser, "/").concat(browserVersion(userAgent, /(safari)\/([\d\.]+)/i));
+
+      case 'Opera':
+        return "".concat(browser, "/").concat(browserVersion(userAgent, /(opera|opr)\/([\d\.]+)/i));
+
+      case 'IE':
+        var version = browserVersion(userAgent, /(trident)\/([\d\.]+)/i); // IE version is mapped using trident version
+        // IE/8.0 = Trident/4.0, IE/9.0 = Trident/5.0
+
+        return version ? "".concat(browser, "/").concat(parseFloat(version) + 4.0) : "".concat(browser, "/7.0");
+
+      default:
+        return "unknown/0.0.0.0";
+    }
+  }
+
+  function browserVersion(userAgent, regex) {
+    return userAgent.match(regex) ? userAgent.match(regex)[2] : null;
+  }
+
   function phoneInput() {
     var phoneInputs = document.querySelectorAll('input[data-tel-input]');
 
@@ -6956,22 +7010,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
     if (is_safari) {
-      alert('safari1');
       document.body.classList.remove('page-animate');
     }
 
-    var canva = document.createElement('canvas');
-    var ctx = canva.getContext('2d');
-    var img = ctx.getImageData(0, 0, 1, 1);
-    var pix = img.data; // byte array, rgba
-
-    var isSafari = pix[3] != 0;
-
-    if (isSafari) {
-      alert('safari2');
-      document.body.classList.remove('page-animate');
-    }
-
+    console.log(getBrowser$1());
+    console.log(navigator.userAgent);
     $('.counter').counterUp({
       delay: 10,
       time: 1000
