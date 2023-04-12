@@ -6946,11 +6946,29 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
     gsapAnimations();
     phoneInput(); //countdownTimer();
 
-    document.body.classList.add('loaded'); //const isSafari = /safari/.test(getBrowser().toLowerCase());
+    document.body.classList.add('loaded'); //const is_safari = /safari/.test(getBrowser().toLowerCase());
+    // var is_opera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+    // var is_Edge = navigator.userAgent.indexOf("Edge") > -1;
+    // var is_chrome = !!window.chrome && !is_opera && !is_Edge;
+    // var is_explorer= typeof document !== 'undefined' && !!document.documentMode && !is_Edge;
+    // var is_firefox = typeof window.InstallTrigger !== 'undefined';
 
     var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
     if (is_safari) {
+      alert('safari1');
+      document.body.classList.remove('page-animate');
+    }
+
+    var canva = document.createElement('canvas');
+    var ctx = canva.getContext('2d');
+    var img = ctx.getImageData(0, 0, 1, 1);
+    var pix = img.data; // byte array, rgba
+
+    var isSafari = pix[3] != 0;
+
+    if (isSafari) {
+      alert('safari2');
       document.body.classList.remove('page-animate');
     }
 
