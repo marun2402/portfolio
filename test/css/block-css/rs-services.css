@@ -1,0 +1,205 @@
+.rs-services {
+    position: relative;
+    background: rgba(206, 215, 222, 0.2);
+}
+
+.rs-services__container {
+    position: relative;
+    padding-top: 231px;
+    padding-bottom: 67px;
+}
+
+.rs-services__inner {
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+.rs-services__content {
+    margin-top: 30px;
+}
+
+.rs-services .services-spoller {
+    margin-bottom: 34px;
+}
+
+.rs-services .services-spoller__head {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 36px 40px;
+    cursor: pointer;
+    background: #ffffff;
+    box-shadow: 0px 76px 45px rgba(0, 0, 0, 0.02), 0px 34px 34px rgba(0, 0, 0, 0.03), 0px 8px 18px rgba(0, 0, 0, 0.03), 0px 0px 0px rgba(0, 0, 0, 0.03);
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.2;
+    color: #353e47;
+}
+
+.rs-services .services-spoller__head .icon {
+    margin-left: 15px;
+    width: 52px;
+    height: 52px;
+    background: #1c4a47;
+    border-radius: 50%;
+    position: relative;
+}
+
+.rs-services .services-spoller__head .icon::before,
+.rs-services .services-spoller__head .icon::after {
+    content: "";
+    display: block;
+    background: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s linear 0.2s, -webkit-transform 0.4s linear;
+    transition: transform 0.4s linear, opacity 0.2s linear 0.2s;
+    transition: transform 0.4s linear, opacity 0.2s linear 0.2s, -webkit-transform 0.4s linear;
+}
+
+.rs-services .services-spoller__head .icon::before {
+    height: 3px;
+    width: 16px;
+}
+
+.rs-services .services-spoller__head .icon::after {
+    height: 16px;
+    width: 3px;
+}
+
+.rs-services .services-spoller__head._active .icon::before,
+.rs-services .services-spoller__head._active .icon::after {
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.rs-services .services-spoller__head._active .icon::after {
+    opacity: 0;
+}
+
+.rs-services .services-spoller__body {
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.rs-services .services-order h4 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 137%;
+    color: #353e47;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.rs-services .services-order p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    letter-spacing: 0.03em;
+    color: #6e8499;
+    margin-bottom: 0px;
+}
+
+.rs-services .services-order__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.rs-services .services-order__wrapper .btn-color {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-top: 20px;
+}
+
+.rs-services .services-order__holder {
+    max-width: 636px;
+    margin-right: 35px;
+}
+
+.rs-services .services-order__type {
+    display: grid;
+    grid-template-columns: auto 260px 1fr;
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.rs-services .services-order__type:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.rs-services .services-order__type::before {
+    content: attr(data-number);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #6e8499;
+}
+
+@media (max-width: 991.98px) {
+    .rs-services__inner {
+        padding: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-services__container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .rs-services .services-spoller {
+        margin-bottom: 14px;
+    }
+
+    .rs-services .services-spoller__head {
+        font-size: 13px;
+        padding: 20px;
+    }
+
+    .rs-services .services-spoller__head .icon {
+        width: 31px;
+        height: 31px;
+    }
+
+    .rs-services .services-order h4 {
+        font-size: 16px;
+    }
+
+    .rs-services .services-order p {
+        font-size: 13px;
+    }
+
+    .rs-services .services-order__wrapper {
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .rs-services .services-order__type:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .rs-services .services-order__type {
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .rs-services .services-order__type::before {
+        font-size: 16px;
+    }
+}
