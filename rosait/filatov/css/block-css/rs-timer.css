@@ -1,0 +1,85 @@
+.rs-timer {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-top: 73px;
+    padding-bottom: 79px;
+    border-radius: 75px 75px 0px 0px;
+    background: #15415a linear-gradient(180deg, rgba(21, 65, 90, 0) 63.09%, #043049 100%);
+    text-align: center;
+}
+
+.rs-timer__body {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.rs-timer .timer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.rs-timer .timer__items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-timer .timer__item {
+    width: 174px;
+    height: 174px;
+    border: 11px solid #7cbfea;
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-family: "Rubik";
+    font-size: 42px;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.rs-timer .timer__item:not(:last-child) {
+    margin-right: 42px;
+}
+
+.rs-timer .timer__item::after {
+    content: attr(data-title);
+    display: block;
+    font-family: "Inter";
+    line-height: 1.2;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+}
+
+@media (max-width: 991.98px) {
+    .rs-timer .timer__item:not(:last-child) {
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-timer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 0;
+    }
+
+    .rs-timer .timer__item {
+        font-size: 17px;
+        width: 70px;
+        height: 70px;
+        border: 3px solid #7cbfea;
+    }
+
+    .rs-timer .timer__item::after {
+        font-size: 9px;
+    }
+}
