@@ -1,0 +1,116 @@
+.rs-callback {
+    position: relative;
+    background: url("../../img/form_1_bg.jpg") right/cover no-repeat;
+    border-radius: 0px 20px 20px 0px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.rs-callback__inner {
+    max-width: 967px;
+}
+
+.rs-callback__form {
+    margin-top: 30px;
+}
+
+.rs-callback .callback-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 12px;
+}
+
+.rs-callback .callback-form .form-control {
+    margin-bottom: 16px;
+    background: #ffffff;
+    box-shadow: 0px 41px 51px rgba(53, 62, 71, 0.03), 0px 10px 34px rgba(53, 62, 71, 0.03), 0px 0px 0;
+    border-radius: 35px;
+    height: 47px;
+    width: 100%;
+    padding: 0px 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 136%;
+    color: #6e8499;
+}
+
+.rs-callback .callback-form .form-control::-webkit-input-placeholder {
+    color: #b3b3b3;
+    transition-duration: 0.3s;
+}
+
+.rs-callback .callback-form .form-control::-moz-placeholder {
+    color: #b3b3b3;
+    transition-duration: 0.3s;
+}
+
+.rs-callback .callback-form .form-control:-ms-input-placeholder {
+    color: #b3b3b3;
+    transition-duration: 0.3s;
+}
+
+.rs-callback .callback-form .form-control::-ms-input-placeholder {
+    color: #b3b3b3;
+    transition-duration: 0.3s;
+}
+
+.rs-callback .callback-form .form-control::placeholder {
+    color: #b3b3b3;
+    transition-duration: 0.3s;
+}
+
+.rs-callback .callback-form .form-control:hover::-webkit-input-placeholder {
+    color: #000000;
+}
+
+.rs-callback .callback-form .form-control:hover::-moz-placeholder {
+    color: #000000;
+}
+
+.rs-callback .callback-form .form-control:hover:-ms-input-placeholder {
+    color: #000000;
+}
+
+.rs-callback .callback-form .form-control:hover::-ms-input-placeholder {
+    color: #000000;
+}
+
+.rs-callback .callback-form .form-control:hover::placeholder {
+    color: #000000;
+}
+
+.rs-callback .callback-form .form-control.error {
+    border-color: #ff3844;
+}
+
+@media (min-width: 1600px) {
+    .rs-callback {
+        padding-left: calc((100% - 1570px) / 2);
+        margin-right: calc((100% - 1570px) / 2);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-callback {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 0;
+    }
+
+    .rs-callback .callback-form {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-callback .callback-form .form-control {
+        margin-bottom: 12px;
+    }
+}
+
+@media (min-width: 405px) and (max-width: 767px) {
+    .rs-callback {
+        padding-left: calc((100vw - 375px) / 2);
+        padding-right: calc((100vw - 375px) / 2);
+    }
+}
