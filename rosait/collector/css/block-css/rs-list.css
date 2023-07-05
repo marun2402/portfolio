@@ -1,0 +1,54 @@
+.rs-list {
+    padding-top: 43px;
+}
+
+.rs-list__item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.rs-list .list-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 7px;
+    border: 1px solid #e6e6e6;
+    padding: 15px 22px;
+    background: #ffffff;
+    transition: background 0.3s ease-out;
+}
+
+.rs-list .list-item h3 {
+    color: #424242;
+    font-size: 19px;
+    font-family: "Brygada 1918";
+    font-weight: 500;
+    margin-left: 16px;
+}
+
+@media (min-width: 767.98px) {
+    .rs-list__items {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .rs-list__item:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-list {
+        padding-top: 25px;
+    }
+}
+
+@media (any-hover: hover) {
+    .rs-list .list-item:hover {
+        background: #f3ebe2;
+    }
+}

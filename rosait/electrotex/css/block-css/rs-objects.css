@@ -1,0 +1,176 @@
+.rs-objects {
+    overflow: hidden;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.rs-objects h1 {
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 100%;
+    color: #1f2133;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rs-objects__items {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.rs-objects .objects-card {
+    height: 481px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rs-objects .objects-card__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.rs-objects .objects-card__img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-objects .objects-card__number {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    z-index: 2;
+    -webkit-filter: url(#outerText);
+    filter: url(#outerText);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 128%;
+}
+
+.rs-objects .objects-card__title {
+    width: 591px;
+    max-width: 100%;
+    position: absolute;
+    bottom: 29px;
+    background: #1f2133;
+    z-index: 2;
+    padding: 21px 63px 5px 40px;
+    transition: all 0.3s ease-out;
+    will-change: bottom;
+}
+
+.rs-objects .objects-card__title::after {
+    content: url(../../img/icons/arrow-object.svg);
+    position: absolute;
+    right: 20px;
+    top: 23px;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.rs-objects .objects-card__title .text {
+    overflow: hidden;
+    background: #1f2133;
+    transition: all 0.3s ease-out;
+}
+
+.rs-objects .objects-card__title .text p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 128%;
+    color: #ffffff;
+}
+
+.rs-objects .objects-card__title h4 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 128%;
+    color: #ffffff;
+    margin-top: 0px;
+    margin-bottom: 16px;
+}
+
+.rs-objects .objects-card > a {
+    font-size: 0;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media (min-width: 767.98px) {
+    .rs-objects__item:nth-child(5n+5) {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-objects {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .rs-objects h1 {
+        font-size: 26px;
+    }
+
+    .rs-objects__items {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .rs-objects .objects-card {
+        height: 381px;
+    }
+
+    .rs-objects .objects-card__number {
+        font-size: 48px;
+    }
+
+    .rs-objects .objects-card__title {
+        padding: 13px 63px 13px 25px;
+    }
+
+    .rs-objects .objects-card__title .text p {
+        font-size: 11px;
+    }
+
+    .rs-objects .objects-card__title h4 {
+        font-size: 13px;
+    }
+}
+
+@media (any-hover: hover) {
+    .rs-objects .objects-card .objects-card__title .text {
+        height: 0;
+    }
+
+    .rs-objects .objects-card:hover .objects-card__title {
+        bottom: 0px;
+        width: 100%;
+    }
+
+    .rs-objects .objects-card:hover .objects-card__title .text {
+        height: calc(var(--height) + 10px);
+    }
+
+    .rs-objects .objects-card:hover .objects-card__title::after {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}

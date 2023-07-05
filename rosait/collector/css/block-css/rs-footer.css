@@ -1,0 +1,386 @@
+.footer-menu {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 133%;
+    color: #696969;
+}
+
+.footer-menu__list {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.footer-menu__list li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-menu__list li a {
+    font-size: 1em;
+    color: #696969;
+}
+
+.footer-menu_grid .footer-menu__list {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 0px;
+    -moz-column-gap: 0px;
+    column-gap: 0px;
+}
+
+.rs-footer._init .footer-title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+}
+
+.rs-footer._init .footer-title::after {
+    content: "";
+    border: 4px solid transparent;
+    border-top: 4px solid #b6b5b5;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+    -webkit-transform-origin: center 2px;
+    transform-origin: center 2px;
+}
+
+.rs-footer._init .footer-title._active::after {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.rs-footer._init .not-spoller.footer-title::after {
+    display: none;
+}
+
+.rs-footer .footer-top {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.rs-footer .footer-top__container {
+    display: grid;
+    grid-template-columns: 1fr 315px;
+    -webkit-column-gap: 190px;
+    -moz-column-gap: 190px;
+    column-gap: 190px;
+}
+
+.rs-footer .footer-top__search {
+    margin-bottom: 50px;
+}
+
+.rs-footer .footer-top__nav {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.rs-footer .footer-top__menu:not(:last-child) {
+    margin-right: 160px;
+}
+
+.rs-footer .footer-top__info {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 133%;
+    color: #696969;
+}
+
+.rs-footer .footer-top__info:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.rs-footer .footer-top__info a,
+.rs-footer .footer-top__info p {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.rs-footer .footer-top__info a {
+    transition: color 0.3s ease-out;
+}
+
+.rs-footer .footer-top__info a[href^="mailto:"] span {
+    text-decoration: underline;
+}
+
+.rs-footer .footer-top__info a:hover {
+    color: #A55E3F;
+}
+
+.rs-footer .footer-bottom {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #d9d9d9;
+}
+
+.rs-footer .footer-bottom__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-footer .footer-bottom__content {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120%;
+    color: #696969;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-footer .footer-bottom__content img {
+    margin-right: 20px;
+}
+
+.rs-footer .footer-bottom a {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #696969;
+    opacity: 0.5;
+}
+
+.rs-footer .footer-title {
+    font-family: "Brygada 1918";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 116%;
+    color: #424242;
+    margin-bottom: 18px;
+}
+
+.rs-footer .footer-search h3 {
+    font-family: "Brygada 1918";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 129.6%;
+    color: #000000;
+}
+
+.rs-footer .footer-search__box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 177px 1fr 156px;
+    -webkit-column-gap: 16px;
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+}
+
+.rs-footer .footer-search__input {
+    width: 100%;
+    height: 46px;
+    border: 1px solid #e6e6e6;
+    border-radius: 7px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 141.6%;
+    color: #bbbbbb;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.rs-footer .footer-search__input::-webkit-input-placeholder {
+    color: #bbbbbb;
+}
+
+.rs-footer .footer-search__input::-moz-placeholder {
+    color: #bbbbbb;
+}
+
+.rs-footer .footer-search__input:-ms-input-placeholder {
+    color: #bbbbbb;
+}
+
+.rs-footer .footer-search__input::-ms-input-placeholder {
+    color: #bbbbbb;
+}
+
+.rs-footer .footer-search__input::placeholder {
+    color: #bbbbbb;
+}
+
+.rs-footer .footer-search__input:focus {
+    outline: none;
+}
+
+.rs-footer .footer-search__submit {
+    background: #a55e3f;
+    border-radius: 7px;
+    height: 46px;
+    padding-left: 11px;
+    padding-right: 11px;
+    font-family: "Brygada 1918";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 133%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.rs-footer .footer-search__submit::before {
+    content: "";
+    margin-right: 8px;
+    display: block;
+    width: 17px;
+    height: 17px;
+    -webkit-mask-image: url("../../img/icons/search-icon.svg");
+    mask-image: url("../../img/icons/search-icon.svg");
+    background: #ffffff;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+@media (max-width: 1506px) {
+    .rs-footer .footer-top__container {
+        -webkit-column-gap: 30px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+    }
+
+    .rs-footer .footer-top__menu:not(:last-child) {
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .footer-menu_grid .footer-menu__list {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-footer .footer-wrapper {
+        padding-bottom: 30px;
+        padding-top: 0px;
+    }
+
+    .rs-footer .footer-top {
+        padding-top: 15px;
+        padding-bottom: 0;
+    }
+
+    .rs-footer .footer-top__container {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-footer .footer-top__nav {
+        display: block;
+    }
+
+    .rs-footer .footer-top__menu:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .rs-footer .footer-top__menu {
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .rs-footer .footer-top__info:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .rs-footer .footer-top__info {
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .rs-footer .footer-bottom {
+        border: none;
+    }
+
+    .rs-footer .footer-title {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer-menu {
+        font-size: 12px;
+    }
+
+    .rs-footer .footer-top__search {
+        margin-bottom: 0;
+    }
+
+    .rs-footer .footer-top__info {
+        font-size: 12px;
+    }
+
+    .rs-footer .footer-bottom__container {
+        display: block;
+    }
+
+    .rs-footer .footer-bottom__content {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .rs-footer .footer-bottom__content img {
+        margin-right: 0;
+        margin-bottom: 14px;
+    }
+
+    .rs-footer .footer-bottom a {
+        text-align: center;
+        display: block;
+        font-size: 12px;
+    }
+
+    .rs-footer .footer-title {
+        font-size: 13px;
+    }
+
+    .rs-footer .footer-search h3 {
+        font-size: 13px;
+        margin-bottom: 11px;
+    }
+
+    .rs-footer .footer-search__box {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-footer .footer-search__input {
+        padding-right: 68px;
+    }
+
+    .rs-footer .footer-search__submit::before {
+        margin-right: 0;
+        background: #2f2f2f;
+    }
+
+    .rs-footer .footer-search__submit {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 0;
+        padding-left: 18px;
+        padding-right: 18px;
+        background: transparent;
+    }
+}

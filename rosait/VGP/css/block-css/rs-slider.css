@@ -1,0 +1,40 @@
+.rs-slider {
+    z-index: 2;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.rs-slider__slider {
+    height: 954px;
+}
+
+.rs-slider__swiper {
+    height: 100%;
+}
+
+.rs-slider__slide {
+    height: 100%;
+    position: relative;
+}
+
+.rs-slider__slide-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+    .rs-slider__slider {
+        height: 450px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-slider {
+        padding-bottom: 0;
+    }
+}

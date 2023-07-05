@@ -1,0 +1,139 @@
+.rs-maintenance {
+    padding-top: 107px;
+    padding-bottom: 107px;
+}
+
+.rs-maintenance__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 130px;
+    -moz-column-gap: 130px;
+    column-gap: 130px;
+    -ms-flex-align: start;
+    align-items: start;
+}
+
+.rs-maintenance__content {
+    position: sticky;
+    top: 10%;
+}
+
+.rs-maintenance__content h2 {
+    font-size: 40px;
+    line-height: 128%;
+    color: #1f2133;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.rs-maintenance__content p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 143%;
+    color: #1f2133;
+    margin-bottom: 71px;
+}
+
+.rs-maintenance__item {
+    position: sticky;
+    top: calc(10% + 320px);
+}
+
+.rs-maintenance__item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.rs-maintenance__item:nth-child(1) {
+    top: calc(10% + 0px);
+}
+
+.rs-maintenance__item:nth-child(2) {
+    top: calc(10% + 80px);
+}
+
+.rs-maintenance__item:nth-child(3) {
+    top: calc(10% + 160px);
+}
+
+.rs-maintenance__item:nth-child(4) {
+    top: calc(10% + 240px);
+}
+
+.rs-maintenance .maintenance-card {
+    background: #ffffff;
+    border: 1px solid #cecdde;
+    border-radius: 5px;
+    padding: 40px;
+}
+
+.rs-maintenance .maintenance-card__number {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 128%;
+    color: #6150e9;
+    -webkit-filter: url(#outerText);
+    filter: url(#outerText);
+}
+
+.rs-maintenance .maintenance-card__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 135.5%;
+    color: #1f2133;
+    margin-top: 3px;
+    margin-bottom: 27px;
+}
+
+.rs-maintenance .maintenance-card__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 135.5%;
+    color: #1f2133;
+    margin-top: 3px;
+    margin-bottom: 27px;
+}
+
+.rs-maintenance .maintenance-card__img {
+    text-align: right;
+}
+
+@media (max-width: 991.98px) {
+    .rs-maintenance__inner {
+        -webkit-column-gap: 30px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+    }
+
+    .rs-maintenance__content h2 {
+        font-size: 28px;
+    }
+
+    .rs-maintenance__content p {
+        font-size: 13px;
+    }
+
+    .rs-maintenance .maintenance-card {
+        padding: 20px;
+    }
+
+    .rs-maintenance .maintenance-card__title {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .rs-maintenance .maintenance-card__text {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-maintenance {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rs-maintenance__inner {
+        grid-template-columns: 1fr;
+    }
+}

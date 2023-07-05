@@ -1,0 +1,120 @@
+.rs-advantages {
+    background: url("../../img/icons/rectangle1.svg") calc(50% + 236px) 50% no-repeat;
+    position: relative;
+    padding-top: 125px;
+    padding-bottom: 170px;
+    margin-top: -37px;
+}
+
+.rs-advantages__inner {
+    position: relative;
+    margin-top: 90px;
+}
+
+.rs-advantages__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px;
+}
+
+.rs-advantages .advantages-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.rs-advantages .advantages-item__icon {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 159px;
+    height: 169px;
+}
+
+.rs-advantages .advantages-item__icon img {
+    width: 100%;
+}
+
+.rs-advantages .advantages-item__wrapper {
+    margin-left: 35px;
+}
+
+.rs-advantages .advantages-item h6 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #293c42;
+    margin-top: 0;
+    margin-bottom: 13px;
+}
+
+.rs-advantages .advantages-item p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #272735;
+    margin-bottom: 0;
+}
+
+@media (max-width: 1475px) {
+    .rs-advantages__items {
+        gap: 30px;
+    }
+
+    .rs-advantages .advantages-item__wrapper {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-advantages {
+        margin-top: 0;
+    }
+
+    .rs-advantages .advantages-item {
+        display: block;
+    }
+
+    .rs-advantages .advantages-item__icon {
+        width: 78px;
+        height: 83px;
+    }
+
+    .rs-advantages .advantages-item__wrapper {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-advantages {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: 1px dashed #fdc300;
+    }
+
+    .rs-advantages__wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 30px;
+        padding-bottom: 70px;
+        border-left: 1px dashed #fdc300;
+        border-right: 1px dashed #fdc300;
+    }
+
+    .rs-advantages__inner {
+        margin-top: 30px;
+    }
+
+    .rs-advantages__items {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-advantages .advantages-item h6 {
+        font-size: 18px;
+    }
+
+    .rs-advantages .advantages-item p {
+        font-size: 13px;
+    }
+}

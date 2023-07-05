@@ -1,0 +1,104 @@
+.rs-text-img-block {
+    background: url("../../img/markets/bg.svg") 100% calc(100% - 40px) no-repeat;
+    position: relative;
+    z-index: 2;
+    padding-left: 15px;
+}
+
+.rs-text-img-block__wrapper {
+    padding-top: 95px;
+    padding-bottom: 235px;
+}
+
+.rs-text-img-block__body {
+    display: grid;
+    grid-template-columns: 1fr 31%;
+    -webkit-column-gap: 90px;
+    -moz-column-gap: 90px;
+    column-gap: 90px;
+    row-gap: 35px;
+}
+
+.rs-text-img-block__content {
+    font-size: 21px;
+    line-height: 180%;
+    color: #272735;
+}
+
+.rs-text-img-block__content .section-title {
+    margin-bottom: 75px;
+}
+
+.rs-text-img-block__content p {
+    margin-bottom: 20px;
+}
+
+.rs-text-img-block__photo {
+    position: relative;
+}
+
+.rs-text-img-block__photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@media (min-width: 1475px) {
+    .rs-text-img-block {
+        padding-left: calc((100% - 1445px) / 2);
+    }
+}
+
+@media (max-width: 1475px) {
+    .rs-text-img-block__body {
+        grid-template-columns: 1fr 40%;
+        -webkit-column-gap: 30px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-text-img-block {
+        background: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-text-img-block {
+        border-bottom: 1px dashed #fdc300;
+    }
+
+    .rs-text-img-block__wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 40px;
+        padding-bottom: 15px;
+        border-left: 1px dashed #fdc300;
+        border-right: 1px dashed #fdc300;
+    }
+
+    .rs-text-img-block__body {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-text-img-block__content {
+        margin-top: 20px;
+        font-size: 13px;
+    }
+
+    .rs-text-img-block__photo {
+        padding-bottom: 85%;
+    }
+}
+
+@media (min-width: 405px) and (max-width: 767px) {
+    .rs-text-img-block {
+        padding-left: calc((100vw - 375px) / 2);
+        padding-right: calc((100vw - 375px) / 2);
+    }
+}

@@ -1,0 +1,190 @@
+.rs-goods {
+    position: relative;
+    padding-bottom: 50px;
+    padding-top: 55px;
+}
+
+.rs-goods__container {
+    position: relative;
+}
+
+.rs-goods__body {
+    margin-top: 18px;
+}
+
+.rs-goods .goods-slider__slider {
+    padding-top: 10px;
+}
+
+.rs-goods .goods-slider__nav {
+    margin-top: 23px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.rs-goods .goods-slider__nav .slider-paging {
+    margin-right: 20px;
+}
+
+.rs-goods .goods-item {
+    position: relative;
+    border-radius: 7px;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    padding: 24px;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.rs-goods .goods-item__photo {
+    padding-bottom: 90%;
+    position: relative;
+    margin-bottom: 23px;
+}
+
+.rs-goods .goods-item__photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.rs-goods .goods-item__content {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.rs-goods .goods-item__content h6 {
+    color: #424242;
+    font-size: 16px;
+    line-height: 141.6%;
+}
+
+.rs-goods .goods-item__footnote {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: 1fr 108px;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-goods .goods-item__price {
+    color: #424242;
+    font-size: 21px;
+    font-family: "Brygada 1918";
+    font-weight: 500;
+}
+
+.rs-goods .goods-item__price .sale {
+    font-family: "Manrope";
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-goods .goods-item__price .sale del {
+    margin-top: 5px;
+    color: #949494;
+    font-size: 13px;
+    font-weight: 500;
+    display: block;
+    margin-right: 6px;
+}
+
+.rs-goods .goods-item__price .sale span {
+    padding-left: 3px;
+    padding-right: 2px;
+    border-radius: 3px;
+    background: #a55e3f;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    height: 15px;
+    line-height: 15px;
+}
+
+.rs-goods .goods-item__link {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 0.777px solid #a55e3f;
+    border-radius: 5px;
+    height: 38px;
+    padding-left: 14px;
+    padding-right: 14px;
+    color: #a55e3f;
+    font-size: 15px;
+    font-family: "Brygada 1918";
+    font-weight: 500;
+    transition: all 0.3s ease-out;
+}
+
+.rs-goods .goods-item > a {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0;
+}
+
+@media (max-width: 991.98px) {
+    .rs-goods .goods-item {
+        width: 267px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-goods {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rs-goods .goods-slider__nav {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .rs-goods .goods-item__content h6 {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 405px) and (max-width: 767px) {
+    .rs-goods__body {
+        margin-right: calc((100vw - 375px) / -2);
+    }
+}
+
+@media (any-hover: hover) {
+    .rs-goods .goods-item:hover {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    .rs-goods .goods-item:hover .goods-item__link {
+        background: #a55e3f;
+        color: #ffffff;
+    }
+}

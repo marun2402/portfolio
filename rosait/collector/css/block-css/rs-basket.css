@@ -1,0 +1,388 @@
+.rs-basket {
+    padding-top: 40px;
+    padding-bottom: 90px;
+}
+
+.rs-basket__header h1 {
+    color: #424242;
+    font-size: 52px;
+    font-family: "Brygada 1918";
+    line-height: 120%;
+    margin-bottom: 44px;
+    margin-top: 16px;
+}
+
+.rs-basket__content {
+    display: grid;
+    grid-template-columns: 1fr 397px;
+    -webkit-column-gap: 100px;
+    -moz-column-gap: 100px;
+    column-gap: 100px;
+    -ms-flex-align: start;
+    align-items: start;
+}
+
+.rs-basket__products {
+    border: 1px solid #ededed;
+    border-radius: 4px;
+}
+
+.rs-basket__sidebar {
+    position: sticky;
+    top: 10%;
+}
+
+.rs-basket .basket-products__item {
+    border-bottom: 1px solid #ededed;
+}
+
+.rs-basket .basket-item {
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 92px 1fr 115px 210px;
+}
+
+.rs-basket .basket-item__picture {
+    width: 92px;
+    height: 92px;
+    position: relative;
+}
+
+.rs-basket .basket-item__picture img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.rs-basket .basket-item__description {
+    padding-left: 32px;
+    padding-right: 84px;
+}
+
+.rs-basket .basket-item__description .remove-button {
+    color: #949494;
+    font-size: 15px;
+    font-family: "Brygada 1918";
+    font-weight: 500;
+    border-bottom: 1px dashed #949494;
+}
+
+.rs-basket .basket-item__info .name {
+    margin-bottom: 12px;
+}
+
+.rs-basket .basket-item__info .name a {
+    color: #424242;
+    font-size: 14px;
+    line-height: 140%;
+}
+
+.rs-basket .basket-item__amount {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-basket .basket-item__cost {
+    margin-top: 8px;
+    color: #949494;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.rs-basket .basket-item__price .price-current {
+    color: #424242;
+    text-align: right;
+    font-size: 21px;
+    font-family: "Brygada 1918";
+    font-weight: 500;
+}
+
+.rs-basket .basket-item__price .price-sale {
+    margin-top: 8px;
+    text-align: right;
+}
+
+.rs-basket .basket-item__price .price-sale del {
+    color: #949494;
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.rs-basket .basket-item__price .price-sale span {
+    border-radius: 3px;
+    background: #a55e3f;
+    padding-left: 3px;
+    padding-right: 3px;
+    height: 15px;
+    line-height: 15px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.rs-basket .sidebar-box {
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0px 3px 20px 0px rgba(34, 34, 34, 0.1);
+}
+
+.rs-basket .sidebar-box__row {
+    padding: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.rs-basket .sidebar-box__title {
+    color: #424242;
+    font-size: 15px;
+    font-family: "Brygada 1918";
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.rs-basket .sidebar-box__title .total {
+    color: #b6b5b5;
+    text-align: right;
+    font-size: 14px;
+    font-family: "Manrope";
+    line-height: 140%;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.rs-basket .sidebar-box__inner .form-group {
+    margin-bottom: 0;
+}
+
+.rs-basket .sidebar-box__line {
+    color: #424242;
+    font-size: 14px;
+    line-height: 140%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-basket .sidebar-box__line:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.rs-basket .sidebar-box__line .red {
+    color: #f00;
+}
+
+.rs-basket .sidebar-box__footnote {
+    padding: 24px 20px;
+}
+
+.rs-basket .sidebar-box__submit {
+    padding: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.rs-basket .sidebar-box .coupon {
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    height: 48px;
+    overflow: hidden;
+    position: relative;
+}
+
+.rs-basket .sidebar-box .coupon input {
+    height: 100%;
+    width: 100%;
+    color: #666;
+    font-size: 13px;
+    line-height: 141.6%;
+    padding-left: 12px;
+    padding-right: 60px;
+}
+
+.rs-basket .sidebar-box .coupon input:focus {
+    outline: none;
+}
+
+.rs-basket .sidebar-box .coupon button {
+    width: 48px;
+    height: 48px;
+    background: rgba(165, 94, 63, 0.15);
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+
+.rs-basket .sidebar-box .total-price {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-basket .sidebar-box .total-price span {
+    color: #424242;
+    font-size: 15px;
+    font-family: "Brygada 1918";
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.rs-basket .sidebar-box .total-price span:nth-child(2) {
+    font-size: 22px;
+}
+
+.rs-basket .link-back a {
+    color: #949494;
+    font-size: 15px;
+    font-family: "Brygada 1918";
+    font-weight: 500;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-basket .link-back a::before {
+    content: url("../../img/icons/arrow-left.svg");
+    margin-right: 8px;
+}
+
+.rs-basket .basket-refresh {
+    background: #f8f6f4;
+    padding: 24px 32px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 15px;
+    font-family: "Brygada 1918";
+    font-weight: 500;
+}
+
+.rs-basket .basket-refresh .shopping {
+    color: #949494;
+}
+
+.rs-basket .basket-refresh .refresh {
+    color: #666;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-basket .basket-refresh .refresh::before {
+    content: url("../../img/icons/refresh-icon.svg");
+    margin-right: 8px;
+}
+
+.rs-basket .basket-remove-all {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.rs-basket .basket-remove-all a {
+    border-bottom: 1px dashed #949494;
+    color: #949494;
+    font-size: 15px;
+    font-family: "Brygada 1918";
+    font-weight: 500;
+}
+
+@media (min-width: 767.98px) {
+    .rs-basket .basket-item__price {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 1506px) {
+    .rs-basket__content {
+        -webkit-column-gap: 35px;
+        -moz-column-gap: 35px;
+        column-gap: 35px;
+        grid-template-columns: 1fr 347px;
+    }
+
+    .rs-basket .basket-item {
+        grid-template-columns: 92px 1fr 115px auto;
+        -webkit-column-gap: 15px;
+        -moz-column-gap: 15px;
+        column-gap: 15px;
+    }
+
+    .rs-basket .basket-item__description {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-basket__content {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+
+    .rs-basket .basket-item {
+        padding: 20px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-basket {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rs-basket__header h1 {
+        font-size: 32px;
+    }
+
+    .rs-basket .basket-item {
+        grid-template-columns: 92px 1fr;
+    }
+
+    .rs-basket .basket-item__info .name a {
+        font-size: 13px;
+    }
+
+    .rs-basket .basket-refresh {
+        padding: 20px;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .rs-basket .basket-refresh .shopping {
+        margin-bottom: 30px;
+    }
+}
