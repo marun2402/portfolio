@@ -340,7 +340,7 @@
 }
 
 .rs-header .header-search__input:hover {
-    border-color: #E28B72;
+    border-color: #e28b72;
 }
 
 .rs-header .header-search__submit {
@@ -399,7 +399,7 @@
 }
 
 .rs-header .header-contacts li a:hover {
-    color: #E28B72;
+    color: #e28b72;
 }
 
 .rs-header .header-contacts-mobile {
@@ -444,7 +444,7 @@
 }
 
 .rs-header .header-cart:hover .text {
-    color: #E28B72;
+    color: #e28b72;
 }
 
 .sticky .rs-header .header-cart .text {
@@ -483,7 +483,7 @@
     justify-content: flex-start;
     height: 50px;
     border-radius: 7px;
-    background: #A55E3F;
+    background: #a55e3f;
     padding-left: 25px;
     padding-right: 25px;
     color: #fff;
@@ -875,6 +875,10 @@
 
     .rs-header .header-cart .text {
         display: none;
+    }
+
+    .sticky .rs-header .rs-header__bottom {
+        height: 50px;
     }
 }
 
