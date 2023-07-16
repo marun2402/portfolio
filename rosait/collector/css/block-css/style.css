@@ -131,7 +131,7 @@ header {
     width: 100%;
 }
 
-section:not(.rs-club, .rs-delivery, .rs-basket) {
+section:not(.rs-club, .rs-delivery, .rs-basket, .rs-contacts) {
     overflow: hidden;
 }
 

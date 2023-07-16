@@ -64,6 +64,12 @@
         overflow-x: auto;
         overflow-y: hidden;
         margin-right: -15px;
+        -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    }
+
+    .rs-catalog__item {
+        scroll-snap-align: start;
     }
 }
 
