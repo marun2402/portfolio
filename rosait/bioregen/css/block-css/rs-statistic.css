@@ -1,0 +1,139 @@
+.rs-statistic {
+    padding-bottom: 160px;
+}
+
+.rs-statistic__charts {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 30px;
+}
+
+.chart-wrap {
+    position: relative;
+    display: inline-block;
+    max-width: 516px;
+}
+
+.chart-holder {
+    position: relative;
+}
+
+.chart {
+    display: inline-block;
+    height: 480px;
+    width: 100%;
+}
+
+.score-stat {
+    padding: 15px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 130%;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.chart-value {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #263037;
+    text-align: center;
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+.chart-value span {
+    position: absolute;
+    right: -10px;
+}
+
+.chart-value span:nth-child(1) {
+    top: 5x;
+}
+
+.chart-value span:nth-child(2) {
+    bottom: 25px;
+}
+
+.chart-legend {
+    color: #263037;
+    font-size: 23px;
+    line-height: 140%;
+}
+
+.chart-legend span {
+    display: block;
+    padding-left: 56px;
+    position: relative;
+}
+
+.chart-legend span:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.chart-legend span::before {
+    content: "";
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    display: block;
+    background: var(--bg);
+}
+
+@media (max-width: 1670px) {
+    .score-stat {
+        font-size: 18px;
+    }
+
+    .chart-value {
+        font-size: 42px;
+    }
+
+    .chart-legend {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-statistic {
+        padding-bottom: 30px;
+    }
+
+    .rs-statistic__charts {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+    }
+
+    .chart {
+        height: 300px;
+    }
+
+    .score-stat {
+        font-size: 13px;
+    }
+
+    .chart-value {
+        font-size: 28px;
+    }
+
+    .chart-legend {
+        font-size: 15px;
+    }
+
+    .chart-legend span::before {
+        top: 0;
+    }
+}
