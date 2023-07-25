@@ -1,0 +1,104 @@
+.rs-fos__container {
+    display: grid;
+    grid-template-columns: 1fr 58%;
+    -webkit-column-gap: 95px;
+    -moz-column-gap: 95px;
+    column-gap: 95px;
+}
+
+.rs-fos__form {
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+.rs-fos__head {
+    margin-bottom: 55px;
+}
+
+.rs-fos__photo {
+    position: relative;
+    min-height: 230px;
+}
+
+.rs-fos__photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-fos .fos-form__submit {
+    margin-top: 35px;
+}
+
+.rs-fos .fos-form input,
+.rs-fos .fos-form textarea {
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid #d9d9d9;
+    border-radius: 0;
+    color: #000;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120.8%;
+    text-transform: uppercase;
+    height: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.rs-fos .fos-form input::-webkit-input-placeholder, .rs-fos .fos-form textarea::-webkit-input-placeholder {
+    color: #000;
+}
+
+.rs-fos .fos-form input::-moz-placeholder, .rs-fos .fos-form textarea::-moz-placeholder {
+    color: #000;
+}
+
+.rs-fos .fos-form input:-ms-input-placeholder, .rs-fos .fos-form textarea:-ms-input-placeholder {
+    color: #000;
+}
+
+.rs-fos .fos-form input::-ms-input-placeholder, .rs-fos .fos-form textarea::-ms-input-placeholder {
+    color: #000;
+}
+
+.rs-fos .fos-form input::placeholder,
+.rs-fos .fos-form textarea::placeholder {
+    color: #000;
+}
+
+.rs-fos .fos-form input.error,
+.rs-fos .fos-form textarea.error {
+    border-color: #ff3844;
+}
+
+.rs-fos .fos-form textarea {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    height: 100%;
+    resize: none;
+    min-height: 142px;
+}
+
+@media (max-width: 1790px) {
+    .rs-fos__container {
+        -webkit-column-gap: 35px;
+        -moz-column-gap: 35px;
+        column-gap: 35px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-fos__container {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-fos__head {
+        margin-bottom: 30px;
+    }
+}
