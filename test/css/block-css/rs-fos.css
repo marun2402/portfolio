@@ -1,74 +1,145 @@
 .rs-fos {
+    border-radius: 50px 50px 0px 0px;
+    background: #f6f9ff;
+    padding-top: 115px;
+    padding-bottom: 45px;
+}
+
+.rs-fos__content {
+    display: grid;
+    grid-template-columns: 39% 1fr;
+}
+
+.rs-fos__form {
+    max-width: 610px;
     position: relative;
-    background: url("../../img/form_2_bg.jpg") right/cover no-repeat;
-    border-radius: 20px 0px 0px 20px;
-    padding-top: 90px;
-    padding-bottom: 90px;
-    padding-left: 15px;
-    padding-right: 15px;
+    z-index: 2;
 }
 
-.rs-fos__inner {
-    max-width: 803px;
-}
-
-.rs-fos__inner h4 {
-    font-weight: 800;
-    font-size: 34px;
-    line-height: 137%;
-    color: #ffffff;
-    margin-top: 0;
-    margin-bottom: 6px;
-}
-
-.rs-fos__inner p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 137%;
-    letter-spacing: 0.03em;
-    color: #ffffff;
+.rs-fos__head {
     margin-bottom: 30px;
 }
 
-.rs-fos_left {
-    background: url("../../img/form_3_bg.jpg") right/cover no-repeat;
-    border-radius: 0px 20px 20px 0px;
+.rs-fos__img {
+    position: relative;
 }
 
-@media (min-width: 1600px) {
-    .rs-fos {
-        padding-right: calc((100% - 1570px) / 2);
-        margin-left: calc((100% - 1570px) / 2);
-        padding-left: 132px;
+.rs-fos__img img {
+    position: absolute;
+    top: -80%;
+    left: -10px;
+}
+
+.rs-fos .fos-form__submit {
+    color: rgba(93, 99, 106, 0.7);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 146.5%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-fos .fos-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 24px;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+}
+
+.rs-fos .fos-form input,
+.rs-fos .fos-form textarea {
+    outline: none;
+    width: 100%;
+    border-radius: 13px;
+    border: 1px solid #c7c7c7;
+    color: rgba(93, 99, 106, 0.7);
+    font-family: Manrope;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 146.5%;
+    height: 61px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.rs-fos .fos-form input::-webkit-input-placeholder, .rs-fos .fos-form textarea::-webkit-input-placeholder {
+    color: rgba(93, 99, 106, 0.7);
+}
+
+.rs-fos .fos-form input:-ms-input-placeholder, .rs-fos .fos-form textarea:-ms-input-placeholder {
+    color: rgba(93, 99, 106, 0.7);
+}
+
+.rs-fos .fos-form input::-ms-input-placeholder, .rs-fos .fos-form textarea::-ms-input-placeholder {
+    color: rgba(93, 99, 106, 0.7);
+}
+
+.rs-fos .fos-form input::placeholder,
+.rs-fos .fos-form textarea::placeholder {
+    color: rgba(93, 99, 106, 0.7);
+}
+
+.rs-fos .fos-form input.error,
+.rs-fos .fos-form textarea.error {
+    border-color: #ff3844;
+}
+
+.rs-fos .fos-form textarea {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+    resize: none;
+    min-height: 139px;
+}
+
+@media (max-width: 1300px) {
+    .rs-fos__content {
+        grid-template-columns: 60% 1fr;
     }
 
-    .rs-fos_left {
-        padding-left: calc((100% - 1570px) / 2);
-        margin-right: calc((100% - 1570px) / 2);
-        padding-right: 132px;
-        margin-left: 0;
+    .rs-fos__img img {
+        width: 955px;
+        top: -50%;
     }
 }
 
 @media (max-width: 767.98px) {
     .rs-fos {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        border-radius: 0;
+        padding-top: 0px;
     }
 
-    .rs-fos__inner h4 {
-        font-size: 16px;
+    .rs-fos__content {
+        grid-template-columns: 1fr;
     }
 
-    .rs-fos__inner p {
-        font-size: 13px;
+    .rs-fos__form {
+        -ms-flex-order: 2;
+        order: 2;
     }
-}
 
-@media (min-width: 405px) and (max-width: 767px) {
-    .rs-fos {
-        padding-left: calc((100vw - 375px) / 2);
-        padding-right: calc((100vw - 375px) / 2);
+    .rs-fos__img {
+        height: 221px;
+    }
+
+    .rs-fos__img img {
+        height: 288px;
+        width: 455px;
+        left: 40px;
+        top: -70px;
+    }
+
+    .rs-fos .fos-form__submit {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-fos .fos-form .form-row {
+        grid-template-columns: 1fr;
     }
 }
