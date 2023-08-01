@@ -1,20 +1,20 @@
 .rs-stages {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 .rs-stages__inner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 90px;
-    -moz-column-gap: 90px;
-    column-gap: 90px;
+    grid-template-columns: 1fr 49%;
+    -webkit-column-gap: 210px;
+    -moz-column-gap: 210px;
+    column-gap: 210px;
     -ms-flex-align: start;
     align-items: start;
 }
 
 .rs-stages__bg {
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .rs-stages__bg img {
@@ -113,13 +113,15 @@
     right: 44px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1600px) {
     .rs-stages__inner {
         -webkit-column-gap: 30px;
         -moz-column-gap: 30px;
         column-gap: 30px;
     }
+}
 
+@media (max-width: 991.98px) {
     .rs-stages .stages-card {
         padding: 20px 120px 20px 20px;
         border-radius: 20px;
@@ -128,6 +130,10 @@
 }
 
 @media (max-width: 767.98px) {
+    .rs-stages {
+        padding-bottom: 20px;
+    }
+
     .rs-stages__inner {
         grid-template-columns: 1fr;
     }

@@ -1,5 +1,5 @@
 .rs-team {
-    padding-top: 100px;
+    padding-top: 70px;
     padding-bottom: 100px;
     position: relative;
 }
@@ -76,11 +76,6 @@
     line-height: 146.5%;
 }
 
-.rs-team .team-card:hover img {
-    -webkit-filter: saturate(1);
-    filter: saturate(1);
-}
-
 .rs-team .team-card > a {
     position: absolute;
     z-index: 3;
@@ -139,5 +134,19 @@
 
     .rs-team .team-card__board p {
         font-size: 10px;
+    }
+}
+
+@media (any-hover: none) {
+    .rs-team .team-card img {
+        -webkit-filter: saturate(1);
+        filter: saturate(1);
+    }
+}
+
+@media (any-hover: hover) {
+    .rs-team .team-card:hover img {
+        -webkit-filter: saturate(1);
+        filter: saturate(1);
     }
 }

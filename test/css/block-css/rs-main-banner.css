@@ -51,7 +51,7 @@
     text-transform: uppercase;
     padding: 5px 20px;
     border-radius: 38px;
-    background: #ebecef;
+    background: #f6f9ff;
     margin-bottom: 10px;
 }
 
@@ -103,6 +103,24 @@
     top: 0;
     z-index: 2;
     background: linear-gradient(180deg, #fff 5%, rgba(255, 255, 255, 0) 50%, #fff 95%);
+}
+
+.rs-main-banner__ticker h6 {
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+    color: #5d636a;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
 }
 
 .rs-main-banner .ticker-slider {
@@ -164,6 +182,10 @@
 @media (max-width: 1600px) {
     .rs-main-banner__content {
         padding-right: 0;
+    }
+
+    .rs-main-banner__ticker h6 {
+        right: 0;
     }
 }
 
@@ -236,5 +258,9 @@
         margin-top: 20px;
         grid-template-columns: 1fr;
         justify-items: stretch;
+    }
+
+    .rs-main-banner__ticker h6 {
+        display: none;
     }
 }

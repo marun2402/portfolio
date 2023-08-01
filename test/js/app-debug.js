@@ -320,53 +320,48 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     }
   }
   function checkViewport() {
-    var options = {
-      root: document,
-      threshold: [0.2]
-    };
-    var observer = new IntersectionObserver(onEntry, options);
-    var elements = document.querySelectorAll('.tlt');
-    var _iterator = _createForOfIteratorHelper(elements),
-      _step;
-    try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var elm = _step.value;
-        observer.observe(elm);
-      }
-    } catch (err) {
-      _iterator.e(err);
-    } finally {
-      _iterator.f();
-    }
-    function onEntry(entry) {
-      entry.forEach(function (change) {
-        if (change.isIntersecting) {
-          change.target.classList.add('in-view');
-          $(change.target).textillate({
-            in: {
-              effect: 'fadeInUp',
-              sequence: true,
-              delayScale: 0.5
-            },
-            autoStart: true,
-            loop: false
-          });
+    var elements = gsap.utils.toArray('.tlt');
+    elements.forEach(function (el) {
+      gsap.from(el, {
+        scrollTrigger: {
+          start: '100px bottom',
+          trigger: el,
+          //toggleClass: 'in-view',
+          onEnter: function onEnter() {
+            el.classList.add('in-view');
+            $(el).textillate({
+              in: {
+                effect: 'fadeInUp',
+                sequence: true,
+                delayScale: 0.5
+              },
+              autoStart: true,
+              loop: false
+            });
+          }
         }
       });
-    }
+    });
   }
 
   // =================== with intersectionObserver =============================
-  // const elements = gsap.utils.toArray('.tlt');
-  // elements.forEach(el => {
-  // 	gsap.from(el, {
-  // 		scrollTrigger: {
-  // 			start: '100px bottom',
-  // 			trigger: el,
-  // 			//toggleClass: 'in-view',
-  // 			onEnter: () => {
-  // 				el.classList.add('in-view');
-  // 				$(el).textillate({
+  // const options = {
+  // 		root: document,
+  // 		threshold: [0.2],
+  // 	};
+
+  // 	let observer = new IntersectionObserver(onEntry, options);
+  // 	let elements = document.querySelectorAll('.tlt');
+
+  // 	for (let elm of elements) {
+  // 		observer.observe(elm);
+  // 	}
+
+  // 	function onEntry(entry) {
+  // 		entry.forEach(change => {
+  // 			if (change.isIntersecting) {
+  // 				change.target.classList.add('in-view');
+  // 				$(change.target).textillate({
   // 					in: {
   // 						effect: 'fadeInUp',
   // 						sequence: true,
@@ -375,10 +370,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   // 					autoStart: true,
   // 					loop: false,
   // 				});
-  // 			},
-  // 		},
-  // 	});
-  // });
+  // 			}
+  // 		});
+  // 	}
   //==========================================================================
 
   // Добавление классов слайдерам
@@ -390,17 +384,17 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       sliders.forEach(function (slider) {
         slider.parentElement.classList.add('swiper');
         slider.classList.add('swiper-wrapper');
-        var _iterator2 = _createForOfIteratorHelper(slider.children),
-          _step2;
+        var _iterator = _createForOfIteratorHelper(slider.children),
+          _step;
         try {
-          for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-            var slide = _step2.value;
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var slide = _step.value;
             slide.classList.add('swiper-slide');
           }
         } catch (err) {
-          _iterator2.e(err);
+          _iterator.e(err);
         } finally {
-          _iterator2.f();
+          _iterator.f();
         }
       });
     }
@@ -1837,27 +1831,26 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return Zoom;
   }();
   function stickyHeader() {
-    document.addEventListener('scroll', stickyHeaderAction);
-  }
-  var header = document.querySelector('header');
-  var menu = document.querySelector('.rs-header');
-  var offset = menu.offsetTop;
-  var scrollPrev = 0;
-  function stickyHeaderAction(e) {
-    var scrolled = window.pageYOffset;
-    //sticky header
-    if (window.pageYOffset > offset) {
-      header.classList.add('sticky');
-    } else {
-      header.classList.remove('sticky');
-    }
-    //sticky spy
-    if (scrolled > 143 && scrolled > scrollPrev) {
-      header.classList.add('out');
-    } else {
-      header.classList.remove('out');
-    }
-    scrollPrev = scrolled;
+    var header = document.querySelector('header');
+    var menu = document.querySelector('.rs-header');
+    var offset = menu.offsetTop;
+    var scrollPrev = 0;
+    document.addEventListener('scroll', function stickyHeaderAction(e) {
+      var scrolled = window.pageYOffset;
+      //sticky header
+      if (window.pageYOffset > offset) {
+        header.classList.add('sticky');
+      } else {
+        header.classList.remove('sticky');
+      }
+      //sticky spy
+      if (scrolled > 143 && scrolled > scrollPrev) {
+        header.classList.add('out');
+      } else {
+        header.classList.remove('out');
+      }
+      scrollPrev = scrolled;
+    });
   }
   function gsapAnimations() {
     var trigger = document.querySelector('.product-banners-wrapper');
@@ -1960,50 +1953,36 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   // tl.to(pathElements[7], {strokeDashoffset: 0}, '<');
 
   function animatePage() {
-    var options = {
-      root: document,
-      threshold: [0.2]
-    };
-    var observer = new IntersectionObserver(onEntry, options);
+    var elements = gsap.utils.toArray('[data-animate]');
+    elements.forEach(function (el) {
+      animateNamed(el);
+      gsap.from(el, {
+        scrollTrigger: {
+          start: '150px bottom',
+          trigger: el,
+          onEnter: function onEnter() {
+            return el.classList.add('in-view');
+          }
+        }
+      });
+    });
 
-    // data animate
-    var elements = document.querySelectorAll('[data-animate]');
-    var elementsStager = document.querySelectorAll('[data-animate-stager]');
-    var _iterator3 = _createForOfIteratorHelper(elements),
-      _step3;
-    try {
-      for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-        var elm = _step3.value;
-        observer.observe(elm);
-        animateNamed(elm);
-      }
-    } catch (err) {
-      _iterator3.e(err);
-    } finally {
-      _iterator3.f();
-    }
-    var _iterator4 = _createForOfIteratorHelper(elementsStager),
-      _step4;
-    try {
-      for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-        var _elm = _step4.value;
-        observer.observe(_elm);
-        var stagerChildrens = Array.from(_elm.children);
-        stagerChildrens.forEach(function (children, index) {
-          animateStagerNamed(children, index);
-        });
-      }
-    } catch (err) {
-      _iterator4.e(err);
-    } finally {
-      _iterator4.f();
-    }
-  }
-  function onEntry(entry) {
-    entry.forEach(function (change) {
-      if (change.isIntersecting) {
-        change.target.classList.add('in-view');
-      }
+    //data animate stager
+    var stagerElements = gsap.utils.toArray('[data-animate-stager]');
+    stagerElements.forEach(function (el) {
+      gsap.from(el, {
+        scrollTrigger: {
+          start: '150px bottom',
+          trigger: el,
+          onEnter: function onEnter() {
+            return el.classList.add('in-view');
+          }
+        }
+      });
+      var stagerChildrens = Array.from(el.children);
+      stagerChildrens.forEach(function (children, index) {
+        animateStagerNamed(children, index);
+      });
     });
   }
   function animateNamed(element) {
@@ -2057,6 +2036,38 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   // 	});
   // });
 
+  // INTERSECTIONOBSERVER
+  // const options = {
+  // 	root: document,
+  // 	threshold: [0.2],
+  // };
+  // let observer = new IntersectionObserver(onEntry, options);
+
+  // // data animate
+  // let elements = document.querySelectorAll('[data-animate]');
+  // let elementsStager = document.querySelectorAll('[data-animate-stager]');
+
+  // for (let elm of elements) {
+  // 	observer.observe(elm);
+  // 	animateNamed(elm);
+  // }
+
+  // for (let elm of elementsStager) {
+  // 	observer.observe(elm);
+  // 	const stagerChildrens = Array.from(elm.children);
+  // 	stagerChildrens.forEach((children, index) => {
+  // 		animateStagerNamed(children, index);
+  // 	});
+  // }
+
+  // function onEntry(entry) {
+  // 	entry.forEach(change => {
+  // 		if (change.isIntersecting) {
+  // 			change.target.classList.add('in-view');
+  // 		}
+  // 	});
+  // }
+
   //import './libs/anchor-links';
 
   var isMobile$1 = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -2068,14 +2079,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   window.addEventListener('load', function (e) {
     mainClickActions();
     initSliders();
-    animatePage();
     stickyHeader();
+    gsapAnimations();
     //initGallery();
     //preloader();
-    checkViewport();
     //customCursor();
-    gsapAnimations();
     phoneInput();
+    animatePage();
+    checkViewport();
     //countdownTimer();
 
     document.body.classList.add('loaded');
@@ -2095,15 +2106,15 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     });
 
     //forms validate
-    if ($("#callback-modal-form").length > 0) {
-      $("#callback-modal-form").validate({
+    if ($('#callback-modal-form').length > 0) {
+      $('#callback-modal-form').validate({
         submitHandler: function submitHandler(form) {
           form.submit();
         },
         // rules: {
         //   callbackModalName: {
         //     required: true,
-        //   },       
+        //   },
         //   callbackModalPhone: {
         //     required: true,
         //   },
@@ -2116,19 +2127,35 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         // },
         messages: {
           callbackModalName: {
-            required: "ФИО"
+            required: 'ФИО'
           },
           callbackModalPhone: {
-            required: "Телефон"
+            required: 'Телефон'
           },
           callbackModalMail: {
-            required: "E-mail",
-            email: "Введите правильный E-mail"
+            required: 'E-mail',
+            email: 'Введите правильный E-mail'
           },
           callbackModalMessage: {
-            required: "Введите ваше сообщение"
+            required: 'Введите ваше сообщение'
           }
         }
+      });
+    }
+
+    //accordion title
+    var accTitles = document.querySelectorAll('.accordion__title');
+    if (accTitles) {
+      accTitles.forEach(function (title) {
+        title.addEventListener('click', function (event) {
+          var _this2 = this;
+          setTimeout(function () {
+            _this2.scrollIntoView({
+              behavior: "smooth",
+              block: "nearest"
+            });
+          }, 500);
+        });
       });
     }
   });

@@ -44,6 +44,7 @@
 
 .rs-contacts__row > a,
 .rs-contacts__row > p {
+    display: block;
     color: #5d636a;
     font-size: 15px;
     font-style: normal;

@@ -42,7 +42,6 @@
     position: relative;
     margin-top: 60px;
     height: 545px;
-    overflow: hidden;
     border-radius: 50px;
 }
 
@@ -437,6 +436,10 @@
 @media (any-hover: hover) {
     .footer-menu__list li a:hover {
         color: #56F09F;
+    }
+
+    .rs-footer__map {
+        overflow: hidden;
     }
 
     .rs-footer .footer-info ul li:hover {

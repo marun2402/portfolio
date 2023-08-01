@@ -75,6 +75,7 @@
     transition: -webkit-transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
     transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
     transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1), -webkit-transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+    box-shadow: 0px 0px 0px 0px rgba(145, 146, 161, 0.2), 0px 11px 24px 0px rgba(145, 146, 161, 0.2), 0px 43px 43px 0px rgba(145, 146, 161, 0.17), 0px 97px 58px 0px rgba(145, 146, 161, 0.1), 0px 172px 69px 0px rgba(145, 146, 161, 0.03), 0px 268px 75px 0px rgba(145, 146, 161, 0);
 }
 
 .rs-feedback .feedback-slider__slide .photo img {

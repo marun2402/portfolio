@@ -116,6 +116,7 @@
 @media (max-width: 767.98px) {
     .rs-product-banner {
         margin-bottom: 45px;
+        border-radius: 10px;
     }
 
     .rs-product-banner__content {

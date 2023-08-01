@@ -9,6 +9,33 @@
     gap: 110px;
 }
 
+.rs-callback__title > span {
+    display: inline-block;
+    color: #2f3635;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    border-radius: 38px;
+    background: #ebecef;
+}
+
+.rs-callback__title h2 {
+    color: #2f3635;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    margin-top: 20px;
+}
+
+.rs-callback__title h2 span {
+    color: #01855c;
+}
+
 .rs-callback__bg {
     margin-top: 70px;
 }
@@ -31,9 +58,21 @@
     line-height: 146.5%;
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 100px;
+    gap: 200px;
     -ms-flex-align: center;
     align-items: center;
+}
+
+.rs-callback .callback-form__submit p {
+    color: rgba(93, 99, 106, 0.7);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 146.5%;
+}
+
+.rs-callback .callback-form__submit p a {
+    text-decoration: underline;
 }
 
 .rs-callback .callback-form .form-row {
@@ -110,6 +149,15 @@
 
     .rs-callback__content {
         grid-template-columns: 1fr;
+    }
+
+    .rs-callback__title > span {
+        font-size: 13px;
+    }
+
+    .rs-callback__title h2 {
+        font-size: 20px;
+        margin-top: 15px;
     }
 
     .rs-callback__bg {
