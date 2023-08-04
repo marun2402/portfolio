@@ -1,94 +1,55 @@
-.rs-banner {
-    margin-bottom: 150px;
-}
-
 .rs-banner__wrapper {
     position: relative;
-    overflow: hidden;
-    border-radius: 50px;
-    background: #004737;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-bottom: 115px;
-    padding-top: 115px;
-}
-
-.rs-banner__content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-}
-
-.rs-banner__content h2 {
-    color: #fff;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 110%;
-    margin-bottom: 20px;
+    border-radius: 30px;
+    background: #00A7DA;
+    padding-top: 175px;
+    padding-bottom: 175px;
+    padding-left: 35px;
+    padding-right: 35px;
 }
 
 .rs-banner__content p {
-    color: #fff;
-    font-size: 17px;
-    font-style: normal;
+    color: #FFF;
+    text-align: center;
+    font-size: 22px;
     font-weight: 400;
-    line-height: 146.5%;
-    margin-bottom: 20px;
-}
-
-.rs-banner__content .buttons {
-    display: grid;
-    grid-template-columns: auto auto;
-    -ms-flex-pack: center;
-    justify-content: center;
-    gap: 15px;
+    margin-top: 12px;
 }
 
 .rs-banner__bg {
     position: absolute;
-    top: 30%;
-    left: 70%;
-    z-index: 1;
-    -webkit-animation: rotate-animation 25s infinite linear;
-    animation: rotate-animation 25s infinite linear;
-    -webkit-transform-origin: 70% 70%;
-    transform-origin: 70% 70%;
-    will-change: transform;
+    top: 0;
+    left: 50%;
+    width: 109%;
+    height: 100%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 
-.rs-banner__bg_small {
-    -webkit-transform-origin: 30% 30%;
-    transform-origin: 30% 30%;
-    top: -40%;
+.rs-banner__bg img {
+    position: absolute;
+    width: 100%;
+    top: 0;
     left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+    .rs-banner__wrapper {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
 }
 
 @media (max-width: 767.98px) {
-    .rs-banner {
-        margin-bottom: 30px;
-    }
-
-    .rs-banner {
-        background: #004737;
-    }
-
     .rs-banner__wrapper {
-        background: transparent;
-        overflow: visible;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .rs-banner__content h2 {
-        font-size: 20px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        border-radius: 20px;
     }
 
     .rs-banner__content p {
-        font-size: 14px;
-    }
-
-    .rs-banner__content .buttons {
-        grid-template-columns: 1fr;
+        font-size: 13px;
     }
 }

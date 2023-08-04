@@ -1,9 +1,3 @@
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
@@ -11,6 +5,169 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   typeof define === 'function' && define.amd ? define('app', factory) : factory();
 })(function () {
   'use strict';
+
+  //scroll to top
+  $('#scroll-top').on('click', function (e) {
+    e.preventDefault();
+    $('html,body').animate({
+      scrollTop: 0
+    }, 700);
+  });
+  document.addEventListener('scroll', function () {
+    if (window.pageYOffset > 300) {
+      $('#scroll-top').addClass('is-active');
+    } else {
+      $('#scroll-top').removeClass('is-active');
+    }
+  });
+
+  // Dynamic Adapt v.1
+
+  function DynamicAdapt(type) {
+    this.type = type;
+  }
+  DynamicAdapt.prototype.init = function () {
+    var _this2 = this;
+    var _this = this;
+    // массив объектов
+    this.оbjects = [];
+    this.daClassname = '_dynamic_adapt_';
+    // массив DOM-элементов
+    this.nodes = document.querySelectorAll('[data-da]');
+
+    // наполнение оbjects объктами
+    for (var i = 0; i < this.nodes.length; i++) {
+      var node = this.nodes[i];
+      var data = node.dataset.da.trim();
+      var dataArray = data.split(',');
+      var оbject = {};
+      оbject.element = node;
+      оbject.parent = node.parentNode;
+      оbject.destination = document.querySelector(dataArray[0].trim());
+      оbject.breakpoint = dataArray[1] ? dataArray[1].trim() : '767';
+      оbject.place = dataArray[2] ? dataArray[2].trim() : 'last';
+      оbject.index = this.indexInParent(оbject.parent, оbject.element);
+      this.оbjects.push(оbject);
+    }
+    this.arraySort(this.оbjects);
+
+    // массив уникальных медиа-запросов
+    this.mediaQueries = Array.prototype.map.call(this.оbjects, function (item) {
+      return '(' + this.type + '-width: ' + item.breakpoint + 'px),' + item.breakpoint;
+    }, this);
+    this.mediaQueries = Array.prototype.filter.call(this.mediaQueries, function (item, index, self) {
+      return Array.prototype.indexOf.call(self, item) === index;
+    });
+
+    // навешивание слушателя на медиа-запрос
+    // и вызов обработчика при первом запуске
+    var _loop = function _loop() {
+      var media = _this2.mediaQueries[_i];
+      var mediaSplit = String.prototype.split.call(media, ',');
+      var matchMedia = window.matchMedia(mediaSplit[0]);
+      var mediaBreakpoint = mediaSplit[1];
+
+      // массив объектов с подходящим брейкпоинтом
+      var оbjectsFilter = Array.prototype.filter.call(_this2.оbjects, function (item) {
+        return item.breakpoint === mediaBreakpoint;
+      });
+      matchMedia.addListener(function () {
+        _this.mediaHandler(matchMedia, оbjectsFilter);
+      });
+      _this2.mediaHandler(matchMedia, оbjectsFilter);
+    };
+    for (var _i = 0; _i < this.mediaQueries.length; _i++) {
+      _loop();
+    }
+  };
+  DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
+    if (matchMedia.matches) {
+      for (var i = 0; i < оbjects.length; i++) {
+        var оbject = оbjects[i];
+        оbject.index = this.indexInParent(оbject.parent, оbject.element);
+        this.moveTo(оbject.place, оbject.element, оbject.destination);
+      }
+    } else {
+      for (var _i2 = 0; _i2 < оbjects.length; _i2++) {
+        var _оbject = оbjects[_i2];
+        if (_оbject.element.classList.contains(this.daClassname)) {
+          this.moveBack(_оbject.parent, _оbject.element, _оbject.index);
+        }
+      }
+    }
+  };
+
+  // Функция перемещения
+  DynamicAdapt.prototype.moveTo = function (place, element, destination) {
+    element.classList.add(this.daClassname);
+    if (place === 'last' || place >= destination.children.length) {
+      destination.insertAdjacentElement('beforeend', element);
+      return;
+    }
+    if (place === 'first') {
+      destination.insertAdjacentElement('afterbegin', element);
+      return;
+    }
+    destination.children[place].insertAdjacentElement('beforebegin', element);
+  };
+
+  // Функция возврата
+  DynamicAdapt.prototype.moveBack = function (parent, element, index) {
+    element.classList.remove(this.daClassname);
+    if (parent.children[index] !== undefined) {
+      parent.children[index].insertAdjacentElement('beforebegin', element);
+    } else {
+      parent.insertAdjacentElement('beforeend', element);
+    }
+  };
+
+  // Функция получения индекса внутри родителя
+  DynamicAdapt.prototype.indexInParent = function (parent, element) {
+    var array = Array.prototype.slice.call(parent.children);
+    return Array.prototype.indexOf.call(array, element);
+  };
+
+  // Функция сортировки массива по breakpoint и place
+  // по возрастанию для this.type = min
+  // по убыванию для this.type = max
+  DynamicAdapt.prototype.arraySort = function (arr) {
+    if (this.type === 'min') {
+      Array.prototype.sort.call(arr, function (a, b) {
+        if (a.breakpoint === b.breakpoint) {
+          if (a.place === b.place) {
+            return 0;
+          }
+          if (a.place === 'first' || b.place === 'last') {
+            return -1;
+          }
+          if (a.place === 'last' || b.place === 'first') {
+            return 1;
+          }
+          return a.place - b.place;
+        }
+        return a.breakpoint - b.breakpoint;
+      });
+    } else {
+      Array.prototype.sort.call(arr, function (a, b) {
+        if (a.breakpoint === b.breakpoint) {
+          if (a.place === b.place) {
+            return 0;
+          }
+          if (a.place === 'first' || b.place === 'last') {
+            return 1;
+          }
+          if (a.place === 'last' || b.place === 'first') {
+            return -1;
+          }
+          return b.place - a.place;
+        }
+        return b.breakpoint - a.breakpoint;
+      });
+      return;
+    }
+  };
+  var da = new DynamicAdapt('max');
+  da.init();
 
   //spollers plugin
   var spollersArray = document.querySelectorAll('[data-spollers]');
@@ -292,6 +449,16 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }
     }
 
+    //open-close dropdown list in menu burger (slider)
+    if (window.innerWidth <= 991) {
+      if (targetElement.closest('.menu__dropdown-arrow')) {
+        targetElement.nextElementSibling.classList.add('is-active');
+      }
+      if (targetElement.closest('.switch-back')) {
+        targetElement.parentNode.classList.remove('is-active');
+      }
+    }
+
     //open-close header search box
     var form = document.querySelector('.header-search');
     var input = document.querySelector('.header-search__input');
@@ -409,16 +576,20 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     //main slider on index page
     if (document.querySelector('.rs-slider__slider')) {
       new Swiper('.rs-slider__slider', {
-        observer: true,
-        observeParents: true,
         slidesPerView: 1,
         spaceBetween: 0,
-        autoHeight: false,
-        speed: 300,
+        speed: 900,
         loop: false,
+        navigation: {
+          nextEl: '.rs-slider__slider .slider-arrow_next',
+          prevEl: '.rs-slider__slider .slider-arrow_prev'
+        },
         effect: 'fade',
         fadeEffect: {
           crossFade: true
+        },
+        autoplay: {
+          delay: 5000
         },
         on: {
           init: function init(swiper) {
@@ -435,200 +606,29 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     }
 
     //common sliders on pages
-    var feedbackSlider = document.querySelector('.feedback-slider');
-    if (feedbackSlider) {
-      var slider = feedbackSlider.querySelector('[class*="__slider"]');
-      var arrowNext = feedbackSlider.querySelector('[class*="_next"]');
-      var arrowPrev = feedbackSlider.querySelector('[class*="_prev"]');
+    var containsSlider = document.querySelector('.contains-slider');
+    if (containsSlider) {
+      var slider = containsSlider.querySelector('[class*="__slider"]');
       new Swiper(slider, {
-        observer: true,
-        observeParents: true,
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         spaceBetween: 30,
         autoHeight: false,
         speed: 800,
-        loop: true,
+        loop: false,
         autoplay: {
           delay: 5000
-        },
-        navigation: {
-          nextEl: arrowNext,
-          prevEl: arrowPrev
-        },
-        breakpoints: {
-          992: {
-            slidesPerView: 2
-          }
         }
       });
     }
-    var logosSlider = document.querySelector('.logos-slider');
-    if (logosSlider) {
-      var _slider = logosSlider.querySelector('[class*="__slider"]');
-      var pagging = logosSlider.querySelector('[class*="-paging"]');
-      new Swiper(_slider, {
-        slidesPerView: 'auto',
-        spaceBetween: 30,
-        speed: 10000,
-        loop: false,
-        autoplay: {
-          delay: 0.0001
-        },
-        pagination: {
-          el: pagging,
-          type: 'bullets',
-          clickable: true
-        }
-      });
-    }
-    var productSlider = document.querySelector('.product-slider');
-    if (productSlider) {
-      var _slider2 = productSlider.querySelector('[class*="__slider"]');
-      var _pagging = productSlider.querySelector('[class*="-paging"]');
-      new Swiper(_slider2, {
-        slidesPerView: 1.8,
-        initialSlide: 1,
-        spaceBetween: 0,
-        speed: 800,
-        loop: false,
-        centeredSlides: true,
-        effect: "creative",
-        creativeEffect: {
-          prev: {
-            shadow: true,
-            translate: ["-130%", 0, -500]
-          },
-          next: {
-            shadow: true,
-            translate: ["130%", 0, -500]
-          }
-        },
-        pagination: {
-          el: _pagging,
-          type: 'bullets',
-          clickable: true
-        }
-      });
-    }
-
-    //disable-enable slider on mobile screen
-    if (document.querySelector('.rs-team')) {
-      var disableEnableSlider = function disableEnableSlider(evt) {
-        if (evt.matches) {
-          if (newsSlider !== undefined) {
-            newsSlider.destroy(true, true);
-          }
-        } else {
-          newsSlider = new Swiper('.rs-team__content', {
-            slidesPerView: 'auto',
-            autoHeight: false,
-            spaceBetween: 30,
-            speed: 800,
-            loop: false,
-            navigation: {
-              nextEl: '.rs-team__nav .slider-arrow_next',
-              prevEl: '.rs-team__nav .slider-arrow_prev'
-            }
-          });
-        }
-      };
-      var mediaQueryList = window.matchMedia('(min-width: 767.98px)');
-      mediaQueryList.addListener(function () {
-        disableEnableSlider(mediaQueryList);
-      });
-      disableEnableSlider(mediaQueryList);
-      var newsSlider;
-    }
-
-    // ticker gallery
-    if (document.querySelector('.rs-ticker-gallery__slider')) {
-      new Swiper('.rs-ticker-gallery__slider', {
-        slidesPerView: 'auto',
-        spaceBetween: 0,
-        speed: 10000,
-        loop: true,
-        autoplay: {
-          delay: 0.0001
-        }
-      });
-    }
-
-    //same ticker sliders
-    var tiskerSliders = document.querySelectorAll('.ticker-slider');
-    tiskerSliders.forEach(function (node, _) {
-      new TickerSlider(node);
-    });
-
-    //same product content sliders
-    var accordionContentSliders = document.querySelectorAll('.accordion-content__slider');
-    accordionContentSliders.forEach(function (node, _) {
-      new AccordionContentSlider(node);
-    });
   }
 
-  // objects for same sliders ==========================================================================================
-  var TickerSlider = /*#__PURE__*/function () {
-    function TickerSlider($component) {
-      _classCallCheck(this, TickerSlider);
-      this.$component = $component;
-      this.$slider = this.$component.querySelector('[class*="__slider"]');
-      this.render();
-    }
-    _createClass(TickerSlider, [{
-      key: "render",
-      value: function render() {
-        new Swiper(this.$slider, {
-          slidesPerView: 'auto',
-          spaceBetween: 0,
-          speed: 10000,
-          loop: true,
-          direction: 'vertical',
-          allowTouchMove: false,
-          autoplay: {
-            delay: 0.0001
-          }
-        });
-      }
-    }]);
-    return TickerSlider;
-  }();
-  var AccordionContentSlider = /*#__PURE__*/function () {
-    function AccordionContentSlider($component) {
-      _classCallCheck(this, AccordionContentSlider);
-      this.$slider = $component;
-      this.paging = this.$slider.querySelector('[class*="-paging"]');
-      this.slides = parseInt($component.dataset.slides);
-      this.render();
-    }
-    _createClass(AccordionContentSlider, [{
-      key: "render",
-      value: function render() {
-        new Swiper(this.$slider, {
-          slidesPerView: 1,
-          spaceBetween: 30,
-          speed: 800,
-          loop: false,
-          pagination: {
-            el: this.paging,
-            type: 'bullets',
-            clickable: true
-          },
-          breakpoints: {
-            768: {
-              slidesPerView: this.slides || 1
-            }
-          }
-        });
-      }
-    }]);
-    return AccordionContentSlider;
-  }();
   /*!
    * lightgallery | 2.7.1 | January 11th 2023
    * http://www.lightgalleryjs.com/
    * Copyright (c) 2020 Sachin Neravath;
    * @license GPLv3
    */
+
   function initLgPolyfills() {
     (function () {
       if (typeof window.CustomEvent === 'function') return false;
@@ -1833,49 +1833,36 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   function stickyHeader() {
     var header = document.querySelector('header');
     var menu = document.querySelector('.rs-header');
-    var offset = menu.offsetTop;
-    var scrollPrev = 0;
+    var menuOffset = menu.offsetTop;
+    var menuHeight = menu.offsetHeight;
     document.addEventListener('scroll', function stickyHeaderAction(e) {
-      var scrolled = window.pageYOffset;
-      //sticky header
-      if (window.pageYOffset > offset) {
+      var scrolled = window.scrollY;
+      if (scrolled > menuOffset && scrolled > menuHeight) {
         header.classList.add('sticky');
       } else {
         header.classList.remove('sticky');
       }
-      //sticky spy
-      if (scrolled > 143 && scrolled > scrollPrev) {
+      if (scrolled > menuHeight && scrolled > 600) {
         header.classList.add('out');
       } else {
         header.classList.remove('out');
       }
-      scrollPrev = scrolled;
     });
   }
   function gsapAnimations() {
-    var trigger = document.querySelector('.product-banners-wrapper');
-    var elements = gsap.utils.toArray('.rs-product-banner');
-    if (trigger && window.innerWidth > 767) {
-      var tl = gsap.timeline({
+    var parallaxElements = document.querySelectorAll('.parallax');
+    parallaxElements.forEach(function (element) {
+      var animElem = element.querySelector('img');
+      gsap.to(animElem, {
         scrollTrigger: {
-          trigger: trigger,
-          start: 'top top',
-          end: '+=2000px',
-          pin: true,
-          scrub: 0.8
+          trigger: element,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 0.5
         },
-        ease: 'none'
+        yPercent: -40
       });
-      tl.to(elements[0], {
-        scale: 0.7
-      });
-      tl.to(elements[1], {
-        yPercent: -100
-      });
-      tl.to(elements[1], {
-        scale: 0.75
-      });
-    }
+    });
   }
 
   // scroll block to left
@@ -1951,6 +1938,32 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   // tl.to(pathElements[5], {strokeDashoffset: 0}, '<');
   // tl.to(pathElements[6], {strokeDashoffset: 0});
   // tl.to(pathElements[7], {strokeDashoffset: 0}, '<');
+
+  // const trigger = document.querySelector('.product-banners-wrapper');
+  // const elements = gsap.utils.toArray('.rs-product-banner');
+
+  // if (trigger && window.innerWidth > 767) {
+  // 	let tl = gsap.timeline({
+  // 		scrollTrigger: {
+  // 			trigger: trigger,
+  // 			start: 'top top',
+  // 			end: '+=2000px',
+  // 			pin: true,
+  // 			scrub: 0.8,
+  // 		},
+  // 		ease: 'none',
+  // 	});
+
+  // 	tl.to(elements[0], {
+  // 		scale: 0.7,
+  // 	});
+  // 	tl.to(elements[1], {
+  // 		yPercent: -100,
+  // 	});
+  // 	tl.to(elements[1], {
+  // 		scale: 0.75,
+  // 	});
+  // }
 
   function animatePage() {
     var elements = gsap.utils.toArray('[data-animate]');
@@ -2090,73 +2103,5 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     //countdownTimer();
 
     document.body.classList.add('loaded');
-
-    // $('.counter').counterUp({
-    // 	delay: 10,
-    // 	time: 1000,
-    // });
-    document.querySelectorAll('.btn-color').forEach(function (button) {
-      var str = button.textContent.trim().split('');
-      var modstr = '';
-      str.forEach(function (letter) {
-        letter === ' ' ? letter = '&nbsp;' : letter = letter;
-        modstr += '<span>' + letter + '</span>';
-      });
-      button.innerHTML = '<div>' + modstr + '</div>';
-    });
-
-    //forms validate
-    if ($('#callback-modal-form').length > 0) {
-      $('#callback-modal-form').validate({
-        submitHandler: function submitHandler(form) {
-          form.submit();
-        },
-        // rules: {
-        //   callbackModalName: {
-        //     required: true,
-        //   },
-        //   callbackModalPhone: {
-        //     required: true,
-        //   },
-        // 	callbackModalMail: {
-        //     required: true,
-        //   },
-        // 	callbackModalMessage: {
-        //     required: true,
-        //   },
-        // },
-        messages: {
-          callbackModalName: {
-            required: 'ФИО'
-          },
-          callbackModalPhone: {
-            required: 'Телефон'
-          },
-          callbackModalMail: {
-            required: 'E-mail',
-            email: 'Введите правильный E-mail'
-          },
-          callbackModalMessage: {
-            required: 'Введите ваше сообщение'
-          }
-        }
-      });
-    }
-
-    //accordion title
-    var accTitles = document.querySelectorAll('.accordion__title');
-    if (accTitles) {
-      accTitles.forEach(function (title) {
-        title.addEventListener('click', function (event) {
-          var _this2 = this;
-          setTimeout(function () {
-            _this2.scrollIntoView({
-              behavior: "smooth",
-              block: "nearest"
-            });
-          }, 500);
-        });
-      });
-    }
   });
 });
