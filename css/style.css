@@ -23,31 +23,31 @@ body {
 }
 
 .wrapper {
-  padding-top: 50px;
-  padding-bottom: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 .portfolio__content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 35px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+	gap: 35px;
 }
 
-.portfolio__item{ 
+.portfolio__item {
 }
 
-.card {	 
-  height: 100%;
-  text-align: center;
-  border-bottom: 1px dashed #ccc;  
+.card {
+	height: 100%;
+	text-align: center;
+	border-bottom: 1px dashed #ccc;
 }
 
 .card__image {
 	width: 100%;
-  padding-bottom: 75%;
+	padding-bottom: 75%;
 	position: relative;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-  margin-bottom: 15px;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+	margin-bottom: 15px;
 }
 
 .card__image img {
@@ -57,7 +57,7 @@ body {
 	top: 0;
 	left: 0;
 	object-fit: cover;
-  object-position: center top;
+	object-position: center top;
 }
 
 .card__content {
@@ -67,19 +67,71 @@ body {
 }
 
 .card__content div a {
-  display: block;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  color: #000;
-  text-decoration: none;
+	display: block;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	color: #000;
+	text-decoration: none;
+	background: transparent;
+	transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 30px;
 }
 
-.card__content div a:hover { 
-  color: red;
+.card__content div a:hover {
+	background: #00a7da;
+	color: #fff;
 }
 
-.card__link {
+.page-btn {
+	text-align: center;
+	margin-top: 45px;
+	margin-bottom: 45px;
 }
 
-.card__link:hover {
+.btn-color {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 45px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 38px;
+	background: #00a7da;	
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.btn-color span {
+	font-size: 16px;
+	font-weight: 600;
+	color: #FFF;
+	position: relative;
+	z-index: 2;
+	transition: color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+	text-transform: uppercase;
+}
+
+.btn-color:hover span {
+	color: #001F47;
+}
+
+.card__title h2 {
+	margin-bottom: 10px;
+}
+
+.card__title p {
+	margin-bottom: 15px;
+}
+
+@media (max-width: 767px){
+	.btn-color {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }

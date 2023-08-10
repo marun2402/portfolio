@@ -1,0 +1,14 @@
+.rs-about-product {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.rs-about-product__head {
+    margin-bottom: 63px;
+}
+
+@media (max-width: 767.98px) {
+    .rs-about-product__head {
+        margin-bottom: 30px;
+    }
+}

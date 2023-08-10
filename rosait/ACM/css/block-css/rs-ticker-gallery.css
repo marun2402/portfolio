@@ -1,0 +1,167 @@
+.rs-ticker-gallery {
+    margin-top: 20px;
+    height: 725px;
+}
+
+.rs-ticker-gallery__slider {
+    height: 100%;
+    padding-bottom: 90px;
+}
+
+.rs-ticker-gallery__swiper {
+    transition-timing-function: linear;
+}
+
+.rs-ticker-gallery__slide {
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    margin-right: 30px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.rs-ticker-gallery .ticker-gallery-slide {
+    height: 100%;
+}
+
+.rs-ticker-gallery .ticker-gallery-slide img {
+    box-shadow: 0px 0px 0px 0px rgba(54, 71, 125, 0.05), 0px 3px 7px 0px rgba(54, 71, 125, 0.05), 0px 13px 13px 0px rgba(54, 71, 125, 0.04), 0px 30px 18px 0px rgba(54, 71, 125, 0.03), 0px 53px 21px 0px rgba(54, 71, 125, 0.01), 0px 83px 23px 0px rgba(54, 71, 125, 0);
+    border-radius: 40px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-ticker-gallery .ticker-gallery-slide.bottom {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.rs-ticker-gallery .ticker-gallery-slide.portret img {
+    height: 575px;
+    width: 389px;
+}
+
+.rs-ticker-gallery .ticker-gallery-slide.landscape img {
+    height: 405px;
+    width: 611px;
+}
+
+.rs-ticker-gallery .ticker-gallery-slide-multi {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.rs-ticker-gallery .ticker-gallery-slide-multi::before {
+    content: url("../../img/gallery/ball.png");
+    position: absolute;
+    left: 80px;
+    top: 330px;
+}
+
+.rs-ticker-gallery .ticker-gallery-slide-multi::after {
+    content: url("../../img/gallery/ball.png");
+    position: absolute;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    right: 0;
+    top: 257px;
+    -webkit-transform-origin: right;
+    transform-origin: right;
+}
+
+.rs-ticker-gallery .ticker-gallery-slide-multi img {
+    box-shadow: 0px 0px 0px 0px rgba(54, 71, 125, 0.05), 0px 3px 7px 0px rgba(54, 71, 125, 0.05), 0px 13px 13px 0px rgba(54, 71, 125, 0.04), 0px 30px 18px 0px rgba(54, 71, 125, 0.03), 0px 53px 21px 0px rgba(54, 71, 125, 0.01), 0px 83px 23px 0px rgba(54, 71, 125, 0);
+    border-radius: 40px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-ticker-gallery .ticker-gallery-slide-multi img:nth-child(1) {
+    width: 268px;
+    height: 187px;
+    z-index: 3;
+    margin-right: -100px;
+    margin-top: 85px;
+}
+
+.rs-ticker-gallery .ticker-gallery-slide-multi img:nth-child(2) {
+    width: 611px;
+    height: 405px;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    z-index: 2;
+}
+
+.rs-ticker-gallery .ticker-gallery-slide-multi img:nth-child(3) {
+    width: 388px;
+    height: 257px;
+    z-index: 3;
+    margin-left: -95px;
+    margin-top: 50px;
+}
+
+@media (max-width: 767.98px) {
+    .rs-ticker-gallery {
+        height: 300px;
+    }
+
+    .rs-ticker-gallery__slide {
+        margin-right: 10px;
+    }
+
+    .rs-ticker-gallery .ticker-gallery-slide img {
+        border-radius: 13px;
+    }
+
+    .rs-ticker-gallery .ticker-gallery-slide.portret img {
+        width: 130px;
+        height: 193px;
+    }
+
+    .rs-ticker-gallery .ticker-gallery-slide.landscape img {
+        width: 205px;
+        height: 136px;
+    }
+
+    .rs-ticker-gallery .ticker-gallery-slide-multi::before {
+        -webkit-transform: scale(0.3);
+        transform: scale(0.3);
+        top: 60px;
+        left: 0;
+    }
+
+    .rs-ticker-gallery .ticker-gallery-slide-multi::after {
+        -webkit-transform: scale(0.2);
+        transform: scale(0.2);
+        top: 45px;
+    }
+
+    .rs-ticker-gallery .ticker-gallery-slide-multi img {
+        border-radius: 13px;
+    }
+
+    .rs-ticker-gallery .ticker-gallery-slide-multi img:nth-child(1) {
+        width: 90px;
+        height: 62px;
+        margin-top: 30px;
+        margin-right: -30px;
+    }
+
+    .rs-ticker-gallery .ticker-gallery-slide-multi img:nth-child(2) {
+        width: 205px;
+        height: 136px;
+    }
+
+    .rs-ticker-gallery .ticker-gallery-slide-multi img:nth-child(3) {
+        width: 130px;
+        height: 86px;
+        margin-top: 15px;
+        margin-left: -20px;
+    }
+}

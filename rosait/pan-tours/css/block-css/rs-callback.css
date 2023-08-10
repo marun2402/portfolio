@@ -1,0 +1,160 @@
+.rs-callback__wrapper {
+    background: url("../../img/callback_bg.svg") 23% calc(100% + 90px) no-repeat;
+    background-color: #00A7DA;
+    border-radius: 30px;
+    padding: 45px;
+}
+
+.rs-callback__content {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    gap: 465px;
+}
+
+.rs-callback__head h2 {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 10px;
+}
+
+.rs-callback__head p {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.rs-callback .callback-form .form-submit {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 200px;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-callback .callback-form .form-submit p {
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.rs-callback .callback-form .form-submit p a {
+    text-decoration: underline;
+}
+
+.rs-callback .callback-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+}
+
+.rs-callback .callback-form .form-group {
+    margin-bottom: 20px;
+}
+
+.rs-callback .callback-form input,
+.rs-callback .callback-form textarea {
+    outline: none;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: #00A7DA;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    height: 53px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.rs-callback .callback-form input::-webkit-input-placeholder, .rs-callback .callback-form textarea::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.rs-callback .callback-form input:-ms-input-placeholder, .rs-callback .callback-form textarea:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.rs-callback .callback-form input::-ms-input-placeholder, .rs-callback .callback-form textarea::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.rs-callback .callback-form input::placeholder,
+.rs-callback .callback-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.rs-callback .callback-form input.error,
+.rs-callback .callback-form textarea.error {
+    border-color: #ff3844;
+}
+
+.rs-callback .callback-form textarea {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+    resize: none;
+    min-height: 114px;
+}
+
+.rs-callback .callback-form .btn-color span {
+    color: #00A7DA;
+}
+
+.rs-callback .callback-form .btn-color:hover span {
+    color: #fff;
+}
+
+@media (max-width: 1790px) {
+    .rs-callback__content {
+        grid-template-columns: 270px 1fr;
+    }
+
+    .rs-callback .callback-form .form-submit {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .rs-callback__content {
+        gap: 375px;
+    }
+
+    .rs-callback .callback-form .form-submit {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rs-callback .callback-form .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-callback__content {
+        gap: 70px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-callback__wrapper {
+        border-radius: 20px;
+        padding: 35px;
+    }
+
+    .rs-callback__content {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-callback__head h2 {
+        font-size: 20px;
+    }
+
+    .rs-callback__head p {
+        font-size: 15px;
+    }
+}
