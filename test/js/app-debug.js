@@ -1,4 +1,3 @@
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
@@ -7,25 +6,11 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 (function (factory) {
   typeof define === 'function' && define.amd ? define('app', factory) : factory();
 })(function () {
   'use strict';
-
-  //scroll to top
-  $('#scroll-top').on('click', function (e) {
-    e.preventDefault();
-    $('html,body').animate({
-      scrollTop: 0
-    }, 700);
-  });
-  document.addEventListener('scroll', function () {
-    if (window.pageYOffset > 300) {
-      $('#scroll-top').addClass('is-active');
-    } else {
-      $('#scroll-top').removeClass('is-active');
-    }
-  });
 
   //spollers plugin
   var spollersArray = document.querySelectorAll('[data-spollers]');
@@ -204,8 +189,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   };
   function phoneInput() {
     var phoneInputs = document.querySelectorAll('input[data-tel-input]');
-    for (var i = 0; i < phoneInputs.length; i++) {
-      var input = phoneInputs[i];
+    for (var _i = 0; _i < phoneInputs.length; _i++) {
+      var input = phoneInputs[_i];
       input.oninput = onPhoneInput;
       input.onkeydown = onPhoneKeyDown;
       input.onpaste = onPhonePaste;
@@ -272,11 +257,456 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }
     }
   }
-  var fileUpload = document.getElementById('resumeModalFile');
-  if (fileUpload) {
-    fileUpload.onchange = function () {
-      document.getElementById('fileuploadurl').innerHTML = this.value.replace(/C:\\fakepath\\/i, '');
-    };
+  function t(t, e) {
+    for (var i = 0; i < e.length; i++) {
+      var o = e[i];
+      o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(t, "symbol" == _typeof(n = function (t, e) {
+        if ("object" != _typeof(t) || null === t) return t;
+        var i = t[Symbol.toPrimitive];
+        if (void 0 !== i) {
+          var o = i.call(t, "string");
+          if ("object" != _typeof(o)) return o;
+          throw new TypeError("@@toPrimitive must return a primitive value.");
+        }
+        return String(t);
+      }(o.key)) ? n : String(n), o);
+    }
+    var n;
+  }
+  function e(e, i, o) {
+    return i && t(e.prototype, i), o && t(e, o), Object.defineProperty(e, "prototype", {
+      writable: !1
+    }), e;
+  }
+  function i() {
+    return i = Object.assign ? Object.assign.bind() : function (t) {
+      for (var e = 1; e < arguments.length; e++) {
+        var i = arguments[e];
+        for (var o in i) Object.prototype.hasOwnProperty.call(i, o) && (t[o] = i[o]);
+      }
+      return t;
+    }, i.apply(this, arguments);
+  }
+  function o(t, e, i) {
+    return Math.max(t, Math.min(e, i));
+  }
+  var n = /*#__PURE__*/function () {
+      function t() {}
+      var e = t.prototype;
+      return e.advance = function (t) {
+        var e, i, n, s;
+        if (this.isRunning) {
+          var r = !1;
+          if (this.lerp) this.value = (i = this.value, n = this.to, (1 - (s = 1 - Math.exp(-60 * this.lerp * t))) * i + s * n), Math.round(this.value) === this.to && (this.value = this.to, r = !0);else {
+            this.currentTime += t;
+            var l = o(0, this.currentTime / this.duration, 1),
+              h = (r = l >= 1) ? 1 : this.easing(l);
+            this.value = this.from + (this.to - this.from) * h;
+          }
+          null == (e = this.onUpdate) || e.call(this, this.value, {
+            completed: r
+          }), r && this.stop();
+        }
+      }, e.stop = function () {
+        this.isRunning = !1;
+      }, e.fromTo = function (t, e, i) {
+        var o = i.lerp,
+          n = void 0 === o ? .1 : o,
+          s = i.duration,
+          r = void 0 === s ? 1 : s,
+          l = i.easing,
+          h = void 0 === l ? function (t) {
+            return t;
+          } : l,
+          a = i.onUpdate;
+        this.from = this.value = t, this.to = e, this.lerp = n, this.duration = r, this.easing = h, this.currentTime = 0, this.isRunning = !0, this.onUpdate = a;
+      }, t;
+    }(),
+    s = /*#__PURE__*/function () {
+      function t(t) {
+        var e,
+          i,
+          o = this,
+          n = void 0 === t ? {} : t,
+          s = n.wrapper,
+          r = n.content,
+          l = n.autoResize,
+          h = void 0 === l || l;
+        if (this.resize = function () {
+          o.onWrapperResize(), o.onContentResize();
+        }, this.onWrapperResize = function () {
+          o.wrapper === window ? (o.width = window.innerWidth, o.height = window.innerHeight) : (o.width = o.wrapper.clientWidth, o.height = o.wrapper.clientHeight);
+        }, this.onContentResize = function () {
+          o.scrollHeight = o.content.scrollHeight, o.scrollWidth = o.content.scrollWidth;
+        }, this.wrapper = s, this.content = r, h) {
+          var a = (e = this.resize, function () {
+            var t = arguments,
+              o = this;
+            clearTimeout(i), i = setTimeout(function () {
+              e.apply(o, t);
+            }, 250);
+          });
+          this.wrapper !== window && (this.wrapperResizeObserver = new ResizeObserver(a), this.wrapperResizeObserver.observe(this.wrapper)), this.contentResizeObserver = new ResizeObserver(a), this.contentResizeObserver.observe(this.content);
+        }
+        this.resize();
+      }
+      return t.prototype.destroy = function () {
+        var t, e;
+        null == (t = this.wrapperResizeObserver) || t.disconnect(), null == (e = this.contentResizeObserver) || e.disconnect();
+      }, e(t, [{
+        key: "limit",
+        get: function get() {
+          return {
+            x: this.scrollWidth - this.width,
+            y: this.scrollHeight - this.height
+          };
+        }
+      }]), t;
+    }(),
+    r = /*#__PURE__*/function () {
+      function t() {
+        this.events = {};
+      }
+      var e = t.prototype;
+      return e.emit = function (t) {
+        for (var e = this.events[t] || [], i = 0, o = e.length; i < o; i++) e[i].apply(e, [].slice.call(arguments, 1));
+      }, e.on = function (t, e) {
+        var i,
+          o = this;
+        return (null == (i = this.events[t]) ? void 0 : i.push(e)) || (this.events[t] = [e]), function () {
+          var i;
+          o.events[t] = null == (i = o.events[t]) ? void 0 : i.filter(function (t) {
+            return e !== t;
+          });
+        };
+      }, e.destroy = function () {
+        this.events = {};
+      }, t;
+    }(),
+    l = /*#__PURE__*/function () {
+      function t(t, e) {
+        var i = this,
+          n = e.wheelMultiplier,
+          s = void 0 === n ? 1 : n,
+          l = e.touchMultiplier,
+          h = void 0 === l ? 2 : l,
+          a = e.normalizeWheel,
+          c = void 0 !== a && a;
+        this.onTouchStart = function (t) {
+          var e = t.targetTouches ? t.targetTouches[0] : t,
+            o = e.clientY;
+          i.touchStart.x = e.clientX, i.touchStart.y = o, i.lastDelta = {
+            x: 0,
+            y: 0
+          };
+        }, this.onTouchMove = function (t) {
+          var e = t.targetTouches ? t.targetTouches[0] : t,
+            o = e.clientX,
+            n = e.clientY,
+            s = -(o - i.touchStart.x) * i.touchMultiplier,
+            r = -(n - i.touchStart.y) * i.touchMultiplier;
+          i.touchStart.x = o, i.touchStart.y = n, i.lastDelta = {
+            x: s,
+            y: r
+          }, i.emitter.emit("scroll", {
+            type: "touch",
+            deltaX: s,
+            deltaY: r,
+            event: t
+          });
+        }, this.onTouchEnd = function (t) {
+          i.emitter.emit("scroll", {
+            type: "touch",
+            inertia: !0,
+            deltaX: i.lastDelta.x,
+            deltaY: i.lastDelta.y,
+            event: t
+          });
+        }, this.onWheel = function (t) {
+          var e = t.deltaX,
+            n = t.deltaY;
+          i.normalizeWheel && (e = o(-100, e, 100), n = o(-100, n, 100)), i.emitter.emit("scroll", {
+            type: "wheel",
+            deltaX: e *= i.wheelMultiplier,
+            deltaY: n *= i.wheelMultiplier,
+            event: t
+          });
+        }, this.element = t, this.wheelMultiplier = s, this.touchMultiplier = h, this.normalizeWheel = c, this.touchStart = {
+          x: null,
+          y: null
+        }, this.emitter = new r(), this.element.addEventListener("wheel", this.onWheel, {
+          passive: !1
+        }), this.element.addEventListener("touchstart", this.onTouchStart, {
+          passive: !1
+        }), this.element.addEventListener("touchmove", this.onTouchMove, {
+          passive: !1
+        }), this.element.addEventListener("touchend", this.onTouchEnd, {
+          passive: !1
+        });
+      }
+      var e = t.prototype;
+      return e.on = function (t, e) {
+        return this.emitter.on(t, e);
+      }, e.destroy = function () {
+        this.emitter.destroy(), this.element.removeEventListener("wheel", this.onWheel, {
+          passive: !1
+        }), this.element.removeEventListener("touchstart", this.onTouchStart, {
+          passive: !1
+        }), this.element.removeEventListener("touchmove", this.onTouchMove, {
+          passive: !1
+        }), this.element.removeEventListener("touchend", this.onTouchEnd, {
+          passive: !1
+        });
+      }, t;
+    }(),
+    h = /*#__PURE__*/function () {
+      function t(t) {
+        var e = this,
+          o = void 0 === t ? {} : t,
+          h = o.wrapper,
+          a = void 0 === h ? window : h,
+          c = o.content,
+          u = void 0 === c ? document.documentElement : c,
+          p = o.wheelEventsTarget,
+          v = void 0 === p ? a : p,
+          d = o.smoothWheel,
+          m = void 0 === d || d,
+          f = o.smoothTouch,
+          g = void 0 !== f && f,
+          S = o.syncTouch,
+          y = void 0 !== S && S,
+          w = o.syncTouchLerp,
+          T = void 0 === w ? .1 : w,
+          b = o.__iosNoInertiaSyncTouchLerp,
+          z = void 0 === b ? .4 : b,
+          M = o.touchInertiaMultiplier,
+          E = void 0 === M ? 35 : M,
+          L = o.duration,
+          _ = o.easing,
+          O = void 0 === _ ? function (t) {
+            return Math.min(1, 1.001 - Math.pow(2, -10 * t));
+          } : _,
+          R = o.lerp,
+          W = void 0 === R ? L && .1 : R,
+          k = o.infinite,
+          x = void 0 !== k && k,
+          H = o.orientation,
+          j = void 0 === H ? "vertical" : H,
+          A = o.gestureOrientation,
+          X = void 0 === A ? "vertical" : A,
+          Y = o.touchMultiplier,
+          D = void 0 === Y ? 1 : Y,
+          I = o.wheelMultiplier,
+          P = void 0 === I ? 1 : I,
+          C = o.normalizeWheel,
+          U = void 0 !== C && C,
+          N = o.autoResize,
+          V = void 0 === N || N;
+        this.onVirtualScroll = function (t) {
+          var o = t.type,
+            n = t.inertia,
+            s = t.deltaX,
+            r = t.deltaY,
+            l = t.event;
+          if (!l.ctrlKey) {
+            var h = "touch" === o,
+              a = "wheel" === o;
+            if (!("vertical" === e.options.gestureOrientation && 0 === r || "horizontal" === e.options.gestureOrientation && 0 === s || h && "vertical" === e.options.gestureOrientation && 0 === e.scroll && !e.options.infinite && r <= 0 || l.composedPath().find(function (t) {
+              return (null == t || null == t.hasAttribute ? void 0 : t.hasAttribute("data-lenis-prevent")) || h && (null == t || null == t.hasAttribute ? void 0 : t.hasAttribute("data-lenis-prevent-touch")) || a && (null == t || null == t.hasAttribute ? void 0 : t.hasAttribute("data-lenis-prevent-wheel"));
+            }))) if (e.isStopped || e.isLocked) l.preventDefault();else {
+              if (e.isSmooth = (e.options.smoothTouch || e.options.syncTouch) && h || e.options.smoothWheel && a, !e.isSmooth) return e.isScrolling = !1, void e.animate.stop();
+              l.preventDefault();
+              var c = r;
+              "both" === e.options.gestureOrientation ? c = Math.abs(r) > Math.abs(s) ? r : s : "horizontal" === e.options.gestureOrientation && (c = s);
+              var u = h && e.options.syncTouch,
+                p = h && n && Math.abs(c) > 1;
+              p && (c = e.velocity * e.options.touchInertiaMultiplier), e.scrollTo(e.targetScroll + c, i({
+                programmatic: !1
+              }, u && {
+                lerp: p ? e.syncTouchLerp : e.options.__iosNoInertiaSyncTouchLerp
+              }));
+            }
+          }
+        }, this.onScroll = function () {
+          if (!e.isScrolling) {
+            var t = e.animatedScroll;
+            e.animatedScroll = e.targetScroll = e.actualScroll, e.velocity = 0, e.direction = Math.sign(e.animatedScroll - t), e.emit();
+          }
+        }, window.lenisVersion = "1.0.19", a !== document.documentElement && a !== document.body || (a = window), this.options = {
+          wrapper: a,
+          content: u,
+          wheelEventsTarget: v,
+          smoothWheel: m,
+          smoothTouch: g,
+          syncTouch: y,
+          syncTouchLerp: T,
+          __iosNoInertiaSyncTouchLerp: z,
+          touchInertiaMultiplier: E,
+          duration: L,
+          easing: O,
+          lerp: W,
+          infinite: x,
+          gestureOrientation: X,
+          orientation: j,
+          touchMultiplier: D,
+          wheelMultiplier: P,
+          normalizeWheel: U,
+          autoResize: V
+        }, this.dimensions = new s({
+          wrapper: a,
+          content: u,
+          autoResize: V
+        }), this.rootElement.classList.add("lenis"), this.velocity = 0, this.isStopped = !1, this.isSmooth = m || g, this.isScrolling = !1, this.targetScroll = this.animatedScroll = this.actualScroll, this.animate = new n(), this.emitter = new r(), this.options.wrapper.addEventListener("scroll", this.onScroll, {
+          passive: !1
+        }), this.virtualScroll = new l(v, {
+          touchMultiplier: D,
+          wheelMultiplier: P,
+          normalizeWheel: U
+        }), this.virtualScroll.on("scroll", this.onVirtualScroll);
+      }
+      var h = t.prototype;
+      return h.destroy = function () {
+        this.emitter.destroy(), this.options.wrapper.removeEventListener("scroll", this.onScroll, {
+          passive: !1
+        }), this.virtualScroll.destroy(), this.dimensions.destroy(), this.rootElement.classList.remove("lenis"), this.rootElement.classList.remove("lenis-smooth"), this.rootElement.classList.remove("lenis-scrolling"), this.rootElement.classList.remove("lenis-stopped");
+      }, h.on = function (t, e) {
+        return this.emitter.on(t, e);
+      }, h.off = function (t, e) {
+        var i;
+        this.emitter.events[t] = null == (i = this.emitter.events[t]) ? void 0 : i.filter(function (t) {
+          return e !== t;
+        });
+      }, h.setScroll = function (t) {
+        this.isHorizontal ? this.rootElement.scrollLeft = t : this.rootElement.scrollTop = t;
+      }, h.resize = function () {
+        this.dimensions.resize();
+      }, h.emit = function () {
+        this.emitter.emit("scroll", this);
+      }, h.reset = function () {
+        this.isLocked = !1, this.isScrolling = !1, this.velocity = 0, this.animate.stop();
+      }, h.start = function () {
+        this.isStopped = !1, this.reset();
+      }, h.stop = function () {
+        this.isStopped = !0, this.animate.stop(), this.reset();
+      }, h.raf = function (t) {
+        var e = t - (this.time || t);
+        this.time = t, this.animate.advance(.001 * e);
+      }, h.scrollTo = function (t, e) {
+        var i = this,
+          n = void 0 === e ? {} : e,
+          s = n.offset,
+          r = void 0 === s ? 0 : s,
+          l = n.immediate,
+          h = void 0 !== l && l,
+          a = n.lock,
+          c = void 0 !== a && a,
+          u = n.duration,
+          p = void 0 === u ? this.options.duration : u,
+          v = n.easing,
+          d = void 0 === v ? this.options.easing : v,
+          m = n.lerp,
+          f = void 0 === m ? !p && this.options.lerp : m,
+          g = n.onComplete,
+          S = void 0 === g ? null : g,
+          y = n.force,
+          w = n.programmatic,
+          T = void 0 === w || w;
+        if (!this.isStopped || void 0 !== y && y) {
+          if (["top", "left", "start"].includes(t)) t = 0;else if (["bottom", "right", "end"].includes(t)) t = this.limit;else {
+            var b, z;
+            if ("string" == typeof t ? z = document.querySelector(t) : null != (b = t) && b.nodeType && (z = t), z) {
+              if (this.options.wrapper !== window) {
+                var M = this.options.wrapper.getBoundingClientRect();
+                r -= this.isHorizontal ? M.left : M.top;
+              }
+              var E = z.getBoundingClientRect();
+              t = (this.isHorizontal ? E.left : E.top) + this.animatedScroll;
+            }
+          }
+          if ("number" == typeof t) {
+            if (t += r, t = Math.round(t), this.options.infinite ? T && (this.targetScroll = this.animatedScroll = this.scroll) : t = o(0, t, this.limit), h) return this.animatedScroll = this.targetScroll = t, this.setScroll(this.scroll), this.reset(), this.emit(), void (null == S || S());
+            if (!T) {
+              if (t === this.targetScroll) return;
+              this.targetScroll = t;
+            }
+            this.animate.fromTo(this.animatedScroll, t, {
+              duration: p,
+              easing: d,
+              lerp: f,
+              onUpdate: function onUpdate(t, e) {
+                var o = e.completed;
+                c && (i.isLocked = !0), i.isScrolling = !0, i.velocity = t - i.animatedScroll, i.direction = Math.sign(i.velocity), i.animatedScroll = t, i.setScroll(i.scroll), T && (i.targetScroll = t), o && (c && (i.isLocked = !1), requestAnimationFrame(function () {
+                  i.isScrolling = !1;
+                }), i.velocity = 0, null == S || S()), i.emit();
+              }
+            });
+          }
+        }
+      }, e(t, [{
+        key: "rootElement",
+        get: function get() {
+          return this.options.wrapper === window ? this.options.content : this.options.wrapper;
+        }
+      }, {
+        key: "limit",
+        get: function get() {
+          return this.dimensions.limit[this.isHorizontal ? "x" : "y"];
+        }
+      }, {
+        key: "isHorizontal",
+        get: function get() {
+          return "horizontal" === this.options.orientation;
+        }
+      }, {
+        key: "actualScroll",
+        get: function get() {
+          return this.isHorizontal ? this.rootElement.scrollLeft : this.rootElement.scrollTop;
+        }
+      }, {
+        key: "scroll",
+        get: function get() {
+          return this.options.infinite ? (this.animatedScroll % (t = this.limit) + t) % t : this.animatedScroll;
+          var t;
+        }
+      }, {
+        key: "progress",
+        get: function get() {
+          return 0 === this.limit ? 1 : this.scroll / this.limit;
+        }
+      }, {
+        key: "isSmooth",
+        get: function get() {
+          return this.__isSmooth;
+        },
+        set: function set(t) {
+          this.__isSmooth !== t && (this.rootElement.classList.toggle("lenis-smooth", t), this.__isSmooth = t);
+        }
+      }, {
+        key: "isScrolling",
+        get: function get() {
+          return this.__isScrolling;
+        },
+        set: function set(t) {
+          this.__isScrolling !== t && (this.rootElement.classList.toggle("lenis-scrolling", t), this.__isScrolling = t);
+        }
+      }, {
+        key: "isStopped",
+        get: function get() {
+          return this.__isStopped;
+        },
+        set: function set(t) {
+          this.__isStopped !== t && (this.rootElement.classList.toggle("lenis-stopped", t), this.__isStopped = t);
+        }
+      }]), t;
+    }();
+  var lenis = null;
+  function lenisSmoothScroll() {
+    lenis = new h();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
   }
   function mainClickActions() {
     document.addEventListener('click', clickActions);
@@ -302,14 +732,28 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       if (targetElement.closest('.menu-burger')) {
         targetElement.closest('.menu-burger').classList.toggle('active');
         document.body.classList.toggle('mobile-menu-opened');
-        document.querySelector('.menu').classList.toggle('active');
-        document.querySelector('.menu-overlay').classList.toggle('active');
+        document.querySelector('[data-js-menu]').classList.toggle('active');
+        document.querySelector('[data-js-overlay]').classList.toggle('active');
       }
-      if (targetElement.closest('.menu-overlay')) {
-        document.querySelector('.menu-burger').classList.remove('active');
-        ocument.body.classList.toggle('mobile-menu-opened');
-        document.querySelector('.menu').classList.remove('active');
-        document.querySelector('.menu-overlay').classList.remove('active');
+    }
+
+    //open-close filters
+    if (window.innerWidth <= 991) {
+      if (targetElement.closest('.filter-show')) {
+        document.body.classList.add('filters-opened');
+      }
+      if (targetElement.closest('.filter-hide')) {
+        document.body.classList.remove('filters-opened');
+      }
+    }
+
+    //open-close dropdown list in menu burger (slider)
+    if (window.innerWidth <= 991) {
+      if (targetElement.closest('.menu__dropdown-arrow')) {
+        targetElement.nextElementSibling.classList.add('is-active');
+      }
+      if (targetElement.closest('.switch-back')) {
+        targetElement.parentNode.classList.remove('is-active');
       }
     }
 
@@ -428,15 +872,66 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     // ПЕРЕЧЕНЬ СЛАЙДЕРОВ=================================================================================================
 
     //main slider on index page
-    if (document.querySelector('.rs-slider__slider')) {
-      new Swiper('.rs-slider__slider', {
-        observer: true,
-        observeParents: true,
+    var swiper1 = null;
+    var swiper2 = null;
+    var headSlider = document.querySelector('.head-slider');
+    if (headSlider) {
+      var slider = headSlider.querySelector('[class*="__slider"]');
+      swiper1 = new Swiper(slider, {
         slidesPerView: 1,
         spaceBetween: 0,
-        autoHeight: false,
+        speed: 10,
+        loop: false,
+        allowTouchMove: false,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        autoplay: {
+          delay: 7000
+        },
+        on: {
+          init: function init(swiper) {
+            swiper.slides[swiper.activeIndex].classList.add('is-active');
+            var title = swiper.slides[swiper.activeIndex].querySelector('h1');
+            $(title).textillate({
+              in: {
+                effect: 'fadeInUp',
+                sequence: true,
+                delayScale: 0.4
+              },
+              autoStart: true,
+              loop: false
+            });
+          },
+          transitionStart: function transitionStart(swiper) {
+            swiper.slides[swiper.activeIndex].classList.remove('is-active');
+          },
+          transitionEnd: function transitionEnd(swiper) {
+            swiper.slides[swiper.activeIndex].classList.add('is-active');
+            var title = swiper.slides[swiper.activeIndex].querySelector('h1');
+            $(title).textillate({
+              in: {
+                effect: 'fadeInUp',
+                sequence: true,
+                delayScale: 0.4
+              },
+              autoStart: true,
+              loop: false
+            });
+          }
+        }
+      });
+    }
+    var pictureSlider = document.querySelector('.picture-slider');
+    if (pictureSlider) {
+      var _slider = pictureSlider.querySelector('[class*="__slider"]');
+      swiper2 = new Swiper(_slider, {
+        slidesPerView: 1,
+        spaceBetween: 0,
         speed: 300,
         loop: false,
+        allowTouchMove: false,
         effect: 'fade',
         fadeEffect: {
           crossFade: true
@@ -454,102 +949,33 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         }
       });
     }
-
-    //common sliders on pages
-    var feedbackSlider = document.querySelector('.feedback-slider');
-    if (feedbackSlider) {
-      var slider = feedbackSlider.querySelector('[class*="__slider"]');
-      var arrowNext = feedbackSlider.querySelector('[class*="_next"]');
-      var arrowPrev = feedbackSlider.querySelector('[class*="_prev"]');
-      new Swiper(slider, {
-        observer: true,
-        observeParents: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
-        autoHeight: false,
-        speed: 800,
-        loop: true,
-        autoplay: {
-          delay: 5000
-        },
-        navigation: {
-          nextEl: arrowNext,
-          prevEl: arrowPrev
-        },
-        breakpoints: {
-          992: {
-            slidesPerView: 2
-          }
-        }
+    var swipeAllSliders = function swipeAllSliders(index) {
+      swiper1.slideTo(index);
+      swiper2.slideTo(index);
+    };
+    if (swiper1 && swiper2) {
+      swiper1.on('slideChange', function () {
+        return swipeAllSliders(swiper1.activeIndex);
       });
-    }
-    var logosSlider = document.querySelector('.logos-slider');
-    if (logosSlider) {
-      var _slider = logosSlider.querySelector('[class*="__slider"]');
-      var pagging = logosSlider.querySelector('[class*="-paging"]');
-      new Swiper(_slider, {
-        slidesPerView: 'auto',
-        spaceBetween: 30,
-        speed: 10000,
-        loop: false,
-        autoplay: {
-          delay: 0.0001
-        },
-        pagination: {
-          el: pagging,
-          type: 'bullets',
-          clickable: true
-        }
-      });
-    }
-    var productSlider = document.querySelector('.product-slider');
-    if (productSlider) {
-      var _slider2 = productSlider.querySelector('[class*="__slider"]');
-      var _pagging = productSlider.querySelector('[class*="-paging"]');
-      new Swiper(_slider2, {
-        slidesPerView: 1.8,
-        initialSlide: 1,
-        spaceBetween: 0,
-        speed: 800,
-        loop: false,
-        centeredSlides: true,
-        effect: "creative",
-        creativeEffect: {
-          prev: {
-            shadow: true,
-            translate: ["-130%", 0, -500]
-          },
-          next: {
-            shadow: true,
-            translate: ["130%", 0, -500]
-          }
-        },
-        pagination: {
-          el: _pagging,
-          type: 'bullets',
-          clickable: true
-        }
+      swiper2.on('slideChange', function () {
+        return swipeAllSliders(swiper2.activeIndex);
       });
     }
 
     //disable-enable slider on mobile screen
-    if (document.querySelector('.rs-team')) {
+    if (document.querySelector('.rs-news')) {
       var disableEnableSlider = function disableEnableSlider(evt) {
         if (evt.matches) {
           if (newsSlider !== undefined) {
             newsSlider.destroy(true, true);
           }
         } else {
-          newsSlider = new Swiper('.rs-team__content', {
+          newsSlider = new Swiper('.rs-news__content', {
             slidesPerView: 'auto',
             autoHeight: false,
-            spaceBetween: 30,
-            speed: 800,
-            loop: false,
-            navigation: {
-              nextEl: '.rs-team__nav .slider-arrow_next',
-              prevEl: '.rs-team__nav .slider-arrow_prev'
-            }
+            spaceBetween: 15,
+            speed: 500,
+            loop: false
           });
         }
       };
@@ -561,88 +987,38 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var newsSlider;
     }
 
-    // ticker gallery
-    if (document.querySelector('.rs-ticker-gallery__slider')) {
-      new Swiper('.rs-ticker-gallery__slider', {
-        slidesPerView: 'auto',
-        spaceBetween: 0,
-        speed: 10000,
-        loop: true,
-        autoplay: {
-          delay: 0.0001
-        }
-      });
-    }
-
-    //same ticker sliders
-    var tiskerSliders = document.querySelectorAll('.ticker-slider');
-    tiskerSliders.forEach(function (node, _) {
-      new TickerSlider(node);
-    });
-
-    //same product content sliders
-    var accordionContentSliders = document.querySelectorAll('.accordion-content__slider');
-    accordionContentSliders.forEach(function (node, _) {
-      new AccordionContentSlider(node);
+    //same sliders
+    var servicesSliders = document.querySelectorAll('.styles-slider');
+    servicesSliders.forEach(function (node, _) {
+      new stylesSlider(node);
     });
   }
 
-  // objects for same sliders ==========================================================================================
-  var TickerSlider = /*#__PURE__*/function () {
-    function TickerSlider($component) {
-      _classCallCheck(this, TickerSlider);
+  //same sliders	objects ==================================================================================================
+  var stylesSlider = /*#__PURE__*/function () {
+    function stylesSlider($component) {
+      _classCallCheck(this, stylesSlider);
       this.$component = $component;
       this.$slider = this.$component.querySelector('[class*="__slider"]');
+      this.$arrowNext = this.$component.querySelector('[class*="_next"]');
+      this.$arrowPrev = this.$component.querySelector('[class*="_prev"]');
       this.render();
     }
-    _createClass(TickerSlider, [{
+    _createClass(stylesSlider, [{
       key: "render",
       value: function render() {
         new Swiper(this.$slider, {
           slidesPerView: 'auto',
-          spaceBetween: 0,
-          speed: 10000,
-          loop: true,
-          direction: 'vertical',
-          allowTouchMove: false,
-          autoplay: {
-            delay: 0.0001
-          }
-        });
-      }
-    }]);
-    return TickerSlider;
-  }();
-  var AccordionContentSlider = /*#__PURE__*/function () {
-    function AccordionContentSlider($component) {
-      _classCallCheck(this, AccordionContentSlider);
-      this.$slider = $component;
-      this.paging = this.$slider.querySelector('[class*="-paging"]');
-      this.slides = parseInt($component.dataset.slides);
-      this.render();
-    }
-    _createClass(AccordionContentSlider, [{
-      key: "render",
-      value: function render() {
-        new Swiper(this.$slider, {
-          slidesPerView: 1,
           spaceBetween: 30,
-          speed: 800,
-          loop: false,
-          pagination: {
-            el: this.paging,
-            type: 'bullets',
-            clickable: true
-          },
-          breakpoints: {
-            768: {
-              slidesPerView: this.slides || 1
-            }
+          speed: 500,
+          navigation: {
+            nextEl: this.$arrowNext,
+            prevEl: this.$arrowPrev
           }
         });
       }
     }]);
-    return AccordionContentSlider;
+    return stylesSlider;
   }();
   /*!
    * lightgallery | 2.7.1 | January 11th 2023
@@ -1851,124 +2227,26 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     };
     return Zoom;
   }();
-  function stickyHeader() {
-    var header = document.querySelector('header');
-    var menu = document.querySelector('.rs-header');
-    var offset = menu.offsetTop;
-    var scrollPrev = 0;
-    document.addEventListener('scroll', function stickyHeaderAction(e) {
-      var scrolled = window.pageYOffset;
-      //sticky header
-      if (window.pageYOffset > offset) {
-        header.classList.add('sticky');
-      } else {
-        header.classList.remove('sticky');
-      }
-      //sticky spy
-      if (scrolled > 143 && scrolled > scrollPrev) {
-        header.classList.add('out');
-      } else {
-        header.classList.remove('out');
-      }
-      scrollPrev = scrolled;
-    });
-  }
+  var header = document.querySelector('header');
+  var menu = document.querySelector('.rs-header');
+  var offset = menu.offsetTop;
   function gsapAnimations() {
-    var trigger = document.querySelector('.product-banners-wrapper');
-    var elements = gsap.utils.toArray('.rs-product-banner');
-    if (trigger) {
-      var productBannerAnimation = function productBannerAnimation(evt) {
-        if (evt.matches) {
-          if (timeLine !== undefined) {
-            timeLine.revert();
-          }
-        } else {
-          timeLine = gsap.timeline({
-            scrollTrigger: {
-              trigger: trigger,
-              start: 'top top',
-              end: '+=2000px',
-              pin: true,
-              scrub: 0.8
-            },
-            ease: 'none'
-          });
-          timeLine.to(elements[0], {
-            scale: 0.7
-          });
-          timeLine.to(elements[1], {
-            yPercent: -100
-          });
-          timeLine.to(elements[1], {
-            scale: 0.75
-          });
-        }
-      };
-      var mediaQueryList = window.matchMedia('(max-width: 767.98px)');
-      var timeLine;
-      mediaQueryList.addListener(function () {
-        productBannerAnimation(mediaQueryList);
+    var parallaxElements = document.querySelectorAll('.parallax');
+    var mm = gsap.matchMedia();
+    mm.add('(min-width: 767.98px)', function () {
+      parallaxElements.forEach(function (element) {
+        var animElem = element.querySelector('img');
+        gsap.to(animElem, {
+          scrollTrigger: {
+            trigger: element,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 0.8
+          },
+          y: 200
+        });
       });
-      productBannerAnimation(mediaQueryList);
-    }
-
-    ////////////////////////////////////////////////////////////////
-    if (document.querySelector('.rs-stages')) {
-      var stagesAnimation = function stagesAnimation(evt) {
-        if (evt.matches) {
-          if (ctx !== undefined) {
-            ctx.revert();
-          }
-        } else {
-          ctx = gsap.context(function () {
-            stickyItems.forEach(function (element, index) {
-              var elementBottom = element.getBoundingClientRect().bottom;
-              var offsetTop = index * 20;
-              gsap.to(element, {
-                scrollTrigger: {
-                  trigger: element,
-                  start: function start() {
-                    return "-=".concat(index * 20, " 120px");
-                  },
-                  end: function end() {
-                    return "+=".concat(stickyItemsContainerBottom - elementBottom + offsetTop - offsetBottom);
-                  },
-                  pin: true,
-                  scrub: 0.8,
-                  pinSpacing: false
-                },
-                transformOrigin: 'top',
-                scale: 0.7 + index / 50
-              });
-            });
-            gsap.to(stickyContent, {
-              scrollTrigger: {
-                trigger: stickyContent,
-                start: 'top 120px',
-                end: function end() {
-                  return "+=".concat(stickyContainer.offsetHeight - stickyContent.offsetHeight);
-                },
-                pin: true,
-                scrub: 0.8,
-                pinSpacing: false
-              }
-            });
-          });
-        }
-      };
-      var stickyItems = gsap.utils.toArray('.rs-stages__item');
-      var stickyItemsContainer = document.querySelector('.rs-stages__items');
-      var stickyItemsContainerBottom = stickyItemsContainer.getBoundingClientRect().bottom;
-      var offsetBottom = (stickyItems.length - 1) * 20;
-      var stickyContainer = document.querySelector('.rs-stages__inner');
-      var stickyContent = document.querySelector('.rs-stages__content');
-      var ctx;
-      var _mediaQueryList = window.matchMedia('(max-width: 767.98px)');
-      _mediaQueryList.addListener(function () {
-        stagesAnimation(_mediaQueryList);
-      });
-      stagesAnimation(_mediaQueryList);
-    }
+    });
   }
 
   // scroll block to left
@@ -2045,30 +2323,31 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   // tl.to(pathElements[6], {strokeDashoffset: 0});
   // tl.to(pathElements[7], {strokeDashoffset: 0}, '<');
 
-  ////////////////////////////////////////////////////////////////
-  // const stickyItems = gsap.utils.toArray('.sticky-item');
-  // const stickyItemsContainer = document.querySelector('.sticky-items-container');
-  // const stickyItemsContainerBottom = stickyItemsContainer.getBoundingClientRect().bottom;
-  // const length = stickyItems.length - 1;
+  // const trigger = document.querySelector('.product-banners-wrapper');
+  // const elements = gsap.utils.toArray('.rs-product-banner');
 
-  // const stickyContainer = document.querySelector('.sticky-container');
-  // const stickyContent = document.querySelector('.sticky-content');
-
-  // stickyItems.forEach((element, index) => {
-  // 	const elementBottom = element.getBoundingClientRect().bottom;
-  // 	gsap.to(element, {
+  // if (trigger && window.innerWidth > 767) {
+  // 	let tl = gsap.timeline({
   // 		scrollTrigger: {
-  // 			trigger: element,
-  // 			start: () => `-=${index * 20} 120px`,
-  // 			end: () => `+=${(stickyItemsContainerBottom - elementBottom) + (index * 20) - (length * 20)}`,
-  // 			pin: true,				
+  // 			trigger: trigger,
+  // 			start: 'top top',
+  // 			end: '+=2000px',
+  // 			pin: true,
   // 			scrub: 0.8,
-  // 			pinSpacing: false,
   // 		},
-  // 		transformOrigin: 'top', 
-  // 		scale: 0.7 + (index / 50)			
-  // 	})
-  // });
+  // 		ease: 'none',
+  // 	});
+
+  // 	tl.to(elements[0], {
+  // 		scale: 0.7,
+  // 	});
+  // 	tl.to(elements[1], {
+  // 		yPercent: -100,
+  // 	});
+  // 	tl.to(elements[1], {
+  // 		scale: 0.75,
+  // 	});
+  // }
 
   function animatePage() {
     var elements = gsap.utils.toArray('[data-animate]');
@@ -2076,7 +2355,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       animateNamed(el);
       gsap.from(el, {
         scrollTrigger: {
-          start: '150px bottom',
+          start: '200px bottom',
           trigger: el,
           onEnter: function onEnter() {
             return el.classList.add('in-view');
@@ -2090,7 +2369,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     stagerElements.forEach(function (el) {
       gsap.from(el, {
         scrollTrigger: {
-          start: '150px bottom',
+          start: '200px bottom',
           trigger: el,
           onEnter: function onEnter() {
             return el.classList.add('in-view');
@@ -2188,16 +2467,19 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
   //import './libs/anchor-links';
 
+  //import {HistorySlider} from './plugins//HistorySlider.js';
+
   var isMobile$1 = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   //const is_safari = /safari/.test(getBrowser().toLowerCase());
   // if (is_safari) {
   // 	document.body.classList.remove('page-animate');
   // }
+
   gsap.registerPlugin(ScrollTrigger);
   window.addEventListener('load', function (e) {
     mainClickActions();
     initSliders();
-    stickyHeader();
+    //stickyHeader();
     gsapAnimations();
     //initGallery();
     //preloader();
@@ -2205,98 +2487,34 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     phoneInput();
     animatePage();
     checkViewport();
+    //stickyContent();
     //countdownTimer();
-
+    lenisSmoothScroll();
     document.body.classList.add('loaded');
 
-    // $('.counter').counterUp({
-    // 	delay: 10,
-    // 	time: 1000,
-    // });
-    document.querySelectorAll('.btn-color').forEach(function (button) {
-      var str = button.textContent.trim().split('');
-      var modstr = '';
-      str.forEach(function (letter) {
-        letter === ' ' ? letter = '&nbsp;' : letter = letter;
-        modstr += '<span>' + letter + '</span>';
-      });
-      button.innerHTML = '<div>' + modstr + '</div>';
+    // play video
+    var playBtn = document.querySelector('.rs-video__video button');
+    var video = document.querySelector('.rs-video__video video');
+    if (playBtn) {
+      playBtn.addEventListener('click', play);
+    }
+    function play() {
+      if (video.paused) {
+        //video.setAttribute('controls', true);
+        video.play();
+        playBtn.classList.add('o');
+      } else {
+        video.pause();
+        playBtn.classList.remove('o');
+      }
+    }
+    $('[data-showmore-button]').click(function () {
+      $(this).prev().slideToggle('slow', tirggerResizeContent).prev().removeClass('masked');
+      $(this).hide();
     });
-
-    //forms validate
-    if ($('#callback-modal-form').length > 0) {
-      $('#callback-modal-form').validate({
-        submitHandler: function submitHandler(form) {
-          form.submit();
-        },
-        // rules: {
-        //   callbackModalName: {
-        //     required: true,
-        //   },
-        //   callbackModalPhone: {
-        //     required: true,
-        //   },
-        // 	callbackModalMail: {
-        //     required: true,
-        //   },
-        // 	callbackModalMessage: {
-        //     required: true,
-        //   },
-        // },
-        messages: {
-          callbackModalName: {
-            required: 'ФИО'
-          },
-          callbackModalPhone: {
-            required: 'Телефон'
-          },
-          callbackModalMail: {
-            required: 'E-mail',
-            email: 'Введите правильный E-mail'
-          },
-          callbackModalMessage: {
-            required: 'Введите ваше сообщение'
-          }
-        }
-      });
-    }
-    if ($('#resume-modal-form').length > 0) {
-      $('#resume-modal-form').validate({
-        submitHandler: function submitHandler(form) {
-          form.submit();
-        },
-        messages: {
-          resumeModalName: {
-            required: 'ФИО'
-          },
-          resumeModalPhone: {
-            required: 'Телефон'
-          },
-          resumeModalMail: {
-            required: 'E-mail',
-            email: 'Введите правильный E-mail'
-          },
-          resumeModalMessage: {
-            required: 'Введите ваше сообщение'
-          }
-        }
-      });
-    }
-
-    //accordion title
-    var accTitles = document.querySelectorAll('.accordion__title');
-    if (accTitles) {
-      accTitles.forEach(function (title) {
-        title.addEventListener('click', function (event) {
-          var _this2 = this;
-          setTimeout(function () {
-            _this2.scrollIntoView({
-              behavior: "smooth",
-              block: "nearest"
-            });
-          }, 500);
-        });
-      });
-    }
   });
+  function tirggerResizeContent() {
+    lenis.resize();
+    ScrollTrigger.update();
+  }
 });
