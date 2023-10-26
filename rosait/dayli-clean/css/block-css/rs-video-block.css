@@ -1,0 +1,117 @@
+.rs-video-block {
+    background: url("../../img/about/video_bg.jpg") center/cover no-repeat;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.rs-video-block__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.rs-video-block__head {
+    max-width: 520px;
+}
+
+.rs-video-block__head h2 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 121.1%;
+    letter-spacing: 1.5px;
+    margin-bottom: 40px;
+}
+
+.rs-video-block__link {
+    width: 69px;
+    height: 69px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-video-block__link::before,
+.rs-video-block__link::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #15c3ee;
+    border-radius: 50%;
+}
+
+.rs-video-block__link::before {
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+.rs-video-block__link::after {
+    width: 60%;
+    height: 60%;
+}
+
+.rs-video-block__link span {
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 18px);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 148.1%;
+    letter-spacing: 0.48px;
+}
+
+.rs-video-block__link img {
+    position: relative;
+    z-index: 2;
+}
+
+.rs-video-block__content {
+    max-width: 610px;
+}
+
+.rs-video-block__content p {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 148.1%;
+  /* 23.696px */
+    letter-spacing: 0.48px;
+}
+
+.rs-video-block__content p:not(:last-child) {
+    margin-bottom: 27px;
+}
+
+@media (max-width: 767.98px) {
+    .rs-video-block {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rs-video-block__container {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-video-block__head h2 {
+        font-size: 30px;
+    }
+
+    .rs-video-block__content p {
+        font-size: 14px;
+    }
+}

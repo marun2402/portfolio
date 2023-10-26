@@ -1,0 +1,26 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Shapes" clip-path="url(#clip0_58_3991)">
+<g id="Clip path group">
+<mask id="mask0_58_3991" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+<g id="clip0_231_793">
+<path id="Vector" d="M100 0H0V100H100V0Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_58_3991)">
+<g id="Group">
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M25 0H100V25V75L75 100V25H0L25 0ZM0 100V25H75L0 100ZM75 100H0L75 25V100Z" fill="url(#paint0_linear_58_3991)"/>
+</g>
+</g>
+</g>
+<path id="Vector 325" d="M75 25H0V50H32.5L0 82.5V100H18L50 68V100H75V25Z" fill="white"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_58_3991" x1="88.5" y1="-5.01387e-06" x2="19.75" y2="76.25" gradientUnits="userSpaceOnUse">
+<stop stop-color="#4318FF"/>
+<stop offset="1" stop-color="#6463B1"/>
+</linearGradient>
+<clipPath id="clip0_58_3991">
+<rect width="100" height="100" fill="white"/>
+</clipPath>
+</defs>
+</svg>

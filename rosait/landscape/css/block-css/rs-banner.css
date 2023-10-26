@@ -1,0 +1,48 @@
+.rs-banner {
+    position: relative;
+}
+
+.rs-banner__wrapper {
+    padding-bottom: 140px;
+}
+
+.rs-banner__picture {
+    overflow: hidden;
+    position: relative;
+    height: 737px;
+}
+
+.rs-banner__picture img {
+    width: 100%;
+    height: calc(100% + 200px);
+    position: absolute;
+    bottom: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-banner_about .rs-banner__wrapper {
+    padding-bottom: 0;
+}
+
+.rs-banner_about .rs-banner__picture {
+    height: 625px;
+}
+
+@media (max-width: 767.98px) {
+    .rs-banner__wrapper {
+        padding-bottom: 45px;
+    }
+
+    .rs-banner__picture {
+        height: 170px;
+    }
+
+    .rs-banner__picture img {
+        height: 100%;
+    }
+
+    .rs-banner_about .rs-banner__picture {
+        height: 133px;
+    }
+}

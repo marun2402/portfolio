@@ -1,0 +1,162 @@
+.rs-about {
+    position: relative;
+    z-index: 6;
+    background: #fff;
+}
+
+.rs-about__tabs {
+    display: grid;
+    grid-template-columns: 523px 1fr;
+}
+
+.rs-about__tabs-nav {
+    border-left: 1px solid #e4e4e4;
+    color: #000;
+    font-family: Unbounded;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 130%;
+}
+
+.rs-about__tabs-nav h2 {
+    color: #b79000;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 1.95px;
+    text-transform: uppercase;
+    padding-top: 107px;
+    padding-bottom: 32px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.rs-about__tabs-nav ul li.active a::after {
+    opacity: 1;
+}
+
+.rs-about__tabs-nav ul li a {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 25px 30px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.rs-about__tabs-nav ul li a::after {
+    content: url(../../img/icons/arrow-narrow-right.svg);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.rs-about__tabs-content {
+    background: #3d6043;
+    padding: 82px 250px 81px 87px;
+}
+
+.rs-about__tabs-pane {
+    height: 100%;
+}
+
+.rs-about .about-content {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.48px;
+}
+
+.rs-about .about-content h4 {
+    color: #fff;
+    font-family: Unbounded;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 130%;
+    margin-bottom: 20px;
+}
+
+.rs-about .about-content p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.rs-about .about-content blockquote {
+    padding: 20px 20px 20px 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: inherit;
+}
+
+.rs-about .about-content ul:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1600px) {
+    .rs-about__tabs-content {
+        padding: 45px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-about__tabs {
+        grid-template-columns: 323px 1fr;
+    }
+
+    .rs-about__tabs-nav {
+        font-size: 13px;
+    }
+
+    .rs-about__tabs-nav h2 {
+        font-size: 11px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .rs-about .about-content {
+        font-size: 13px;
+    }
+
+    .rs-about .about-content h4 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-about__tabs {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-about__tabs-nav {
+        border-right: 1px solid #e4e4e4;
+    }
+
+    .rs-about__tabs-nav ul li a {
+        padding: 15px 30px;
+    }
+
+    .rs-about__tabs-nav ul li a::after {
+        display: none;
+    }
+
+    .rs-about__tabs-content {
+        padding: 20px;
+    }
+
+    .rs-about .about-content blockquote {
+        padding: 20px;
+    }
+}

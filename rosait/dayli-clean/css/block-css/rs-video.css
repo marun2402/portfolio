@@ -1,0 +1,119 @@
+.rs-video {
+    padding-top: 95px;
+    padding-bottom: 120px;
+}
+
+.rs-video__head {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.rs-video__head h2 {
+    color: #292930;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 121.1%;
+    letter-spacing: 1.35px;
+}
+
+.rs-video__video {
+    overflow: hidden;
+    padding-bottom: 45%;
+    border-radius: 15px 200px 15px 15px;
+    position: relative;
+}
+
+.rs-video__video video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.rs-video__video button {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background: #15c3ee;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.rs-video__video button svg {
+    fill: transparent;
+    transition: fill 0.3s ease;
+}
+
+.rs-video__video button:hover svg {
+    fill: #fff;
+}
+
+.rs-video__video button.o {
+    display: none;
+}
+
+.rs-video__link-mobile {
+    margin-top: 10px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@media (min-width: 767.98px) {
+    .rs-video__link-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-video__video {
+        border-radius: 15px 90px 15px 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-video {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+
+    .rs-video__head {
+        margin-bottom: 15px;
+    }
+
+    .rs-video__head h2 {
+        font-size: 25px;
+    }
+
+    .rs-video__video {
+        border-radius: 4px 50px 4px 4px;
+    }
+
+    .rs-video__video button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .rs-video__link {
+        display: none;
+    }
+}

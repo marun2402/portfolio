@@ -1,0 +1,122 @@
+.rs-fos {
+    border-radius: 15px;
+    background: #fafafc;
+    padding: 50px;
+}
+
+.rs-fos h3 {
+    color: #292930;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 121.1%;
+    letter-spacing: 0.9px;
+}
+
+.rs-fos__form {
+    margin-top: 40px;
+}
+
+.rs-fos .fos-form .form-submit {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 33px;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-fos .fos-form .form-submit p {
+    max-width: 500px;
+    color: #9297a8;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 148.1%;
+    letter-spacing: 0.39px;
+}
+
+.rs-fos .fos-form .form-submit p a {
+    text-decoration: underline;
+}
+
+.rs-fos .fos-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 15px;
+    -moz-column-gap: 15px;
+    column-gap: 15px;
+}
+
+.rs-fos .fos-form .form-group {
+    margin-bottom: 15px;
+}
+
+.rs-fos .fos-form input,
+.rs-fos .fos-form textarea {
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #babfce;
+    background: transparent;
+    color: #9297a8;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    height: 60px;
+    padding-left: 27px;
+    padding-right: 27px;
+}
+
+.rs-fos .fos-form input::-webkit-input-placeholder, .rs-fos .fos-form textarea::-webkit-input-placeholder {
+    color: #9297a8;
+}
+
+.rs-fos .fos-form input:-ms-input-placeholder, .rs-fos .fos-form textarea:-ms-input-placeholder {
+    color: #9297a8;
+}
+
+.rs-fos .fos-form input::-ms-input-placeholder, .rs-fos .fos-form textarea::-ms-input-placeholder {
+    color: #9297a8;
+}
+
+.rs-fos .fos-form input::placeholder,
+.rs-fos .fos-form textarea::placeholder {
+    color: #9297a8;
+}
+
+.rs-fos .fos-form input.error,
+.rs-fos .fos-form textarea.error {
+    border-color: #ff3844;
+}
+
+.rs-fos .fos-form textarea {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+    resize: none;
+    min-height: 183px;
+}
+
+@media (max-width: 1300px) {
+    .rs-fos .fos-form .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-fos .fos-form .form-submit {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-fos {
+        padding: 30px;
+    }
+
+    .rs-fos h3 {
+        font-size: 25px;
+    }
+
+    .rs-fos__form {
+        margin-top: 20px;
+    }
+}

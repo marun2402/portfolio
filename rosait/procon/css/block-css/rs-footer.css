@@ -1,0 +1,203 @@
+.footer-menu__list li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.footer-menu__list li a {
+    --font-size: 22px;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    font-size: var(--font-size);
+    font-weight: 400;
+    line-height: 150%;
+    overflow: hidden;
+}
+
+.footer-menu__list li a span {
+    display: block;
+    text-shadow: 0 calc(var(--font-size) + 9px) 0 #fff;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.footer-menu__list li a:hover span {
+    -webkit-transform: translateY(calc((var(--font-size) + 9px) * -1));
+    transform: translateY(calc((var(--font-size) + 9px) * -1));
+}
+
+.footer-menu_grid .footer-menu__list {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 120px;
+    -moz-column-gap: 120px;
+    column-gap: 120px;
+}
+
+.rs-footer {
+    padding: 10px;
+}
+
+.rs-footer__wrapper {
+    border-radius: 12px;
+    background: #4318ff;
+}
+
+.rs-footer__top {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: grid;
+    grid-template-columns: 1fr 10% 10% 20%;
+    gap: 120px;
+}
+
+.rs-footer__info {
+    justify-self: start;
+}
+
+.rs-footer .footer-info__logo {
+    max-width: 285px;
+    margin-bottom: 32px;
+}
+
+.rs-footer .footer-info__logo img {
+    width: 100%;
+}
+
+.rs-footer .footer-info p {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 110%;
+}
+
+.rs-footer .footer-contacts__list ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rs-footer .footer-contacts__list ul li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.rs-footer .footer-contacts__list ul li p,
+.rs-footer .footer-contacts__list ul li a {
+    position: relative;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.rs-footer .footer-bottom {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border-top: 1px solid rgba(221, 216, 216, 0.3);
+}
+
+.rs-footer .footer-bottom__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-footer .footer-bottom p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.rs-footer .footer-bottom a {
+    color: #fff;
+    display: inline-block;
+}
+
+@media (min-width: 991.98px) {
+    .rs-footer__top {
+        justify-items: end;
+        -ms-flex-pack: end;
+        justify-content: end;
+    }
+
+    .rs-footer__info {
+        max-width: 285px;
+    }
+}
+
+@media (max-width: 1630px) {
+    .rs-footer__top {
+        grid-template-columns: 1fr 20% 20% 20%;
+    }
+
+    .rs-footer__top {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .footer-menu_grid .footer-menu__list {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-footer__top {
+        grid-template-columns: 1fr;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        gap: 20px;
+    }
+
+    .rs-footer__contacts {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+
+    .rs-footer__info {
+        padding-bottom: 30px;
+    }
+
+    .rs-footer .footer-bottom__wrapper {
+        -ms-flex-align: center;
+        align-items: center;
+        display: block;
+    }
+
+    .rs-footer .footer-bottom p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer-menu__list li a {
+        --font-size: 13px;
+    }
+
+    .rs-footer .footer-info__logo {
+        max-width: 153px;
+        margin-bottom: 10px;
+    }
+
+    .rs-footer .footer-info p {
+        font-size: 13px;
+    }
+
+    .rs-footer .footer-contacts__list ul li p,
+  .rs-footer .footer-contacts__list ul li a {
+        font-size: 13px;
+    }
+}

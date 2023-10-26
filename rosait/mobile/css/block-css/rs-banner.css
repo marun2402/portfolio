@@ -1,0 +1,131 @@
+.rs-banner {
+    padding-top: 32px;
+    padding-bottom: 64px;
+    position: relative;
+}
+
+.rs-banner__wrapper {
+    background: #e1eae4;
+    height: 538px;
+}
+
+.rs-banner__container {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-banner__picture {
+    position: relative;
+    background: url("../../img/ellipse.png") center bottom no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.rs-banner__picture img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.rs-banner__content {
+    position: relative;
+    max-width: 715px;
+    padding-right: 50px;
+}
+
+.rs-banner__content h3 {
+    color: #05251d;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 16px;
+}
+
+.rs-banner__content p {
+    color: #666;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 160%;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 991.98px) {
+    .rs-banner__picture {
+        -ms-flex: 0 0 625px;
+        flex: 0 0 625px;
+    }
+}
+
+@media (max-width: 1470px) {
+    .rs-banner__content {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-banner__wrapper {
+        height: 447px;
+        padding-top: 20px;
+    }
+
+    .rs-banner__container {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .rs-banner__picture {
+        height: 265px;
+        background-size: contain;
+    }
+
+    .rs-banner__picture {
+        -ms-flex-order: 2;
+        order: 2;
+    }
+
+    .rs-banner__picture img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: contain;
+        object-fit: contain;
+        -o-object-position: bottom;
+        object-position: bottom;
+    }
+
+    .rs-banner__content {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        max-width: none;
+    }
+
+    .rs-banner__content {
+        -ms-flex-order: 1;
+        order: 1;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-banner {
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+
+    .rs-banner__content h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .rs-banner__content p {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+}

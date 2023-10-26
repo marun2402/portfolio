@@ -1,0 +1,37 @@
+.rs-vacancies {
+    position: relative;
+    padding-bottom: 120px;
+}
+
+.rs-vacancies::before {
+    content: "";
+    background: url("../../img/vacancies/3.1_bg.png") 50%/cover no-repeat;
+    background-blend-mode: exclusion;
+    position: absolute;
+    width: 2190px;
+    height: 1506px;
+    opacity: 0.1;
+    left: 0;
+    top: -500px;
+    z-index: -1;
+}
+
+.rs-vacancies__title {
+    margin-bottom: 24px;
+    color: #292930;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 121.1%;
+    letter-spacing: 1.5px;
+}
+
+@media (max-width: 767.98px) {
+    .rs-vacancies {
+        padding-bottom: 30px;
+    }
+
+    .rs-vacancies__title {
+        font-size: 30px;
+    }
+}
