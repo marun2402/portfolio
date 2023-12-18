@@ -1,0 +1,15 @@
+.rs-directory__entry {
+    border-radius: 3px;
+    background: #fff;
+    padding: 50px 40px;
+}
+
+.rs-directory__entry:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 991.98px) {
+    .rs-directory__entry {
+        padding: 30px 15px;
+    }
+}
