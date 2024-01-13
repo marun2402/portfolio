@@ -1,0 +1,26 @@
+.rs-news-page__wrapper {
+    border-left: 1px solid #dcdcdc;
+}
+
+.rs-news-page__item {
+    min-height: 387px;
+    display: grid;
+    position: relative;
+}
+
+.rs-news-page__item::after {
+    content: "";
+    height: 1px;
+    width: 100vw;
+    background: #dcdcdc;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media (max-width: 767.98px) {
+    .rs-news-page__item {
+        min-height: auto;
+    }
+}
