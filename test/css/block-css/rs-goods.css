@@ -82,6 +82,10 @@
     .rs-goods__item {
         scroll-snap-align: start;
     }
+
+    .rs-goods__item:first-child {
+        padding-left: 1px;
+    }
 }
 
 @media (min-width: 405px) and (max-width: 767px) {

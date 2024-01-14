@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .menu {
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -7,6 +9,31 @@
 
 .menu {
     position: relative;
+}
+
+.menu .menu-mobile-head {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    height: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.menu .menu-mobile-head .logo {
+    display: block;
+    width: 80px;
+    max-height: 100%;
+}
+
+.menu .menu-mobile-head .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .menu .menu-wrapper {
@@ -74,7 +101,7 @@
     background-color: #fff;
     padding-top: 10px;
     padding-bottom: 10px;
-    border: 1px solid #DCDCDC;
+    border: 1px solid #dcdcdc;
 }
 
 .menu .menu__dropdown-list .menu__dropdown-list {
@@ -162,7 +189,6 @@
     width: 46px;
     height: 46px;
     line-height: 1;
-    z-index: 5;
     background-color: transparent;
 }
 
@@ -203,13 +229,13 @@
 .rs-header__logo {
     grid-area: 1/1/3/2;
     position: relative;
+    z-index: 1;
     padding: 0px 80px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
     border-right: 1px solid #dcdcdc;
-    z-index: 3;
 }
 
 .rs-header__logo img {
@@ -239,10 +265,6 @@
     grid-area: 1/3/3/4;
     border-left: 1px solid #dcdcdc;
     border-right: 1px solid #dcdcdc;
-}
-
-.rs-header__social {
-    position: relative;
 }
 
 .rs-header__search {
@@ -383,6 +405,70 @@
     opacity: 1;
     pointer-events: auto;
     transform: none;
+}
+
+.rs-header .menu-catalog-mobile {
+    padding: 0px 20px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.rs-header .menu-catalog-mobile > button {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px 0px;
+    color: #0c0c0d;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 148.5%;
+}
+
+.rs-header .menu-catalog-mobile > button svg {
+    margin-right: 10px;
+}
+
+.rs-header .menu-catalog-mobile__list {
+    padding-bottom: 15px;
+    padding-top: 5px;
+    color: #0c0c0d;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 148.5%;
+}
+
+.rs-header .menu-catalog-mobile__list a {
+    display: inline-block;
+    padding: 8px 0px;
+}
+
+.rs-header .menu-catalog-mobile__list ul {
+    padding-left: 20px;
+}
+
+.rs-header .menu-catalog-mobile__list ul li a::before {
+    content: "— ";
+}
+
+.rs-header .menu-catalog-mobile__list li {
+    position: relative;
+}
+
+.rs-header .menu-catalog-mobile__list button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    width: 35px;
+    height: 35px;
+    transform: rotate(90deg);
+}
+
+.rs-header .menu-catalog-mobile__list button::before {
+    content: url("../../img/icons/menu_icon.svg");
+    display: block;
 }
 
 .rs-header .header-search {
@@ -541,6 +627,14 @@
 }
 
 @media (min-width: 991.98px) {
+    .menu .menu-holder {
+        height: 100%;
+    }
+
+    .menu .menu-mobile-head {
+        display: none;
+    }
+
     .menu .menu__dropdown-list li a {
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -586,6 +680,10 @@
     }
 
     .menu-overlay {
+        display: none;
+    }
+
+    .rs-header .menu-catalog-mobile {
         display: none;
     }
 
@@ -642,9 +740,8 @@
         visibility: hidden;
         pointer-events: none;
         height: auto;
-        max-height: 100vh;
+        max-height: 100dvh;
         position: fixed;
-        padding-top: 50px;
         left: 0;
         top: 0;
         width: 100%;
@@ -672,10 +769,13 @@
         background: #b8c2d0;
     }
 
+    .menu .menu-holder {
+        overflow-y: auto;
+    }
+
     .menu .menu-wrapper {
         height: auto;
         width: 100%;
-        overflow-y: auto;
     }
 
     .menu .menu__list {
@@ -691,7 +791,7 @@
         padding-bottom: 15px;
         padding-left: 20px;
         padding-right: 20px;
-        border-bottom: 1px solid #DCDCDC;
+        border-bottom: 1px solid #dcdcdc;
     }
 
     .menu .menu__list > li > a {

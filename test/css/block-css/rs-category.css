@@ -148,6 +148,7 @@
     border: 1px solid #dcdcdc;
     position: relative;
     height: 100%;
+    margin: 0 -1px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;

@@ -348,7 +348,7 @@ header {
 
 .page-content ul li::marker {
     content: "■ ";
-    font-size: 21px;
+    font-size: 24px;
     line-height: 100%;
 }
 
@@ -540,12 +540,7 @@ header {
 }
 
 .btn-color {
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    display: inline-block;
     position: relative;
     outline: none;
     text-decoration: none;
@@ -589,6 +584,7 @@ header {
     border: 1px solid #dcdcdc;
     position: relative;
     height: 100%;
+    margin: 0 -1px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -951,12 +947,25 @@ header {
     }
 
     .form form {
-        gap: 10px;
+        gap: 15px;
     }
 
     .form .form-submit {
         margin-top: 10px;
         gap: 10px;
+    }
+
+    .form input,
+  .form textarea {
+        padding-left: 20px;
+    }
+
+    .form .warn-icon {
+        right: 20px;
+    }
+
+    .form label.error {
+        font-size: 10px;
     }
 
     .page-head h1 {

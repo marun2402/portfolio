@@ -25,7 +25,6 @@
 
 	<script src="js/pixi/pixi.min.js" defer></script>
 	<script src="js/pixi/pixi-filters.min.js" defer></script>
-	
 		
 	<link rel="stylesheet" type="text/css" href="css/block-css/style.css" />
 	<script src="js/app.js" defer></script>
@@ -80,29 +79,91 @@
 
 
 <span class="menu-overlay" data-js-overlay></span>
-<nav class="menu" data-spollers="991, max">	
+<nav class="menu" data-spollers="991, max">
+
+	<div class="menu-mobile-head">
+		<a href="#" class="logo"><img src="img/logo.svg" alt=""></a>
+		<button type="button" class="mobile-menu-close">
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+				<path d="M19 1L1 19" stroke="#CECECE"/>
+				<path d="M1 1L19 19" stroke="#CECECE"/>
+			</svg>
+		</button>
+	</div>
 	
-	<div class="menu-wrapper">
-		<ul class="menu__list">				
-			<li><a href="#"><span>Главная</span></a></li>
-			<li><a href="#"><span>О нас</span></a></li>
-			<li class="menu__dropdown">
-				<a href="#"><span>Сферы применения</span></a>
-				<button type="button" class="menu__dropdown-arrow" data-spoller></button>
-				<ul class="menu__dropdown-list">
-					<li><a href="#"><span>Автоматизация производства</span></a></li>
-					<li><a href="#"><span>Продукты питания и напитки</span></a></li>
-					<li><a href="#"><span>Коммерческий транспорт</span></a></li>
-					<li><a href="#"><span>Биологические науки</span></a></li>
-					<li><a href="#"><span>Железная дорога</span></a></li>
-					<li><a href="#"><span>Энергетика, химия и нефтехимия</span></a></li>
-					<li><a href="#"><span>Коммерческое применение</span></a></li>
-					<li><a href="#"><span>Индивидуальные решения</span></a></li>
-				</ul>
-			</li>
-			<li><a href="#"><span>Новости</span></a></li>
-			<li><a href="#"><span>Контакты</span></a></li>
-		</ul>
+	<div class="menu-holder">
+		<div class="menu-catalog-mobile" data-spollers>
+			<button type="button" data-spoller>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C92628">
+					<rect width="4.8" height="4.8" />
+					<rect y="19.2" width="4.8" height="4.8" />
+					<rect x="9.59998" y="9.6001" width="4.8" height="4.8" />
+					<rect x="19.2" width="4.8" height="4.8" />
+					<rect x="19.2" y="19.2" width="4.8" height="4.8" />
+					<g id="hover">
+						<rect y="9.6001" width="4.8" height="4.8" />
+						<rect x="9.59998" width="4.8" height="4.8" />
+						<rect x="9.59998" y="19.2" width="4.8" height="4.8" />
+						<rect x="19.2" y="9.6001" width="4.8" height="4.8" />
+					</g>
+				</svg>
+				<span>Каталог</span>
+			</button>
+			<ul class="menu-catalog-mobile__list">
+				<li>
+					<a href="#">Соленоидные клапаны</a>
+					<button type="button" data-spoller></button>
+					<ul>
+						<li>
+							<a href="#">Серия 081</a>
+							<button type="button" data-spoller></button>
+							<ul>
+								<li><a href="#">Соленоидный клапан серии 081, 081-XX-1</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Серия 086 Тип I</a></li>
+						<li><a href="#">Серия 086 Тип D</a></li>
+						<li><a href="#">Серия 086 Тип E</a></li>
+						<li><a href="#">Серия 086 Тип X</a></li>
+						<li><a href="#">Серия 086 Тип R</a></li>
+						<li><a href="#">Серия 033</a></li>
+						<li><a href="#">Серия 065</a></li>
+						<li><a href="#">Серия 069</a></li>
+						<li><a href="#">Серия 001</a></li>
+						<li><a href="#">Серия 010</a></li>
+						<li><a href="#">Серия 098</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Электромагнитные катушки</a></li>
+				<li><a href="#">Манифольды</a></li>
+				<li><a href="#">Фильтр-регуляторы</a></li>
+				<li><a href="#">Индивидуальные изделия</a></li>
+				<li><a href="#">Индивидуальные системы</a></li>
+			</ul>
+		</div>
+		
+		<div class="menu-wrapper">
+			<ul class="menu__list">
+				<li><a href="#"><span>Главная</span></a></li>
+				<li><a href="#"><span>О нас</span></a></li>
+				<li class="menu__dropdown">
+					<a href="#"><span>Сферы применения</span></a>
+					<button type="button" class="menu__dropdown-arrow" data-spoller></button>
+					<ul class="menu__dropdown-list">
+						<li><a href="#"><span>Автоматизация производства</span></a></li>
+						<li><a href="#"><span>Продукты питания и напитки</span></a></li>
+						<li><a href="#"><span>Коммерческий транспорт</span></a></li>
+						<li><a href="#"><span>Биологические науки</span></a></li>
+						<li><a href="#"><span>Железная дорога</span></a></li>
+						<li><a href="#"><span>Энергетика, химия и нефтехимия</span></a></li>
+						<li><a href="#"><span>Коммерческое применение</span></a></li>
+						<li><a href="#"><span>Индивидуальные решения</span></a></li>
+					</ul>
+				</li>
+				<li><a href="#"><span>Новости</span></a></li>
+				<li><a href="#"><span>Контакты</span></a></li>
+			</ul>
+		</div>
 	</div>
 
 	<div class="header-contacts-mobile">
@@ -418,132 +479,132 @@
 						<div class="rs-category__item">
 							
 <article class="product-card">
-	<div class="product-card__title">Соленоидный клапан 081-XX-1</div>
+	<div class="product-card__title">Серия 081-ХХ-1</div>
 	<div class="product-card__photo"><img src="img/goods_1.png" alt=""></div>
 	<div class="product-card__description">Материал корпуса: Алюминий	Одиночные и двойные электромагнитные конструкции	Статическое уплотнение</div>
 	<div class="order-button"><a href="#">Заказать</a></div>
-	<a href="#">Соленоидный клапан 081-XX-1</a>
+	<a href="#">Серия 081-ХХ-1</a>
 </article>
 
 						</div>
 						<div class="rs-category__item">
 							
 <article class="product-card">
-	<div class="product-card__title">Соленоидный клапан 081-XX-1</div>
+	<div class="product-card__title">Серия 081-ХХ-1</div>
 	<div class="product-card__photo"><img src="img/goods_1.png" alt=""></div>
 	<div class="product-card__description">Материал корпуса: Алюминий	Одиночные и двойные электромагнитные конструкции	Статическое уплотнение</div>
 	<div class="order-button"><a href="#">Заказать</a></div>
-	<a href="#">Соленоидный клапан 081-XX-1</a>
+	<a href="#">Серия 081-ХХ-1</a>
 </article>
 
 						</div>
 						<div class="rs-category__item">
 							
 <article class="product-card">
-	<div class="product-card__title">Соленоидный клапан 081-XX-1</div>
+	<div class="product-card__title">Серия 081-ХХ-1</div>
 	<div class="product-card__photo"><img src="img/goods_1.png" alt=""></div>
 	<div class="product-card__description">Материал корпуса: Алюминий	Одиночные и двойные электромагнитные конструкции	Статическое уплотнение</div>
 	<div class="order-button"><a href="#">Заказать</a></div>
-	<a href="#">Соленоидный клапан 081-XX-1</a>
+	<a href="#">Серия 081-ХХ-1</a>
 </article>
 
 						</div>
 						<div class="rs-category__item">
 							
 <article class="product-card">
-	<div class="product-card__title">Соленоидный клапан 081-XX-1</div>
+	<div class="product-card__title">Серия 081-ХХ-1</div>
 	<div class="product-card__photo"><img src="img/goods_1.png" alt=""></div>
 	<div class="product-card__description">Материал корпуса: Алюминий	Одиночные и двойные электромагнитные конструкции	Статическое уплотнение</div>
 	<div class="order-button"><a href="#">Заказать</a></div>
-	<a href="#">Соленоидный клапан 081-XX-1</a>
+	<a href="#">Серия 081-ХХ-1</a>
 </article>
 
 						</div>
 						<div class="rs-category__item">
 							
 <article class="product-card">
-	<div class="product-card__title">Соленоидный клапан 081-XX-1</div>
+	<div class="product-card__title">Серия 081-ХХ-1</div>
 	<div class="product-card__photo"><img src="img/goods_1.png" alt=""></div>
 	<div class="product-card__description">Материал корпуса: Алюминий	Одиночные и двойные электромагнитные конструкции	Статическое уплотнение</div>
 	<div class="order-button"><a href="#">Заказать</a></div>
-	<a href="#">Соленоидный клапан 081-XX-1</a>
+	<a href="#">Серия 081-ХХ-1</a>
 </article>
 
 						</div>
 						<div class="rs-category__item">
 							
 <article class="product-card">
-	<div class="product-card__title">Соленоидный клапан 081-XX-1</div>
+	<div class="product-card__title">Серия 081-ХХ-1</div>
 	<div class="product-card__photo"><img src="img/goods_1.png" alt=""></div>
 	<div class="product-card__description">Материал корпуса: Алюминий	Одиночные и двойные электромагнитные конструкции	Статическое уплотнение</div>
 	<div class="order-button"><a href="#">Заказать</a></div>
-	<a href="#">Соленоидный клапан 081-XX-1</a>
+	<a href="#">Серия 081-ХХ-1</a>
 </article>
 
 						</div>
 						<div class="rs-category__item">
 							
 <article class="product-card">
-	<div class="product-card__title">Соленоидный клапан 081-XX-1</div>
+	<div class="product-card__title">Серия 081-ХХ-1</div>
 	<div class="product-card__photo"><img src="img/goods_1.png" alt=""></div>
 	<div class="product-card__description">Материал корпуса: Алюминий	Одиночные и двойные электромагнитные конструкции	Статическое уплотнение</div>
 	<div class="order-button"><a href="#">Заказать</a></div>
-	<a href="#">Соленоидный клапан 081-XX-1</a>
+	<a href="#">Серия 081-ХХ-1</a>
 </article>
 
 						</div>
 						<div class="rs-category__item">
 							
 <article class="product-card">
-	<div class="product-card__title">Соленоидный клапан 081-XX-1</div>
+	<div class="product-card__title">Серия 081-ХХ-1</div>
 	<div class="product-card__photo"><img src="img/goods_1.png" alt=""></div>
 	<div class="product-card__description">Материал корпуса: Алюминий	Одиночные и двойные электромагнитные конструкции	Статическое уплотнение</div>
 	<div class="order-button"><a href="#">Заказать</a></div>
-	<a href="#">Соленоидный клапан 081-XX-1</a>
+	<a href="#">Серия 081-ХХ-1</a>
 </article>
 
 						</div>
 						<div class="rs-category__item">
 							
 <article class="product-card">
-	<div class="product-card__title">Соленоидный клапан 081-XX-1</div>
+	<div class="product-card__title">Серия 081-ХХ-1</div>
 	<div class="product-card__photo"><img src="img/goods_1.png" alt=""></div>
 	<div class="product-card__description">Материал корпуса: Алюминий	Одиночные и двойные электромагнитные конструкции	Статическое уплотнение</div>
 	<div class="order-button"><a href="#">Заказать</a></div>
-	<a href="#">Соленоидный клапан 081-XX-1</a>
+	<a href="#">Серия 081-ХХ-1</a>
 </article>
 
 						</div>
 						<div class="rs-category__item">
 							
 <article class="product-card">
-	<div class="product-card__title">Соленоидный клапан 081-XX-1</div>
+	<div class="product-card__title">Серия 081-ХХ-1</div>
 	<div class="product-card__photo"><img src="img/goods_1.png" alt=""></div>
 	<div class="product-card__description">Материал корпуса: Алюминий	Одиночные и двойные электромагнитные конструкции	Статическое уплотнение</div>
 	<div class="order-button"><a href="#">Заказать</a></div>
-	<a href="#">Соленоидный клапан 081-XX-1</a>
+	<a href="#">Серия 081-ХХ-1</a>
 </article>
 
 						</div>
 						<div class="rs-category__item">
 							
 <article class="product-card">
-	<div class="product-card__title">Соленоидный клапан 081-XX-1</div>
+	<div class="product-card__title">Серия 081-ХХ-1</div>
 	<div class="product-card__photo"><img src="img/goods_1.png" alt=""></div>
 	<div class="product-card__description">Материал корпуса: Алюминий	Одиночные и двойные электромагнитные конструкции	Статическое уплотнение</div>
 	<div class="order-button"><a href="#">Заказать</a></div>
-	<a href="#">Соленоидный клапан 081-XX-1</a>
+	<a href="#">Серия 081-ХХ-1</a>
 </article>
 
 						</div>
 						<div class="rs-category__item">
 							
 <article class="product-card">
-	<div class="product-card__title">Соленоидный клапан 081-XX-1</div>
+	<div class="product-card__title">Серия 081-ХХ-1</div>
 	<div class="product-card__photo"><img src="img/goods_1.png" alt=""></div>
 	<div class="product-card__description">Материал корпуса: Алюминий	Одиночные и двойные электромагнитные конструкции	Статическое уплотнение</div>
 	<div class="order-button"><a href="#">Заказать</a></div>
-	<a href="#">Соленоидный клапан 081-XX-1</a>
+	<a href="#">Серия 081-ХХ-1</a>
 </article>
 
 						</div>
@@ -716,7 +777,7 @@
 </div>
 		<div class="rs-footer__copyright">
 <div class="footer-copyright">		
-	<p>© ООО «Современные Технологии Газовых Турбин» 2023. Все права защищены.</p>
+	<p>© ООО «Торговый Дом «Все для АЗС» 2023. <br> Все права защищены.</p>
 	<a href="#">Разработано в <img src="img/rosait_logo.svg" alt=""></a>
 </div>
 </div>			

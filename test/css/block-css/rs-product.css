@@ -78,10 +78,6 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.rs-product .product-benefit__entry:nth-child(2) {
-    border-left: 1px solid #dcdcdc;
-}
-
 .rs-product .product-benefit__entry:nth-child(1) .product-benefit__title::after {
     content: "";
     height: 1px;
@@ -163,6 +159,10 @@
 }
 
 @media (min-width: 767.98px) {
+    .rs-product .product-benefit__entry:nth-child(2) {
+        border-left: 1px solid #dcdcdc;
+    }
+
     .download-button-mobile {
         display: none;
     }
@@ -183,6 +183,7 @@
 @media (max-width: 767.98px) {
     .rs-product {
         font-size: 13px;
+        background: none;
     }
 
     .rs-product h1 {
@@ -214,6 +215,10 @@
 
     .rs-product__head {
         padding-right: 0;
+    }
+
+    .rs-product .product-info__content {
+        display: grid;
     }
 
     .rs-product .product-benefit__wrapper {

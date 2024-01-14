@@ -105,6 +105,10 @@
         margin-top: 20px;
     }
 
+    .rs-benefit__row {
+        margin-bottom: 15px;
+    }
+
     .rs-benefit__item {
         padding: 0;
     }
