@@ -1,0 +1,123 @@
+.rs-benefit {
+    --gap: 32px;
+    position: relative;
+    background: #f3f3f3;
+}
+
+.rs-benefit__wrapper {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    padding-left: 117px;
+    padding-right: 117px;
+}
+
+.rs-benefit__items {
+    margin-top: 40px;
+}
+
+.rs-benefit__item {
+    -ms-flex: 0 1 30%;
+    flex: 0 1 30%;
+    padding-left: var(--gap);
+    padding-right: var(--gap);
+}
+
+.rs-benefit .benefit-item {
+    height: 100%;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    color: #0c0c0d;
+    font-style: normal;
+}
+
+.rs-benefit .benefit-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 135%;
+    margin-bottom: 8px;
+}
+
+.rs-benefit .benefit-item p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 158%;
+    margin-bottom: 16px;
+}
+
+.rs-benefit .benefit-item img {
+    margin-top: auto;
+}
+
+@media (min-width: 767.98px) {
+    .rs-benefit__row {
+        display: -ms-flexbox;
+        display: flex;
+        margin-left: calc(var(--gap) * -1);
+        margin-right: calc(var(--gap) * -1);
+    }
+
+    .rs-benefit__row:not(:last-child) {
+        margin-bottom: calc(var(--gap) * 2);
+    }
+
+    .rs-benefit__row:nth-child(even) {
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 1800px) {
+    .rs-benefit {
+        --gap: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .rs-benefit__item {
+        -ms-flex: 0 1 33.333%;
+        flex: 0 1 33.333%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-benefit .benefit-item h3 {
+        font-size: 16px;
+    }
+
+    .rs-benefit .benefit-item p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-benefit__wrapper {
+        padding: 30px 0px 30px 20px;
+    }
+
+    .rs-benefit__items {
+        margin-top: 20px;
+    }
+
+    .rs-benefit__row {
+        margin-bottom: 15px;
+    }
+
+    .rs-benefit__item {
+        padding: 0;
+    }
+
+    .rs-benefit__item:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    .rs-benefit .benefit-item {
+        padding: 20px;
+    }
+}

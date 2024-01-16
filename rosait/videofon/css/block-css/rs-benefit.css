@@ -1,0 +1,176 @@
+.rs-benefit .bg {
+    position: absolute;
+}
+
+.rs-benefit .bg_1 {
+    top: 50px;
+    right: -50px;
+}
+
+.rs-benefit .bg_2 {
+    right: 13px;
+    top: 472px;
+}
+
+.rs-benefit__head {
+    position: relative;
+    z-index: 2;
+    padding-left: 95px;
+    margin-bottom: 105px;
+}
+
+.rs-benefit__head h2 {
+    color: #0c1b23;
+    font-family: Russo One;
+    font-size: 43px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 1.29px;
+    text-transform: uppercase;
+}
+
+.rs-benefit__container {
+    position: relative;
+}
+
+.rs-benefit__wrapper {
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    padding-top: 100px;
+}
+
+.rs-benefit__row:last-child {
+    background: url("../../img/benefit-bg.png") 0 0;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-top: 1px solid #e5e5e5;
+    padding-bottom: 100px;
+}
+
+.rs-benefit__item {
+    -ms-flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
+}
+
+.rs-benefit .benefit-item {
+    outline: 1px solid #e5e5e5;
+    padding: 96px 95px 66px 95px;
+    position: relative;
+    height: 100%;
+    background: #fff;
+}
+
+.rs-benefit .benefit-item span {
+    position: absolute;
+    top: 20px;
+    right: 9px;
+    display: block;
+    font-family: Russo One;
+    font-size: 167.463px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 78%;
+    letter-spacing: 5.024px;
+    text-transform: uppercase;
+    background-color: #f9f9f9;
+    background-image: linear-gradient(180deg, #f9f9f9 0%, #f1f1f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rs-benefit .benefit-item h4 {
+    position: relative;
+    z-index: 2;
+    color: #0c1b23;
+    font-family: Russo One;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.66px;
+    text-transform: uppercase;
+    margin-top: 19px;
+    margin-bottom: 14px;
+}
+
+.rs-benefit .benefit-item p {
+    position: relative;
+    z-index: 2;
+    color: #3a3a3a;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.48px;
+    opacity: 0.7;
+}
+
+@media (min-width: 767.98px) {
+    .rs-benefit__row {
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+@media (max-width: 1790px) {
+    .rs-benefit__wrapper {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .rs-benefit .benefit-item {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-benefit .bg {
+        display: none;
+    }
+
+    .rs-benefit__head {
+        padding-left: 35px;
+    }
+
+    .rs-benefit__item {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    }
+
+    .rs-benefit .benefit-item {
+        padding: 20px 12px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-benefit__head {
+        margin-bottom: 22px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .rs-benefit__head h2 {
+        font-size: 18px;
+    }
+
+    .rs-benefit__row:last-child {
+        padding-bottom: 30px;
+    }
+
+    .rs-benefit .benefit-item span {
+        font-size: 100px;
+        top: 11px;
+    }
+
+    .rs-benefit .benefit-item h4 {
+        font-size: 16px;
+        margin-top: 11px;
+        margin-bottom: 8px;
+    }
+
+    .rs-benefit .benefit-item p {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,311 @@
+.rs-news {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.rs-news__wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.rs-news__head {
+    margin-bottom: 40px;
+}
+
+.rs-news__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.news-card {
+    height: 100%;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+}
+
+.news-card > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    font-size: 0;
+}
+
+.news-card .photo {
+    position: relative;
+    padding-bottom: 95%;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 20px;
+}
+
+.news-card .photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: -webkit-transform 0.45s ease;
+    transition: transform 0.45s ease;
+    transition: transform 0.45s ease, -webkit-transform 0.45s ease;
+}
+
+.news-card .content {
+    margin-top: 20px;
+    display: grid;
+    gap: 11px;
+}
+
+.news-card span.date {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 2;
+    border-radius: 20px;
+    background: #fff;
+    padding: 10px;
+    color: #202020;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+}
+
+.news-card h4 {
+    color: #202020;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.news-card p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #616161;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 135%;
+}
+
+.news-card .button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    width: 65px;
+    height: 65px;
+    border-top-left-radius: 40px;
+    pointer-events: none;
+}
+
+.news-card .button::before {
+    content: "";
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-bottom-right-radius: 20px;
+    box-shadow: 6px 6px #fff;
+    position: absolute;
+    right: -1px;
+    bottom: calc(100% - 1px);
+}
+
+.news-card .button::after {
+    content: "";
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-bottom-right-radius: 20px;
+    box-shadow: 6px 6px #fff;
+    position: absolute;
+    right: calc(100% - 1px);
+    bottom: -1px;
+}
+
+.news-card .button span.arrow-button {
+    pointer-events: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: #50cfd3;
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.news-card .button span.arrow-button::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    -webkit-mask-image: url("../../img/icons/arrow_icon.svg");
+    mask-image: url("../../img/icons/arrow_icon.svg");
+    background: #202020;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    transition: background 0.35s ease, -webkit-transform 0.35s ease;
+    transition: background 0.35s ease, transform 0.35s ease;
+    transition: background 0.35s ease, transform 0.35s ease, -webkit-transform 0.35s ease;
+    z-index: 2;
+}
+
+.news-card .button span.arrow-button::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #359d9d;
+    border-radius: 50%;
+    transition: -webkit-transform 0.35s ease;
+    transition: transform 0.35s ease;
+    transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+@media (min-width: 767.98px) {
+    .rs-news__item,
+  .rs-news__head {
+        opacity: 0;
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+        transition: opacity 0.45s ease-out, -webkit-transform 0.45s ease-out;
+        transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+        transition: opacity 0.45s ease-out, transform 0.45s ease-out, -webkit-transform 0.45s ease-out;
+    }
+
+    .rs-news__item.in-view,
+  .rs-news__head.in-view {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 1866px) {
+    .rs-news__wrapper {
+        padding: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-news__items {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-news {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rs-news__head {
+        margin-bottom: 16px;
+    }
+
+    .rs-news__items {
+        grid-template-columns: 290px;
+        grid-auto-flow: column;
+        grid-auto-columns: 290px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-right: -15px;
+        -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    }
+
+    .rs-news__item {
+        scroll-snap-align: start;
+    }
+
+    .news-card .content {
+        margin-top: 10px;
+    }
+
+    .news-card span.date {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .news-card h4 {
+        font-size: 18px;
+    }
+
+    .news-card p {
+        font-size: 13px;
+    }
+
+    .news-card .button {
+        width: 42px;
+        height: 42px;
+        border-top-left-radius: 25px;
+    }
+
+    .news-card .button::before {
+        border-bottom-right-radius: 15px;
+    }
+
+    .news-card .button::after {
+        border-bottom-right-radius: 15px;
+    }
+
+    .news-card .button span.arrow-button {
+        width: 32px;
+        height: 32px;
+    }
+
+    .news-card .button span.arrow-button::before {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media (min-width: 405px) and (max-width: 767px) {
+    .rs-news__items {
+        margin-right: calc((100vw - 375px) / -2);
+    }
+}
+
+@media (any-hover: hover) {
+    .news-card:hover img {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+    .news-card:hover .button span.arrow-button::before {
+        background: #fff;
+        -webkit-transform: rotate(-45deg) scale(1.3);
+        transform: rotate(-45deg) scale(1.3);
+    }
+
+    .news-card:hover .button span.arrow-button::after {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}

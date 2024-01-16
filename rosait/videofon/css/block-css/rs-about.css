@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+.rs-about__wrapper {
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-left: 95px;
+    padding-right: 95px;
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    -ms-flex-align: end;
+    align-items: end;
+    -webkit-column-gap: 88px;
+    -moz-column-gap: 88px;
+    column-gap: 88px;
+    row-gap: 45px;
+}
+
+.rs-about__head h2 {
+    color: #0c1b23;
+    font-family: Russo One;
+    font-size: 43px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 1.29px;
+    text-transform: uppercase;
+    margin-top: 60px;
+}
+
+.rs-about__content {
+    padding-right: 70px;
+    color: #282828;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+    letter-spacing: 0.48px;
+}
+
+.rs-about__content p {
+    margin-bottom: 5px;
+}
+
+.rs-about__content ul li {
+    list-style-position: inside;
+}
+
+.rs-about__content ul li::marker {
+    content: "— ";
+}
+
+@media (min-width: 991.98px) {
+    .rs-about__content {
+        grid-row: span 2;
+    }
+}
+
+@media (max-width: 1790px) {
+    .rs-about__wrapper {
+        padding: 50px;
+        -webkit-column-gap: 60px;
+        -moz-column-gap: 60px;
+        column-gap: 60px;
+    }
+
+    .rs-about__content {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1300px) {
+    .rs-about__head h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-about__wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-about__wrapper {
+        padding: 40px 10px;
+        row-gap: 16px;
+    }
+
+    .rs-about__head h2 {
+        font-size: 18px;
+        margin-top: 0;
+    }
+
+    .rs-about__head img {
+        display: none;
+    }
+
+    .rs-about__content {
+        font-size: 13px;
+    }
+}

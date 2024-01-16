@@ -1,0 +1,149 @@
+.rs-services {
+    position: relative;
+    overflow: hidden;
+    padding-top: 110px;
+}
+
+.rs-services__wrapper {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    -webkit-column-gap: 85px;
+    -moz-column-gap: 85px;
+    column-gap: 85px;
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.rs-services__head {
+    margin-bottom: 30px;
+}
+
+.rs-services__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.rs-services .services-item {
+    display: block;
+    background: #1d1d1d;
+    height: 400px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.rs-services .services-item h4 {
+    position: relative;
+    max-width: 340px;
+    color: #fff;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.96px;
+}
+
+.rs-services .services-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: all 0.8s ease;
+}
+
+.rs-services .services-item .button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #1d1d1d;
+    width: 80px;
+    height: 80px;
+    border-top-left-radius: 48px;
+    pointer-events: none;
+}
+
+.rs-services .services-item .button::before {
+    content: "";
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-bottom-right-radius: 20px;
+    box-shadow: 6px 6px #1d1d1d;
+    position: absolute;
+    right: -1px;
+    bottom: calc(100% - 1px);
+}
+
+.rs-services .services-item .button::after {
+    content: "";
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-bottom-right-radius: 20px;
+    box-shadow: 6px 6px #1d1d1d;
+    position: absolute;
+    right: calc(100% - 1px);
+    bottom: -1px;
+}
+
+.rs-services .services-item .button span {
+    pointer-events: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+@media (max-width: 1828px) {
+    .rs-services__wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .rs-services__wrapper {
+        -webkit-column-gap: 50px;
+        -moz-column-gap: 50px;
+        column-gap: 50px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-services__wrapper {
+        display: block;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-services {
+        padding-top: 0px;
+    }
+
+    .rs-services__content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .rs-services .services-item {
+        height: 250px;
+    }
+
+    .rs-services .services-item h4 {
+        font-size: 16px;
+    }
+}
+
+@media (any-hover: hover) {
+    .rs-services .services-item:hover img {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+}

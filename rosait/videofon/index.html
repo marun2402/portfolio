@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ВидеоФон</title>	
+
+
+	<script src="js/jquery-2.1.3.min.js" defer></script>
+	<script src="js/jquery.validate.min.js" defer></script>	
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+
+	<script src="js/bootstrap.min.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+	<script src="js/swiper-bundle.min.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.css" />
+
+	<script src="js/gsap/gsap.min.js" defer></script>
+	<script src="js/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="js/gsap/CustomEase.min.js" defer></script>	
+	
+	<link rel="stylesheet" type="text/css" href="css/block-css/style.css" />
+	<script src="js/app.js" defer></script>
+
+</head>
+
+  <body class="page-type-default page-animate">
+    <div class="custom-cursor"><img src="img/icons/custom-cursor.png" alt=""></div>
+    
+    <div class="wrapper">
+      
+      <header>       
+        
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-header.css" />
+<div class="rs-header">		
+	<div class="rs-header__container">
+		<div class="rs-header__wrapper">
+			<button class="menu-burger">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+			<a href="#" class="rs-header__logo">
+				<img src="img/logo.png" alt="">
+				<img src="img/logo-dark.png" alt="">
+			</a>
+			
+
+
+<span class="menu-overlay" data-js-overlay></span>
+<nav class="menu" data-spollers="991, max" data-js-menu>	
+
+	<div class="menu-wrapper">
+		<ul class="menu__list">	
+			<li><a href="#"><span>Главная</span></a></li>
+			<li class="menu__dropdown">
+				<a href="#"><span>Комплексы</span></a>
+				<button type="button" class="menu__dropdown-arrow" data-spoller></button>
+				<ul class="menu__dropdown-list">
+					<li><a href="#"><span>Безопасность промышленных и критически важных объектов</span></a></li>
+					<li class="menu__dropdown">
+						<a href="#"><span>Безопасность железнодорожного полотна / дорог и прилегающих территорий</span></a>
+						<button type="button" class="menu__dropdown-arrow" data-spoller></button>
+						<ul class="menu__dropdown-list">
+							<li><a href="#"><span>Безопасность промышленных и критически важных объектов</span></a></li>
+							<li><a href="#"><span>Безопасность железнодорожного полотна / дорог и прилегающих территорий</span></a></li>
+							<li><a href="#"><span>Решение по борьбе с БПЛА для городов</span></a></li>
+							<li><a href="#"><span>Системы контроля и безопасности прилегающих территорий</span></a></li>
+							<li><a href="#"><span>Центр управления системой противодействия БПЛА</span></a></li>
+							<li><a href="#"><span>Тепловизионная и специализированная оптика</span></a></li>
+						</ul>
+					</li>
+					<li><a href="#"><span>Решение по борьбе с БПЛА для городов</span></a></li>
+					<li><a href="#"><span>Системы контроля и безопасности прилегающих территорий</span></a></li>
+					<li><a href="#"><span>Центр управления системой противодействия БПЛА</span></a></li>
+					<li><a href="#"><span>Тепловизионная и специализированная оптика</span></a></li>					
+				</ul>
+			</li>
+			<li><a href="#"><span>Продукция</span></a></li>
+			<li><a href="#"><span>О компании</span></a></li>
+			<li><a href="#"><span>Лицензии</span></a></li>
+			<li><a href="#"><span>Новости</span></a></li>
+		</ul>
+	</div>
+
+</nav>
+
+
+
+		
+			<div class="rs-header__buttons">
+				<a href="#" class="header-btn"><span>Контакты</span><span>Контакты</span></a>
+				<a href="#" class="header-btn">				
+					<span>	
+						<svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28" fill="none">
+						<path d="M18.4758 25.4371H11.5721C10.5815 25.4371 9.59088 25.4407 8.60031 25.4371C7.8827 25.4345 7.21841 25.0579 6.93433 24.3778C6.81288 24.0871 6.80323 23.7926 6.80323 23.487V5.16759C6.80323 4.45758 6.72202 3.7194 7.23861 3.14286C7.92136 2.38084 9.05515 2.56288 9.97647 2.56288H18.0339C18.3693 2.56288 18.6993 2.54601 19.0242 2.65137C19.7487 2.8863 20.1943 3.57681 20.2023 4.32105C20.2216 6.10927 20.2023 7.89881 20.2023 9.68709V18.7843C20.2023 20.4251 20.2277 22.0682 20.2023 23.7088C20.1875 24.664 19.4302 25.4203 18.4758 25.4371C18.0691 25.4443 18.0678 26.0771 18.4758 26.0699C19.5869 26.0504 20.5908 25.2665 20.7923 24.1542C20.8369 23.9082 20.8351 23.6678 20.8351 23.4205V4.80884C20.8351 4.63977 20.8374 4.47055 20.8351 4.30153C20.8226 3.38812 20.3067 2.5275 19.4624 2.14765C19.0268 1.95169 18.5866 1.93018 18.1231 1.93018H8.70067C8.05572 1.93018 7.45645 2.09434 6.96101 2.52803C6.43446 2.98892 6.17327 3.65955 6.17042 4.34989C6.16778 4.98513 6.17042 5.62042 6.17042 6.25566V22.686C6.17042 23.385 6.10287 24.1116 6.41695 24.7599C6.81351 25.5786 7.66449 26.0601 8.55923 26.07C8.87632 26.0734 9.19363 26.07 9.51067 26.07L18.4758 26.0699C18.883 26.0699 18.8837 25.4371 18.4758 25.4371Z" fill="white"/>
+						<path d="M16.1133 3.5928H13.6343C12.7289 3.5928 11.8145 3.63098 10.9098 3.5928C10.1788 3.56195 10.3113 2.75791 10.3113 2.24634L9.99491 2.56274H17.0109L16.6945 2.24634C16.6945 2.7393 16.8296 3.56385 16.1133 3.5928C15.7075 3.60921 15.7054 4.24212 16.1133 4.22562C16.7223 4.20099 17.2399 3.7759 17.3156 3.15717C17.3521 2.85832 17.3273 2.54703 17.3273 2.24634C17.3273 2.07532 17.1823 1.92993 17.0109 1.92993H9.99491C9.8239 1.92993 9.67851 2.0749 9.67851 2.24634C9.67851 2.90441 9.60152 3.61105 10.2314 4.02855C10.5872 4.26443 11.0047 4.22556 11.4089 4.22556H16.1133C16.5205 4.22562 16.5211 3.5928 16.1133 3.5928ZM17.0109 22.9899H9.99491C9.58775 22.9899 9.58707 23.6227 9.99491 23.6227H17.0109C17.4181 23.6227 17.4188 22.9899 17.0109 22.9899Z" fill="white"/>
+					</svg>
+					<span>Заказать звонок</span>
+				</span>
+				<span>	
+					<svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28" fill="none">
+					<path d="M18.4758 25.4371H11.5721C10.5815 25.4371 9.59088 25.4407 8.60031 25.4371C7.8827 25.4345 7.21841 25.0579 6.93433 24.3778C6.81288 24.0871 6.80323 23.7926 6.80323 23.487V5.16759C6.80323 4.45758 6.72202 3.7194 7.23861 3.14286C7.92136 2.38084 9.05515 2.56288 9.97647 2.56288H18.0339C18.3693 2.56288 18.6993 2.54601 19.0242 2.65137C19.7487 2.8863 20.1943 3.57681 20.2023 4.32105C20.2216 6.10927 20.2023 7.89881 20.2023 9.68709V18.7843C20.2023 20.4251 20.2277 22.0682 20.2023 23.7088C20.1875 24.664 19.4302 25.4203 18.4758 25.4371C18.0691 25.4443 18.0678 26.0771 18.4758 26.0699C19.5869 26.0504 20.5908 25.2665 20.7923 24.1542C20.8369 23.9082 20.8351 23.6678 20.8351 23.4205V4.80884C20.8351 4.63977 20.8374 4.47055 20.8351 4.30153C20.8226 3.38812 20.3067 2.5275 19.4624 2.14765C19.0268 1.95169 18.5866 1.93018 18.1231 1.93018H8.70067C8.05572 1.93018 7.45645 2.09434 6.96101 2.52803C6.43446 2.98892 6.17327 3.65955 6.17042 4.34989C6.16778 4.98513 6.17042 5.62042 6.17042 6.25566V22.686C6.17042 23.385 6.10287 24.1116 6.41695 24.7599C6.81351 25.5786 7.66449 26.0601 8.55923 26.07C8.87632 26.0734 9.19363 26.07 9.51067 26.07L18.4758 26.0699C18.883 26.0699 18.8837 25.4371 18.4758 25.4371Z" fill="#0C1B23"/>
+					<path d="M16.1133 3.5928H13.6343C12.7289 3.5928 11.8145 3.63098 10.9098 3.5928C10.1788 3.56195 10.3113 2.75791 10.3113 2.24634L9.99491 2.56274H17.0109L16.6945 2.24634C16.6945 2.7393 16.8296 3.56385 16.1133 3.5928C15.7075 3.60921 15.7054 4.24212 16.1133 4.22562C16.7223 4.20099 17.2399 3.7759 17.3156 3.15717C17.3521 2.85832 17.3273 2.54703 17.3273 2.24634C17.3273 2.07532 17.1823 1.92993 17.0109 1.92993H9.99491C9.8239 1.92993 9.67851 2.0749 9.67851 2.24634C9.67851 2.90441 9.60152 3.61105 10.2314 4.02855C10.5872 4.26443 11.0047 4.22556 11.4089 4.22556H16.1133C16.5205 4.22562 16.5211 3.5928 16.1133 3.5928ZM17.0109 22.9899H9.99491C9.58775 22.9899 9.58707 23.6227 9.99491 23.6227H17.0109C17.4181 23.6227 17.4188 22.9899 17.0109 22.9899Z" fill="#0C1B23"/>
+				</svg>
+				<span>Заказать звонок</span>
+			</span>
+				</a>
+			</div>
+			<a href="#" class="btn-mobile">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="25" viewBox="0 0 16 25" fill="none">
+					<g clip-path="url(#clip0_420_748)">
+						<path d="M3.44065 24.0772C2.4246 24.0648 1.53324 23.5167 1.11225 22.6463C0.824592 22.0537 0.834469 21.4364 0.841876 20.8414L0.84558 3.44379C0.848049 2.66601 1.16286 1.94502 1.70855 1.46724C2.1999 1.03761 2.8283 0.819092 3.57522 0.819092H12.3641C12.8086 0.819092 13.2839 0.83761 13.7666 1.05366C14.6629 1.45736 15.2506 2.37589 15.2654 3.39441V21.234C15.2654 21.4994 15.2641 21.7377 15.2197 21.9821C15.0049 23.1722 13.9456 24.0525 12.7012 24.0747L3.73941 24.0784L3.44065 24.0772ZM3.89127 2.13144C3.36534 2.13144 2.83077 2.18453 2.48632 2.56724C2.15916 2.93268 2.16657 3.41169 2.17398 3.96478L2.17521 21.2969C2.17521 21.5512 2.18262 21.7784 2.26904 21.9846C2.4641 22.4525 2.9283 22.7438 3.48139 22.7463H12.6913C13.374 22.734 13.9209 22.1858 13.932 21.4982C13.9481 20.4809 13.9431 19.4623 13.937 18.4426L13.932 16.9105L13.9357 6.75491C13.9394 5.64503 13.9444 4.53392 13.932 3.42404C13.9259 2.86231 13.5876 2.37589 13.0888 2.21416C12.9234 2.15984 12.7431 2.14872 12.5073 2.14872H11.9975C11.9938 2.2265 11.9876 2.30181 11.9789 2.37712C11.8888 3.11416 11.2691 3.66972 10.5049 3.70058L5.8209 3.70305C5.4851 3.70305 5.12707 3.67342 4.79868 3.4549C4.26287 3.09934 4.14559 2.57836 4.1209 2.13391C4.04559 2.13268 3.96781 2.13144 3.89127 2.13144ZM5.45423 2.14996C5.48386 2.36354 5.55794 2.36724 5.65176 2.37095C5.92831 2.38206 6.20485 2.387 6.48263 2.387L8.1777 2.37095H10.49C10.5604 2.36724 10.6296 2.36477 10.658 2.14996H5.45423Z" fill="url(#paint0_linear_420_748)"/>
+						<path d="M4.78251 21.7935C4.40844 21.7935 4.12695 21.5083 4.12695 21.1293C4.12695 20.7491 4.40844 20.4639 4.78251 20.4639H11.327C11.5233 20.4639 11.6998 20.5416 11.8208 20.6849C11.9245 20.8058 11.9825 20.9639 11.9825 21.1281C11.9825 21.5083 11.6998 21.7935 11.327 21.7935H4.78251Z" fill="url(#paint1_linear_420_748)"/>
+					</g>
+					<defs>
+						<linearGradient id="paint0_linear_420_748" x1="8.05202" y1="24.0782" x2="8.05202" y2="0.819092" gradientUnits="userSpaceOnUse">
+							<stop stop-color="#F9F9F9"/>
+							<stop offset="1" stop-color="#F1F1F1"/>
+						</linearGradient>
+						<linearGradient id="paint1_linear_420_748" x1="8.05523" y1="21.7939" x2="8.05523" y2="20.464" gradientUnits="userSpaceOnUse">
+							<stop stop-color="#F9F9F9"/>
+							<stop offset="1" stop-color="#F1F1F1"/>
+						</linearGradient>
+						<clipPath id="clip0_420_748">
+							<rect width="14.4247" height="23.2593" fill="white" transform="translate(0.839355 0.819092)"/>
+						</clipPath>
+					</defs>
+				</svg>
+			</a>		
+		</div>
+	</div>
+</div>
+
+      </header>
+      
+      <div class="main">        
+        
+
+  <!-- rs-banner -->
+   
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-banner.css" />
+<div class="rs-banner">
+
+	<div class="banner-slider">
+		<div class="banner-slider__slider">
+			<div class="banner-slider__swiper">
+				<div class="banner-slider__slide">
+<div class="slide">
+	<div class="slide__wrapper">
+		<div class="slide__container">
+			<div class="slide__inner">
+				<h1>Системы антидрон</h1>
+				<div class="content">
+					<p>Комплексы из радиолакационной станции, обнаружения оператора БПЛА и системы активной защиты</p>
+					
+<a href="#" class="btn-border ">
+	<span></span><span>Получить консультацию</span><span></span>
+</a>
+
+				</div>
+			</div>
+			<a href="#more" class="more-details-link" data-cursor></a>
+	
+		</div>
+		<picture>
+			<source media="(max-width: 767.98px)" srcset="img/banner_min.jpg">
+			<img class="slide__bg" src="img/banner.jpg" alt="">
+		</picture>
+	</div>
+</div>
+</div>
+				<div class="banner-slider__slide">
+<div class="slide">
+	<div class="slide__wrapper">
+		<div class="slide__container">
+			<div class="slide__inner">
+				<h1>Системы антидрон</h1>
+				<div class="content">
+					<p>Комплексы из радиолакационной станции, обнаружения оператора БПЛА и системы активной защиты</p>
+					
+<a href="#" class="btn-border ">
+	<span></span><span>Получить консультацию</span><span></span>
+</a>
+
+				</div>
+			</div>
+			<a href="#more" class="more-details-link" data-cursor></a>
+	
+		</div>
+		<picture>
+			<source media="(max-width: 767.98px)" srcset="img/banner_min.jpg">
+			<img class="slide__bg" src="img/banner.jpg" alt="">
+		</picture>
+	</div>
+</div>
+</div>
+				<div class="banner-slider__slide">
+<div class="slide">
+	<div class="slide__wrapper">
+		<div class="slide__container">
+			<div class="slide__inner">
+				<h1>Системы антидрон</h1>
+				<div class="content">
+					<p>Комплексы из радиолакационной станции, обнаружения оператора БПЛА и системы активной защиты</p>
+					
+<a href="#" class="btn-border ">
+	<span></span><span>Получить консультацию</span><span></span>
+</a>
+
+				</div>
+			</div>
+			<a href="#more" class="more-details-link" data-cursor></a>
+	
+		</div>
+		<picture>
+			<source media="(max-width: 767.98px)" srcset="img/banner_min.jpg">
+			<img class="slide__bg" src="img/banner.jpg" alt="">
+		</picture>
+	</div>
+</div>
+</div>
+			</div>
+		</div>
+		<div class="banner-slider__paging"></div>
+		<div class="scroll-down"><img src="img/icons/scroll-down-icon.svg" alt=""></div>
+	</div>
+	
+</div>
+
+
+ 
+  
+   <!-- rs-about -->
+   
+ 
+
+<link rel="stylesheet" href="css/block-css/rs-about.css" />
+<section class="rs-about" data-animate="fadeIn" data-animate-duration="0.2">
+	<div class="rs-about__container">
+		<div class="rs-about__wrapper" data-animate-stager="fadeInUp" data-animate-duration="0.3" data-animate-delay="0.3">
+
+			<div class="rs-about__head">
+				<img src="img/about-logo.png" alt="" />
+				<h2>разработка, производство и проектирование комплексных систем безопасности</h2>				
+			</div>
+
+			<div class="rs-about__content">
+				<p>Наша компания предоставляет комплексные системы обнаружения и защиты от БПЛА. В комплекс входит стационарная система противодействия, включающая	в себя:</p>
+				<ul>
+					<li>радиолокационную станцию;</li>
+					<li>тепловизионную платформу наблюдения и сопровождения БПЛА;</li>
+					<li>систему обнаружения и позиционирования оператора БПЛА;</li>
+					<li>систему активной защиты и постановки помех систем навигации БПЛА;</li>
+					<li>программное обеспечение «Центр управления системой противодействия БПЛА».</li>
+				</ul>
+			</div>
+
+      <div class="rs-about__button">
+        
+<a href="#" class="btn-border btn-border_dark">
+	<span></span><span>Подробнее</span><span></span>
+</a>
+
+      </div>
+
+		</div>
+	</div>
+</section>
+ 
+  
+  <!-- rs-services -->
+  
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-services.css" />
+<section class="rs-services">
+	<div class="rs-services__container">		
+		
+		<div class="rs-services__wrapper">
+			<div class="services-slider">
+				<div class="services-slider__wrapper">
+					<div class="services-slider__slider">
+						<div class="services-slider__swiper">
+
+							<div class="services-slider__slide">															
+								<div class="services-slider__slide-content">										
+									<h3>Стационарная система противодействия</h3>
+									<p>Тепловизионные платформы наблюдения и сопровождения БПЛА типа 1.3 (до 28 км первого рубежа) и 2 (ближайшее расстояние).</p>
+									<p>Преимущества промышленных камер:</p>
+									<ul>
+										<li>— отрабатывают любые цели на заявленных расстояниях;</li>
+										<li>— позволяют обеспечить раннее обнаружение одного или нескольких БПЛА;</li>
+										<li>— позволяют увеличить время реакции оператора и служб реагирования.</li>
+									</ul>
+									<div class="buttons">
+										
+<a href="#" class="btn-border ">
+	<span></span><span>Подробнее</span><span></span>
+</a>
+
+										<a href="#" class="download-link">Скачать презентацию</a>
+									</div>
+								</div>
+								<img src="img/slider_1.jpg" alt="">							
+							</div>	
+
+							<div class="services-slider__slide">												
+								<div class="services-slider__slide-content">										
+									<h3>Мобильная система противодействия</h3>
+									<p>ТСтационарные и мобильные системы и комплексы противодействия беспилотным летательных аппаратам.</p>
+									<p>Преимущества систем противодействия БПЛА:</p>
+									<ul>
+										<li>— возвращение или вынужденная посадка летательного аппарата; </li>
+										<li>— глушение и подмена навигации БПЛА на расстоянии до 50 км;</li>
+										<li>— позиционирование оператора через систему обнаружения.</li>
+									</ul>
+									<div class="buttons">
+										
+<a href="#" class="btn-border ">
+	<span></span><span>Подробнее</span><span></span>
+</a>
+
+										<a href="#" class="download-link">Скачать презентацию</a>
+									</div>
+								</div>		
+								<img src="img/slider_2.jpg" alt="">						
+							</div>
+
+							<div class="services-slider__slide">															
+								<div class="services-slider__slide-content">										
+									<h3>Системы контроля РЖД</h3>
+									<p>Система контроля и безопасности железнодорожного полотна и прилегающих территорий.</p>
+									<p>Преимущества систем контроля РЖД:</p>
+									<ul>
+										<li>— обеспечение постоянного мониторинга на всем протяжении полотна; </li>
+										<li>— контроль за стратегически важными объектами инфраструктуры;</li>
+										<li>— оперативная организация охранного видеонаблюдения в любой точке;</li>
+										<li>— интеграция систем в единую комплексную базу.</li>
+									</ul>
+									<div class="buttons">
+										
+<a href="#" class="btn-border ">
+	<span></span><span>Подробнее</span><span></span>
+</a>
+
+										<a href="#" class="download-link">Скачать презентацию</a>
+									</div>
+								</div>	
+								<img src="img/slider_3.jpg" alt="">							
+							</div>
+
+							<div class="services-slider__slide">															
+								<div class="services-slider__slide-content">										
+									<h3>Мобильные комплексы быстрого развёртывания</h3>
+									<p>Мобильные комплексы быстрого развёртывания на прицепной базе и на транспорте, а также комплексы для пешего патруля.</p>
+									<p>Преимущества мобильных комплексов:</p>
+									<ul>
+										<li>— комплексы радиосредств, освещения и систем обнаружения;</li>
+										<li>— может быть установлен как на автомобиль, так и на шлем;</li>
+										<li>— временный внешний контур безопасности разворачивается в течение 2 минут.</li>
+									</ul>
+									<div class="buttons">
+										
+<a href="#" class="btn-border ">
+	<span></span><span>Подробнее</span><span></span>
+</a>
+
+										<a href="#" class="download-link">Скачать презентацию</a>
+									</div>
+								</div>		
+								<img src="img/slider_4.jpg" alt="">						
+							</div>
+
+							
+
+						</div>
+					</div>
+
+					<div class="services-slider__nav">
+						<div class="services-slider__counter"></div>
+						<div class="services-slider__paging"></div>
+					</div>
+				</div>		
+			</div>
+		</div>
+		
+	</div>
+</section>
+
+ 
+  
+  <!-- rs-benefit -->
+   
+ 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-benefit.css" />
+<section class="rs-benefit" data-animate="fadeInUp" data-animate-duration="0.5">
+	<div class="rs-benefit__container">
+		<div class="bg bg_1"><img src="img/kopter.png" alt=""></div>
+		<div class="bg bg_2"><img src="img/kopter_small.png" alt=""></div>
+		<div class="rs-benefit__wrapper">
+
+			<div class="rs-benefit__head">
+				<h2>Преимущества нашего <br> оборудования</h2>
+			</div>
+
+			<div class="rs-benefit__items">
+				<div class="rs-benefit__row" data-animate-stager="fadeInUp" data-animate-duration="0.3">
+					
+					<div class="rs-benefit__item">
+<div class="benefit-item">
+	<span>01</span>
+	<img src="img/benefit_icon_1.png" alt="">
+	<h4>Продвинутая аналитика системы защиты</h4>
+	<p>Автоматический анализ воздушного пространства объекта на основе данных с сенсоров</p>
+</div>
+</div>
+					
+					<div class="rs-benefit__item">
+<div class="benefit-item">
+	<span>02</span>
+	<img src="img/benefit_icon_2.png" alt="">
+	<h4>Автоматическая <br> отчётность</h4>
+	<p>Автоматический сбор информации об инцидентах и автоматическая выгрузка отчётов системы</p>
+</div>
+</div>
+										
+				</div>
+				<div class="rs-benefit__row" data-animate-stager="fadeInUp" data-animate-duration="0.3" data-animate-delay="0.5">
+					
+					<div class="rs-benefit__item">
+<div class="benefit-item">
+	<span>03</span>
+	<img src="img/benefit_icon_3.png" alt="">
+	<h4>Простота в управлении системами</h4>
+	<p>Возможность контролировать воздушное пространство с минимальными усилиями персонала</p>
+</div>
+</div>
+					
+					<div class="rs-benefit__item">
+<div class="benefit-item">
+	<span>04</span>
+	<img src="img/benefit_icon_4.png" alt="">
+	<h4>Доступность данных для других систем</h4>
+	<p>Все собранные данные могут быть доступны через API для SOC, SIEM и других систем</p>
+</div>
+</div>
+					
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+ 
+
+
+
+      </div>
+
+      <footer>
+        
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-footer.css" />
+<section class="rs-footer">	
+	<div class="rs-footer__container">
+		<div class="rs-footer__wrapper">
+
+			<div class="rs-footer__fos">
+<div class="footer-fos">
+	<h3>Нужна консультация специалиста?</h3>
+	<p>Напишите свой вопрос, и мы обязательно свяжемся с вами <br> в ближайшее время</p>
+
+	<div class="form ">
+		<form action="#" id="fosForm">
+
+			<div class="form-group">
+				<input type="text" id="fosName" name="fosName" placeholder="Ваше имя" required />
+			</div>
+		
+			<div class="form-group">
+				<input type="email" id="fosMail" name="fosMail" placeholder="Email" required="">			
+			</div>
+			
+			<div class="form-group">
+				<textarea id="fosMessage" name="fosMessage" placeholder="Сообщение" required></textarea>
+			</div>
+
+			<div class="form-submit">
+				<p>Даю своё согласие на обработку персональных данных в соответствии с <a href="#">пользовательским соглашением</a></p>
+				<button type="submit" class="btn-border"><span></span><span>Отправить сообщение</span><span></span></button>
+			</div>
+		</form>
+	</div>
+
+</div>
+</div>
+			<div class="rs-footer__ctrl">
+				
+<nav class="footer-menu footer-menu_h"> 
+  <ul class="footer-menu__list">
+    
+    <li><a href="#"><span>Главная</span></a></li>
+    
+    <li><a href="#"><span>О компании</span></a></li>
+    
+    <li><a href="#"><span>Лицензии</span></a></li>
+    
+    <li><a href="#"><span>Новости</span></a></li>
+    
+    <li><a href="#"><span>Контакты</span></a></li>
+       
+  </ul>
+</nav>
+
+				
+<nav class="footer-menu "> 
+  <ul class="footer-menu__list">
+    
+    <li><a href="#"><span>Стационарная система противодействия</span></a></li>
+    
+    <li><a href="#"><span>Мобильная система противодействия</span></a></li>
+    
+    <li><a href="#"><span>Системы контроля РЖД</span></a></li>
+    
+    <li><a href="#"><span>Мобильные комплексы быстрого развёртывания</span></a></li>
+       
+  </ul>
+</nav>
+
+				
+<div class="footer-contacts">
+	<div class="wrap">
+		<a href="tel:+70000000000">+7 (000) 000–00–00</a>
+		<a href="mailto:mail@mail.ru">mail@mail.ru</a>
+	</div>
+	
+	<div class="wrap">
+		<img src="img/icons/loc-icon.svg" alt="">
+		<p>Москва</p>
+		<p>Пн-Пт: с 10:00 до 18:00</p>
+	</div>
+</div>
+
+			</div>
+			<div class="rs-footer__back"><a href="#" id="scrollTop"></a></div>
+			<div class="rs-footer__bottom">
+<div class="footer-bottom">		
+	<p>© НПК «Видеофон» 2023. Все права защищены.</p>
+	<a href="#">Разработано в Россайт</a>
+</div>
+</div>
+
+		</div>
+
+	</div>
+</section>
+
+
+      </footer>
+      
+    </div>    
+
+  </body>
+</html>

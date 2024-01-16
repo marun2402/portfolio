@@ -1,0 +1,134 @@
+.rs-about {
+    background: url("../../img/bg-grid.svg") center bottom no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding-top: 150px;
+    padding-bottom: 88px;
+}
+
+.rs-about__wrapper {
+    display: grid;
+    grid-template-columns: 31% 1fr;
+    -webkit-column-gap: 350px;
+    -moz-column-gap: 350px;
+    column-gap: 350px;
+}
+
+.rs-about__head {
+    margin-bottom: 10px;
+}
+
+.rs-about__content {
+    padding-top: 40px;
+}
+
+.rs-about__content > p {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 160%;
+    letter-spacing: 0.54px;
+}
+
+.rs-about__content > p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.rs-about .about-adv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 30px;
+}
+
+.rs-about .adv-item span {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid #ed8c2b;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.rs-about .adv-item h4 {
+    color: #fff;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.rs-about .adv-item p {
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+}
+
+@media (max-width: 1790px) {
+    .rs-about__wrapper {
+        -webkit-column-gap: 45px;
+        -moz-column-gap: 45px;
+        column-gap: 45px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-about {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .rs-about__wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-about__content > p {
+        font-size: 13px;
+    }
+
+    .rs-about .about-adv {
+        gap: 20px;
+    }
+
+    .rs-about .about-adv {
+        grid-template-columns: 290px;
+        grid-auto-flow: column;
+        grid-auto-columns: 290px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-right: -15px;
+        -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    }
+
+    .rs-about .about-adv__item {
+        scroll-snap-align: start;
+    }
+
+    .rs-about .adv-item h4 {
+        font-size: 16px;
+    }
+
+    .rs-about .adv-item p {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 405px) and (max-width: 767px) {
+    .rs-about .about-adv {
+        margin-right: calc((100vw - 375px) / -2);
+    }
+}

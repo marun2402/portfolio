@@ -1,0 +1,138 @@
+.rs-benefit {
+    position: relative;
+    background: #f1f3f6;
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
+
+.rs-benefit__head {
+    text-align: center;
+}
+
+.rs-benefit__items {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px;
+}
+
+.rs-benefit__picture {
+    margin-top: 90px;
+    --duration: 0.45s;
+}
+
+.rs-benefit__picture svg {
+    width: 100%;
+}
+
+.rs-benefit__picture svg #elepsis path {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transition: -webkit-transform var(--duration);
+    transition: transform var(--duration);
+    transition: transform var(--duration), -webkit-transform var(--duration);
+}
+
+.rs-benefit__picture svg #elepsis path:nth-child(4) {
+    transition-delay: calc(var(--duration) * 1);
+    -webkit-transform-origin: 0px 350px;
+    transform-origin: 0px 350px;
+}
+
+.rs-benefit__picture svg #elepsis path:nth-child(3) {
+    transition-delay: calc(var(--duration) * 2);
+    -webkit-transform-origin: 186px 350px;
+    transform-origin: 186px 350px;
+}
+
+.rs-benefit__picture svg #elepsis path:nth-child(2) {
+    transition-delay: calc(var(--duration) * 3);
+    -webkit-transform-origin: 517px 350px;
+    transform-origin: 517px 350px;
+}
+
+.rs-benefit__picture svg #elepsis path:nth-child(1) {
+    transition-delay: calc(var(--duration) * 4);
+    -webkit-transform-origin: 971px 350px;
+    transform-origin: 971px 350px;
+}
+
+.rs-benefit__picture svg #letters {
+    opacity: 0;
+    transition: opacity var(--duration);
+    transition-delay: calc(var(--duration) * 5);
+}
+
+.rs-benefit__picture.in-view svg #elepsis path {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.rs-benefit__picture.in-view svg #letters {
+    opacity: 1;
+}
+
+.rs-benefit .benefit-item {
+    padding: 0px 15px;
+}
+
+.rs-benefit .benefit-item h4 {
+    color: #004077;
+    text-align: center;
+    font-family: "TT Travels Next";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 146%;
+    margin-bottom: 8px;
+}
+
+.rs-benefit .benefit-item p {
+    color: #071f34;
+    text-align: center;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+}
+
+@media (max-width: 1555px) {
+    .rs-benefit__items {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-benefit__items {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-benefit {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rs-benefit__items {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+    }
+
+    .rs-benefit__picture {
+        display: none;
+    }
+
+    .rs-benefit .benefit-item {
+        padding: 0;
+    }
+
+    .rs-benefit .benefit-item h4 {
+        font-size: 26px;
+        margin-bottom: 0;
+    }
+
+    .rs-benefit .benefit-item p {
+        font-size: 13px;
+    }
+}

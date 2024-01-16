@@ -1,0 +1,444 @@
+@import url(https://fonts.googleapis.com/css?family=Geologica:100,200,300,regular,500,600,700,800,900);
+
+:root {
+    --brd: 20px;
+    --hover: #50CFD3;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 320px;
+}
+
+body {
+    line-height: 1;
+    font-family: "Geologica";
+    font-size: 14px;
+}
+
+input,
+button,
+textarea {
+    font-family: "Geologica";
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
+    color: inherit;
+    background-color: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: inherit;
+    font-size: inherit;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body {
+    background-color: #FFF;
+    color: #202020;
+}
+
+body.mobile-menu-opened,
+body.filters-opened {
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+html {
+    font-size: 16px;
+}
+
+.site-wrapper,
+.site {
+    overflow: hidden;
+    min-height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.site-wrapper > .main,
+.site-wrapper .site-content,
+.site > .main,
+.site .site-content {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.site-wrapper > *,
+.site > * {
+    min-width: 0;
+}
+
+header {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+[class*=__container] {
+    position: relative;
+    max-width: 1836px;
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.fancybox__container {
+    max-width: none !important;
+}
+
+@-webkit-keyframes stroke {
+    0% {
+        fill: transparent;
+    }
+
+    15% {
+        fill: transparent;
+        stroke: #ed8c2b;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+    }
+
+    80% {
+        fill: transparent;
+        stroke: #ed8c2b;
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+    }
+
+    100% {
+        fill: #ed8c2b;
+        stroke: #ed8c2b;
+    }
+}
+
+@keyframes stroke {
+    0% {
+        fill: transparent;
+    }
+
+    15% {
+        fill: transparent;
+        stroke: #ed8c2b;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+    }
+
+    80% {
+        fill: transparent;
+        stroke: #ed8c2b;
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+    }
+
+    100% {
+        fill: #ed8c2b;
+        stroke: #ed8c2b;
+    }
+}
+
+.form form {
+    display: grid;
+    gap: 10px;
+}
+
+.form .form-group {
+    margin-bottom: 0;
+    position: relative;
+}
+
+.form .form-submit {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto 50%;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: start;
+    justify-content: start;
+    gap: 6px;
+    color: #202020;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.form .form-submit a {
+    text-decoration: underline;
+}
+
+.form input,
+.form textarea {
+    outline: none;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    color: #616161;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 135%;
+    height: 59px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.form input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
+    color: #616161;
+}
+
+.form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+    color: #616161;
+}
+
+.form input::-ms-input-placeholder, .form textarea::-ms-input-placeholder {
+    color: #616161;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: #616161;
+}
+
+.form textarea {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: 100%;
+    resize: none;
+    min-height: 141px;
+}
+
+.slider-arrows {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.slider-arrows .slider-arrow {
+    pointer-events: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: opacity 0.35s ease;
+    background: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transition: background 0.3s ease-out;
+}
+
+.slider-arrows .slider-arrow::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 16px;
+    -webkit-mask-image: url("../../img/icons/slider_arrow.svg");
+    mask-image: url("../../img/icons/slider_arrow.svg");
+    background: #202020;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    transition: background 0.3s ease-out;
+}
+
+.slider-arrows .slider-arrow_next {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.slider-arrows .slider-arrow:not(.swiper-button-disabled):hover {
+    background: #50CFD3;
+}
+
+.slider-arrows .slider-arrow.swiper-button-disabled {
+    opacity: 0.5;
+}
+
+.section-title h2 {
+    color: #202020;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.btn-color {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 100px;
+    background: #50cfd3;
+    outline: none;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    color: #202020;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: color 0.4s ease-in-out;
+}
+
+.btn-color span.text {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-color span.tilt {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: #359D9D;
+    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.btn-color:hover {
+    color: #fff;
+}
+
+.btn-color:hover span.tilt {
+    width: 225%;
+    height: 562.5px;
+}
+
+@media (min-width: 767.98px) {
+    .page-animate [data-animate] {
+        visibility: hidden;
+    }
+
+    .page-animate [data-animate].in-view {
+        visibility: visible;
+        -webkit-animation-name: var(--animateName);
+        animation-name: var(--animateName);
+        -webkit-animation-duration: var(--animateDuration);
+        animation-duration: var(--animateDuration);
+        -webkit-animation-delay: var(--animateDelay);
+        animation-delay: var(--animateDelay);
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: ease;
+        animation-timing-function: ease;
+    }
+
+    .page-animate [data-animate-stager] > * {
+        visibility: hidden;
+    }
+
+    .page-animate [data-animate-stager].in-view > * {
+        visibility: visible;
+        -webkit-animation-name: var(--animateName);
+        animation-name: var(--animateName);
+        -webkit-animation-duration: var(--animateDuration);
+        animation-duration: var(--animateDuration);
+        -webkit-animation-delay: var(--animateDelay);
+        animation-delay: var(--animateDelay);
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: ease;
+        animation-timing-function: ease;
+    }
+}
+
+@media (max-width: 767.98px) {
+    [class*=__container] {
+        max-width: 375px;
+    }
+
+    .form .form-submit {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+}
+
+@media (any-hover: none) {
+    [data-hidescroll]::-webkit-scrollbar {
+        width: 0;
+    }
+
+    [data-hidescroll] {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}

@@ -1,0 +1,220 @@
+.rs-catalog {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+}
+
+.rs-catalog__items {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.rs-catalog__items_three {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.rs-catalog h3 {
+    color: #15141c;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.rs-catalog .catalog-card {
+    height: 384px;
+    overflow: hidden;
+    position: relative;
+    padding: 40px;
+    background: #f2f4f6 url("../../img/catalog-item-bg.png") 100% 100%/contain no-repeat;
+}
+
+.rs-catalog .catalog-card > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    font-size: 0;
+}
+
+.rs-catalog .catalog-card .picture {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.rs-catalog .catalog-card .picture img {
+    max-width: 100%;
+}
+
+.rs-catalog .catalog-card h4 {
+    color: #15141c;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(21, 20, 28, 0.15);
+    transition: color 0.35s ease;
+}
+
+.rs-catalog .catalog-card span {
+    padding-top: 24px;
+    display: block;
+    color: #616161;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    transition: color 0.35s ease;
+}
+
+.rs-catalog .catalog-card::before {
+    content: url("../../img/icons/arrow-right.svg");
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.rs-catalog .catalog-card_left .picture {
+    right: auto;
+    left: 0;
+}
+
+.rs-catalog .catalog-card_left::before {
+    left: auto;
+    right: 40px;
+}
+
+.rs-catalog .catalog-card {
+    position: relative;
+    opacity: 0;
+    transition: opacity 1s ease, background 0.35s ease;
+}
+
+.rs-catalog .catalog-card .wrapper {
+    opacity: 0;
+    transition: opacity 0.65s ease 0.8s;
+}
+
+.rs-catalog .catalog-card .picture {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: -webkit-transform 0.65s ease 0.8s;
+    transition: transform 0.65s ease 0.8s;
+    transition: transform 0.65s ease 0.8s, -webkit-transform 0.65s ease 0.8s;
+}
+
+.rs-catalog .catalog-card.in-view {
+    opacity: 1;
+}
+
+.rs-catalog .catalog-card.in-view .wrapper {
+    opacity: 1;
+}
+
+.rs-catalog .catalog-card.in-view .picture {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+@media (min-width: 767.98px) {
+    .rs-catalog__item:nth-child(5),
+  .rs-catalog__item:nth-child(6) {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 1510px) {
+    .rs-catalog__items {
+        gap: 25px;
+    }
+
+    .rs-catalog .catalog-card {
+        padding: 20px;
+    }
+
+    .rs-catalog .catalog-card::before {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .rs-catalog .catalog-card_left::before {
+        right: 20px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-catalog__items {
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .rs-catalog .catalog-card {
+        padding: 15px 10px;
+        height: 245px;
+    }
+
+    .rs-catalog .catalog-card h4 {
+        font-size: 16px;
+        padding-bottom: 6px;
+    }
+
+    .rs-catalog .catalog-card span {
+        font-size: 12px;
+        padding-top: 6px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-catalog {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rs-catalog__items {
+        grid-template-columns: 211px;
+        grid-auto-flow: column;
+        grid-auto-columns: 211px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-right: -15px;
+        -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    }
+
+    .rs-catalog__item {
+        scroll-snap-align: start;
+    }
+
+    .rs-catalog h3 {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 405px) and (max-width: 767px) {
+    .rs-catalog__items {
+        margin-right: calc((100vw - 375px) / -2);
+    }
+}
+
+@media (any-hover: hover) {
+    .rs-catalog .catalog-card:hover {
+        background: #0163cb url("../../img/catalog-item-bg-hover.png") 100% 100%/contain no-repeat;
+    }
+
+    .rs-catalog .catalog-card:hover h4,
+  .rs-catalog .catalog-card:hover span {
+        color: #fff;
+    }
+
+    .rs-catalog .catalog-card:hover::before {
+        opacity: 1;
+    }
+}
