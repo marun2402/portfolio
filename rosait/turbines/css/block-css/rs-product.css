@@ -1,0 +1,374 @@
+.rs-product {
+    position: relative;
+}
+
+.rs-product .banner {
+    max-width: 1920px;
+    margin: 0 auto;
+    background: #d5dae3;
+    position: relative;
+    overflow: hidden;
+}
+
+.rs-product .banner__wrapper {
+    position: relative;
+    max-height: 868px;
+    height: calc(100dvh - 135px);
+    display: grid;
+    grid-template-columns: 40% 1fr;
+}
+
+.rs-product .banner__content {
+    padding-top: 142px;
+    padding-bottom: 142px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.rs-product .banner__content h1 {
+    color: #004077;
+    font-family: "TT Travels Next";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+    margin-bottom: 14px;
+}
+
+.rs-product .banner__picture {
+    -ms-flex-item-align: center;
+    align-self: center;
+    position: relative;
+    z-index: 2;
+}
+
+.rs-product .banner__picture img {
+    max-width: 100%;
+}
+
+.rs-product .banner__bg {
+    position: absolute;
+    left: 59%;
+    top: -60px;
+    height: calc(100% + 60px);
+    width: 790px;
+}
+
+.rs-product .banner__mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-clip-path: path("M1.21684 480.806C-0.329385 215.009 329.853 -2.38938 738.699 -4.76757C1147.55 -7.14577 1480.23 206.397 1481.78 472.194C1483.33 737.991 1153.14 955.389 744.298 957.768C335.452 960.146 2.76306 746.603 1.21684 480.806Z");
+    clip-path: path("M1.21684 480.806C-0.329385 215.009 329.853 -2.38938 738.699 -4.76757C1147.55 -7.14577 1480.23 206.397 1481.78 472.194C1483.33 737.991 1153.14 955.389 744.298 957.768C335.452 960.146 2.76306 746.603 1.21684 480.806Z");
+}
+
+.rs-product .banner__mask::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 64, 119, 0.95);
+    mix-blend-mode: multiply;
+    display: block;
+    z-index: 3;
+}
+
+.rs-product .banner__mask::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.88) 0%, rgba(9, 28, 44, 0) 63.85%);
+    display: block;
+}
+
+.rs-product .banner__mask img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.rs-product .banner .banner__bg svg path:first-child {
+    stroke-dasharray: 3881.48828125;
+    stroke-dashoffset: 3881.48828125;
+    transition: stroke-dashoffset 1.8s ease-out;
+}
+
+.rs-product .banner .banner__bg svg path:last-child {
+    stroke-dasharray: 1483.7310791016;
+    stroke-dashoffset: 1483.7310791016;
+    transition: stroke-dashoffset 1.8s ease-out;
+}
+
+.rs-product .banner .breadcrumbs,
+.rs-product .banner h1 {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+}
+
+.rs-product .banner .button-down {
+    transform: translateY(-40px);
+    opacity: 0;
+    transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+}
+
+.rs-product .banner .banner__mask {
+    opacity: 0;
+    transition: opacity 0.45s ease-out;
+    transition-delay: 1s;
+}
+
+.rs-product .banner .banner__picture {
+    transform: translateX(60px);
+    opacity: 0;
+    transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+    transition-delay: 1.85s;
+}
+
+.rs-product .banner .breadcrumbs {
+    transition-delay: 0.15s;
+}
+
+.rs-product .banner .button-down {
+    transition-delay: 2s;
+}
+
+.rs-product .banner.in-view .banner__bg svg path:first-child,
+.rs-product .banner.in-view .banner__bg svg path:last-child {
+    stroke-dashoffset: 0;
+}
+
+.rs-product .banner.in-view .banner__picture {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.rs-product .banner.in-view .banner__mask,
+.rs-product .banner.in-view .breadcrumbs,
+.rs-product .banner.in-view .button-down,
+.rs-product .banner.in-view h1 {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.rs-product .banner .button-down {
+    position: absolute;
+    bottom: 28px;
+    left: 15px;
+}
+
+.rs-product .options {
+    position: relative;
+    padding-bottom: 128px;
+    padding-top: 70px;
+}
+
+.rs-product .options__head {
+    color: #000;
+    font-family: "TT Travels Next";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 121%;
+}
+
+.rs-product .options__tabs {
+    margin-top: 35px;
+}
+
+.rs-product .options__nav {
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(184, 194, 208, 0.6);
+}
+
+.rs-product .options__nav ul {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+}
+
+.rs-product .options__nav ul li a {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 64px;
+    border-radius: 100px;
+    padding: 0px 40px;
+    background: transparent;
+    color: #071f34;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 148.858%;
+    transition: background 0.35s ease, color 0.35s ease;
+}
+
+.rs-product .options__nav ul li.active a {
+    background: #004077;
+    color: #fff;
+}
+
+.rs-product .options__content {
+    padding-top: 32px;
+}
+
+.rs-product .about {
+    padding-top: 70px;
+}
+
+.rs-product .about__wrapper {
+    display: grid;
+    grid-template-columns: 30.5% 1fr;
+    gap: 16px;
+}
+
+.rs-product .about__head {
+    color: #000;
+    font-family: "TT Travels Next";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 121%;
+}
+
+.rs-product .about__content {
+    color: #071f34;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+}
+
+.rs-product .about__content p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 991.98px) {
+    .rs-product .banner__bg svg path:last-child {
+        display: none;
+    }
+}
+
+@media (min-width: 1920px) {
+    .rs-product .banner__content {
+        padding-left: calc((1920px - 1525px) / 2);
+    }
+
+    .rs-product .banner .button-down {
+        left: calc((1920px - 1525px) / 2);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-product .banner__wrapper {
+        height: calc(100dvh - 64px);
+    }
+
+    .rs-product .banner__wrapper {
+        max-height: 430px;
+    }
+
+    .rs-product .banner__content h1 {
+        font-size: 24px;
+    }
+
+    .rs-product .banner__bg {
+        top: 0;
+        height: 100%;
+    }
+
+    .rs-product .banner__bg svg path:first-child {
+        display: none;
+    }
+
+    .rs-product .banner__mask {
+        -webkit-clip-path: path("M1.23186 185.969C0.640803 84.3661 126.856 1.26363 283.141 0.354541C439.425 -0.554543 566.599 81.074 567.19 182.677C567.781 284.28 441.566 367.382 285.281 368.292C128.996 369.201 1.82292 287.572 1.23186 185.969Z");
+        clip-path: path("M1.23186 185.969C0.640803 84.3661 126.856 1.26363 283.141 0.354541C439.425 -0.554543 566.599 81.074 567.19 182.677C567.781 284.28 441.566 367.382 285.281 368.292C128.996 369.201 1.82292 287.572 1.23186 185.969Z");
+    }
+
+    .rs-product .banner .button-down {
+        display: none;
+    }
+
+    .rs-product .options__nav {
+        padding-bottom: 16px;
+    }
+
+    .rs-product .options__nav ul li a {
+        padding: 0px 15px;
+        font-size: 13px;
+        height: 40px;
+    }
+
+    .rs-product .about__wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-product .banner__wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-product .banner__content {
+        padding-top: 23px;
+        padding-bottom: 23px;
+    }
+
+    .rs-product .banner__picture {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .rs-product .banner__bg {
+        top: 75px;
+    }
+
+    .rs-product .options {
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+
+    .rs-product .options__head {
+        font-size: 21px;
+    }
+
+    .rs-product .about {
+        padding-top: 26px;
+    }
+
+    .rs-product .about__head {
+        font-size: 21px;
+    }
+
+    .rs-product .about__content {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 405px) and (max-width: 767px) {
+    .rs-product .banner__wrapper {
+        padding-left: calc((100vw - 375px) / 2);
+        padding-right: calc((100vw - 375px) / 2);
+    }
+}
+
+@media (min-width: 1555px) and (max-width: 1920px) {
+    .rs-product .banner__content {
+        padding-left: calc((100vw - 1525px) / 2);
+    }
+
+    .rs-product .banner .button-down {
+        left: calc((100vw - 1525px) / 2);
+    }
+}

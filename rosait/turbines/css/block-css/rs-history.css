@@ -1,0 +1,281 @@
+.rs-history__container {
+    padding-top: 75px;
+    position: relative;
+}
+
+.rs-history__head {
+    max-width: 1100px;
+    color: #071f34;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+    margin-bottom: 90px;
+}
+
+.rs-history__head h2 {
+    font-family: "TT Travels Next";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 121%;
+    margin-bottom: 16px;
+}
+
+.rs-history__content {
+    padding-top: 300px;
+    padding-bottom: 300px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.rs-history__years {
+    -ms-flex: 0 1 47%;
+    flex: 0 1 47%;
+}
+
+.rs-history__events {
+    -ms-flex: 0 1 53%;
+    flex: 0 1 53%;
+    padding-left: 210px;
+}
+
+.rs-history__events-block {
+    transition: opacity 0.85s ease 0s;
+}
+
+.rs-history__events-block.is-active {
+    opacity: 1;
+}
+
+.rs-history__events-item {
+    display: grid;
+    gap: 16px;
+    padding-bottom: 98px;
+    padding-top: 30px;
+    color: #071f34;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+}
+
+.rs-history__events-item h4 {
+    display: block;
+    color: #071f34;
+    font-family: "TT Travels Next";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 121%;
+}
+
+.rs-history__events-item ul {
+    padding-left: 35px;
+}
+
+.rs-history__events-item ul li {
+    list-style: disc;
+}
+
+.rs-history__events-item ul li:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.rs-history__events-item .picture {
+    position: relative;
+    border-radius: 10px;
+    padding-bottom: 71.5%;
+    overflow: hidden;
+}
+
+.rs-history__events-item .picture img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.rs-history .years {
+    position: relative;
+}
+
+.rs-history .years__vertical {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    color: #004077;
+    font-family: "TT Travels Next";
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.rs-history .years__left {
+    position: relative;
+    z-index: 1;
+    visibility: hidden;
+    width: 0;
+}
+
+.rs-history .years__right-list {
+    position: absolute;
+}
+
+.rs-history .years__right-list-item {
+    opacity: 0;
+    transition: all 0.45s ease 0s;
+}
+
+.rs-history .years__right-list-item.is-active {
+    opacity: 1;
+}
+
+.rs-history .images {
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rs-history .images__main {
+    width: 455px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    border: 1px solid #004077;
+    overflow: hidden;
+}
+
+.rs-history .images__main .image-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.rs-history .images__main .image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rs-history .images__2,
+.rs-history .images__3,
+.rs-history .images__4 {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    border-radius: 50%;
+    border: 1px solid #004077;
+}
+
+.rs-history .images__2 {
+    width: 332px;
+    right: 455px;
+}
+
+.rs-history .images__3 {
+    width: 185px;
+    right: 787px;
+}
+
+.rs-history .images__4 {
+    width: 466px;
+    right: -1250px;
+}
+
+@media (min-width: 767.98px) {
+    .rs-history__events-block {
+        opacity: 0.3;
+    }
+
+    .rs-history__events-item .picture {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .rs-history__events {
+        padding-left: 35px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-history .years__vertical {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-history__container {
+        padding-top: 23px;
+    }
+
+    .rs-history__head {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+
+    .rs-history__head h2 {
+        font-size: 21px;
+        margin-bottom: 8px;
+    }
+
+    .rs-history__content {
+        display: block;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .rs-history__years {
+        display: none;
+    }
+
+    .rs-history__events {
+        padding-left: 0;
+    }
+
+    .rs-history__events-item {
+        font-size: 13px;
+        gap: 8px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+
+    .rs-history__events-item h4 {
+        font-size: 21px;
+    }
+
+    .rs-history__events-item ul {
+        padding-left: 20px;
+    }
+
+    .rs-history__events-item ul li:not(:last-child) {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .rs-history {
+        font-size: 8px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1px) {
+    .rs-history {
+        font-size: clamp( 8px , 10.0062695925px  +  -0.6269592476vw , 10px );
+    }
+}

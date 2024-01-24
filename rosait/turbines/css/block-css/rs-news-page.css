@@ -1,0 +1,23 @@
+.rs-news-page {
+    padding-top: 74px;
+    padding-bottom: 128px;
+}
+
+.rs-news-page__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 24px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 991.98px) {
+    .rs-news-page__items {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-news-page__items {
+        grid-template-columns: 1fr;
+    }
+}

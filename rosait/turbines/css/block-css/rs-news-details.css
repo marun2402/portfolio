@@ -1,0 +1,162 @@
+.rs-news-details {
+    padding-top: 55px;
+    padding-bottom: 128px;
+}
+
+.rs-news-details__head {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #bdc7d4;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-news-details__head .type {
+    color: #9ba5ab;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 113.156%;
+    letter-spacing: 0.42px;
+}
+
+.rs-news-details__body {
+    display: grid;
+    grid-template-columns: 39% 1fr;
+    gap: 90px;
+    -ms-flex-align: start;
+    align-items: start;
+    padding-top: 47px;
+}
+
+.rs-news-details .news-title {
+    position: relative;
+}
+
+.rs-news-details .news-title h1 {
+    color: #000;
+    font-family: "TT Travels Next";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 121%;
+    margin-bottom: 50px;
+}
+
+.rs-news-details .news-title__date {
+    position: relative;
+    border-top: 1px solid #bdc7d4;
+    padding-top: 57px;
+    padding-bottom: 50px;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    display: grid;
+    grid-template-columns: auto auto;
+    -ms-flex-pack: start;
+    justify-content: start;
+    -ms-flex-align: center;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.rs-news-details .news-title__date .day {
+    grid-row: span 2;
+    color: #b8d049;
+    font-family: "TT Travels Next";
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+}
+
+.rs-news-details .news-content {
+    color: #000;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+}
+
+.rs-news-details .news-content__photo {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 59%;
+}
+
+.rs-news-details .news-content__photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.rs-news-details .news-content p {
+    margin-bottom: 16px;
+}
+
+.back-to-all {
+    color: #071f34;
+    font-family: "TT Travels Next";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.back-to-all::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(184, 194, 208, 0.2) url("../../img/icons/arrow_left_icon.svg") center no-repeat;
+    margin-right: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .rs-news-details__body {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-top: 20px;
+    }
+
+    .rs-news-details .news-title h1 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .rs-news-details .news-title__date {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-news-details {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .rs-news-details .news-content {
+        font-size: 13px;
+    }
+
+    .back-to-all {
+        font-size: 13px;
+    }
+}

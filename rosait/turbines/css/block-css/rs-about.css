@@ -5,23 +5,29 @@
 
 .rs-about__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 55% 1fr;
 }
 
 .rs-about__content {
-    background: #F1F3F6;
-}
-
-.rs-about__holder-content {
     border-radius: 0px 15px 15px 15px;
     background: #38aee4;
     padding-left: 15px;
-    padding-top: 160px;
-    padding-bottom: 160px;
+    padding-top: 120px;
+    padding-bottom: 30px;
     padding-right: 177px;
 }
 
-.rs-about__holder-content h3 {
+.rs-about__content > span {
+    color: #fff;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.rs-about__content h3 {
     color: #fff;
     font-family: "TT Travels Next";
     font-size: 36px;
@@ -29,22 +35,45 @@
     font-weight: 700;
     line-height: 121%;
     margin-bottom: 16px;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
 }
 
-.rs-about__holder-content p {
+.rs-about__content p,
+.rs-about__content ul,
+.rs-about__content blockquote {
     color: #fff;
     font-size: 19px;
     font-style: normal;
     font-weight: 400;
     line-height: 170%;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
+}
+
+.rs-about__content ul {
+    padding-left: 35px;
+}
+
+.rs-about__content ul li {
+    list-style: disc;
+}
+
+.rs-about__content ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.rs-about__content blockquote {
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+}
+
+.rs-about__content .btn-color {
+    margin-right: 28px;
 }
 
 .rs-about__picture {
-    margin-top: 95px;
+    margin-top: 96px;
+    margin-bottom: -96px;
     margin-left: -95px;
 }
 
@@ -60,12 +89,17 @@
     height: 100%;
     top: 0;
     left: 0;
-    -o-object-fit: cover;
     object-fit: cover;
 }
 
+@media (min-width: 991.98px) {
+    .rs-about__content {
+        min-height: 780px;
+    }
+}
+
 @media (min-width: 1555px) {
-    .rs-about__holder-content {
+    .rs-about__content {
         padding-left: calc((100vw - 1525px) / 2);
     }
 }
@@ -77,13 +111,13 @@
 }
 
 @media (max-width: 1555px) {
-    .rs-about__holder-content {
+    .rs-about__content {
         padding-top: 35px;
         padding-bottom: 35px;
         padding-right: 70px;
     }
 
-    .rs-about__holder-content h3 {
+    .rs-about__content h3 {
         font-size: 26px;
     }
 
@@ -97,19 +131,24 @@
         grid-template-columns: 1fr;
     }
 
-    .rs-about__holder-content {
+    .rs-about__content {
         border-radius: 0;
         padding: 35px 25px;
     }
 
-    .rs-about__holder-content h3 {
+    .rs-about__content h3 {
         font-size: 21px;
         margin-bottom: 8px;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
     }
 
-    .rs-about__holder-content p {
+    .rs-about__content p,
+  .rs-about__content ul,
+  .rs-about__content blockquote {
         font-size: 13px;
-        margin-bottom: 17px;
+        margin-bottom: 16px;
     }
 
     .rs-about__picture {
@@ -125,6 +164,17 @@
 @media (max-width: 991px) {
     .rs-about__holder-picture {
         height: 300px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-about__content > span {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .rs-about__content .btn-color {
+        margin-bottom: 28px;
     }
 }
 

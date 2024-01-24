@@ -44,28 +44,12 @@
 .rs-banner__picture .deco img {
     height: 100%;
     width: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
 }
 
 .rs-banner .deco svg path {
     stroke-dasharray: 1967.8631591797;
-    -webkit-animation: bannerLines 2s linear infinite;
     animation: bannerLines 2s linear infinite;
-}
-
-@-webkit-keyframes bannerLines {
-    0% {
-        stroke-dashoffset: 1967.8631591797;
-    }
-
-    50% {
-        stroke-dashoffset: 0;
-    }
-
-    100% {
-        stroke-dashoffset: -1967.8631591797;
-    }
 }
 
 @keyframes bannerLines {

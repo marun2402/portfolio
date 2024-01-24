@@ -56,7 +56,6 @@
     height: 100%;
     top: 0;
     left: 0;
-    -o-object-fit: cover;
     object-fit: cover;
     transition: -webkit-clip-path 0.8s ease;
     transition: clip-path 0.8s ease;
@@ -147,36 +146,26 @@
     top: 0;
     background: #38aee4;
     border-radius: 50%;
-    transition: -webkit-transform 0.35s ease;
     transition: transform 0.35s ease;
-    transition: transform 0.35s ease, -webkit-transform 0.35s ease;
-    -webkit-transform: scale(0);
     transform: scale(0);
 }
 
 @media (min-width: 767.98px) {
     .rs-services__head {
         opacity: 0;
-        -webkit-transform: translateY(100px);
         transform: translateY(100px);
-        transition: opacity 0.45s, -webkit-transform 0.45s;
         transition: opacity 0.45s, transform 0.45s;
-        transition: opacity 0.45s, transform 0.45s, -webkit-transform 0.45s;
     }
 
     .rs-services__head.in-view {
         opacity: 1;
-        -webkit-transform: translateY(0px);
         transform: translateY(0px);
     }
 
     .rs-services__content .rs-services__entry:nth-child(1) {
         opacity: 0;
-        -webkit-transform: translateY(100px);
         transform: translateY(100px);
-        transition: opacity 0.45s, -webkit-transform 0.45s;
         transition: opacity 0.45s, transform 0.45s;
-        transition: opacity 0.45s, transform 0.45s, -webkit-transform 0.45s;
         transition-delay: 0.3s;
         z-index: 3;
         position: relative;
@@ -184,11 +173,8 @@
 
     .rs-services__content .rs-services__entry:nth-child(2) {
         opacity: 0;
-        -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
-        transition: opacity 0.45s, -webkit-transform 0.45s;
         transition: opacity 0.45s, transform 0.45s;
-        transition: opacity 0.45s, transform 0.45s, -webkit-transform 0.45s;
         transition-delay: 0.7s;
         z-index: 2;
         position: relative;
@@ -196,11 +182,8 @@
 
     .rs-services__content .rs-services__entry:nth-child(3) {
         opacity: 0;
-        -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
-        transition: opacity 0.45s, -webkit-transform 0.45s;
         transition: opacity 0.45s, transform 0.45s;
-        transition: opacity 0.45s, transform 0.45s, -webkit-transform 0.45s;
         transition-delay: 1s;
         z-index: 1;
         position: relative;
@@ -210,7 +193,6 @@
   .rs-services__content.in-view .rs-services__entry:nth-child(2),
   .rs-services__content.in-view .rs-services__entry:nth-child(3) {
         opacity: 1;
-        -webkit-transform: none;
         transform: none;
     }
 }
@@ -261,6 +243,7 @@
         overflow-x: auto;
         overflow-y: hidden;
         margin-right: -15px;
+        padding-right: 15px;
         -ms-scroll-snap-type: x mandatory;
         scroll-snap-type: x mandatory;
     }
@@ -322,7 +305,6 @@
     }
 
     .rs-services .services-item:hover .button span.arrow-button::after {
-        -webkit-transform: scale(1);
         transform: scale(1);
     }
 }

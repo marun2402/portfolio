@@ -14,6 +14,8 @@
 	<script src="js/swiper-bundle.min.js" defer></script>
 	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.css" />
 
+	<script src="js/validate/jquery.validate.min.js" defer></script>
+
 	<script src="js/gsap/gsap.min.js" defer></script>
 	<script src="js/gsap/ScrollTrigger.min.js" defer></script>
 	<script src="js/gsap/CustomEase.min.js" defer></script>	
@@ -40,6 +42,7 @@
 <div class="rs-header">		
 	<div class="rs-header__wrapper">
 		<a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+		<a href="#" class="logo-dark"><img src="img/logo_dark.png" alt=""></a>
 		<a href="#" class="logo-mobile"><img src="img/logo_sticky.png" alt=""></a>
 		
 
@@ -104,11 +107,7 @@
 			<a href="mailto:contact@mgtt.ru">contact@mgtt.ru</a>
 		</div>
 		<div class="rs-header__btns">
-			
-<a href="#" class="btn-border btn-border_small btn-border_light">	
-	<span>Связаться с нами</span>
-</a>
-
+			<a href="#" class="btn-border btn-border_small btn-border_light" data-toggle="modal" data-target="#callback-modal"><span>Связаться с нами</span></a>
 		</div>
 		<div class="rs-header__lang">
 			<div class="lang-picker">
@@ -248,22 +247,20 @@
  
 
 <link rel="stylesheet" href="css/block-css/rs-about.css" />
-<section class="rs-about">	
-	<div class="rs-about__wrapper" data-sticky="container">
-		<div class="rs-about__content" data-animate="fadeInLeft" data-animate-duration="0.45">
-			<div class="rs-about__holder-content">
-				<h3>Многофункциональный энергомашиностроительный комплекс</h3>
-				<p>Основным видом деятельности СТГТ является производство газовых турбин большой мощности, комплексная поставка газотурбинного и парогазового оборудования энергоблоков, исполнение проектов на электростанциях (шеф-монтажные и пусконаладочные работы), инженерная деятельность, а также сервисное обслуживание и модернизация газовых турбин мощностью более 100 МВт для рынка России и СНГ.</p>
-				
+<section class="rs-about" data-sticky="block">	
+	<div class="rs-about__wrapper"  data-sticky="container">
+		<div class="rs-about__content" data-animate="fadeInLeft">			
+			<h3>Многофункциональный энергомашиностроительный комплекс</h3>
+			<p>Основным видом деятельности СТГТ является производство газовых турбин большой мощности, комплексная поставка газотурбинного и парогазового оборудования энергоблоков, исполнение проектов на электростанциях (шеф-монтажные и пусконаладочные работы), инженерная деятельность, а также сервисное обслуживание и модернизация газовых турбин мощностью более 100 МВт для рынка России и СНГ.</p>		
+			
 <a href="#" class="btn-color ">	
 	<span>Подробнее</span>
 </a>
 
-			</div>
 		</div>
 		<div class="rs-about__picture">
 			<div class="rs-about__holder-picture" data-sticky="content">
-				<img src="img/about.jpg" alt="" data-animate="fadeInRight" data-animate-duration="0.45" data-animate-delay="0.3">
+				<img src="img/about.jpg" alt="" data-animate="fadeInRight" data-animate-delay="0.3">
 			</div>
 		</div>
 	</div>	
@@ -649,5 +646,60 @@
       
     </div>   
     
+    <div class="modal fade" tabindex="-1" id="callback-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6>Свяжитесь с нами</h6>
+        <p>Оставьте заявку, наш менеджер свяжется с вами в ближайшее время</p>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="img/icons/close_icon.svg" alt=""></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-form">
+					<form action="#" id="callback-modal-form">
+
+            <div class="form-group">
+              <input type="text" id="callbackModalName" name="callbackModalName" placeholder="" required />
+              <span class="placeholder">ФИО</span>
+              <button class="reset-field"></button>
+              <span class="valid-icon"></span>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="callbackModalPhone" name="callbackModalPhone" placeholder="" maxlength="18" required data-tel-input />
+              <span class="placeholder">Телефон</span>
+              <button class="reset-field"></button>
+              <span class="valid-icon"></span>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="callbackModalMail" name="callbackModalMail" placeholder="" required />
+              <span class="placeholder">E-mail</span>
+              <button class="reset-field"></button>
+              <span class="valid-icon"></span>
+            </div>
+
+						<div class="form-group">
+              <textarea id="callbackModalMessage" name="callbackModalMessage" placeholder="" required></textarea>
+              <span class="placeholder">Введите ваше сообщение</span>
+              <button class="reset-field"></button>
+              <span class="valid-icon"></span>
+            </div>
+
+						<div class="form-submit">
+              <p>Нажимая на кнопку «Отправить сообщение», Вы соглашаетесь на обработку персональных данных в соответствии с <a href="#">пользовательским соглашением</a></p>
+              <button type="submit" class="btn-color btn-color_blue"><span>Отправить сообщение</span></button>
+						</div>
+
+					</form>
+				</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+   
   </body>
 </html>

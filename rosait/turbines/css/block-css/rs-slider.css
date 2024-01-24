@@ -83,7 +83,6 @@
 .intro .intro-picture__mask img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -113,7 +112,6 @@
     -ms-flex-pack: center;
     justify-content: center;
     max-width: 1526px;
-    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     opacity: 0;
     padding-top: 165px;
@@ -165,49 +163,6 @@
     z-index: 3;
 }
 
-.intro .button-down a {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.intro .button-down a span.text {
-    color: #fff;
-    font-family: "TT Travels Next";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 160%;
-}
-
-.intro .button-down a span.icon {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    background: #fff;
-    border-radius: 50%;
-    margin-left: 8px;
-    transition: background 0.3s ease-out;
-    -webkit-animation: bounce 2s linear infinite both;
-    animation: bounce 2s linear infinite both;
-}
-
-.intro .button-down a span.icon::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    -webkit-mask-image: url("../../img/icons/arrow-down.png");
-    mask-image: url("../../img/icons/arrow-down.png");
-    background: #004077;
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    transition: background 0.3s ease-out;
-}
-
 .intro {
     opacity: 0;
     transition: opacity 0.8s ease;
@@ -215,20 +170,14 @@
 
 .intro .rs-slider__slider {
     opacity: 0;
-    -webkit-transform: translateY(100px);
     transform: translateY(100px);
-    transition: opacity 0.45s ease 0.6s, -webkit-transform 0.45s ease 0.6s;
     transition: opacity 0.45s ease 0.6s, transform 0.45s ease 0.6s;
-    transition: opacity 0.45s ease 0.6s, transform 0.45s ease 0.6s, -webkit-transform 0.45s ease 0.6s;
 }
 
 .intro .rs-slider__paging {
     opacity: 0;
-    -webkit-transform: translateY(100px);
     transform: translateY(100px);
-    transition: opacity 0.45s ease 1s, -webkit-transform 0.45s ease 1s;
     transition: opacity 0.45s ease 1s, transform 0.45s ease 1s;
-    transition: opacity 0.45s ease 1s, transform 0.45s ease 1s, -webkit-transform 0.45s ease 1s;
 }
 
 .intro .button-down {
@@ -242,13 +191,11 @@
 
 .intro.in-view .rs-slider__slider {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
 }
 
 .intro.in-view .rs-slider__paging {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
 }
 
@@ -258,36 +205,26 @@
 
 .rs-slider__slide h2 {
     opacity: 0;
-    -webkit-transform: translateY(80px);
     transform: translateY(80px);
-    transition: opacity 0.45s, -webkit-transform 0.45s;
     transition: opacity 0.45s, transform 0.45s;
-    transition: opacity 0.45s, transform 0.45s, -webkit-transform 0.45s;
 }
 
 .rs-slider__slide p {
     opacity: 0;
-    -webkit-transform: translateY(80px);
     transform: translateY(80px);
-    transition: opacity 0.45s linear 0.2s, -webkit-transform 0.45s linear 0.2s;
     transition: opacity 0.45s linear 0.2s, transform 0.45s linear 0.2s;
-    transition: opacity 0.45s linear 0.2s, transform 0.45s linear 0.2s, -webkit-transform 0.45s linear 0.2s;
 }
 
 .rs-slider__slide a {
     opacity: 0;
-    -webkit-transform: translateY(80px);
     transform: translateY(80px);
-    transition: opacity 0.45s linear 0.4s, -webkit-transform 0.45s linear 0.4s;
     transition: opacity 0.45s linear 0.4s, transform 0.45s linear 0.4s;
-    transition: opacity 0.45s linear 0.4s, transform 0.45s linear 0.4s, -webkit-transform 0.45s linear 0.4s;
 }
 
 .rs-slider__slide.swiper-slide-active h2,
 .rs-slider__slide.swiper-slide-active p,
 .rs-slider__slide.swiper-slide-active a {
     opacity: 1;
-    -webkit-transform: translateY(0px);
     transform: translateY(0px);
 }
 
@@ -362,8 +299,6 @@
     .intro .intro-metrics__item {
         grid-template-columns: auto 1fr;
         grid-template-rows: auto 1fr;
-        -webkit-column-gap: 24px;
-        -moz-column-gap: 24px;
         column-gap: 24px;
         padding: 0;
         margin: 0;
@@ -393,11 +328,5 @@
 
     .intro .rs-slider__slide-inner p {
         font-size: 13px;
-    }
-}
-
-@media (any-hover: hover) {
-    .intro .button-down a:hover span.icon {
-        background: #B8D049;
     }
 }

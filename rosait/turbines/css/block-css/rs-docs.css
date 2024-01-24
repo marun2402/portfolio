@@ -1,0 +1,133 @@
+.rs-docs {
+    padding-top: 128px;
+    padding-bottom: 128px;
+}
+
+.rs-docs__head {
+    color: #071f34;
+    font-family: "TT Travels Next";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 121%;
+}
+
+.rs-docs__content {
+    margin-top: 32px;
+}
+
+.rs-docs .docs {
+    color: #071f34;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+    display: grid;
+    gap: 32px;
+}
+
+.rs-docs .docs__row {
+    display: grid;
+    grid-template-columns: 18% 1fr;
+    gap: 8px;
+}
+
+.rs-docs .docs__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.rs-docs .docs__item {
+    min-height: 205px;
+}
+
+.rs-docs .docs-item {
+    color: #071f34;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+    height: 100%;
+    border-radius: 20px;
+    background: #f1f3f6;
+    display: block;
+    padding: 30px;
+    transition: background 0.35s ease;
+    display: grid;
+    grid-template-columns: 1fr 59px;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    gap: 10px 65px;
+}
+
+.rs-docs .docs-item__type {
+    justify-self: end;
+    color: #004077;
+}
+
+.rs-docs .docs-item__icon {
+    justify-self: end;
+}
+
+@media (min-width: 1870px) {
+    .rs-docs .docs__row {
+        margin-right: -155px;
+    }
+}
+
+@media (max-width: 1555px) {
+    .rs-docs .docs-item {
+        gap: 10px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-docs {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .rs-docs .docs__row {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-docs .docs__item {
+        min-height: 104px;
+    }
+
+    .rs-docs .docs-item {
+        font-size: 14px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-docs__head {
+        font-size: 21px;
+    }
+
+    .rs-docs__content {
+        margin-top: 10px;
+    }
+
+    .rs-docs .docs {
+        font-size: 15px;
+    }
+
+    .rs-docs .docs {
+        gap: 8px;
+    }
+
+    .rs-docs .docs__items {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
+
+@media (any-hover: hover) {
+    .rs-docs .docs-item:hover {
+        background: #B8D049;
+    }
+}

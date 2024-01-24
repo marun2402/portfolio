@@ -18,17 +18,9 @@
 }
 
 .footer-menu_grid .footer-menu__list {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
     column-count: 3;
-    -webkit-column-width: auto;
-    -moz-column-width: auto;
     column-width: auto;
-    -webkit-column-fill: balance;
-    -moz-column-fill: balance;
     column-fill: balance;
-    -webkit-column-gap: 55px;
-    -moz-column-gap: 55px;
     column-gap: 55px;
 }
 
@@ -53,8 +45,6 @@
     padding: 114px 28px 165px 88px;
     display: grid;
     grid-template-columns: 35% 1fr;
-    -webkit-column-gap: 125px;
-    -moz-column-gap: 125px;
     column-gap: 125px;
 }
 
@@ -224,9 +214,7 @@
     content: "";
     position: absolute;
     background-color: #38aee4;
-    transition: -webkit-transform 0.35s ease;
     transition: transform 0.35s ease;
-    transition: transform 0.35s ease, -webkit-transform 0.35s ease;
 }
 
 .rs-footer._init .footer-title::after {
@@ -240,17 +228,14 @@
     right: 12px;
     height: 2px;
     width: 14px;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
 .rs-footer._init .footer-title._active::after {
-    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
 }
 
 .rs-footer._init .footer-title._active::before {
-    -webkit-transform: translateY(-50%) scale(0);
     transform: translateY(-50%) scale(0);
 }
 
@@ -261,14 +246,10 @@
 
 @media (max-width: 1750px) {
     .footer-menu_grid .footer-menu__list {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
         column-count: 2;
     }
 
     .rs-footer__ctrl .wrap {
-        -webkit-column-gap: 45px;
-        -moz-column-gap: 45px;
         column-gap: 45px;
         grid-template-columns: 1fr 1fr;
     }
@@ -295,11 +276,7 @@
 
 @media (max-width: 1300px) {
     .footer-menu_grid .footer-menu__list {
-        -webkit-column-count: 3;
-        -moz-column-count: 3;
         column-count: 3;
-        -webkit-column-gap: 25px;
-        -moz-column-gap: 25px;
         column-gap: 25px;
     }
 
@@ -336,8 +313,6 @@
     }
 
     .footer-menu_grid .footer-menu__list {
-        -webkit-column-count: auto;
-        -moz-column-count: auto;
         column-count: auto;
     }
 

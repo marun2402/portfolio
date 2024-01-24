@@ -1,0 +1,128 @@
+.rs-definition {
+    padding-top: 128px;
+    padding-bottom: 128px;
+}
+
+.rs-definition__head {
+    max-width: 950px;
+    color: #071f34;
+    font-family: "TT Travels Next";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 121%;
+    margin-bottom: 30px;
+}
+
+.rs-definition__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.rs-definition .definition-item {
+    border-radius: 20px;
+    background: #f1f3f6;
+    height: 100%;
+    padding: 30px;
+    position: relative;
+}
+
+.rs-definition .definition-item > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    font-size: 0;
+}
+
+.rs-definition .definition-item h4,
+.rs-definition .definition-item p,
+.rs-definition .definition-item ul,
+.rs-definition .definition-item span {
+    color: #071f34;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%;
+}
+
+.rs-definition .definition-item h4:not(:last-child),
+.rs-definition .definition-item p:not(:last-child),
+.rs-definition .definition-item ul:not(:last-child),
+.rs-definition .definition-item span:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.rs-definition .definition-item h4 {
+    display: inline;
+}
+
+.rs-definition .definition-item__head {
+    margin-bottom: 16px;
+}
+
+.rs-definition .definition-item__head span {
+    color: #004077;
+    font-family: "TT Travels Next";
+    font-weight: 700;
+}
+
+.rs-definition .definition-item__content ul {
+    padding-left: 25px;
+}
+
+.rs-definition .definition-item__content ul li {
+    list-style: disc;
+}
+
+@media (max-width: 991.98px) {
+    .rs-definition {
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+
+    .rs-definition__head {
+        font-size: 36px;
+    }
+
+    .rs-definition .definition-item {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-definition__head {
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+
+    .rs-definition__items {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .rs-definition .definition-item h4,
+  .rs-definition .definition-item p,
+  .rs-definition .definition-item ul,
+  .rs-definition .definition-item span {
+        font-size: 15px;
+    }
+
+    .rs-definition .definition-item h4:not(:last-child),
+  .rs-definition .definition-item p:not(:last-child),
+  .rs-definition .definition-item ul:not(:last-child),
+  .rs-definition .definition-item span:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    .rs-definition .definition-item {
+        font-size: 13px;
+    }
+
+    .rs-definition .definition-item__head {
+        margin-bottom: 8px;
+    }
+}
