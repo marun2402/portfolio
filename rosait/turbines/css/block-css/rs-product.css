@@ -13,7 +13,7 @@
 .rs-product .banner__wrapper {
     position: relative;
     max-height: 868px;
-    height: calc(100dvh - 135px);
+    height: calc(100svh - 135px);
     display: grid;
     grid-template-columns: 40% 1fr;
 }
@@ -341,6 +341,16 @@
 
     .rs-product .options__head {
         font-size: 21px;
+    }
+
+    .rs-product .options__nav ul {
+        gap: 10px;
+    }
+
+    .rs-product .options__nav ul li a {
+        font-size: 11px;
+        padding: 0px 10px;
+        height: 35px;
     }
 
     .rs-product .about {
