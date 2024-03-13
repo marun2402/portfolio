@@ -1,0 +1,206 @@
+.rs-shops {
+    background: #fff;
+    padding-top: 115px;
+    padding-bottom: 60px;
+}
+
+.rs-shops__head {
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.rs-shops__head p {
+    margin-top: 18px;
+}
+
+.rs-shops__slider {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.rs-shops__footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.rs-shops .shops-slider__swiper {
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.rs-shops .shops-slider__slide {
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    height: auto;
+    transition: transform 0.35s ease, margin 0.35s ease;
+}
+
+.rs-shops .shops-slider__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+.rs-shops .shops-slider__nav .slider-arrows {
+    width: 100%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-shops .shops-slider__nav .slider-arrows .slider-arrow {
+    width: 60px;
+    background: linear-gradient(-90deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+    height: 100%;
+}
+
+.rs-shops .shops-item {
+    height: 100%;
+    width: 365px;
+    padding: 10px;
+    border: 1px solid #a1f65e;
+    background: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.rs-shops .shops-item > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    font-size: 0;
+}
+
+.rs-shops .shops-item__picture {
+    position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+.rs-shops .shops-item__picture img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.rs-shops .shops-item h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: #0b0f19;
+    margin-bottom: -20px;
+    margin-top: 10px;
+    padding-right: 96px;
+}
+
+.rs-shops .shops-item span {
+    margin-top: auto;
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: right;
+    color: #0b0f19;
+    opacity: 0.5;
+    text-align: right;
+}
+
+@media (min-width: 767.98px) {
+    .rs-shops .shops-slider__slide {
+        transform: rotate(5deg);
+    }
+
+    .rs-shops .shops-slider__slide.swiper-slide-active {
+        transform: rotate(0deg);
+        margin-left: -75px;
+        margin-right: -20px;
+    }
+
+    .rs-shops .shops-slider__slide.swiper-slide-active ~ .shops-slider__slide {
+        transform: rotate(-5deg);
+    }
+
+    .rs-shops .shops-slider__slide.swiper-slide-prev {
+        transform: rotate(-6deg) !important;
+        margin-left: -115px;
+    }
+
+    .rs-shops .shops-slider__slide.swiper-slide-next {
+        transform: rotate(6deg) !important;
+        margin-right: -95px;
+    }
+}
+
+@media (min-width: 1384px) {
+    .rs-shops__head {
+        padding-left: calc((100% - 1354px) / 2);
+        padding-right: calc((100% - 1354px) / 2);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-shops {
+        padding-top: 72px;
+        padding-bottom: 36px;
+    }
+
+    .rs-shops__slider {
+        margin-top: 10px;
+    }
+
+    .rs-shops .shops-slider__slide {
+        margin-right: 8px;
+    }
+
+    .rs-shops .shops-item {
+        width: 311px;
+    }
+
+    .rs-shops .shops-item h4 {
+        padding-right: 42px;
+    }
+}
+
+@media (min-width: 405px) and (max-width: 767px) {
+    .rs-shops__head {
+        padding-left: calc((100vw - 375px) / 2);
+        padding-right: calc((100vw - 375px) / 2);
+    }
+}
+
+@media (any-hover: hover) {
+    .rs-shops .shops-slider__slide:hover {
+        z-index: 2;
+        transform: rotate(0) !important;
+    }
+
+    .rs-shops .shops-slider:hover .shops-slider__nav {
+        opacity: 1;
+    }
+
+    .rs-shops .shops-item:hover img {
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,227 @@
+.rs-banner {
+    position: relative;
+}
+
+.rs-banner__container {
+    min-height: 310px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.rs-banner__wrapper {
+    color: #fff;
+    display: grid;
+    grid-template-columns: 16% 1fr 16% 17% 19%;
+    padding-top: 30px;
+    padding-bottom: 22px;
+}
+
+.rs-banner__photo {
+    max-width: 100%;
+    justify-self: end;
+    width: 132px;
+}
+
+.rs-banner__photo:nth-child(1) {
+    width: 132px;
+    transform: rotate(12deg);
+}
+
+.rs-banner__photo:nth-child(3) {
+    width: 167px;
+    margin-top: -10px;
+    transform: rotate(-5deg);
+}
+
+.rs-banner__photo:nth-child(4) {
+    width: 148px;
+    transform: rotate(12deg);
+}
+
+.rs-banner__photo:nth-child(5) {
+    width: 169px;
+    margin-right: 13px;
+    transform: rotate(12deg);
+}
+
+.rs-banner__title {
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.rs-banner__title h1 {
+    position: relative;
+    display: inline-block;
+}
+
+.rs-banner__title svg {
+    position: absolute;
+    left: -553px;
+    top: -80px;
+    z-index: -1;
+}
+
+.rs-banner__breadcrumbs {
+    margin-top: auto;
+    padding-bottom: 24px;
+}
+
+.rs-banner_delivery .rs-banner__wrapper {
+    grid-template-columns: 16% 1fr 16% 17%;
+}
+
+.rs-banner_delivery .rs-banner__title svg {
+    left: -587px;
+    top: -90px;
+}
+
+.rs-banner_offer .rs-banner__wrapper {
+    grid-template-columns: 16% 1fr 16% 17%;
+}
+
+.rs-banner_offer .rs-banner__title svg {
+    left: -590px;
+    top: -90px;
+}
+
+.rs-banner_category .rs-banner__wrapper {
+    grid-template-columns: 1fr;
+}
+
+.rs-banner_category .rs-banner__title svg {
+    left: -515px;
+    top: -125px;
+}
+
+.rs-banner_contacts .rs-banner__wrapper {
+    grid-template-columns: 1fr;
+}
+
+.rs-banner_contacts .rs-banner__title {
+    text-align: left;
+    padding-left: 345px;
+}
+
+.rs-banner_contacts .rs-banner__title svg {
+    left: -536px;
+    top: -121px;
+}
+
+.rs-banner .banner-photo {
+    width: 100%;
+    padding-bottom: 127.5%;
+    position: relative;
+    transform: skew(3deg);
+}
+
+.rs-banner .banner-photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.rs-banner .banner-photo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #a1f65e;
+    transform: skew(3deg) rotate(-7deg);
+}
+
+@media (max-width: 991.98px) {
+    .rs-banner__title {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-banner__container {
+        min-height: 180px;
+    }
+
+    .rs-banner__wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rs-banner__photo {
+        justify-self: start;
+    }
+
+    .rs-banner__photo:nth-child(1) {
+        display: none;
+    }
+
+    .rs-banner__photo:nth-child(3) {
+        display: none;
+    }
+
+    .rs-banner__photo:nth-child(4) {
+        width: 128px;
+    }
+
+    .rs-banner__photo:nth-child(5) {
+        display: none;
+    }
+
+    .rs-banner__title {
+        padding-top: 20px;
+        text-align: left;
+    }
+
+    .rs-banner__title svg {
+        width: 767px;
+        height: 141px;
+        left: -236px;
+        top: -29px;
+    }
+
+    .rs-banner__breadcrumbs {
+        display: none;
+    }
+
+    .rs-banner_delivery .rs-banner__wrapper {
+        grid-template-columns: 1fr 30%;
+    }
+
+    .rs-banner_delivery .rs-banner__title svg {
+        left: -250px;
+        top: -40px;
+    }
+
+    .rs-banner_offer .rs-banner__wrapper {
+        grid-template-columns: 1fr 30%;
+    }
+
+    .rs-banner_offer .rs-banner__title svg {
+        left: -250px;
+        top: -35px;
+    }
+
+    .rs-banner_category .rs-banner__wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-banner_category .rs-banner__title svg {
+        top: -29px;
+        left: -218px;
+    }
+
+    .rs-banner_contacts .rs-banner__wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-banner_contacts .rs-banner__title {
+        padding-left: 0;
+    }
+
+    .rs-banner_contacts .rs-banner__title svg {
+        top: -45px;
+        left: -245px;
+    }
+}
