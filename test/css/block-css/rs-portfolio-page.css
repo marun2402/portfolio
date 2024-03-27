@@ -1,0 +1,117 @@
+.rs-portfolio-page {
+    position: relative;
+}
+
+.rs-portfolio-page .page-head {
+    text-align: center;
+}
+
+.rs-portfolio-page__container {
+    position: relative;
+}
+
+.rs-portfolio-page__wrapper {
+    position: relative;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+.rs-portfolio-page__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.rs-portfolio-page__item {
+    height: 607px;
+}
+
+.portfolio-card {
+    position: relative;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    padding: 30px 160px 30px 30px;
+    display: grid;
+    -ms-flex-line-pack: end;
+    align-content: end;
+}
+
+.portfolio-card > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    font-size: 0;
+}
+
+.portfolio-card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.75;
+    transition: opacity var(--animation-duration) var(--timing-func);
+}
+
+.portfolio-card h4 {
+    position: relative;
+    color: #fff;
+}
+
+.portfolio-card .icon {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: block;
+    width: 41px;
+    height: 41px;
+    background: url("../../img/icons/expand.svg") center/contain no-repeat;
+}
+
+@media (max-width: 1400px) {
+    .rs-portfolio-page__wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .rs-portfolio-page__items {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-portfolio-page__wrapper {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .rs-portfolio-page__item {
+        height: 259px;
+    }
+
+    .portfolio-card {
+        padding: 10px 30px 10px 12px;
+    }
+
+    .portfolio-card .icon {
+        width: 17px;
+        height: 17px;
+        bottom: 10px;
+        right: 12px;
+    }
+}
+
+@media (any-hover: hover) {
+    .portfolio-card:hover img {
+        opacity: 1;
+    }
+}

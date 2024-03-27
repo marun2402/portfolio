@@ -1,0 +1,109 @@
+.rs-add {
+    background: #f9f9f9;
+    position: relative;
+}
+
+.rs-add__container {
+    position: relative;
+}
+
+.rs-add__wrapper {
+    position: relative;
+}
+
+.rs-add__head {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.rs-add .add-slider .slider-nav {
+    margin-top: 0px;
+    padding: 20px 0px;
+}
+
+.rs-add .add-slider .slider-nav .slider-paging {
+    margin-left: 0;
+}
+
+.add-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px 34px;
+}
+
+.add-card > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    font-size: 0;
+}
+
+.add-card__photo {
+    position: relative;
+    padding-bottom: 74%;
+    background: #f9f9f9;
+}
+
+.add-card__photo img {
+    mix-blend-mode: multiply;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+}
+
+.add-card h4 {
+    margin-top: 50px;
+    text-align: center;
+    color: #000;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 120%;
+}
+
+@media (max-width: 1023.98px) {
+    .rs-add .btn-color {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .rs-add .add-slider__slide {
+        width: 290px;
+    }
+
+    .rs-add .add-slider .slider-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-add {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .rs-add__head {
+        margin-bottom: 15px;
+    }
+
+    .add-card {
+        padding: 20px;
+    }
+
+    .add-card h4 {
+        font-size: 16px;
+    }
+}
