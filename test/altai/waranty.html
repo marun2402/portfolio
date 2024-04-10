@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ALTAI</title>
+
+	<script src="js/jquery-2.1.3.min.js" defer></script>
+
+	<script src="js/swiper-bundle.min.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
+
+	<script src="js/validate/jquery.validate.min.js" defer></script>
+
+	<script src="js/gsap/gsap.min.js" defer></script>
+	<script src="js/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="js/gsap/CustomEase.min.js" defer></script>	
+	<script src="js/gsap/ScrollToPlugin.min.js" defer></script>	
+		
+	<link rel="stylesheet" type="text/css" href="css/block-css/style.css" />
+	<script src="js/app.js" defer></script>
+
+</head>
+
+
+
+  <body class="page-type-default page-animate">
+    <div class="preloader">
+  <img src="img/preloader.png" alt="">
+</div>
+    <div class="site-wrapper">
+      
+      <header>
+        <span class="menu-overlay" data-js-overlay></span>        
+        
+
+
+<link rel="stylesheet" href="css/block-css/rs-header.css" />
+<div class="rs-header" data-check-view>			
+	<div class="rs-header__wrapper">
+		<div class="logo"><a href="#"><img src="img/logo.png" alt="" /></a></div>
+		<div class="logo-mobile"><a href="#"><img src="img/logo_mobile.png" alt="" /></a></div>
+		<div class="logo-sticky"><a href="#"><img src="img/logo_sticky.png" alt="" /></a></div>
+		
+
+
+
+
+<span class="menu-overlay" data-js-overlay></span>
+<nav class="menu">
+ 
+	<div class="mobile-menu-logo">
+		<img src="img/logo_sticky.png" alt="">
+	</div>
+
+	<div class="menu-wrapper">
+		<ul class="menu__list">		
+			<li class="menu__dropdown">
+				<a href="#"><span>Каталог техники</span></a>
+				<button type="button" class="menu__dropdown-arrow"></button>
+				<ul class="menu__dropdown-list">
+					<li class="switch-back">Каталог техники</li>					
+					<li  class="menu__dropdown">
+						<a href="#"><span>Шасси</span></a>
+						<button type="button" class="menu__dropdown-arrow"></button>
+						<ul class="menu__dropdown-list">
+							<li><a href="#"><span>HCV (крупнотоннажная техника)</span></a></li>
+							<li><a href="#"><span>MCV (среднетоннажная техника)</span></a></li>
+							<li><a href="#"><span>LCV (малотоннажный)</span></a></li>
+						</ul>
+					</li>
+					<li  class="menu__dropdown">
+						<a href="#"><span>Модельный ряд</span></a>
+						<button type="button" class="menu__dropdown-arrow"></button>
+						<ul class="menu__dropdown-list">
+							<li><a href="#"><span>HCV (крупнотоннажная техника)</span></a></li>
+							<li><a href="#"><span>MCV (среднетоннажная техника)</span></a></li>
+							<li><a href="#"><span>LCV (малотоннажный)</span></a></li>
+						</ul>
+					</li>
+					<li><a href="#"><span>Автомобили в наличии</span></a></li>
+				</ul>
+			</li>
+			<li><a href="#"><span>Услуги</span></a></li>
+			<li><a href="#"><span>О компании</span></a></li>
+			<li><a href="#"><span>Дилеры</span></a></li>
+			<li><a href="#"><span>Новости</span></a></li>
+			<li><a href="#"><span>Контакты</span></a></li>
+		</ul>
+	</div>
+
+	<div class="mobile-menu-contacts">
+		<div class="menu-wrapper">		
+			<a href="tel:+79136515359">+7 913 651-53-59</a>
+			<a href="mailto:docs@altaitrucks.ru">docs@altaitrucks.ru</a>			
+		</div>
+	</div>
+
+	<div class="mobile-menu-lang">
+		<div class="menu-wrapper">
+			<ul>
+				<li class="current">Русский</li>
+				<li><a href="#">English</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="mobile-menu-social">
+		<div class="menu-wrapper">		
+			<ul>				
+				<li><a href="#"><img src="img/icons/vk_icon.svg" alt=""></a></li>
+				<li><a href="#"><img src="img/icons/yt_icon.svg" alt=""></a></li>
+				<li><a href="#"><img src="img/icons/tg_icon.svg" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+
+</nav>
+		<div class="rs-header__lang">
+			<ul>
+				<li class="current">RU</li>
+				<li><a href="#">EN</a></li>
+			</ul>
+		</div>
+		<div class="rs-header__contacts"><a href="tel:+79136515359">+7 913 651-53-59</a></div>
+		<div class="rs-header__btns">
+			<button class="btn-color btn-color_small btn-color_phone" data-modal="#callbackModal">
+				<span class="title">Заказать звонок</span>
+				<span class="icon"></span>
+			</button>
+		</div>		
+		<button class="menu-burger">
+  <span data-title="Закрыть">Меню</span>
+</button>	
+	</div>
+</div>
+      </header>
+
+      <div class="main">
+        <div class="social-bar" data-check-view>
+          <ul>
+            <li><a href="#"><img src="img/icons/vk_icon.svg" alt=""></a></li>
+            <li><a href="#"><img src="img/icons/yt_icon.svg" alt=""></a></li>
+            <li><a href="#"><img src="img/icons/tg_icon.svg" alt=""></a></li>
+          </ul>
+        </div>       
+        
+
+<!-- rs-intro -->
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-intro.css" />
+<div class="rs-intro">	
+	<div class="rs-intro__holder">
+		<div class="rs-intro__container">
+			<div class="rs-intro__wrapper">
+				<div class="content">
+					<h1>Гарантия и сервис</h1>
+				</div>
+			</div>
+		</div>
+		<div class="rs-intro__bg">
+			<img src="img/intro_waranty.jpg" alt="">
+		</div>
+	</div>
+	<div class="rs-intro__breadcrumbs">
+		<div class="rs-intro__container">
+			
+  <div class="breadcrumbs " data-hidescroll>    
+    
+      <span><a href="#">Главная</a></span>
+      <span class="sep">/</span>
+    
+      <span><a href="#">Услуги</a></span>
+      <span class="sep">/</span>
+        
+    <span class="current">Гарантия и сервис</span>    
+  </div>
+
+		</div>
+	</div>
+</div>
+
+
+<div class="page-sidebar page-sidebar_rev" data-sticky="block">
+  <div class="page-sidebar__container" data-sticky="container">
+    <div class="page-sidebar__aside" data-sticky="content">
+<nav class="sidebar-menu" data-anchors>	
+	<div class="sidebar-menu__head">
+		<h5>Сеть СТО</h5>
+	</div>
+	<ul class="sidebar-menu__list">		
+		<li class="current-menu-item"><a href="#waranty-1">Авторизованные дилеры АLTAI</a></li>
+		<li><a href="#waranty-2">Партнёры</a></li>
+	</ul>
+	<div class="sidebar-menu__head">
+		<h5>Гарантийная политика</h5>
+	</div>
+	<ul class="sidebar-menu__list">		
+		<li><a href="#waranty-3">Правила</a></li>
+		<li><a href="#waranty-4">Гарантийные обязательства</a></li>
+		<li><a href="#waranty-5">Смена собственника ТС</a></li>
+		<li><a href="#waranty-6">Предмет гарантии</a></li>
+		<li><a href="#waranty-7">Условия гарантийного обслуживания</a></li>
+		<li><a href="#waranty-8">Обязанности владельца</a></li>
+		<li><a href="#waranty-9">Негарантийные случаи</a></li>
+		<li><a href="#waranty-10">Ограничения срока гарантии</a></li>
+		<li><a href="#waranty-11">Не могут быть компенсированы</a></li>
+		<li><a href="#waranty-12">Не обслуживаются автомобили</a></li>		
+	</ul>
+</nav>
+</div>
+    <div class="page-sidebar__content">      
+      
+      <div class="page-content page-content-entry" id="waranty-1">	
+        <h4>Список авторизованных дилеров АLTAI</h4>
+        <div class="table">
+          <table>
+            <tr>
+              <th>Дилеррегион</th>
+              <th>Филиал</th>
+              <th>Название</th>
+              <th>Сайт</th>
+              <th>Телефон общий</th>
+            </tr>
+            <tr>
+              <td>Барнаул</td>
+              <td>Барнаул</td>
+              <td>ООО «АСМ-Алтай»</td>
+              <td>https://www.asm-altay.ru/</td>
+              <td>+7 (3852) 505-590 <br> +7 (3852) 505-598</td>
+            </tr>
+            <tr>
+              <td>Барнаул</td>
+              <td>Новосибирск</td>
+              <td>ООО «АгроТехМаш»</td>
+              <td>http://atm-nsk.ru/</td>
+              <td>+7 (913) 949-34-00</td>
+            </tr>
+            <tr>
+              <td>Барнаул</td>
+              <td>Барнаул</td>
+              <td>ООО «АСМ-Алтай»</td>
+              <td>https://www.asm-altay.ru/</td>
+              <td>+7 (3852) 505-590 <br> +7 (3852) 505-598</td>
+            </tr>
+            <tr>
+              <td>Барнаул</td>
+              <td>Барнаул</td>
+              <td>ООО «АСМ-Алтай»</td>
+              <td>https://www.asm-altay.ru/</td>
+              <td>+7 (3852) 505-590 <br> +7 (3852) 505-598</td>
+            </tr>
+          </table>
+        </div>
+        <div class="map">
+          <img src="img/map.jpg" alt="">
+        </div>
+      </div> 
+
+      <div class="page-content page-content-entry" id="waranty-2">	
+        <h4>Присоединяйтесь к нам в качестве сервисного партнёра ALTAI</h4>
+        <p>Компания ООО «Кистоун Авто», являясь официальным представителем коммерческой техники ALTAI и активно развивает партнерскую сеть на территории России. Мы стремимся к сотрудничеству с ответственными и профессиональными предпринимателями, готовыми обеспечить качественный сервис и реализацию автомобилей нашего бренда. Предлагаем дилерам выгодные условия сотрудничества, обучение, маркетинговую поддержку и доступ к качественной коммерческой технике ALTAI.</p>
+        <blockquote>
+          <p>Хотите стать частью нашей успешной команды и предоставлять высококачественные услуги в области коммерческой техники? Присоединяйтесь к нам и станьте сервисным партнёром ALTAI!</p>
+          
+<a href="#" class="btn-color ">
+	<span class="title">Стать дилером</span>
+	<span class="icon"></span>
+</a>
+
+        </blockquote>
+      </div>
+
+      <div class="page-content page-content-entry" id="waranty-3">	
+        <h4>Правила гарантийного обслуживания</h4>
+        <p>Компания ООО «Кистоун Авто» предоставляет гарантию на автомобили марки ALTAI сроком на 24 месяца или до достижения пробега в 200 000 километров. Эта гарантия распространяется на все автомобили, проданные через официальные дилерские центры, являющиеся частью сети ООО «Кистоун Авто».</p>       
+      </div> 
+
+      <div class="page-content page-content-entry" id="waranty-4">	
+        <h4>Гарантийные обязательства</h4>
+        <div class="grid">
+          <blockquote>
+            <p class="selected">1 год</p>
+            <p>гарантия распространяется на весь автомобиль за исключением случаев, указанных в разделе «Случаи, не покрываемые гарантией».</p>
+          </blockquote>
+          <blockquote>
+            <p class="selected">2 год</p>
+            <p>условия гарантии такие же, как и для первого года эксплуатации, за исключением случаев, предусмотренных разделом « Ограничения срока гарантии».</p>
+          </blockquote>
+        </div> 
+      </div>
+
+      <div class="page-content page-content-entry" id="waranty-5">	
+        <h4>Условия гарантийного обслуживания при смене собственника&nbsp;ТС</h4>
+        <p>Гарантийные обязательства и сервисное обслуживание транспортного средства сохраняются при смене владельца на законных основаниях.</p>
+      </div>
+
+      <div class="page-content page-content-entry" id="waranty-6">	
+        <h4>Предмет гарантии</h4>
+        <p>Гарантийное обслуживание включает в себя компенсацию стоимости всех ремонтных работ, которые могут потребоваться в течение гарантийного периода, вызванных дефектами материала или качеством изготовления транспортного средства. Все исключения описаны в пункте «Случаи, не покрываемые гарантией».</p>
+        <p>Для сохранения гарантийного обслуживания необходимо проходить все плановые ТО в авторизованных сервисных центрах.</p>
+      </div>
+
+      <div class="page-content page-content-entry" id="waranty-7">	
+        <h4>Условия гарантийного обслуживания</h4>    
+        <p>Плановое техническое обслуживание необходимо осуществлять исключительно в сервисном центре официального дилерского представительства. Если обслуживание проводится в сторонних организациях, по желанию владельца или в результате каких-либо непредвиденных обстоятельствах, то в гарантийном обслуживании возможен отказ.</p>    
+      </div>
+
+      <div class="page-content page-content-entry" id="waranty-8">	
+        <h4>Обязанности владельца</h4>      
+        <ul class="marker">
+          <li>Иметь при себе сервисную книжку при посещении сервисного центра официального дилера для проведения планового технического обслуживания или гарантийного ремонта ТС ALTAI.</li>
+          <li>Эксплуатировать, обслуживать и хранить транспортное средство в соответствии с правилами, указанными в Руководстве по эксплуатации и сервисной книжке автомобиля марки ALTAI.</li>
+          <li>Своевременно предоставлять автомобиль официальному дилеру для проведения планового технического обслуживания в соответствии с требованиями, указанными в сервисной книжке.</li>
+          <li>Показания одометра при прохождении планового технического обслуживания не должны превышать 500 км по сравнению с показаниями, указанными в регламенте технического обслуживания.</li>
+          <li>Перед каждой поездкой на автомобиле проводить его осмотр по пунктам, указанным в разделе «Ежедневный уход» Руководства по эксплуатации.</li>          
+        </ul>  
+      </div>
+
+      <div class="page-content page-content-entry" id="waranty-9">	
+        <h4>Случаи, не покрываемые гарантией</h4>    
+        <p class="selected">Техническое обслуживание</p>   
+        <p>Регламентные работы, диагностические и регулировочные работы в рамках плановых технических обслуживаний (за исключением случаев, связанных с гарантийными работами), а также работы по очистке различных систем автомобиля, включая промывку топливной, смазочной и охлаждающей систем двигателя, а также расход материалов, используемых при этом.</p> 
+        <p class="selected">Части, поврежденные в результате износа, внешних воздействий и т.д.</p>
+        <p>Не покрываются гарантией ремонт и замена следующих деталей, поврежденных в результате естественного износа при обычной эксплуатации:</p>
+        <ul class="defis column">
+          <li>лампы;</li>
+          <li>плавкие предохранители;</li>
+          <li>щетки стеклоочистителя;</li>
+          <li>фильтры (воздушный; топливный; масляный);</li>
+          <li>масла и заправочные жидкости,хладагент;</li>
+          <li>диски сцепления;</li>
+          <li>приводные ремни;</li>
+          <li>щетки стартера или генератора;</li>
+          <li>диодный мост генератора;</li>
+          <li>резиновые части и детали (искл. опор двигателя);</li>
+          <li>свечи накаливания;</li>
+          <li>тормозные колодки;</li>
+          <li>аккумуляторная батарея;</li>
+          <li>стереосистема;</li>
+          <li>элементы внутренней отделки салона;</li>
+          <li>части кузова с гальваническим покрытием;</li>
+          <li>тормозные трубопроводы, диски и барабаны.</li>
+        </ul>
+        <p class="selected">Повреждения, вызванные неправильной эксплуатацией</p>
+        <p>Не подлежат возмещению по гарантии повреждения или неисправности, вызванные ненадлежащим использованием:</p>
+        <ul class="defis">
+          <li>эксплуатация автомобиля с нарушениями инструкций Руководства по эксплуатации или сервисной книжки;</li>
+          <li>использование транспортного средства в гонках, ралли и иных спортивных мероприятиях;</li>
+          <li>использование непригодного или загрязненного топлива, масла или заправочных жидкостей;</li>
+          <li>превышение допустимой нагрузки;</li>
+          <li>эксплуатация на бездорожье;</li>
+          <li>эксплуатация неисправного автомобиля, если известно о наличии дефекта;</li>
+          <li>использование транспортного средства не по его обычному назначению, произведение переоборудования или модификаций;</li>
+          <li>к транспортному средству постоянно или временно было присоединено навесное оборудование, в т.ч. полуприцеп или прицеп, которые по техническим характеристикам не соответствует транспортному средству</li>
+          <li>на транспортном средстве перевозились грузы, для перевозки которых транспортное средство не приспособлено;</li>
+          <li>транспортное средство попадало в аварию, иное дорожно-транспортное происшествие, или было деформировано в результате внешнего воздействия;</li>
+          <li>нарушение условий, сроков или пробега, по достижении которых должно проводиться профилактическое обслуживание транспортного средства;</li>
+          <li>техническое обслуживание или ремонт выполнены не на СТО официального дилера ALTAI;</li>
+          <li>дефекты, неисправности или коррозия, возникшие в результате воздействия химических веществ, кислотных осадков, дорожного покрытия (камней, песка, солей, реагентов и т.п.), пожаров, катастроф, в том числе техногенных, стихийных бедствий;</li>
+          <li>повреждения, нанесенные при транспортировке;</li>
+          <li>повреждения грузового отсека при погрузочно-разгрузочных работах или перевозке грузов.</li>
+        </ul>
+      </div>
+
+      <div class="page-content page-content-entry" id="waranty-10">	
+        <h4>Ограничения срока гарантии</h4>  
+        <p>Гарантийный срок 12 месяцев / 100 000 км – действует на следующие объекты:</p>
+        <div class="accordion" data-spollers data-one-spoller>
+          <div class="accordion__item">
+            <div class="accordion__title" data-spoller>Детали механизма сцепления<span class="expand"></span></div>
+            <div class="accordion__content">
+              <div class="accordion-content">
+                <ul class="marker">
+                  <li>главный цилиндр сцепления</li>
+                  <li>главный цилиндр сцепления</li>
+                  <li>маслобак</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__title" data-spoller>Детали, относящиеся к трансмиссии<span class="expand"></span></div>
+            <div class="accordion__content">
+              <div class="accordion-content">
+                <ul class="marker">
+                  <li>главный цилиндр сцепления</li>
+                  <li>главный цилиндр сцепления</li>
+                  <li>маслобак</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__title" data-spoller>Детали кабины<span class="expand"></span></div>
+            <div class="accordion__content">
+              <div class="accordion-content">
+                <ul class="marker">
+                  <li>главный цилиндр сцепления</li>
+                  <li>главный цилиндр сцепления</li>
+                  <li>маслобак</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__title" data-spoller>Система охлаждения<span class="expand"></span></div>
+            <div class="accordion__content">
+              <div class="accordion-content">
+                <ul class="marker">
+                  <li>главный цилиндр сцепления</li>
+                  <li>главный цилиндр сцепления</li>
+                  <li>маслобак</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__title" data-spoller>Общая часть<span class="expand"></span></div>
+            <div class="accordion__content">
+              <div class="accordion-content">
+                <ul class="marker">
+                  <li>главный цилиндр сцепления</li>
+                  <li>главный цилиндр сцепления</li>
+                  <li>маслобак</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__title" data-spoller>Детали тормозной системы<span class="expand"></span></div>
+            <div class="accordion__content">
+              <div class="accordion-content">
+                <ul class="marker">
+                  <li>главный цилиндр сцепления</li>
+                  <li>главный цилиндр сцепления</li>
+                  <li>маслобак</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__title" data-spoller>Электрическая часть<span class="expand"></span></div>
+            <div class="accordion__content">
+              <div class="accordion-content">
+                <ul class="marker">
+                  <li>главный цилиндр сцепления</li>
+                  <li>главный цилиндр сцепления</li>
+                  <li>маслобак</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+
+      <div class="page-content page-content-entry" id="waranty-11">	
+        <h4>Не могут быть компенсированы</h4>     
+        <h6>Не подлежат возмещению:</h6> 
+        <ul class="marker">
+          <li> расходы, связанные с неисправностью автомобиля, такие как невозможность его использования, потеря времени, расходы на топливо, мобильную связь, транспортные расходы, упущенная выгода и прочие коммерческие доходы;</li>  
+          <li> горюче-смазочные материалы и другие расходные комплектующие, которые могут изнашиваться в процессе обычной эксплуатации ТС.</li>
+        </ul>
+      </div>
+
+      <div class="page-content page-content-entry" id="waranty-12">	
+        <h4>Не обслуживаются автомобили</h4>    
+        <p>Гарантия не распространяется на автомобили, показания одометра которых были изменены и фактический пробег стал невозможно определить. При замене одометра на новый необходимо зафиксировать показания замененного прибора в базе данных Дилера и в Сервисной книжке.</p>    
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>       
+        
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-footer.css" />
+<section class="rs-footer">	
+	<a href="#slider" data-anchor><span>Вернуться →</span></a>
+	<div class="rs-footer__holder">
+		<div class="rs-footer__wrapper">
+			<div class="rs-footer__over">
+				<div class="rs-footer__logo"><img src="img/logo_footer.png" alt=""></div>
+				<div class="rs-footer__contacts">
+					<ul>
+						<li><a href="tel:+79136515359">+7 913 651-53-59</a></li>
+						<li><a href="mailto:docs@altaitrucks.ru">docs@altaitrucks.ru</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="rs-footer__top">
+				<div class="rs-footer__info">
+<div class="footer-info">
+	<p>Оставьте заявку, и мы подготовим для вас индивидуальное коммерческое предложение</p>
+	
+<a href="#" class="btn-color btn-color_light btn-color_kp">
+	<span class="title">Запросить КП</span>
+	<span class="icon"></span>
+</a>
+
+</div>
+</div>
+				<div class="rs-footer__address">
+					<div class="footer-title">Адрес</div>
+					<p>Санкт-Петербург, Свердловская наб., д. 44 Д, БЦ «Лето», офис 416</p>
+				</div>
+				<div class="rs-footer__menu">
+					<div class="footer-title">Каталог</div>
+					
+<nav class="footer-menu "> 
+  <ul class="footer-menu__list">
+    
+    <li><a href="#" class="tilt"><span>Шасси</span></a></li>
+    
+    <li><a href="#" class="tilt"><span>Модельный ряд</span></a></li>
+    
+    <li><a href="#" class="tilt"><span>Автомобили в наличии</span></a></li>
+       
+  </ul>
+</nav>
+
+				</div>
+				<div class="rs-footer__menu">
+					<div class="footer-title">Меню</div>
+					
+<nav class="footer-menu "> 
+  <ul class="footer-menu__list">
+    
+    <li><a href="#" class="tilt"><span>Услуги</span></a></li>
+    
+    <li><a href="#" class="tilt"><span>О компании</span></a></li>
+    
+    <li><a href="#" class="tilt"><span>Дилеры</span></a></li>
+    
+    <li><a href="#" class="tilt"><span>Новости</span></a></li>
+    
+    <li><a href="#" class="tilt"><span>Контакты</span></a></li>
+       
+  </ul>
+</nav>
+
+				</div>
+			</div>
+			<div class="rs-footer__copyright">
+				<p>© ООО «Кистоун Авто» 2023. Все права защищены.</p>
+				<a href="#">Разработано в Россайт</a>
+			</div>
+		
+		</div>
+	</div>
+</section>
+
+
+      </footer>
+      
+    </div>   
+    
+    <div class="modal" tabindex="-1" id="callbackModal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-wrapper">
+    <div class="modal-dialog">
+      <button type="button" class="close">
+        <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L24 25" stroke="#08222E" stroke-width="2" stroke-linecap="round" />
+          <path d="M24 1L1 25" stroke="#08222E" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6>Свяжитесь с нами</h6>
+          <p>Оставьте ваши данные и наш менеджер вам перезвонит</p>
+        </div>
+        <div class="modal-body">
+          <div class="modal-form">
+            <div class="form">
+              <form action="#" id="callbackModalForm">
+                <div class="form-group">
+                  <input type="text" id="callbackModalName" name="callbackModalName" placeholder="Ваше имя" required />
+                  <span class="valid-icon"></span>
+                </div>
+                <div class="form-group">
+                  <input type="tel" id="callbackModalPhone" name="callbackModalPhone" placeholder="Телефон" maxlength="18" required data-tel-input>
+                  <span class="valid-icon"></span>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="callbackModalMail" name="callbackModalMail" placeholder="e-mail" required />
+                  <span class="valid-icon"></span>
+                </div>
+                <div class="form-group">
+                  <textarea name="callbackModalMessage" id="callbackModalMessage" placeholder="Сообщение" required></textarea>                  
+                  <span class="valid-icon"></span>
+                </div>
+                <div class="form-submit">
+                  <p>Нажимая кнопку «Отправить» вы соглашаетесь на обработку ваших персональных данных в соответствии с политикой конфиденциальности</p>
+                  <button type="submit" class="btn-color">
+                    <span class="title">Отправить</span>
+                    <span class="icon"></span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  </body>
+</html>
