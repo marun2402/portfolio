@@ -531,7 +531,7 @@ header.sticky .rs-header .rs-header__lang ul li {
 
 .site-wrapper .page-content .map,
 .site .page-content .map {
-    padding-bottom: 37%;
+    height: 390px;
     position: relative;
     border-radius: 30px;
     overflow: hidden;
@@ -1695,6 +1695,16 @@ header.sticky .rs-header .rs-header__lang ul li {
   .site .page-content .column {
         column-count: 2;
         column-gap: 16px;
+    }
+
+    .form .form-submit_row {
+        grid-template-columns: 1fr auto;
+        gap: 35px;
+    }
+
+    .form .form-submit_row p {
+        text-align: left;
+        font-size: 15px;
     }
 
     [data-wow] > *:nth-child(1) {

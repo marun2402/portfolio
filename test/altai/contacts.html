@@ -24,7 +24,7 @@
 
 
 
-  <body class="page-type-default page-animate">
+  <body class="page-type-inner page-animate">
     <div class="preloader">
   <img src="img/preloader.png" alt="">
 </div>
@@ -136,106 +136,92 @@
 </div>
       </header>
 
-      <div class="main">
-        <div class="social-bar" data-check-view>
-          <ul>
-            <li><a href="#"><img src="img/icons/vk_icon.svg" alt=""></a></li>
-            <li><a href="#"><img src="img/icons/yt_icon.svg" alt=""></a></li>
-            <li><a href="#"><img src="img/icons/tg_icon.svg" alt=""></a></li>
-          </ul>
-        </div>       
+      <div class="main">             
         
 
-<!-- rs-intro -->
+  <!-- rs-contacts -->
+   
 
 
 
+<link rel="stylesheet" href="css/block-css/rs-contacts.css" />
+<section class="rs-contacts">
+	<div class="rs-contacts__container">    
+		<div class="rs-contacts__wrapper">
 
-
-<link rel="stylesheet" href="css/block-css/rs-intro.css" />
-<div class="rs-intro">	
-	<div class="rs-intro__holder">
-		<div class="rs-intro__container">
-			<div class="rs-intro__wrapper">
-				<div class="content">
-					<h1>Финансовые услуги</h1>
-				</div>
-			</div>
-		</div>
-		<div class="rs-intro__bg">
-			<img src="img/intro_finance.jpg" alt="">
-		</div>
-	</div>
-	<div class="rs-intro__breadcrumbs">
-		<div class="rs-intro__container">
-			
-  <div class="breadcrumbs " data-hidescroll>    
-    
-      <span><a href="#">Главная</a></span>
-      <span class="sep">/</span>
-    
-      <span><a href="#">Услуги</a></span>
-      <span class="sep">/</span>
+      <div class="rs-contacts__content">
         
-    <span class="current">Финансовые услуги</span>    
-  </div>
-
-		</div>
-	</div>
+<div class="section-title" >
+	
+	<h2>Контакты</h2>	
+	
 </div>
 
-<section class="page-content">	
-  <div class="page-content__container">
-    <div class="page-row rev">               
-      <div class="content">
-        <h3>Всё для успешного бизнеса и работы</h3>
-        <p>Комплексное обслуживание клиентов на индивидуальных условиях:</p>        
-        <ul class="adv-list">
+        <ul>
           <li>
-            <img src="img/finance_icon_1.png" alt="">
-            <p>Банковские гарантии</p>
+            <p>«Кистоун Авто» в г. Санкт-Петербург</p>
+            </li>
+          <li>
+            <span>Адрес</span>
+            <p>195027, г. Санкт-Петербург, Свердловская набережная, д. 44Д (БЦ «Лето»)</p>
           </li>
           <li>
-            <img src="img/finance_icon_2.png" alt="">
-            <p>Консалтинговое сопровождение сделок</p>
+            <span>Время работы</span>
+            <p>Пн-Вс: 09:00 – 18:00</p>
           </li>
           <li>
-            <img src="img/finance_icon_3.png" alt="">
-            <p>Торговое финансирование</p>
+            <span>Телефон</span>
+            <a href="tel:+79136515359">+7 (913) 651-53-59</a>
           </li>
           <li>
-            <img src="img/finance_icon_4.png" alt="">
-            <p>Кредитование в рублях и юанях</p>
+            <span>Почта</span>
+            <a href="mailto:docs@altaitrucks.ru">docs@altaitrucks.ru</a>
           </li>
-        </ul>  
-      </div> 
-      <div class="picture">
-        <img src="img/finance_1.jpg" alt="">
-      </div>           
-    </div>		
-  </div>	
-</section>
+        </ul>
+      </div>
 
-<section class="page-content">	
-  <div class="page-content__container">
-    <div class="page-row">               
-      <div class="content">
-        <h3>Автомобильный факторинг</h3>
-        <p class="selected">Доступное финансирование для дилеров с прямой поставкой автомобилей и запасных частей от производителя ALTAI:</p>        
-        <ul class="defis">
-          <li>индивидуальные условия предоставления финансирования;</li>
-          <li>фиксация цен при выкупе автомобилей;</li>
-          <li>предоставление под залог приобретаемой техники или машин, с минимальным участием собственными средствами;</li>
-          <li>возможность формировать сезонные запасы по выгодным ценам;</li>
-          <li>индивидуальные условия структурирования сделок (предоставление сроков траншей), в зависимости от потребностей.</li>
-        </ul>  
-      </div> 
-      <div class="picture">
-        <img src="img/finance_2.jpg" alt="">
-      </div>           
-    </div>		
-  </div>	
+      <div class="rs-contacts__form">
+        <div class="form">
+          <form action="#" id="fosForm">
+            <div class="form-group">
+              <input type="text" id="fosName" name="fosName" placeholder="Ваше имя" required />
+              <span class="valid-icon"></span>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="fosPhone" name="fosPhone" placeholder="Телефон" maxlength="18" required data-tel-input>
+              <span class="valid-icon"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" id="fosMail" name="fosMail" placeholder="e-mail" required />
+              <span class="valid-icon"></span>
+            </div>
+            <div class="form-group">
+              <textarea name="fosMessage" id="fosMessage" placeholder="Сообщение" required></textarea>                  
+              <span class="valid-icon"></span>
+            </div>
+            <div class="form-submit form-submit_row">
+              <p>Нажимая кнопку «Отправить» вы соглашаетесь на обработку ваших персональных данных в соответствии с политикой конфиденциальности</p>
+              <button type="submit" class="btn-color">
+                <span class="title">Отправить</span>
+                <span class="icon"></span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+		</div>		
+	</div>	
 </section>
+  
+
+  <section class="page-content">	
+    <div class="page-content__container">
+      <div class="map">
+        <iframe src="https://yandex.ru/map-widget/v1/?scroll=false&amp;um=constructor%3A151ec296049c100687d6aadd1c22d4324135bab0f300cbaf0d737780b9357a6c&amp;source=constructor"></iframe>
+      </div>
+    </div>	
+  </section>
 
 
       </div>
@@ -330,7 +316,6 @@
       </footer>
       
     </div>   
-    
     <div class="modal" tabindex="-1" id="callbackModal">
   <div class="modal-backdrop"></div>
   <div class="modal-wrapper">
