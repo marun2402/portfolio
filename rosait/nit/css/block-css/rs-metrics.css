@@ -1,0 +1,124 @@
+.rs-metrics {
+    position: relative;
+}
+
+.rs-metrics__parallax {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.rs-metrics__parallax img {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.rs-metrics__wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.rs-metrics__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.rs-metrics .metrics-item {
+    height: 100%;
+    padding: 32px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.rs-metrics .metrics-item h6 {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.rs-metrics .metrics-item p {
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 120%;
+    color: #fff;
+}
+
+@media (min-width: 767.98px) {
+    .rs-metrics__item {
+        border-right: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .rs-metrics__item:first-child {
+        border-left: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .rs-metrics .metrics-item {
+        min-height: 423px;
+    }
+}
+
+@media (max-width: 1310px) {
+    .rs-metrics .metrics-item {
+        padding: 16px;
+    }
+
+    .rs-metrics .metrics-item h6 {
+        font-size: 46px;
+    }
+
+    .rs-metrics .metrics-item p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-metrics .metrics-item h6 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-metrics__wrapper {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .rs-metrics__items {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-metrics__item:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .rs-metrics .metrics-item {
+        padding: 30px 0px;
+    }
+
+    .rs-metrics .metrics-item h6 {
+        font-size: 24px;
+    }
+
+    .rs-metrics .metrics-item p {
+        font-size: 13px;
+    }
+
+    .rs-metrics .metrics-item p br {
+        display: none;
+    }
+}

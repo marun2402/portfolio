@@ -1,0 +1,193 @@
+.footer-menu__list li:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.footer-menu__list li a {
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    transition: color 0.35s ease;
+}
+
+.footer-menu_grid .footer-menu__list {
+    column-count: 2;
+    column-width: auto;
+    column-fill: balance;
+    column-gap: 90px;
+}
+
+.rs-footer {
+    background: #0c0c0c;
+}
+
+.rs-footer__top {
+    padding-top: 56px;
+    padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: 22% 1fr 32%;
+    gap: 185px;
+}
+
+.rs-footer .footer-wrapper {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.rs-footer._init .footer-title {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+}
+
+.rs-footer._init .footer-title::after,
+.rs-footer._init .footer-title::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    transition: transform 0.35s ease;
+}
+
+.rs-footer._init .footer-title::after {
+    right: 18px;
+    width: 2px;
+    height: 14px;
+}
+
+.rs-footer._init .footer-title::before {
+    top: 9px;
+    right: 12px;
+    height: 2px;
+    width: 14px;
+}
+
+.rs-footer._init .footer-title._active::after {
+    transform: rotate(90deg);
+}
+
+.rs-footer._init .footer-title._active::before {
+    transform: scale(0);
+}
+
+.rs-footer._init .not-spoller.footer-title::after,
+.rs-footer._init .not-spoller.footer-title::before {
+    display: none;
+}
+
+.rs-footer .footer-title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #252525;
+}
+
+.rs-footer .footer-info p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+
+.rs-footer .footer-contacts ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.rs-footer .footer-contacts ul li p,
+.rs-footer .footer-contacts ul li a {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: #fff;
+    transition: color 0.35s ease;
+}
+
+.rs-footer .footer-contacts ul li p[href^="tel:"]::before,
+.rs-footer .footer-contacts ul li a[href^="tel:"]::before {
+    content: url("../../img/icons/phone_icon.png");
+}
+
+.rs-footer .footer-contacts ul li p[href^="mailto:"]::before,
+.rs-footer .footer-contacts ul li a[href^="mailto:"]::before {
+    content: url("../../img/icons/mail_icon.png");
+}
+
+.rs-footer .footer-contacts ul li p.shedule::before,
+.rs-footer .footer-contacts ul li a.shedule::before {
+    content: url("../../img/icons/clock_icon.svg");
+}
+
+.rs-footer .footer-contacts ul li p.location::before,
+.rs-footer .footer-contacts ul li a.location::before {
+    content: url("../../img/icons/home_icon.svg");
+}
+
+.rs-footer .footer-contacts ul li a:hover {
+    color: var(--primary-color);
+}
+
+.rs-footer .footer-copyright {
+    padding: 20px 0px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-footer .footer-copyright p {
+    font-weight: 600;
+}
+
+@media (max-width: 1600px) {
+    .footer-menu_grid .footer-menu__list {
+        column-gap: 45px;
+    }
+
+    .rs-footer__top {
+        gap: 90px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-footer__top {
+        grid-template-columns: 1fr;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        gap: 22px;
+    }
+
+    .rs-footer .footer-copyright {
+        -ms-flex-align: center;
+        align-items: center;
+        display: block;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer-menu_grid .footer-menu__list {
+        column-count: auto;
+    }
+}
+
+@media (any-hover: hover) {
+    .footer-menu__list li a:hover {
+        color: var(--primary-color);
+    }
+}

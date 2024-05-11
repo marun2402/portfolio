@@ -1,0 +1,149 @@
+.rs-about {
+    position: relative;
+    padding-top: 140px;
+}
+
+.rs-about__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 46%;
+    gap: 100px;
+    -ms-flex-align: start;
+    align-items: start;
+}
+
+.rs-about__content {
+    padding-top: 55px;
+}
+
+.rs-about__content h3 {
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 103%;
+    letter-spacing: -0.04em;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.rs-about__content p {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 183%;
+    color: #fff;
+}
+
+.rs-about__content .footnote {
+    margin-top: 50px;
+    padding: 10px 10px 10px 30px;
+    border-left: 2px solid #b29b69;
+    display: grid;
+    justify-items: start;
+    gap: 22px;
+}
+
+.rs-about__picture {
+    position: relative;
+    padding-right: 54px;
+    padding-bottom: 54px;
+}
+
+.rs-about__picture .pattern-background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 319px;
+    height: 260px;
+    background: url("../../img/about_pattern.png") center/cover no-repeat;
+}
+
+.rs-about__picture .holder {
+    padding-bottom: 96%;
+    position: relative;
+}
+
+.rs-about__picture .holder img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.rs-about__picture .about-label {
+    padding: 35px;
+    background: #b29b69;
+    border-radius: 8px;
+    width: 319px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    right: 0;
+}
+
+.rs-about__picture .about-label h4 {
+    font-weight: 900;
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 55px;
+}
+
+.rs-about__picture .about-label p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 136%;
+    color: #fff;
+}
+
+@media (max-width: 1470px) {
+    .rs-about__wrapper {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-about {
+        padding-top: 30px;
+    }
+
+    .rs-about__wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-about__content {
+        padding-top: 0;
+    }
+
+    .rs-about__content h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .rs-about__content p {
+        font-size: 13px;
+    }
+
+    .rs-about__picture {
+        padding-right: 26px;
+        padding-bottom: 26px;
+    }
+
+    .rs-about__picture .pattern-background {
+        width: 155px;
+        height: 130px;
+    }
+
+    .rs-about__picture .about-label {
+        padding: 15px;
+        width: 155px;
+    }
+
+    .rs-about__picture .about-label h4 {
+        font-size: 25px;
+        margin-bottom: 7px;
+    }
+
+    .rs-about__picture .about-label p {
+        font-size: 13px;
+    }
+}

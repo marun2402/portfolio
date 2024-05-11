@@ -1,0 +1,713 @@
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:300");
+
+@font-face {
+    font-family: "Evolventa";
+  src: url("../../fonts/Evolventa-Bold.woff2") format("woff2"), url("../../fonts/Evolventa-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Evolventa";
+  src: url("../../fonts/Evolventa-Regular.woff2") format("woff2"), url("../../fonts/Evolventa-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
+    color: inherit;
+    background-color: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+:root {
+    --font-family: "Evolventa", sans-serif;
+    --second-family: "Cormorant Garamond", sans-serif;
+    --main-bg-color: #fff;
+    --main-text-color: #222;
+    --primary-color: #a39382;
+    --error-color: #f00;
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+    min-width: 320px;
+}
+
+body {
+    height: 100%;
+    font-family: var(--font-family);
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-style: normal;
+}
+
+body.mobile-menu-opened,
+body.filters-opened {
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.site-wrapper,
+.site {
+    overflow: hidden;
+    min-height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.site-wrapper > .main,
+.site-wrapper .site-content,
+.site > .main,
+.site .site-content {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.site-wrapper > *,
+.site > * {
+    min-width: 0;
+}
+
+header {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer {
+    position: relative;
+}
+
+.main,
+.site-content {
+    position: relative;
+    padding-top: 80px;
+}
+
+[class*=__container] {
+    max-width: 1640px;
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.fancybox__container {
+    max-width: none !important;
+}
+
+@keyframes stroke {
+    0% {
+        fill: transparent;
+    }
+
+    15% {
+        fill: transparent;
+        stroke: #ed8c2b;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+    }
+
+    80% {
+        fill: transparent;
+        stroke: #ed8c2b;
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+    }
+
+    100% {
+        fill: #ed8c2b;
+        stroke: #ed8c2b;
+    }
+}
+
+header .rs-header .rs-header__wrapper {
+    transition: height 0.45s ease;
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.form {
+    margin-top: 38px;
+}
+
+.form form {
+    display: grid;
+    gap: 30px;
+}
+
+.form .form-group {
+    margin-bottom: 0;
+    position: relative;
+}
+
+.form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form .form-submit {
+    display: grid;
+    gap: 18px;
+    font-weight: 400;
+    font-size: 13px;
+    color: #9e9e9e;
+}
+
+.form input,
+.form textarea {
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid #c5c5c5;
+    border-radius: 0px;
+    padding: 0px;
+    height: 45px;
+    background: transparent;
+    font-weight: 400;
+    font-size: 16px;
+    color: #222;
+}
+
+.form input:-ms-input-placeholder, .form textarea:-ms-input-placeholder {
+    color: #222;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: #222;
+}
+
+.form input.error,
+.form textarea.error {
+    border-color: var(--error-color);
+}
+
+.form textarea {
+    height: 100%;
+    resize: none;
+    padding: 12px 0px;
+    min-height: 115px;
+}
+
+.form label.error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    color: var(--error-color);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.39px;
+}
+
+.slider-arrows {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    pointer-events: none;
+}
+
+.slider-arrows .slider-arrow {
+    pointer-events: auto;
+    width: 34px;
+    height: 34px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.slider-arrows .slider-arrow_prev {
+    transform: scaleX(-1);
+}
+
+.slider-arrows .slider-arrow:not(.swiper-button-disabled):hover img {
+    animation: pulse 0.65s linear infinite both;
+}
+
+.slider-arrows .slider-arrow.swiper-button-disabled {
+    opacity: 0.5;
+}
+
+.section-title {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    color: #222;
+}
+
+.section-title p {
+    font-family: var(--second-family);
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 127%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.section-title p span {
+    display: block;
+}
+
+.section-title p::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 55px;
+    background: transparent;
+    margin: 35px auto 55px auto;
+}
+
+.section-title h2 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
+}
+
+.section-title p span {
+    transform: translateY(60px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.45s ease, opacity 0.45s ease;
+}
+
+.section-title p span:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.section-title p span:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.section-title p span:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.section-title p span:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+.section-title p span:nth-child(5) {
+    transition-delay: 0.8s;
+}
+
+.section-title p::after {
+    transform: scale(0);
+    transform-origin: top;
+    transition: transform 0.45s ease 0.8s;
+}
+
+.section-title h2 {
+    transform: translateY(60px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.75s ease 1s, opacity 0.75s ease 1s;
+}
+
+.section-title.in-view p span {
+    transform: translateY(0px);
+    visibility: visible;
+    opacity: 1;
+}
+
+.section-title.in-view p::after {
+    transform: scale(1);
+}
+
+.section-title.in-view h2 {
+    transform: translateY(0px);
+    visibility: visible;
+    opacity: 1;
+}
+
+.breadcrumbs {
+    font-weight: 400;
+    font-size: 12px;
+    color: #424242;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs__container {
+    width: 100%;
+}
+
+.breadcrumbs a {
+    transition: color 0.3s ease 0s;
+    color: inherit;
+}
+
+.breadcrumbs .sep {
+    margin: 0px 8px;
+}
+
+.breadcrumbs .current {
+    cursor: default;
+}
+
+.slider-paging.swiper-pagination-progressbar {
+    height: 2px;
+    width: 100%;
+    background: #dddddd;
+    position: relative;
+}
+
+.slider-paging.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    transform-origin: left;
+    display: block;
+    height: 3px;
+    background: #6150e9;
+}
+
+.slider-paging.swiper-pagination-bullets.swiper-pagination-horizontal,
+.slider-paging.swiper-pagination-bullets.swiper-pagination-vertical {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.slider-paging.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet,
+.slider-paging.swiper-pagination-bullets.swiper-pagination-vertical .swiper-pagination-bullet {
+    margin: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 110%;
+    color: #fff;
+    transition: color 0.3s linear;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.slider-paging.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet > span,
+.slider-paging.swiper-pagination-bullets.swiper-pagination-vertical .swiper-pagination-bullet > span {
+    margin-left: 24px;
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    transition: width 0.3s linear;
+    position: relative;
+}
+
+.slider-paging.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet > span::before,
+.slider-paging.swiper-pagination-bullets.swiper-pagination-vertical .swiper-pagination-bullet > span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transition: width 5s linear;
+}
+
+.slider-paging.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet.swiper-pagination-bullet-active > span,
+.slider-paging.swiper-pagination-bullets.swiper-pagination-vertical .swiper-pagination-bullet.swiper-pagination-bullet-active > span {
+    width: 100px;
+    margin-right: 24px;
+}
+
+.slider-paging.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet.swiper-pagination-bullet-active > span::before,
+.slider-paging.swiper-pagination-bullets.swiper-pagination-vertical .swiper-pagination-bullet.swiper-pagination-bullet-active > span::before {
+    width: 100%;
+}
+
+.slider-paging.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet:focus,
+.slider-paging.swiper-pagination-bullets.swiper-pagination-vertical .swiper-pagination-bullet:focus {
+    outline: none;
+}
+
+.slider-paging.swiper-pagination-bullets.swiper-pagination-horizontal.swiper-pagination-clickable .swiper-pagination-bullet,
+.slider-paging.swiper-pagination-bullets.swiper-pagination-vertical.swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+}
+
+.slider-paging.swiper-pagination-fraction {
+    color: #303030;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 153%;
+}
+
+.btn-color {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    overflow: hidden;
+    min-height: 40px;
+    background: var(--primary-color);
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 0px 24px;
+    transition: background 0.35s ease;
+}
+
+.btn-color span {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+.btn-color_dark {
+    background: #222;
+}
+
+.btn-border {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    overflow: hidden;
+    min-height: 40px;
+    background: transparent;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 1px solid #c5c5c5;
+    padding: 0px 24px;
+    transition: background 0.35s ease;
+}
+
+.btn-border span {
+    font-weight: 400;
+    font-size: 16px;
+    color: #222;
+    transition: color 0.35s ease;
+}
+
+@media (min-width: 767.98px) {
+    .page-animate [data-animate] {
+        visibility: hidden;
+    }
+
+    .page-animate [data-animate].in-view {
+        visibility: visible;
+        animation-name: var(--animateName);
+        animation-duration: var(--animateDuration, 0.45s);
+        animation-delay: var(--animateDelay);
+        animation-fill-mode: both;
+        animation-timing-function: ease-out;
+    }
+
+    .page-animate [data-animate-stager] > * {
+        visibility: hidden;
+    }
+
+    .page-animate [data-animate-stager].in-view > * {
+        visibility: visible;
+        animation-name: var(--animateName);
+        animation-duration: var(--animateDuration, 0.45s);
+        animation-delay: var(--animateDelay);
+        animation-fill-mode: both;
+        animation-timing-function: ease-out;
+    }
+
+    .form .form-submit {
+        justify-items: start;
+    }
+}
+
+@media (min-width: 1200px) {
+    header.sticky .rs-header .rs-header__wrapper {
+        height: 60px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main,
+  .site-content {
+        padding-top: 53px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .section-title p::after {
+        margin: 14px auto 24px auto;
+    }
+
+    .section-title p {
+        font-size: 24px;
+    }
+
+    .section-title h2 {
+        font-size: 21px;
+    }
+
+    .slider-paging.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet > span,
+  .slider-paging.swiper-pagination-bullets.swiper-pagination-vertical .swiper-pagination-bullet > span {
+        margin-left: 10px;
+    }
+
+    .slider-paging.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet.swiper-pagination-bullet-active > span,
+  .slider-paging.swiper-pagination-bullets.swiper-pagination-vertical .swiper-pagination-bullet.swiper-pagination-bullet-active > span {
+        margin-right: 10px;
+        width: 42px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    [class*=__container] {
+        max-width: 375px;
+    }
+
+    .form {
+        margin-top: 24px;
+    }
+
+    .form form {
+        gap: 16px;
+    }
+
+    .form .form-row {
+        display: contents;
+    }
+
+    .form .form-submit {
+        font-size: 11px;
+    }
+
+    .form input,
+  .form textarea {
+        font-size: 13px;
+    }
+
+    .slider-paging.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet,
+  .slider-paging.swiper-pagination-bullets.swiper-pagination-vertical .swiper-pagination-bullet {
+        font-size: 13px;
+    }
+}
+
+@media (any-hover: none) {
+    [data-hidescroll]::-webkit-scrollbar {
+        width: 0;
+    }
+
+    [data-hidescroll] {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+
+@media (any-hover: hover) {
+    .btn-color:hover {
+        background: #222;
+    }
+
+    .btn-color_dark:hover {
+        background: var(--primary-color);
+    }
+
+    .btn-border:hover {
+        background: #222;
+    }
+
+    .btn-border:hover span {
+        color: #fff;
+    }
+}

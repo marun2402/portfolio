@@ -1,0 +1,192 @@
+.rs-material__slider {
+    background: #f9f9f9;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.rs-material .material-slider__slider {
+    margin-right: -15px;
+}
+
+.rs-material .material-slider__slide {
+    width: 736px;
+    height: 610px;
+}
+
+.rs-material .material-slider__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rs-material .material-slider .slider-nav {
+    margin-top: 30px;
+}
+
+.rs-material .material-content__wrapper {
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+}
+
+.rs-material .material-content__row {
+    display: grid;
+    grid-template-columns: 1fr 75%;
+}
+
+.rs-material .material-content__row:not(:last-child) {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.rs-material .material-content__head {
+    padding: 60px 90px 60px 60px;
+}
+
+.rs-material .material-content__body {
+    padding: 60px 90px 60px 0px;
+}
+
+.rs-material .material-content__body ul li {
+    margin-bottom: 12px;
+}
+
+.rs-material .material-content__body ul li span {
+    display: block;
+    padding-left: 13px;
+}
+
+.rs-material .material-content__body blockquote {
+    margin-top: 20px;
+}
+
+.rs-material .material-content .adv {
+    margin-top: 20px;
+}
+
+.rs-material .material-content .adv__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.rs-material .material-content .adv__item {
+    color: #000;
+    padding: 20px;
+    background: #f9f9f9;
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    gap: 20px;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-material .material-content .adv__item img {
+    width: 100%;
+}
+
+.rs-material .material-content .product {
+    margin: -60px -60px -60px 0px;
+}
+
+.rs-material .material-content .product__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.rs-material .material-content .product__item {
+    border-left: 1px solid #eaeaea;
+    padding: 60px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-material .material-content .product__item img {
+    margin-bottom: 90px;
+    max-width: 100%;
+}
+
+@media (min-width: 767.98px) {
+    .rs-material .material-content__body ul {
+        column-count: 2;
+        column-gap: 16px;
+    }
+}
+
+@media (min-width: 1790px) {
+    .rs-material .material-slider__slider {
+        margin-right: calc((100vw - 1760px) / -2);
+    }
+}
+
+@media (max-width: 1790px) {
+    .rs-material .material-content__head {
+        padding: 30px;
+    }
+
+    .rs-material .material-content__body {
+        padding: 30px 30px 30px 0px;
+    }
+
+    .rs-material .material-content .product {
+        margin: -30px -30px -30px 0px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .rs-material .material-content .adv__items {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .rs-material .material-slider .slider-nav {
+        display: none;
+    }
+
+    .rs-material .material-content__row {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-material .material-content__body {
+        padding: 30px;
+    }
+
+    .rs-material .material-content .product {
+        margin: -30px;
+    }
+
+    .rs-material .material-content .product__item img {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-material__slider {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .rs-material .material-slider__slide {
+        width: 315px;
+        height: 259px;
+    }
+
+    .rs-material .material-content .adv__items {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-material .material-content .product__items {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 405px) and (max-width: 767px) {
+    .rs-material .material-slider__slider {
+        margin-right: calc((100vw - 375px) / -2);
+    }
+}

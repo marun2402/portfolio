@@ -1,0 +1,123 @@
+.rs-benefit {
+    padding-top: 63px;
+    padding-bottom: 32px;
+}
+
+.rs-benefit__wrapper {
+    color: #fff;
+}
+
+.rs-benefit__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.rs-benefit__head {
+    margin-bottom: 40px;
+}
+
+.rs-benefit__head h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    color: #fff;
+}
+
+.rs-benefit .benefit-item {
+    position: relative;
+    min-height: 255px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-benefit .benefit-item .content h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.rs-benefit .benefit-item .content p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #fff;
+}
+
+.rs-benefit .benefit-item .icon {
+    width: 60px;
+    height: 60px;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.rs-benefit .benefit-item .icon img {
+    max-width: 100%;
+}
+
+@media (max-width: 991.98px) {
+    .rs-benefit .benefit-item {
+        border-radius: 8px;
+        padding: 20px;
+        min-height: 200px;
+    }
+
+    .rs-benefit .benefit-item .content h4 {
+        font-size: 18px;
+    }
+
+    .rs-benefit .benefit-item .content p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-benefit {
+        padding-top: 26px;
+        background-position: 26px;
+    }
+
+    .rs-benefit__items {
+        grid-template-columns: 305px;
+        grid-auto-flow: column;
+        grid-auto-columns: 305px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-right: -15px;
+        padding-right: 15px;
+        -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    }
+
+    .rs-benefit__items {
+        gap: 16px;
+    }
+
+    .rs-benefit__head {
+        margin-bottom: 16px;
+    }
+
+    .rs-benefit__head h2 {
+        font-size: 20px;
+    }
+
+    .rs-benefit__item {
+        scroll-snap-align: start;
+    }
+}
+
+@media (min-width: 405px) and (max-width: 767px) {
+    .rs-benefit__items {
+        margin-right: calc((100vw - 375px) / -2);
+    }
+}

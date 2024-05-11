@@ -1,0 +1,446 @@
+@charset "UTF-8";
+
+.rs-slider {
+    background: #1e1e1e;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.rs-slider__wrapper {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    min-height: 790px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    display: grid;
+    grid-template-columns: 1fr 26% 34.5%;
+}
+
+.rs-slider__slider {
+    padding-top: 72px;
+    padding-bottom: 58px;
+    margin: 0;
+    min-width: 0;
+    height: 100%;
+}
+
+.rs-slider__swiper {
+    height: 100%;
+}
+
+.rs-slider__slide {
+    height: 100%;
+}
+
+.rs-slider__calculator {
+    padding-top: 70px;
+    padding-right: 43px;
+}
+
+.rs-slider__media {
+    margin-left: -84px;
+    position: relative;
+    margin-right: 77px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.rs-slider__media .photo:nth-child(1) {
+    justify-self: end;
+    margin-right: 45px;
+    margin-top: 15px;
+}
+
+.rs-slider__media .photo:nth-child(2) {
+    justify-self: start;
+    margin-top: 38px;
+}
+
+.rs-slider__media .shop-link {
+    position: absolute;
+    right: 0;
+    top: 45%;
+    z-index: 2;
+}
+
+.rs-slider .calculator {
+    position: relative;
+}
+
+.rs-slider .calculator .point::after {
+    content: "•";
+    display: inline-block;
+    font-size: 30px;
+    line-height: inherit;
+    color: #a1f65e;
+    margin-left: 4px;
+    position: absolute;
+}
+
+.rs-slider .calculator::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    transform: skew(3deg);
+}
+
+.rs-slider .calculator::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #a1f65e;
+    transform: skew(4deg) rotate(10deg);
+}
+
+.rs-slider .calculator .wrapper {
+    display: grid;
+    padding: 0px 33px;
+}
+
+.rs-slider .calculator form {
+    padding: 48px 28px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.rs-slider .calculator form h4 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 135%;
+    color: #1d2229;
+    margin-bottom: 32px;
+}
+
+.rs-slider .calculator form input {
+    border: 1px solid #1d2229;
+    height: 54px;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 0px 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #1d2229;
+    text-align: center;
+}
+
+.rs-slider .calculator form input:-ms-input-placeholder {
+    opacity: 0.5;
+}
+
+.rs-slider .calculator form input::placeholder {
+    opacity: 0.5;
+}
+
+.rs-slider .calculator form p {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #1d2229;
+}
+
+.rs-slider .calculator form .formula {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    text-align: center;
+    color: #1d2229;
+    opacity: 0.5;
+}
+
+.rs-slider .calculator form .result {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 160%;
+    text-align: center;
+    color: #1d2229;
+}
+
+.rs-slider .calculator input[type=number]::-webkit-outer-spin-button,
+.rs-slider .calculator input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.rs-slider .calculator input[type=number],
+.rs-slider .calculator input[type=number]:hover,
+.rs-slider .calculator input[type=number]:focus {
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.rs-slider .slide {
+    height: 100%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.rs-slider .slide p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: #fff;
+    opacity: 0.5;
+    margin-top: 16px;
+    margin-bottom: 40px;
+}
+
+.rs-slider .slide__btns {
+    margin-bottom: 15px;
+}
+
+.rs-slider .slide .review-link {
+    margin-top: auto;
+}
+
+.rs-slider .slide .review-link span {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.rs-slider .shop-link {
+    width: 120px;
+    height: 120px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.rs-slider .shop-link img.disc {
+    position: absolute;
+    animation: rotate 15s normal linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    25% {
+        transform: rotate3d(0, 0, 1, 90deg);
+    }
+
+    50% {
+        transform: rotate3d(0, 0, 1, 180deg);
+    }
+
+    75% {
+        transform: rotate3d(0, 0, 1, 270deg);
+    }
+
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+.rs-slider .photo {
+    --width: 188px;
+    --height: 244px;
+    --r: -7deg;
+    width: var(--width);
+    height: var(--height);
+    position: relative;
+    transform: skew(2deg) rotate(var(--r));
+}
+
+.rs-slider .photo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #a1f65e;
+    transform: skew(3deg) rotate(-7deg);
+}
+
+.rs-slider .photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.rs-slider .photo:first-child {
+    --width: 155px;
+    --height: 205px;
+    --r: -12deg;
+}
+
+.rs-slider .marquee {
+    transform: rotate(-2deg);
+    background: #a1f65e;
+    height: 59px;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-slider .marquee__scroller {
+    display: -ms-flexbox;
+    display: flex;
+    animation: scroll 30s forwards linear infinite;
+}
+
+.rs-slider .marquee__item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-slider .marquee__item p {
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 140%;
+    padding: 0px 23px;
+    filter: url(#outerText);
+}
+
+.rs-slider .marquee__item::after {
+    content: url("../../img/icons/star_icon.png");
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(-20%);
+    }
+}
+
+@media (max-width: 1384px) {
+    .rs-slider__calculator {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-slider__media {
+        margin-left: -44px;
+        margin-right: 10px;
+    }
+
+    .rs-slider__media .photo:nth-child(2) {
+        margin-top: 68px;
+    }
+
+    .rs-slider__media .shop-link {
+        top: 30%;
+    }
+
+    .rs-slider .photo {
+        --width: 168px;
+        --height: 214px;
+    }
+
+    .rs-slider .photo:first-child {
+        --width: 132px;
+        --height: 169px;
+        --r: 7deg;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-slider__wrapper {
+        grid-template-columns: 1fr;
+        padding-top: 10px;
+        padding-bottom: 100px;
+    }
+
+    .rs-slider__slider {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .rs-slider__media {
+        margin: 0;
+    }
+
+    .rs-slider__media {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .rs-slider__media .photo:nth-child(1) {
+        -ms-flex-order: 2;
+        order: 2;
+        margin-left: -30px;
+    }
+
+    .rs-slider__media .shop-link {
+        top: auto;
+        bottom: 0;
+    }
+
+    .rs-slider .calculator form {
+        padding: 33px 18px;
+    }
+
+    .rs-slider .calculator form h4 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .rs-slider .calculator form input {
+        height: 41px;
+    }
+
+    .rs-slider .calculator form p {
+        font-size: 14px;
+    }
+
+    .rs-slider .calculator form .result {
+        font-size: 28px;
+    }
+
+    .rs-slider .calculator form .btn-color {
+        min-height: 41px;
+    }
+
+    .rs-slider .slide p {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .rs-slider .marquee {
+        height: 49px;
+    }
+
+    .rs-slider .marquee__item p {
+        font-size: 32px;
+    }
+}
+
+@media (any-hover: hover) {
+    .rs-slider .slide .review-link:hover img {
+        animation: pulse 0.65s linear infinite both;
+    }
+
+    .rs-slider .shop-link:hover img.arrow {
+        animation: pulse 0.65s linear infinite both;
+    }
+}

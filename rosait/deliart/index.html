@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Доставка угощений</title>
+
+	<script src="js/jquery-2.1.3.min.js" defer></script>
+	<script src="js/lenis.min.js" defer></script>
+
+	<script src="js/waypoints.min.js" defer></script>
+	<script src="js/jquery.counterup.min.js" defer></script>
+
+	<script src="js/swiper-bundle.min.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
+
+	<script src="js/validate/jquery.validate.min.js" defer></script>
+
+	<script src="js/gsap/gsap.min.js" defer></script>
+	<script src="js/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="js/gsap/CustomEase.min.js" defer></script>	
+	<script src="js/gsap/ScrollToPlugin.min.js" defer></script>	
+	
+		
+	<link rel="stylesheet" type="text/css" href="css/block-css/style.css" />
+	<script src="js/app.js" defer></script>
+
+</head>
+
+
+
+  <body class="page-type-default">
+    <div class="site-wrapper">
+      
+      <header>        
+        <div class="mobile-panel">
+  <div class="mobile-panel__container">
+		<div class="mobile-panel__wrapper">
+			<ul>
+				<li>
+					<a href="#">
+						<img src="img/icons/search.png" alt="">
+						<h6>Поиск</h6>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/icons/promo.svg" alt="">
+						<h6>Акции</h6>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/icons/cart.svg" alt="">
+						<h6>Корзина</h6>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/icons/delivery.svg" alt="">
+						<h6>Доставка</h6>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/icons/lk.svg" alt="">
+						<h6>Войти</h6>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>  
+         
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-header.css" />
+<div class="rs-header">
+	<div class="rs-header__container">
+		<div class="rs-header__wrapper">
+			
+			<div class="rs-header__logo"><a href="#"><img src="img/logo.png" alt="" /></a></div>		
+			
+			
+			<nav class="menu">
+				<ul class="menu__list menu__list_points">
+					<li><a href="#">Канапе</a></li>
+					<li><a href="#">Закуски</a></li>
+					<li><a href="#">Сэндвичи</a></li>
+					<li><a href="#">Наборы</a></li>
+				</ul>
+				<ul class="menu__list menu__list_full">
+					<li><button data-modal="#catalogFull">все меню</button></li>
+					<li><button data-modal="#catalogKit">готовые решения</button></li>
+				</ul>
+			</nav>			
+
+			<div class="rs-header__actions">
+				<a href="#" class="action action_promo"></a>
+				<a href="#" class="action action_delivery"></a>
+				<a href="#" class="action action_search"></a>
+				<a href="#" class="action action_lk"></a>
+				<a href="#" class="action action_cart"></a>
+			</div>
+			<button class="action action_burger" data-modal="#charterMenu"></button>			
+					
+		</div>
+	</div>
+</div>
+
+      </header>
+
+      <main class="main">        
+        
+
+  <!-- rs-slider -->
+  
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-slider.css" />
+<div class="rs-slider">	
+	<div class="rs-slider__wrapper">
+		<div class="rs-slider__slider">
+
+			<div class="hero-slider">
+				<div class="hero-slider__slider">
+					<div class="hero-slider__swiper">
+						
+						<div class="hero-slider__slide">
+<div class="slide">
+	<div class="slide__content">
+		<span>Cкидка 15% на заказы от 50 человек</span>
+		<h2>Особенный праздничный сет</h2>
+		<p>Уникальное предложение для корпоративных мероприятий</p>
+	</div>
+	<div class="slide__picture">
+		<picture>
+			<source media="(max-width: 767.98px)" srcset="img/slider_1_mob.jpg">
+			<img src="img/slider_1.jpg" alt="">
+		</picture>
+	</div>
+</div>
+</div>
+						
+					</div>
+				</div>
+				<div class="hero-slider__nav">
+					<div class="slider-paging"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>  
+  
+  <!-- rs-goods -->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-goods.css" />
+<section class="rs-goods">
+	<div class="rs-goods__container">		
+		<div class="rs-goods__wrapper">
+
+
+      <div class="rs-goods__head"  data-animate="fadeInUp">
+        <h3>Популярное</h3>
+      </div>
+
+
+      <div class="rs-goods__content" data-animate="fadeInUp::300">
+        <div class="goods-slider">
+          <div class="goods-slider__slider">
+            <div class="goods-slider__swiper" >
+              
+              <div class="goods-slider__slide">
+<div class="goods-item">
+  <div class="photo"><img src="img/1.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>Хиты</span></div>
+    <h6>Канапе с куриной грудкой и персиком</h6>
+    <button type="button">75 ₽</button>
+  </div> 
+  <a href="#">Канапе с куриной грудкой и персиком</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item">
+  <div class="photo"><img src="img/2.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>Хиты</span></div>
+    <h6>Сырный крокет с оливками, 20 г</h6>
+    <button type="button">75 ₽</button>
+  </div> 
+  <a href="#">Сырный крокет с оливками, 20 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item">
+  <div class="photo"><img src="img/3.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>Хиты</span></div>
+    <h6>Татаки из тунца на поленте, 25 г</h6>
+    <button type="button">75 ₽</button>
+  </div> 
+  <a href="#">Татаки из тунца на поленте, 25 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item">
+  <div class="photo"><img src="img/4.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>Хиты</span></div>
+    <h6>Клаб-сэндвич с бужениной, 130 г</h6>
+    <button type="button">75 ₽</button>
+  </div> 
+  <a href="#">Клаб-сэндвич с бужениной, 130 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item">
+  <div class="photo"><img src="img/5.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>Хиты</span></div>
+    <h6>Ролл овощной с&nbsp;сыром,&nbsp;200 г</h6>
+    <button type="button">75 ₽</button>
+  </div> 
+  <a href="#">Ролл овощной с&amp;nbsp;сыром,&amp;nbsp;200 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item">
+  <div class="photo"><img src="img/1.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>Хиты</span></div>
+    <h6>Канапе с куриной грудкой и персиком</h6>
+    <button type="button">75 ₽</button>
+  </div> 
+  <a href="#">Канапе с куриной грудкой и персиком</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item">
+  <div class="photo"><img src="img/2.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>Хиты</span></div>
+    <h6>Сырный крокет с оливками, 20 г</h6>
+    <button type="button">75 ₽</button>
+  </div> 
+  <a href="#">Сырный крокет с оливками, 20 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item">
+  <div class="photo"><img src="img/3.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>Хиты</span></div>
+    <h6>Татаки из тунца на поленте, 25 г</h6>
+    <button type="button">75 ₽</button>
+  </div> 
+  <a href="#">Татаки из тунца на поленте, 25 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item">
+  <div class="photo"><img src="img/4.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>Хиты</span></div>
+    <h6>Клаб-сэндвич с бужениной, 130 г</h6>
+    <button type="button">75 ₽</button>
+  </div> 
+  <a href="#">Клаб-сэндвич с бужениной, 130 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item">
+  <div class="photo"><img src="img/5.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>Хиты</span></div>
+    <h6>Ролл овощной с сыром, 200 г</h6>
+    <button type="button">75 ₽</button>
+  </div> 
+  <a href="#">Ролл овощной с сыром, 200 г</a>	
+</div>
+</div>
+                                
+            </div>
+          </div>
+          <div class="slider-nav">
+            <div class="slider-arrows">
+	<button type="button" class="slider-arrow slider-arrow_prev">
+		<span class="bg">
+			<svg width="46" height="176" viewBox="0 0 46 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M45.0914 85.2487L45.0914 88L0.318968 88L0.420162 9.72727C0.408123 20.1245 4.63671 30.0771 12.1293 37.286L33.3823 57.7342C40.8637 64.9324 45.0914 74.8668 45.0914 85.2487Z" fill="#E87A83" />
+				<path d="M45.0914 90.7513L45.0914 88L0.318968 88L0.420162 166.273C0.408123 155.875 4.63671 145.923 12.1293 138.714L33.3823 118.266C40.8637 111.068 45.0914 101.133 45.0914 90.7513Z" fill="#E87A83" />
+			</svg>
+		</span>
+		<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M10.8787 1L2.21368 9.5L10.8787 18" stroke="white" stroke-width="2"/>
+		</svg>
+	</button>
+	<button type="button" class="slider-arrow slider-arrow_next">
+		<span class="bg">
+			<svg width="46" height="176" viewBox="0 0 46 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0.563601 85.3258L0.563601 88L45.5612 88L45.5625 9.78591C45.5626 9.74866 45.5626 9.71141 45.5626 9.67415L45.5626 3.70876e-08L45.5625 9.78591C45.5321 20.1727 41.2711 30.1009 33.7593 37.279L12.3669 57.721C4.82815 64.9249 0.5636 74.8985 0.563601 85.3258Z" fill="#E87A83" />
+				<path d="M0.563417 90.6742L0.563417 88L45.5629 88L45.5629 176L45.5627 166.325C45.5625 155.898 41.298 145.925 33.7594 138.721L12.3667 118.279C4.82797 111.075 0.563417 101.101 0.563417 90.6742Z" fill="#E87A83" />
+			</svg>
+		</span>
+		<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0.918521 1L9.672 9.5L0.918521 18" stroke="white" stroke-width="2"/>
+		</svg>			
+	</button>
+</div>
+
+          </div>
+        </div>
+      </div>
+				
+		</div>
+	</div>
+</section>  
+
+  <!-- rs-goods -->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="rs-goods">
+	<div class="rs-goods__container">		
+		<div class="rs-goods__wrapper">
+
+
+      <div class="rs-goods__head"  data-animate="fadeInUp">
+        <h3>Наши новинки</h3>
+      </div>
+
+
+      <div class="rs-goods__content" data-animate="fadeInUp::300">
+        <div class="goods-slider">
+          <div class="goods-slider__slider">
+            <div class="goods-slider__swiper" >
+              
+              <div class="goods-slider__slide">
+<div class="goods-item goods-item_new">
+  <div class="photo"><img src="img/10.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>новинки</span></div>
+    <h6>Брускетта с лососем на белом багете, 25г</h6>
+    <button type="button">130 ₽</button>
+  </div> 
+  <a href="#">Брускетта с лососем на белом багете, 25г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item goods-item_new">
+  <div class="photo"><img src="img/9.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>новинки</span></div>
+    <h6>Круассан с пармской ветчиной, 50 г</h6>
+    <button type="button">130 ₽</button>
+  </div> 
+  <a href="#">Круассан с пармской ветчиной, 50 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item goods-item_new">
+  <div class="photo"><img src="img/8.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>новинки</span></div>
+    <h6>Профитроль с сырным кремом «Итальяно», 25 г</h6>
+    <button type="button">130 ₽</button>
+  </div> 
+  <a href="#">Профитроль с сырным кремом «Итальяно», 25 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item goods-item_new">
+  <div class="photo"><img src="img/7.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>новинки</span></div>
+    <h6>Тигровая креветка с манго, 20 г</h6>
+    <button type="button">130 ₽</button>
+  </div> 
+  <a href="#">Тигровая креветка с манго, 20 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item goods-item_new">
+  <div class="photo"><img src="img/6.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>новинки</span></div>
+    <h6>Профитроль с мягким сыром и персиком, 25 г</h6>
+    <button type="button">130 ₽</button>
+  </div> 
+  <a href="#">Профитроль с мягким сыром и персиком, 25 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item goods-item_new">
+  <div class="photo"><img src="img/10.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>новинки</span></div>
+    <h6>Брускетта с лососем на белом багете, 25г</h6>
+    <button type="button">130 ₽</button>
+  </div> 
+  <a href="#">Брускетта с лососем на белом багете, 25г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item goods-item_new">
+  <div class="photo"><img src="img/9.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>новинки</span></div>
+    <h6>Круассан с пармской ветчиной, 50 г</h6>
+    <button type="button">130 ₽</button>
+  </div> 
+  <a href="#">Круассан с пармской ветчиной, 50 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item goods-item_new">
+  <div class="photo"><img src="img/8.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>новинки</span></div>
+    <h6>Профитроль с сырным кремом «Итальяно», 25 г</h6>
+    <button type="button">130 ₽</button>
+  </div> 
+  <a href="#">Профитроль с сырным кремом «Итальяно», 25 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item goods-item_new">
+  <div class="photo"><img src="img/7.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>новинки</span></div>
+    <h6>Тигровая креветка с манго, 20 г</h6>
+    <button type="button">130 ₽</button>
+  </div> 
+  <a href="#">Тигровая креветка с манго, 20 г</a>	
+</div>
+</div>
+              
+              <div class="goods-slider__slide">
+<div class="goods-item goods-item_new">
+  <div class="photo"><img src="img/6.jpg" alt=""></div>
+  <div class="content">
+    <div class="label"><span>новинки</span></div>
+    <h6>Профитроль с мягким сыром и персиком, 25 г</h6>
+    <button type="button">130 ₽</button>
+  </div> 
+  <a href="#">Профитроль с мягким сыром и персиком, 25 г</a>	
+</div>
+</div>
+                                
+            </div>
+          </div>
+          <div class="slider-nav">
+            <div class="slider-arrows">
+	<button type="button" class="slider-arrow slider-arrow_prev">
+		<span class="bg">
+			<svg width="46" height="176" viewBox="0 0 46 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M45.0914 85.2487L45.0914 88L0.318968 88L0.420162 9.72727C0.408123 20.1245 4.63671 30.0771 12.1293 37.286L33.3823 57.7342C40.8637 64.9324 45.0914 74.8668 45.0914 85.2487Z" fill="#E87A83" />
+				<path d="M45.0914 90.7513L45.0914 88L0.318968 88L0.420162 166.273C0.408123 155.875 4.63671 145.923 12.1293 138.714L33.3823 118.266C40.8637 111.068 45.0914 101.133 45.0914 90.7513Z" fill="#E87A83" />
+			</svg>
+		</span>
+		<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M10.8787 1L2.21368 9.5L10.8787 18" stroke="white" stroke-width="2"/>
+		</svg>
+	</button>
+	<button type="button" class="slider-arrow slider-arrow_next">
+		<span class="bg">
+			<svg width="46" height="176" viewBox="0 0 46 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0.563601 85.3258L0.563601 88L45.5612 88L45.5625 9.78591C45.5626 9.74866 45.5626 9.71141 45.5626 9.67415L45.5626 3.70876e-08L45.5625 9.78591C45.5321 20.1727 41.2711 30.1009 33.7593 37.279L12.3669 57.721C4.82815 64.9249 0.5636 74.8985 0.563601 85.3258Z" fill="#E87A83" />
+				<path d="M0.563417 90.6742L0.563417 88L45.5629 88L45.5629 176L45.5627 166.325C45.5625 155.898 41.298 145.925 33.7594 138.721L12.3667 118.279C4.82797 111.075 0.563417 101.101 0.563417 90.6742Z" fill="#E87A83" />
+			</svg>
+		</span>
+		<svg width="12" height="19" viewBox="0 0 12 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0.918521 1L9.672 9.5L0.918521 18" stroke="white" stroke-width="2"/>
+		</svg>			
+	</button>
+</div>
+
+          </div>
+        </div>
+      </div>
+				
+		</div>
+	</div>
+</section> 
+  
+  <!-- rs-catalog -->
+  
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-catalog.css" />
+<section class="rs-catalog">	
+	<div class="rs-catalog__container">	
+		<div class="rs-catalog__wrapper">
+
+			<div class="rs-catalog__head"  data-animate="fadeInUp">
+        <h3>Все меню Deli Art</h3>
+      </div>
+
+			<div class="rs-catalog__items" data-animate-stager="fadeInUp:0::300" data-hidescroll>				
+				<div class="rs-catalog__item big">
+<article class="catalog-card"  style="--hhv: #f8a937"  >	
+	<div class="content">
+		<img src="img/kt_1.jpg" alt="">
+		<h5>Канапе</h5>
+	</div>
+	<a href="#">Канапе</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  style="--hhv: #94b732"  >	
+	<div class="content">
+		<img src="img/kt_2.jpg" alt="">
+		<h5>Холодные закуски</h5>
+	</div>
+	<a href="#">Холодные закуски</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  style="--hhv: #e87a83"  >	
+	<div class="content">
+		<img src="img/kt_3.jpg" alt="">
+		<h5>Сэндвичи</h5>
+	</div>
+	<a href="#">Сэндвичи</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_4.jpg" alt="">
+		<h5>Салаты</h5>
+	</div>
+	<a href="#">Салаты</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  style="--hhv: #e87a83"  >	
+	<div class="content">
+		<img src="img/kt_5.jpg" alt="">
+		<h5>Канапе в шотах</h5>
+	</div>
+	<a href="#">Канапе в шотах</a>
+</article>
+</div>	
+				<div class="rs-catalog__item big">
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_6.jpg" alt="">
+		<h5>Напитки</h5>
+	</div>
+	<a href="#">Напитки</a>
+</article>
+</div>	
+				<div class="rs-catalog__item big">
+<article class="catalog-card"  style="--hhv: #f8a937"  >	
+	<div class="content">
+		<img src="img/kt_7.jpg" alt="">
+		<h5>Плато (нарезки)</h5>
+	</div>
+	<a href="#">Плато (нарезки)</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  style="--hhv: #f8a937"  >	
+	<div class="content">
+		<img src="img/kt_8.jpg" alt="">
+		<h5>Десерты в стаканчиках</h5>
+	</div>
+	<a href="#">Десерты в стаканчиках</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_9.jpg" alt="">
+		<h5>Горячие закуски</h5>
+	</div>
+	<a href="#">Горячие закуски</a>
+</article>
+</div>	
+			</div>
+
+			<div class="rs-catalog__items expand-content" style="display: none;" data-hidescroll>		
+				<div class="rs-catalog__item">
+<article class="catalog-card"  style="--hhv: #94b732"  >	
+	<div class="content">
+		<img src="img/kt_13.jpg" alt="">
+		<h5>Пицца</h5>
+	</div>
+	<a href="#">Пицца</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  style="--hhv: #e87a83"  >	
+	<div class="content">
+		<img src="img/kt_14.jpg" alt="">
+		<h5>Ассорти</h5>
+	</div>
+	<a href="#">Ассорти</a>
+</article>
+</div>	
+				<div class="rs-catalog__item big">
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_15.jpg" alt="">
+		<h5>Торты</h5>
+	</div>
+	<a href="#">Торты</a>
+</article>
+</div>	
+				<div class="rs-catalog__item big">
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_16.jpg" alt="">
+		<h5>Десерты</h5>
+	</div>
+	<a href="#">Десерты</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  style="--hhv: #e87a83"  >	
+	<div class="content">
+		<img src="img/kt_17.jpg" alt="">
+		<h5>Пирожки и слойки</h5>
+	</div>
+	<a href="#">Пирожки и слойки</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  style="--hhv: #f8a937"  >	
+	<div class="content">
+		<img src="img/kt_18.jpg" alt="">
+		<h5>Блины</h5>
+	</div>
+	<a href="#">Блины</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  style="--hhv: #94b732"  >	
+	<div class="content">
+		<img src="img/kt_19.jpg" alt="">
+		<h5>Акции</h5>
+	</div>
+	<a href="#">Акции</a>
+</article>
+</div>	
+			</div>
+
+			
+<button type="button"  class="btn-expand " data-expand-button data-text="Свернуть" data-animate="fadeInUp">
+	<span>Смотреть всё</span>
+	<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M1 7.5H13M7 1.5V13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+	</svg>
+</button>
+
+		</div>
+	</div>
+</section> 
+
+  <!-- rs-catalog -->
+  
+
+
+
+
+
+
+
+
+
+
+<section class="rs-catalog">	
+	<div class="rs-catalog__container">	
+		<div class="rs-catalog__wrapper">
+
+			<div class="rs-catalog__head"  data-animate="fadeInUp">
+        <h3>Готовые решения</h3>
+      </div>
+
+			<div class="rs-catalog__items" data-animate-stager="fadeInUp:0::300" data-hidescroll>				
+				<div class="rs-catalog__item">
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Детские Дни рождения</h5>
+	</div>
+	<a href="#">Детские Дни рождения</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Детские Дни рождения</h5>
+	</div>
+	<a href="#">Детские Дни рождения</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Детские Дни рождения</h5>
+	</div>
+	<a href="#">Детские Дни рождения</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Детские Дни рождения</h5>
+	</div>
+	<a href="#">Детские Дни рождения</a>
+</article>
+</div>	
+			</div>
+
+			<div class="rs-catalog__items expand-content" style="display: none;" data-hidescroll>		
+				<div class="rs-catalog__item">
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Детские Дни рождения</h5>
+	</div>
+	<a href="#">Детские Дни рождения</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Детские Дни рождения</h5>
+	</div>
+	<a href="#">Детские Дни рождения</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Детские Дни рождения</h5>
+	</div>
+	<a href="#">Детские Дни рождения</a>
+</article>
+</div>	
+				<div class="rs-catalog__item">
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Детские Дни рождения</h5>
+	</div>
+	<a href="#">Детские Дни рождения</a>
+</article>
+</div>	
+			</div>
+
+			
+<button type="button"  class="btn-expand " data-expand-button data-text="Свернуть" data-animate="fadeInUp">
+	<span>Смотреть всё</span>
+	<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M1 7.5H13M7 1.5V13.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+	</svg>
+</button>
+
+		</div>
+	</div>
+</section> 
+
+  <!-- rs-about -->
+   
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-about.css" />
+<section class="rs-about">
+	<div class="rs-about__container">    
+		<div class="rs-about__wrapper">
+
+      <div class="rs-about__content" data-animate-stager="fadeInUp:250">
+        <h4>Deli Art – одна из первых кейтеринговых компаний, появившихся в Санкт-Петербурге</h4>
+        <p>Компания берет начало своей деятельности в 2001 году. За это время она проделала путь от небольшого частного предприятия до крупного пищевого производства, на котором трудится несколько десятков сотрудников.</p>
+        <p>Благодаря большому объёму заказов нам удаётся сохранять оптимальные цены при высоком качестве продуктов. Начиная с 2010 года, мы провели более 8000 мероприятий и сделали более 13000 доставок мобильных фуршетов.</p>
+        <p><strong>От обычных производств нас отличает то, что каждый заказ мы готовим отдельно. Индивидуальный подход помогает соответствовать ожиданиям клиентов на все 100%.</strong></p>
+      </div>
+
+      <div class="rs-about__adv">
+        <div class="about-adv" data-animate-stager="zoomIn:250::600">
+          <div class="about-adv__item">
+            <img src="img/about_1.png" alt="">
+            <h6>Вкус</h6>
+            <p>Вкус события, который запомнится. Предлагаем качественные блюда, которые лучше всего подходят к формату вашего события.</p>
+          </div>
+          <div class="about-adv__item">
+            <img src="img/about_2.png" alt="">
+            <h6>Надёжность</h6>
+            <p>Наша ответственность — ваша уверенность. Мы — те, кому можно доверять.</p>
+          </div>
+          <div class="about-adv__item">
+            <img src="img/about_3.png" alt="">
+            <h6>Яркость момента</h6>
+            <p>Мы помогаем сделать важные события яркими. Нам важно сохранить эстетику деталей: от рецептуры блюд и исполнения до современной упаковки.</p>
+          </div>
+        </div>
+      </div>
+
+		</div>		
+	</div>	
+</section>
+ 
+
+
+      </main>
+
+      <footer>       
+        
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-footer.css" />
+<section class="rs-footer">	
+	
+	<div class="rs-footer__container">
+		<div class="rs-footer__wrapper" data-animate-stager="fadeInUp:300">
+
+			<div class="rs-footer__content">
+
+				<div class="footer-over">
+					<div class="footer-logo"><img src="img/logo.png" alt=""></div>				
+					<div class="footer-over__contacts">
+						<a href="tel:+78125020705"><span>+7 812 502-07-05</span> Доставка заказов круглосуточно</a>
+					</div>
+				</div>
+				
+				<div class="footer-top">
+					<div class="footer-top__contacts">						
+						<ul>
+							<li>
+								<h6>Почта</h6>
+								<a href="mailto:zakaz@anc-group.ru">zakaz@anc-group.ru</a>
+							</li>
+							<li>
+								<h6>Адрес</h6>
+								<p>Санкт-Петербург, ул. Газовая,&nbsp;д. 10</p>
+							</li>
+							<li>
+								<a href="#"><img src="img/icons/vk.png" alt=""></a>
+								<a href="#"><img src="img/icons/rutube.png" alt=""></a>
+							</li>
+						</ul>
+					</div>				
+					<div class="footer-top__menu">						
+						
+<nav class="footer-menu footer-menu_grid"> 
+  <ul class="footer-menu__list">
+    
+    <li><a href="#"><span>Меню</span></a></li>
+    
+    <li><a href="#"><span>О нас</span></a></li>
+    
+    <li><a href="#"><span>Услуги</span></a></li>
+    
+    <li><a href="#"><span>Акции</span></a></li>
+    
+    <li><a href="#"><span>Блог</span></a></li>
+    
+    <li><a href="#"><span>Условия доставки</span></a></li>
+    
+    <li><a href="#"><span>Отзывы</span></a></li>
+    
+    <li><a href="#"><span>Портфолио</span></a></li>
+    
+    <li><a href="#"><span>FAQ</span></a></li>
+    
+    <li><a href="#"><span>Контакты</span></a></li>
+       
+  </ul>
+</nav>
+
+					</div>			
+				</div>
+	
+				<div class="footer-copyright">
+					<p>© Deli Art 2023. Все права защищены.</p>
+					<a href="#">Разработано в Россайт</a>
+				</div>
+
+			</div>
+			
+			<div class="rs-footer__callback">
+				<h3>У вас остались вопросы?</h3>
+				<h6>Чтобы заказать кейтеринговые услуги или задать вопрос по стоимости, оставьте свою заявку здесь, и наши специалисты ответят на них</h6>
+				<button class="btn-color" data-modal="#callbackModal"><span>Оставить заявку</span></button>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+
+      </footer>
+      
+    </div>
+
+    <div class="modal" tabindex="-1" id="callbackModal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-wrapper">
+    <div class="modal-dialog modal-dialog_cb">
+      <button type="button" class="close">
+        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.7342 1.7749C12.65 1.69052 12.55 1.62358 12.4399 1.5779C12.3298 1.53223 12.2117 1.50872 12.0925 1.50872C11.9733 1.50872 11.8553 1.53223 11.7452 1.5779C11.6351 1.62358 11.535 1.69052 11.4508 1.7749L7 6.21663L2.54916 1.76579C2.4649 1.68153 2.36486 1.61468 2.25476 1.56908C2.14466 1.52347 2.02665 1.5 1.90748 1.5C1.78831 1.5 1.6703 1.52347 1.5602 1.56908C1.4501 1.61468 1.35006 1.68153 1.26579 1.76579C1.18153 1.85006 1.11468 1.9501 1.06908 2.0602C1.02347 2.1703 1 2.28831 1 2.40748C1 2.52665 1.02347 2.64466 1.06908 2.75476C1.11468 2.86486 1.18153 2.9649 1.26579 3.04916L5.71663 7.5L1.26579 11.9508C1.18153 12.0351 1.11468 12.1351 1.06908 12.2452C1.02347 12.3553 1 12.4733 1 12.5925C1 12.7117 1.02347 12.8297 1.06908 12.9398C1.11468 13.0499 1.18153 13.1499 1.26579 13.2342C1.35006 13.3185 1.4501 13.3853 1.5602 13.4309C1.6703 13.4765 1.78831 13.5 1.90748 13.5C2.02665 13.5 2.14466 13.4765 2.25476 13.4309C2.36486 13.3853 2.4649 13.3185 2.54916 13.2342L7 8.78337L11.4508 13.2342C11.5351 13.3185 11.6351 13.3853 11.7452 13.4309C11.8553 13.4765 11.9733 13.5 12.0925 13.5C12.2117 13.5 12.3297 13.4765 12.4398 13.4309C12.5499 13.3853 12.6499 13.3185 12.7342 13.2342C12.8185 13.1499 12.8853 13.0499 12.9309 12.9398C12.9765 12.8297 13 12.7117 13 12.5925C13 12.4733 12.9765 12.3553 12.9309 12.2452C12.8853 12.1351 12.8185 12.0351 12.7342 11.9508L8.28337 7.5L12.7342 3.04916C13.0801 2.70329 13.0801 2.12077 12.7342 1.7749Z" fill="white" />
+        </svg>
+      </button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Свяжитесь с нами</h4>
+          <p>Оставьте заявку, наш менеджер свяжется с вами в ближайшее время</p>
+        </div>
+        <div class="modal-body">
+          <div class="modal-form">            
+            <form action="#" id="callbackModalForm">
+  
+              <div class="form-group">
+                <input type="text" id="callbackModalName" name="callbackModalName" placeholder="" required />
+                <span class="placeholder">ФИО</span>
+                <button class="reset-field"></button>
+                <span class="valid-icon"></span>
+              </div>
+  
+              <div class="form-group">
+                <input type="tel" id="callbackModalPhone" name="callbackModalPhone" placeholder="" maxlength="18" required data-tel-input />
+                <span class="placeholder">Телефон</span>
+                <button class="reset-field"></button>
+                <span class="valid-icon"></span>
+              </div>           
+  
+              <div class="form-group">
+                <textarea id="callbackModalMessage" name="callbackModalMessage" placeholder="" required></textarea>
+                <span class="placeholder">Введите ваше сообщение</span>
+                <button class="reset-field"></button>
+                <span class="valid-icon"></span>
+              </div>
+  
+              <div class="form-submit">
+                <p>Нажимая на кнопку «Отправить сообщение», вы соглашаетесь на обработку персональных данных в соответствии с пользовательским соглашением</p>
+                <button type="submit" class="btn-color btn-color_dark"><span>Отправить сообщение</span></button>
+              </div>
+  
+            </form>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal" tabindex="-1" id="charterMenu">
+  <div class="modal-backdrop"></div>
+  <div class="modal-wrapper">
+    <div class="modal-dialog">
+      <button type="button" class="close">
+        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.7342 1.7749C12.65 1.69052 12.55 1.62358 12.4399 1.5779C12.3298 1.53223 12.2117 1.50872 12.0925 1.50872C11.9733 1.50872 11.8553 1.53223 11.7452 1.5779C11.6351 1.62358 11.535 1.69052 11.4508 1.7749L7 6.21663L2.54916 1.76579C2.4649 1.68153 2.36486 1.61468 2.25476 1.56908C2.14466 1.52347 2.02665 1.5 1.90748 1.5C1.78831 1.5 1.6703 1.52347 1.5602 1.56908C1.4501 1.61468 1.35006 1.68153 1.26579 1.76579C1.18153 1.85006 1.11468 1.9501 1.06908 2.0602C1.02347 2.1703 1 2.28831 1 2.40748C1 2.52665 1.02347 2.64466 1.06908 2.75476C1.11468 2.86486 1.18153 2.9649 1.26579 3.04916L5.71663 7.5L1.26579 11.9508C1.18153 12.0351 1.11468 12.1351 1.06908 12.2452C1.02347 12.3553 1 12.4733 1 12.5925C1 12.7117 1.02347 12.8297 1.06908 12.9398C1.11468 13.0499 1.18153 13.1499 1.26579 13.2342C1.35006 13.3185 1.4501 13.3853 1.5602 13.4309C1.6703 13.4765 1.78831 13.5 1.90748 13.5C2.02665 13.5 2.14466 13.4765 2.25476 13.4309C2.36486 13.3853 2.4649 13.3185 2.54916 13.2342L7 8.78337L11.4508 13.2342C11.5351 13.3185 11.6351 13.3853 11.7452 13.4309C11.8553 13.4765 11.9733 13.5 12.0925 13.5C12.2117 13.5 12.3297 13.4765 12.4398 13.4309C12.5499 13.3853 12.6499 13.3185 12.7342 13.2342C12.8185 13.1499 12.8853 13.0499 12.9309 12.9398C12.9765 12.8297 13 12.7117 13 12.5925C13 12.4733 12.9765 12.3553 12.9309 12.2452C12.8853 12.1351 12.8185 12.0351 12.7342 11.9508L8.28337 7.5L12.7342 3.04916C13.0801 2.70329 13.0801 2.12077 12.7342 1.7749Z" fill="white" />
+        </svg>
+      </button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Разделы</h3>          
+        </div>
+        <div class="modal-body">
+          
+          <div class="charter-menu">
+            <div class="charter-menu__list">
+              <div class="charter-menu__item">
+<article class="charter-item"  style="--hhv: #94b732"  >	
+	<div class="content">
+		<img src="img/charter_1.jpg" alt="">
+		<h5>О компании</h5>
+	</div>
+	<a href="#">О компании</a>
+</article>
+</div>
+              <div class="charter-menu__item">
+<article class="charter-item"  style="--hhv: #e87a83"  >	
+	<div class="content">
+		<img src="img/charter_2.jpg" alt="">
+		<h5>Портфолио</h5>
+	</div>
+	<a href="#">Портфолио</a>
+</article>
+</div>
+              <div class="charter-menu__item">
+<article class="charter-item"  >	
+	<div class="content">
+		<img src="img/charter_3.jpg" alt="">
+		<h5>FAQ</h5>
+	</div>
+	<a href="#">FAQ</a>
+</article>
+</div>
+              <div class="charter-menu__item">
+<article class="charter-item"  style="--hhv: #e87a83"  >	
+	<div class="content">
+		<img src="img/charter_4.jpg" alt="">
+		<h5>Отзывы</h5>
+	</div>
+	<a href="#">Отзывы</a>
+</article>
+</div>
+              <div class="charter-menu__item">
+<article class="charter-item"  >	
+	<div class="content">
+		<img src="img/charter_5.jpg" alt="">
+		<h5>Блог</h5>
+	</div>
+	<a href="#">Блог</a>
+</article>
+</div>
+              <div class="charter-menu__item">
+<article class="charter-item"  style="--hhv: #f8a937"  >	
+	<div class="content">
+		<img src="img/charter_6.jpg" alt="">
+		<h5>Контакты</h5>
+	</div>
+	<a href="#">Контакты</a>
+</article>
+</div>              
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal" tabindex="-1" id="catalogKit">
+  <div class="modal-backdrop"></div>
+  <div class="modal-wrapper">
+    <div class="modal-dialog">
+      <button type="button" class="close">
+        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.7342 1.7749C12.65 1.69052 12.55 1.62358 12.4399 1.5779C12.3298 1.53223 12.2117 1.50872 12.0925 1.50872C11.9733 1.50872 11.8553 1.53223 11.7452 1.5779C11.6351 1.62358 11.535 1.69052 11.4508 1.7749L7 6.21663L2.54916 1.76579C2.4649 1.68153 2.36486 1.61468 2.25476 1.56908C2.14466 1.52347 2.02665 1.5 1.90748 1.5C1.78831 1.5 1.6703 1.52347 1.5602 1.56908C1.4501 1.61468 1.35006 1.68153 1.26579 1.76579C1.18153 1.85006 1.11468 1.9501 1.06908 2.0602C1.02347 2.1703 1 2.28831 1 2.40748C1 2.52665 1.02347 2.64466 1.06908 2.75476C1.11468 2.86486 1.18153 2.9649 1.26579 3.04916L5.71663 7.5L1.26579 11.9508C1.18153 12.0351 1.11468 12.1351 1.06908 12.2452C1.02347 12.3553 1 12.4733 1 12.5925C1 12.7117 1.02347 12.8297 1.06908 12.9398C1.11468 13.0499 1.18153 13.1499 1.26579 13.2342C1.35006 13.3185 1.4501 13.3853 1.5602 13.4309C1.6703 13.4765 1.78831 13.5 1.90748 13.5C2.02665 13.5 2.14466 13.4765 2.25476 13.4309C2.36486 13.3853 2.4649 13.3185 2.54916 13.2342L7 8.78337L11.4508 13.2342C11.5351 13.3185 11.6351 13.3853 11.7452 13.4309C11.8553 13.4765 11.9733 13.5 12.0925 13.5C12.2117 13.5 12.3297 13.4765 12.4398 13.4309C12.5499 13.3853 12.6499 13.3185 12.7342 13.2342C12.8185 13.1499 12.8853 13.0499 12.9309 12.9398C12.9765 12.8297 13 12.7117 13 12.5925C13 12.4733 12.9765 12.3553 12.9309 12.2452C12.8853 12.1351 12.8185 12.0351 12.7342 11.9508L8.28337 7.5L12.7342 3.04916C13.0801 2.70329 13.0801 2.12077 12.7342 1.7749Z" fill="white" />
+        </svg>
+      </button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Готовые решения</h3>          
+        </div>
+        <div class="modal-body">
+          
+          <div class="modal-catalog">
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Дни рождения</h5>
+	</div>
+	<a href="#">Дни рождения</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Хэллоуин</h5>
+	</div>
+	<a href="#">Хэллоуин</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>8 марта</h5>
+	</div>
+	<a href="#">8 марта</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>23 февраля</h5>
+	</div>
+	<a href="#">23 февраля</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Новый Год</h5>
+	</div>
+	<a href="#">Новый Год</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Дни рождения</h5>
+	</div>
+	<a href="#">Дни рождения</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Дни рождения</h5>
+	</div>
+	<a href="#">Дни рождения</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Дни рождения</h5>
+	</div>
+	<a href="#">Дни рождения</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Дни рождения</h5>
+	</div>
+	<a href="#">Дни рождения</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Дни рождения</h5>
+	</div>
+	<a href="#">Дни рождения</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Дни рождения</h5>
+	</div>
+	<a href="#">Дни рождения</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_kit.jpg" alt="">
+		<h5>Дни рождения</h5>
+	</div>
+	<a href="#">Дни рождения</a>
+</article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" tabindex="-1" id="catalogFull">
+  <div class="modal-backdrop"></div>
+  <div class="modal-wrapper">
+    <div class="modal-dialog">
+      <button type="button" class="close">
+        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.7342 1.7749C12.65 1.69052 12.55 1.62358 12.4399 1.5779C12.3298 1.53223 12.2117 1.50872 12.0925 1.50872C11.9733 1.50872 11.8553 1.53223 11.7452 1.5779C11.6351 1.62358 11.535 1.69052 11.4508 1.7749L7 6.21663L2.54916 1.76579C2.4649 1.68153 2.36486 1.61468 2.25476 1.56908C2.14466 1.52347 2.02665 1.5 1.90748 1.5C1.78831 1.5 1.6703 1.52347 1.5602 1.56908C1.4501 1.61468 1.35006 1.68153 1.26579 1.76579C1.18153 1.85006 1.11468 1.9501 1.06908 2.0602C1.02347 2.1703 1 2.28831 1 2.40748C1 2.52665 1.02347 2.64466 1.06908 2.75476C1.11468 2.86486 1.18153 2.9649 1.26579 3.04916L5.71663 7.5L1.26579 11.9508C1.18153 12.0351 1.11468 12.1351 1.06908 12.2452C1.02347 12.3553 1 12.4733 1 12.5925C1 12.7117 1.02347 12.8297 1.06908 12.9398C1.11468 13.0499 1.18153 13.1499 1.26579 13.2342C1.35006 13.3185 1.4501 13.3853 1.5602 13.4309C1.6703 13.4765 1.78831 13.5 1.90748 13.5C2.02665 13.5 2.14466 13.4765 2.25476 13.4309C2.36486 13.3853 2.4649 13.3185 2.54916 13.2342L7 8.78337L11.4508 13.2342C11.5351 13.3185 11.6351 13.3853 11.7452 13.4309C11.8553 13.4765 11.9733 13.5 12.0925 13.5C12.2117 13.5 12.3297 13.4765 12.4398 13.4309C12.5499 13.3853 12.6499 13.3185 12.7342 13.2342C12.8185 13.1499 12.8853 13.0499 12.9309 12.9398C12.9765 12.8297 13 12.7117 13 12.5925C13 12.4733 12.9765 12.3553 12.9309 12.2452C12.8853 12.1351 12.8185 12.0351 12.7342 11.9508L8.28337 7.5L12.7342 3.04916C13.0801 2.70329 13.0801 2.12077 12.7342 1.7749Z" fill="white" />
+        </svg>
+      </button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Все меню Deli Art</h3>          
+        </div>
+        <div class="modal-body">
+          
+          <div class="modal-catalog">
+            
+<article class="catalog-card"  style="--hhv: #f8a937"  >	
+	<div class="content">
+		<img src="img/kt_1.jpg" alt="">
+		<h5>Канапе</h5>
+	</div>
+	<a href="#">Канапе</a>
+</article>
+
+            
+<article class="catalog-card"  style="--hhv: #94b732"  >	
+	<div class="content">
+		<img src="img/kt_2.jpg" alt="">
+		<h5>Холодные закуски</h5>
+	</div>
+	<a href="#">Холодные закуски</a>
+</article>
+
+            
+<article class="catalog-card"  style="--hhv: #e87a83"  >	
+	<div class="content">
+		<img src="img/kt_3.jpg" alt="">
+		<h5>Сэндвичи</h5>
+	</div>
+	<a href="#">Сэндвичи</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_4.jpg" alt="">
+		<h5>Салаты</h5>
+	</div>
+	<a href="#">Салаты</a>
+</article>
+
+            
+<article class="catalog-card"  style="--hhv: #e87a83"  >	
+	<div class="content">
+		<img src="img/kt_5.jpg" alt="">
+		<h5>Канапе в шотах</h5>
+	</div>
+	<a href="#">Канапе в шотах</a>
+</article>
+
+            
+<article class="catalog-card"  style="--hhv: #f8a937"  >	
+	<div class="content">
+		<img src="img/kt_8.jpg" alt="">
+		<h5>Десерты в стаканчиках</h5>
+	</div>
+	<a href="#">Десерты в стаканчиках</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_9.jpg" alt="">
+		<h5>Горячие закуски</h5>
+	</div>
+	<a href="#">Горячие закуски</a>
+</article>
+
+            
+<article class="catalog-card"  style="--hhv: #94b732"  >	
+	<div class="content">
+		<img src="img/kt_13.jpg" alt="">
+		<h5>Пицца</h5>
+	</div>
+	<a href="#">Пицца</a>
+</article>
+
+            
+<article class="catalog-card"  style="--hhv: #f8a937"  >	
+	<div class="content">
+		<img src="img/kt_18.jpg" alt="">
+		<h5>Блины</h5>
+	</div>
+	<a href="#">Блины</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_6.jpg" alt="">
+		<h5>Напитки</h5>
+	</div>
+	<a href="#">Напитки</a>
+</article>
+
+            
+<article class="catalog-card"  style="--hhv: #f8a937"  >	
+	<div class="content">
+		<img src="img/kt_7.jpg" alt="">
+		<h5>Плато (нарезки)</h5>
+	</div>
+	<a href="#">Плато (нарезки)</a>
+</article>
+
+            
+<article class="catalog-card"  style="--hhv: #e87a83"  >	
+	<div class="content">
+		<img src="img/kt_17.jpg" alt="">
+		<h5>Пирожки и слойки</h5>
+	</div>
+	<a href="#">Пирожки и слойки</a>
+</article>
+
+            
+<article class="catalog-card"  style="--hhv: #94b732"  >	
+	<div class="content">
+		<img src="img/kt_19.jpg" alt="">
+		<h5>Акции</h5>
+	</div>
+	<a href="#">Акции</a>
+</article>
+
+            
+<article class="catalog-card"  style="--hhv: #e87a83"  >	
+	<div class="content">
+		<img src="img/kt_14.jpg" alt="">
+		<h5>Ассорти</h5>
+	</div>
+	<a href="#">Ассорти</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_15.jpg" alt="">
+		<h5>Торты</h5>
+	</div>
+	<a href="#">Торты</a>
+</article>
+
+            
+<article class="catalog-card"  >	
+	<div class="content">
+		<img src="img/kt_16.jpg" alt="">
+		<h5>Десерты</h5>
+	</div>
+	<a href="#">Десерты</a>
+</article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+  </body>
+</html>

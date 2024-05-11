@@ -1,0 +1,106 @@
+.rs-intro {
+    position: relative;
+    overflow: hidden;
+}
+
+.rs-intro .content {
+    max-width: 1230px;
+}
+
+.rs-intro .content h1 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 95%;
+    letter-spacing: -0.01em;
+    color: var(--color-4);
+}
+
+.rs-intro__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rs-intro__bg::before {
+    content: "";
+    background: url("../../img/intro_shadow.png") center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.rs-intro__container {
+    position: relative;
+}
+
+.rs-intro__wrapper {
+    position: relative;
+    z-index: 3;
+    min-height: 520px;
+    padding-bottom: 30px;
+    padding-top: 99px;
+    display: grid;
+    -ms-flex-line-pack: end;
+    align-content: end;
+    justify-items: start;
+}
+
+.rs-intro__breadcrumbs {
+    position: relative;
+    z-index: 3;
+}
+
+@media (min-width: 1023.98px) {
+    .rs-intro {
+        border-radius: 0 0 30px 30px;
+    }
+
+    .rs-intro__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .rs-intro__breadcrumbs {
+        padding-bottom: 45px;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .rs-intro .content {
+        margin-top: 30px;
+    }
+
+    .rs-intro .content h1 {
+        font-size: 24px;
+    }
+
+    .rs-intro__bg {
+        position: relative;
+        height: 366px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .rs-intro__holder {
+        background: var(--color-1);
+        border-radius: 0 0 20px 20px;
+    }
+
+    .rs-intro__wrapper {
+        min-height: auto;
+        -ms-flex-line-pack: start;
+        align-content: start;
+        padding-bottom: 18px;
+        padding-top: 56px;
+    }
+
+    .rs-intro__breadcrumbs {
+        padding-top: 16px;
+    }
+}

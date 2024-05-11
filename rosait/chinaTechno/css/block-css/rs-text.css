@@ -1,0 +1,44 @@
+.rs-text {
+    position: relative;
+}
+
+.rs-text h2 {
+    color: #b1b3bf;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.rs-text p {
+    color: #141515;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.rs-text__wrapper {
+    padding-top: 110px;
+    padding-bottom: 70px;
+    display: grid;
+    grid-template-columns: 1fr 59%;
+    gap: 10px;
+}
+
+@media (max-width: 767.98px) {
+    .rs-text h2 {
+        font-size: 13px;
+    }
+
+    .rs-text p {
+        font-size: 16px;
+    }
+
+    .rs-text__wrapper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border: none;
+        grid-template-columns: 1fr;
+    }
+}
