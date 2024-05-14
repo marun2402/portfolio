@@ -1,0 +1,203 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+
+@font-face {
+    font-family: "Circe";
+  src: url("../../fonts/circe.woff2") format("woff2"), url("../../fonts/circe.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Circe";
+  src: url("../../fonts/circe_bold.woff2") format("woff2"), url("../../fonts/circe_bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Circe";
+  src: url("../../fonts/circe_light.woff2") format("woff2"), url("../../fonts/circe_light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
+    color: inherit;
+    background-color: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+:root {
+    --font-family: "Circe", sans-serif;
+    --second-family: "Manrope", sans-serif;
+    --main-bg-color: #fffaf4;
+    --main-text-color: #515151;
+    --primary-color: #f8a937;
+    --error-color: #e87a83;
+    --animation-duration: 0.45s;
+    --timing-func: ease-out;
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+    min-width: 320px;
+    scrollbar-gutter: stable;
+}
+
+body {
+    height: 100%;
+    font-family: var(--font-family);
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-weight: normal;
+    font-style: normal;
+    opacity: 0;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+body.mobile-menu-opened,
+body.toolbar-mobile-opened,
+body.modal-open {
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+.site-wrapper,
+.site {
+    overflow: hidden;
+    min-height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.site-wrapper > .main,
+.site-wrapper .site-content,
+.site > .main,
+.site .site-content {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.site-wrapper > *,
+.site > * {
+    min-width: 0;
+}
+
+header {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer {
+    position: relative;
+}
+
+[class*=__container] {
+    max-width: 1470px;
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.fancybox__container {
+    max-width: none !important;
+}
+
+@media (max-width: 1023.98px) {
+    [class*=__container] {
+        max-width: 768px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    [class*=__container] {
+        max-width: 375px;
+    }
+}
+
+@media (any-hover: none) {
+    [data-hidescroll]::-webkit-scrollbar {
+        width: 0;
+    }
+
+    [data-hidescroll] {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
