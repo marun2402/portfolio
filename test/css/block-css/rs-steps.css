@@ -1,0 +1,190 @@
+.rs-steps {
+    position: relative;
+    overflow: hidden;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.rs-steps__content {
+    position: relative;
+}
+
+.rs-steps__content .bd-left,
+.rs-steps__content .bd-right {
+    position: absolute;
+    left: 33.333%;
+    top: 0;
+    height: 100%;
+    width: 1.5px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+.rs-steps__content .bd-left::before,
+.rs-steps__content .bd-right::before {
+    content: url("../../img/icons/plus.svg");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rs-steps__content .bd-right {
+    left: 66.6666%;
+}
+
+.rs-steps__content .bd-center {
+    height: 1.5px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.3;
+}
+
+.rs-steps__content .bd-bottom {
+    height: 1.5px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.3;
+}
+
+.rs-steps__content .bd-left-bottom,
+.rs-steps__content .bd-right-bottom {
+    position: absolute;
+    left: 33.333%;
+    top: 0;
+    height: 100%;
+    width: 1.5px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+}
+
+.rs-steps__content .bd-left-bottom::before,
+.rs-steps__content .bd-right-bottom::before {
+    content: url("../../img/icons/half_plus.svg");
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.rs-steps__content .bd-right-bottom {
+    left: 66.6666%;
+}
+
+.rs-steps__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    grid-auto-rows: 1fr;
+}
+
+.rs-steps .steps-item {
+    display: block;
+    position: relative;
+    height: 100%;
+    padding: 35px 35px 35px 70px;
+}
+
+.rs-steps .steps-item h4 {
+    color: #fff;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.78px;
+    margin-bottom: 15px;
+}
+
+.rs-steps .steps-item p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 160%;
+    letter-spacing: 0.54px;
+}
+
+.rs-steps .steps-item span {
+    display: block;
+    color: #00f1cc;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.78px;
+    margin-bottom: 70px;
+}
+
+@media (max-width: 1790px) {
+    .rs-steps .steps-item {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rs-steps__entry .section-title h2 {
+        font-size: 30px;
+    }
+
+    .rs-steps .steps-item h4 {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-steps {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .rs-steps__content .bd-left,
+  .rs-steps__content .bd-right {
+        display: none;
+    }
+
+    .rs-steps__content .bd-center {
+        display: none;
+    }
+
+    .rs-steps__content .bd-bottom {
+        display: none;
+    }
+
+    .rs-steps__content .bd-left-bottom,
+  .rs-steps__content .bd-right-bottom {
+        display: none;
+    }
+
+    .rs-steps__items {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-steps .steps-item {
+        padding: 20px 0px;
+    }
+
+    .rs-steps .steps-item h4 {
+        font-size: 14px;
+        margin-bottom: 5px;
+        margin-top: 20px;
+    }
+
+    .rs-steps .steps-item p {
+        font-size: 13px;
+    }
+
+    .rs-steps .steps-item span {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+}

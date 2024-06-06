@@ -3,27 +3,34 @@
   <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Доставка угощений</title>
+	<title>МТех</title>	
+
 
 	<script src="js/jquery-2.1.3.min.js" defer></script>
+	<script src="js/jquery.validate.min.js" defer></script>	
+	<script src="js/additional-methods.min.js" defer></script>	
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<script src="js/bootstrap.min.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
 	<script src="js/lenis.min.js" defer></script>
 
-	<script src="js/gyronorm.complete.min.js" defer></script>
-
-	<script src="js/waypoints.min.js" defer></script>
-	<script src="js/jquery.counterup.min.js" defer></script>
-
 	<script src="js/swiper-bundle.min.js" defer></script>
-	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.css" />
 
-	<script src="js/validate/jquery.validate.min.js" defer></script>
+	<script src="js/fancybox.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="css/fancybox.css" />
 
+	<script src="js/jquery.lettering.js" defer></script>
+	<script src="js/jquery.textillate.js" defer></script>	
+	
+	
 	<script src="js/gsap/gsap.min.js" defer></script>
 	<script src="js/gsap/ScrollTrigger.min.js" defer></script>
 	<script src="js/gsap/CustomEase.min.js" defer></script>	
 	<script src="js/gsap/ScrollToPlugin.min.js" defer></script>	
 	
-		
+	
 	<link rel="stylesheet" type="text/css" href="css/block-css/style.css" />
 	<script src="js/app.js" defer></script>
 
@@ -31,10 +38,86 @@
 
 
 
-  <body class="page-type-default">
-    <div class="site-wrapper">     
+  <body class="page-type-default page-animate">
+    
+    <div class="wrapper">
+      
+      <header>       
+        
 
-      <main class="main">        
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-header.css" />
+<div class="rs-header">		
+	<div class="rs-header__container">
+		<div class="rs-header__wrapper">
+			<a href="#" class="rs-header__logo"><img src="img/logo.png" alt=""></a>
+			
+
+
+<span class="menu-overlay" data-js-overlay></span>
+<nav class="menu" data-spollers="991, max" data-anchors>	
+
+	<div class="header-contacts-btns">
+		<div class="menu-wrapper">
+			
+<a href="#" class="btn-border ">	
+	<span>Обсудить ваш проект</span>
+</a>
+
+		</div>
+	</div>	
+
+	<div class="menu-wrapper">
+		<ul class="menu__list">	
+			<li class="menu__dropdown">
+				<a href="#services"><span>Услуги</span></a>
+				<button type="button" class="menu__dropdown-arrow" data-spoller></button>
+				<ul class="menu__dropdown-list">
+					<li><a href="#"><span>Производство чистых помещений</span></a></li>
+					<li><a href="#"><span>Генеральный подряд</span></a></li>
+					<li><a href="#"><span>Проектирование чистых помещений и инженерных систем</span></a></li>
+					<li><a href="#"><span>Управление инвестпроектами</span></a></li>
+					<li><a href="#"><span>Квалификация и валидация</span></a></li>
+					<li><a href="#"><span>Монтаж чистых помещений</span></a></li>
+				</ul>
+			</li>
+			<li><a href="#portfolio"><span>Проекты</span></a></li>
+			<li><a href="#gallery"><span>Оборудование</span></a></li>
+			<li><a href="#about"><span>Компания</span></a></li>
+		</ul>
+	</div>
+
+</nav>
+
+
+			
+			<div class="rs-header__lang">
+				<ul>
+					<li class="active"><a href="#">RU</a></li>
+					<li><a href="#">EN</a></li>
+				</ul>
+			</div>
+			<div class="rs-header__btns">
+				
+<a href="#" class="btn-border ">	
+	<span>Обсудить ваш проект</span>
+</a>
+
+			</div>			
+			<button class="menu-burger">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+		</div>
+	</div>
+</div>
+
+      </header>
+
+      <div class="main">        
         
 
   <!-- rs-slider -->
@@ -43,25 +126,1496 @@
 
 
 
+
 <link rel="stylesheet" href="css/block-css/rs-slider.css" />
-<section class="rs-slider">		
+<section class="rs-slider" data-animate="fadeIn" data-duration="0.2">
 	
-<div class="banner">		
-	<div class="banner__photos">		
-		<div class="photo photo-1"><img src="img/photo_1.jpg" alt=""></div>
-		<div class="photo photo-2"><img src="img/photo_2.jpg" alt=""></div>
-		<div class="photo photo-3"><img src="img/photo_3.jpg" alt=""></div>
-		<div class="photo photo-4"><img src="img/photo_4.jpg" alt=""></div>
+	<div class="rs-slider__slider">
+		<div class="rs-slider__swiper">
+			
+			<div class="rs-slider__slide">
+				<div class="rs-slider__slide-inner">
+					<h2><span>чистые помещения <br></span> для современного производства</h2>						
+				</div>
+				<div class="rs-slider__slide-img"><img src="img/slider_1.jpg" alt="" /></div>
+			</div>
+
+			<div class="rs-slider__slide">
+				<div class="rs-slider__slide-inner">
+					<h2>широкий спектр услуг для <span>вашего бизнеса</span></h2>			
+					<div class="wrapper">
+						<div class="content">
+							<p>От управления инвестпроектом до производства конструкций</p>
+						</div>
+					</div>			
+				</div>
+				<div class="rs-slider__slide-img"><img src="img/slider_2.jpg" alt="" /></div>
+			</div>
+
+			<div class="rs-slider__slide">
+				<div class="rs-slider__slide-inner">
+					<h2>более 16 лет на рынке <span>чистых помещений</span></h2>		
+					<div class="wrapper">
+						<div class="content">
+							<p>Выполнили проекты в 56 городах России и СНГ</p>
+							<a href="#">Подробнее о компании</a>
+						</div>
+					</div>				
+				</div>
+				<div class="rs-slider__slide-img"><img src="img/slider_3.jpg" alt="" /></div>
+			</div>
+
+			<div class="rs-slider__slide">
+				<div class="rs-slider__slide-inner">
+					<h3>Международная выставка</h3>
+					<h2>Pharmtech & Ingredients</h2>	
+					<div class="wrapper">
+						<div class="content">
+							<p><span>Павильон №2, зал №8, номер стенда В3021</span> Компания «МТех» приняла участие в 25-ой международной выставке оборудования, сырья и технологий для фармацевтического производства.</p>
+							<a href="#">Подробнее о выставке</a>
+							<a href="#" class="white">Как нас найти</a>
+						</div>
+						<a href="#" class="ticket">Бесплатный билет на официальном сайте выставки <span>pha23eESEE</span></a>
+					</div>					
+				</div>
+				<div class="rs-slider__slide-img"><img src="img/slider_4.jpg" alt="" /></div>
+			</div>
+
+		</div>
+	</div>
+	
+	<div class="rs-slider__paging">
+		<div class="slider-paging"></div>
+	</div>
+
+	<div data-anchors>
+		<a href="#about" class="button-down arrow-button"><img src="img/icons/arrow-button-icon.png" alt=""></a>
+	</div>
+
+</section>
+ 
+  
+  <!-- rs-about -->
+   
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-about.css" />
+<section class="rs-about" id="about" data-animate="fadeInUp" data-animate-duration="0.5">
+	<div class="rs-about__container">
+		<div class="rs-about__wrapper">
+
+			<div class="rs-about__head">
+				
+<div class="section-title ">
+	
+	<span>Специализация</span>
+	
+	<h2 class="tlt ">Эксперты в области чистых помещений</h2>	
+	
+</div>
+
+			</div>
+
+			<div class="rs-about__content">
+				<p>Мы специализируемся на создании чистых помещений. Предлагаем широкий спектр решений для клиентов из различных отраслей, включая фармацевтику, медицину, электронику, пищевую промышленность и другие. Наша команда экспертов имеет опыт в проектировании и строительстве чистых помещений, учитывая особенности каждого клиента и их специфические требования. </p>
+        <p>Наши помещения обеспечивают контролируемые параметры окружающей среды, включая температуру, влажность, статическое электричество и уровень частиц. Мы используем передовое оборудование и технологии, чтобы гарантировать оптимальные условия для производства чувствительных продуктов.</p>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+ 
+  
+  <!-- rs-numbers -->
+   
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-numbers.css" />
+<section class="rs-numbers" data-animate="fadeInUp" data-animate-duration="0.5">
+	<div class="rs-numbers__container">
+		<div class="rs-numbers__wrapper">
+
+			
+      <div class="rs-numbers__item">
+<div class="numbers-item">  
+	<h4>16<span>лет</span></h4>
+	<p>на рынке чистых помещений</p>
+</div>
+</div>
+      
+      <div class="rs-numbers__item">
+<div class="numbers-item">  
+	<h4>214</h4>
+	<p>проектов успешно реализовано</p>
+</div>
+</div>
+      
+      <div class="rs-numbers__item">
+<div class="numbers-item">  
+	<h4>56</h4>
+	<p>городов в России и СНГ <br> в нашем портфолио</p>
+</div>
+</div>
+      
+
+      <div class="rs-numbers__img"><img src="img/numbers.png" alt=""></div>
+      <div class="rs-numbers__btn">
+<a href="#" class="btn-color " data-text="Узнать подробнее о&amp;nbsp;компании">	
+	<span class="text"><span>Узнать подробнее о&nbsp;компании</span></span>
+</a>
+</div>
+			
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+ 
+  
+   <!-- rs-services -->
+   
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-services.css" />
+<section class="rs-services" id="services" data-animate="fadeInUp" data-animate-duration="0.5">
+	<div class="rs-services__container">
+		<div class="rs-services__wrapper">
+
+			<div class="rs-services__head">
+				
+<div class="section-title ">
+	
+	<span>Услуги</span>
+	
+	<h2 class="tlt ">Поможем вашему бизнесу</h2>	
+	
+</div>
+
+			</div>
+
+			<div class="rs-services__content">
+        <div class="bd-left"></div>
+        <div class="bd-right"></div>
+        <div class="bd-center"></div>
+
+        <div class="rs-services__items" data-animate-stager="fadeInUp" data-animate-duration="0.2" data-animate-delay="0.3">
+          
+            <div class="rs-services__entry">
+<article class="services-item">  
+  <span>[01]</span>
+	<h4>Производство чистых <br> помещений</h4>
+  <div class="icon"><img src="img/icons/arrow-icon.png" alt=""></div>
+  <a href="#">Производство чистых &lt;br&gt; помещений</a>
+</article>
+</div>
+          
+            <div class="rs-services__entry">
+<article class="services-item">  
+  <span>[02]</span>
+	<h4>Генеральный подряд</h4>
+  <div class="icon"><img src="img/icons/arrow-icon.png" alt=""></div>
+  <a href="#">Генеральный подряд</a>
+</article>
+</div>
+          
+            <div class="rs-services__entry">
+<article class="services-item">  
+  <span>[03]</span>
+	<h4>Проектирование чистых <br> помещений и инженерных систем</h4>
+  <div class="icon"><img src="img/icons/arrow-icon.png" alt=""></div>
+  <a href="#">Проектирование чистых &lt;br&gt; помещений и инженерных систем</a>
+</article>
+</div>
+          
+            <div class="rs-services__entry">
+<article class="services-item">  
+  <span>[04]</span>
+	<h4>Управление <br> инвестпроектами</h4>
+  <div class="icon"><img src="img/icons/arrow-icon.png" alt=""></div>
+  <a href="#">Управление &lt;br&gt; инвестпроектами</a>
+</article>
+</div>
+          
+            <div class="rs-services__entry">
+<article class="services-item">  
+  <span>[05]</span>
+	<h4>Квалификация <br> и валидация</h4>
+  <div class="icon"><img src="img/icons/arrow-icon.png" alt=""></div>
+  <a href="#">Квалификация &lt;br&gt; и валидация</a>
+</article>
+</div>
+          
+            <div class="rs-services__entry">
+<article class="services-item">  
+  <span>[06]</span>
+	<h4>Монтаж чистых <br> помещений</h4>
+  <div class="icon"><img src="img/icons/arrow-icon.png" alt=""></div>
+  <a href="#">Монтаж чистых &lt;br&gt; помещений</a>
+</article>
+</div>
+          
+        </div>
+        
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+ 
+  
+  <!-- rs-portfolio -->
+   
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-portfolio.css" />
+<div class="rs-portfolio" id="portfolio">
+	<div class="rs-portfolio__wrapper">
+		<div class="rs-portfolio__container">
+			
+			<div class="rs-portfolio__tabs">
+				<div class="rs-portfolio__head">
+					
+<div class="section-title ">
+	
+	<span>Проекты</span>
+	
+	<h2 class="tlt word2 word3">Более 214 проектов в портфолио</h2>	
+	
+</div>
+
+					<div class="rs-portfolio__nav">		
+
+						<div class="itc-select itc-select_bg">
+							<button type="button" class="itc-select__toggle" data-select="toggle">Город</button>
+							<div class="itc-select__dropdown">
+								<ul class="itc-select__options">									
+									<li class="itc-select__option" data-select="option"><a href="#protfolioTab-1" data-toggle="tab">Москва</a></li>
+									<li class="itc-select__option" data-select="option"><a href="#protfolioTab-2" data-toggle="tab">Санкт-Петербург</a></li>
+									<li class="itc-select__option" data-select="option"><a href="#protfolioTab-3" data-toggle="tab">Екатеринбург</a></li>							
+								</ul>
+							</div>
+						</div>			
+
+						<div class="itc-select">
+							<button type="button" class="itc-select__toggle" data-select="toggle">Тип работ</button>
+							<div class="itc-select__dropdown">
+								<ul class="itc-select__options">									
+									<li class="itc-select__option" data-select="option"><a href="#protfolioTab-4" data-toggle="tab">Управление инвестпроектами</a></li>
+									<li class="itc-select__option" data-select="option"><a href="#protfolioTab-5" data-toggle="tab">Проектирование</a></li>
+									<li class="itc-select__option" data-select="option"><a href="#protfolioTab-6" data-toggle="tab">Генподряд</a></li>
+									<li class="itc-select__option" data-select="option"><a href="#protfolioTab-7" data-toggle="tab">Производство конструкций</a></li>
+									<li class="itc-select__option" data-select="option"><a href="#protfolioTab-8" data-toggle="tab">Квалификация</a></li>													
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>			
+				<div class="rs-portfolio__content tab-content">
+					<div class="tab-pane active" id="protfolioTab-1">
+<div class="portfolio">
+	<div class="portfolio__items">		
+		 
+<div class="portfolio__item">
+	<a href="img/project_1.jpg" data-fancybox="portfolio-1"><img src="img/project_1.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
 	</div>
 </div>
 
+		 
+<div class="portfolio__item">
+	<a href="img/project_2.jpg" data-fancybox="portfolio-1"><img src="img/project_2.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_3.jpg" data-fancybox="portfolio-1"><img src="img/project_3.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_4.jpg" data-fancybox="portfolio-1"><img src="img/project_4.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_5.jpg" data-fancybox="portfolio-1"><img src="img/project_5.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_6.jpg" data-fancybox="portfolio-1"><img src="img/project_6.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_7.jpg" data-fancybox="portfolio-1"><img src="img/project_7.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_8.jpg" data-fancybox="portfolio-1"><img src="img/project_8.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_9.jpg" data-fancybox="portfolio-1"><img src="img/project_9.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+	</div>
+	<a href="#" class="load-more">
+		<span>Загрузить ещё</span>
+		<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+			<path d="M9.06288 16.3125L14.5004 21.75M14.5004 21.75L19.9379 16.3125M14.5004 21.75L14.5004 7.25" stroke="#00F1CC" stroke-linecap="round" stroke-linejoin="round"/>
+			<rect opacity="0.5" x="0.5" y="0.5" width="28" height="28" rx="2.5" stroke="#00F1CC"/>
+		</svg>
+	</a>
+</div>
+</div>
+					<div class="tab-pane" id="protfolioTab-2">
+<div class="portfolio">
+	<div class="portfolio__items">		
+		 
+<div class="portfolio__item">
+	<a href="img/project_1.jpg" data-fancybox="portfolio-2"><img src="img/project_1.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_2.jpg" data-fancybox="portfolio-2"><img src="img/project_2.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_3.jpg" data-fancybox="portfolio-2"><img src="img/project_3.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_4.jpg" data-fancybox="portfolio-2"><img src="img/project_4.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_5.jpg" data-fancybox="portfolio-2"><img src="img/project_5.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_6.jpg" data-fancybox="portfolio-2"><img src="img/project_6.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_7.jpg" data-fancybox="portfolio-2"><img src="img/project_7.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_8.jpg" data-fancybox="portfolio-2"><img src="img/project_8.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_9.jpg" data-fancybox="portfolio-2"><img src="img/project_9.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+	</div>
+	<a href="#" class="load-more">
+		<span>Загрузить ещё</span>
+		<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+			<path d="M9.06288 16.3125L14.5004 21.75M14.5004 21.75L19.9379 16.3125M14.5004 21.75L14.5004 7.25" stroke="#00F1CC" stroke-linecap="round" stroke-linejoin="round"/>
+			<rect opacity="0.5" x="0.5" y="0.5" width="28" height="28" rx="2.5" stroke="#00F1CC"/>
+		</svg>
+	</a>
+</div>
+</div>
+					<div class="tab-pane" id="protfolioTab-3">
+<div class="portfolio">
+	<div class="portfolio__items">		
+		 
+<div class="portfolio__item">
+	<a href="img/project_1.jpg" data-fancybox="portfolio-3"><img src="img/project_1.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_2.jpg" data-fancybox="portfolio-3"><img src="img/project_2.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_3.jpg" data-fancybox="portfolio-3"><img src="img/project_3.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_4.jpg" data-fancybox="portfolio-3"><img src="img/project_4.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_5.jpg" data-fancybox="portfolio-3"><img src="img/project_5.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_6.jpg" data-fancybox="portfolio-3"><img src="img/project_6.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_7.jpg" data-fancybox="portfolio-3"><img src="img/project_7.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_8.jpg" data-fancybox="portfolio-3"><img src="img/project_8.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_9.jpg" data-fancybox="portfolio-3"><img src="img/project_9.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+	</div>
+	<a href="#" class="load-more">
+		<span>Загрузить ещё</span>
+		<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+			<path d="M9.06288 16.3125L14.5004 21.75M14.5004 21.75L19.9379 16.3125M14.5004 21.75L14.5004 7.25" stroke="#00F1CC" stroke-linecap="round" stroke-linejoin="round"/>
+			<rect opacity="0.5" x="0.5" y="0.5" width="28" height="28" rx="2.5" stroke="#00F1CC"/>
+		</svg>
+	</a>
+</div>
+</div>
+					<div class="tab-pane" id="protfolioTab-4">
+<div class="portfolio">
+	<div class="portfolio__items">		
+		 
+<div class="portfolio__item">
+	<a href="img/project_1.jpg" data-fancybox="portfolio-4"><img src="img/project_1.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_2.jpg" data-fancybox="portfolio-4"><img src="img/project_2.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_3.jpg" data-fancybox="portfolio-4"><img src="img/project_3.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_4.jpg" data-fancybox="portfolio-4"><img src="img/project_4.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_5.jpg" data-fancybox="portfolio-4"><img src="img/project_5.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_6.jpg" data-fancybox="portfolio-4"><img src="img/project_6.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_7.jpg" data-fancybox="portfolio-4"><img src="img/project_7.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_8.jpg" data-fancybox="portfolio-4"><img src="img/project_8.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_9.jpg" data-fancybox="portfolio-4"><img src="img/project_9.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+	</div>
+	<a href="#" class="load-more">
+		<span>Загрузить ещё</span>
+		<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+			<path d="M9.06288 16.3125L14.5004 21.75M14.5004 21.75L19.9379 16.3125M14.5004 21.75L14.5004 7.25" stroke="#00F1CC" stroke-linecap="round" stroke-linejoin="round"/>
+			<rect opacity="0.5" x="0.5" y="0.5" width="28" height="28" rx="2.5" stroke="#00F1CC"/>
+		</svg>
+	</a>
+</div>
+</div>
+					<div class="tab-pane" id="protfolioTab-5">
+<div class="portfolio">
+	<div class="portfolio__items">		
+		 
+<div class="portfolio__item">
+	<a href="img/project_1.jpg" data-fancybox="portfolio-5"><img src="img/project_1.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_2.jpg" data-fancybox="portfolio-5"><img src="img/project_2.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_3.jpg" data-fancybox="portfolio-5"><img src="img/project_3.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_4.jpg" data-fancybox="portfolio-5"><img src="img/project_4.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_5.jpg" data-fancybox="portfolio-5"><img src="img/project_5.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_6.jpg" data-fancybox="portfolio-5"><img src="img/project_6.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_7.jpg" data-fancybox="portfolio-5"><img src="img/project_7.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_8.jpg" data-fancybox="portfolio-5"><img src="img/project_8.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_9.jpg" data-fancybox="portfolio-5"><img src="img/project_9.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+	</div>
+	<a href="#" class="load-more">
+		<span>Загрузить ещё</span>
+		<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+			<path d="M9.06288 16.3125L14.5004 21.75M14.5004 21.75L19.9379 16.3125M14.5004 21.75L14.5004 7.25" stroke="#00F1CC" stroke-linecap="round" stroke-linejoin="round"/>
+			<rect opacity="0.5" x="0.5" y="0.5" width="28" height="28" rx="2.5" stroke="#00F1CC"/>
+		</svg>
+	</a>
+</div>
+</div>
+					<div class="tab-pane" id="protfolioTab-6">
+<div class="portfolio">
+	<div class="portfolio__items">		
+		 
+<div class="portfolio__item">
+	<a href="img/project_1.jpg" data-fancybox="portfolio-6"><img src="img/project_1.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_2.jpg" data-fancybox="portfolio-6"><img src="img/project_2.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_3.jpg" data-fancybox="portfolio-6"><img src="img/project_3.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_4.jpg" data-fancybox="portfolio-6"><img src="img/project_4.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_5.jpg" data-fancybox="portfolio-6"><img src="img/project_5.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_6.jpg" data-fancybox="portfolio-6"><img src="img/project_6.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_7.jpg" data-fancybox="portfolio-6"><img src="img/project_7.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_8.jpg" data-fancybox="portfolio-6"><img src="img/project_8.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_9.jpg" data-fancybox="portfolio-6"><img src="img/project_9.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+	</div>
+	<a href="#" class="load-more">
+		<span>Загрузить ещё</span>
+		<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+			<path d="M9.06288 16.3125L14.5004 21.75M14.5004 21.75L19.9379 16.3125M14.5004 21.75L14.5004 7.25" stroke="#00F1CC" stroke-linecap="round" stroke-linejoin="round"/>
+			<rect opacity="0.5" x="0.5" y="0.5" width="28" height="28" rx="2.5" stroke="#00F1CC"/>
+		</svg>
+	</a>
+</div>
+</div>
+					<div class="tab-pane" id="protfolioTab-7">
+<div class="portfolio">
+	<div class="portfolio__items">		
+		 
+<div class="portfolio__item">
+	<a href="img/project_1.jpg" data-fancybox="portfolio-7"><img src="img/project_1.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_2.jpg" data-fancybox="portfolio-7"><img src="img/project_2.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_3.jpg" data-fancybox="portfolio-7"><img src="img/project_3.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_4.jpg" data-fancybox="portfolio-7"><img src="img/project_4.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_5.jpg" data-fancybox="portfolio-7"><img src="img/project_5.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_6.jpg" data-fancybox="portfolio-7"><img src="img/project_6.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_7.jpg" data-fancybox="portfolio-7"><img src="img/project_7.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_8.jpg" data-fancybox="portfolio-7"><img src="img/project_8.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_9.jpg" data-fancybox="portfolio-7"><img src="img/project_9.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+	</div>
+	<a href="#" class="load-more">
+		<span>Загрузить ещё</span>
+		<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+			<path d="M9.06288 16.3125L14.5004 21.75M14.5004 21.75L19.9379 16.3125M14.5004 21.75L14.5004 7.25" stroke="#00F1CC" stroke-linecap="round" stroke-linejoin="round"/>
+			<rect opacity="0.5" x="0.5" y="0.5" width="28" height="28" rx="2.5" stroke="#00F1CC"/>
+		</svg>
+	</a>
+</div>
+</div>
+					<div class="tab-pane" id="protfolioTab-8">
+<div class="portfolio">
+	<div class="portfolio__items">		
+		 
+<div class="portfolio__item">
+	<a href="img/project_1.jpg" data-fancybox="portfolio-8"><img src="img/project_1.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_2.jpg" data-fancybox="portfolio-8"><img src="img/project_2.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_3.jpg" data-fancybox="portfolio-8"><img src="img/project_3.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_4.jpg" data-fancybox="portfolio-8"><img src="img/project_4.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_5.jpg" data-fancybox="portfolio-8"><img src="img/project_5.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_6.jpg" data-fancybox="portfolio-8"><img src="img/project_6.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_7.jpg" data-fancybox="portfolio-8"><img src="img/project_7.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_8.jpg" data-fancybox="portfolio-8"><img src="img/project_8.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+		 
+<div class="portfolio__item">
+	<a href="img/project_9.jpg" data-fancybox="portfolio-8"><img src="img/project_9.jpg" alt=""></a>
+	<div class="content">
+		<span>[2023 г.]</span>
+		<h4>ООО «Название компании»</h4>
+		<p>Здесь будет ваш текст о выполненных работах на данном предприятии.</p>
+	</div>
+</div>
+
+	</div>
+	<a href="#" class="load-more">
+		<span>Загрузить ещё</span>
+		<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+			<path d="M9.06288 16.3125L14.5004 21.75M14.5004 21.75L19.9379 16.3125M14.5004 21.75L14.5004 7.25" stroke="#00F1CC" stroke-linecap="round" stroke-linejoin="round"/>
+			<rect opacity="0.5" x="0.5" y="0.5" width="28" height="28" rx="2.5" stroke="#00F1CC"/>
+		</svg>
+	</a>
+</div>
+</div>
+				</div>	
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+  
+  <!-- rs-steps -->
+   
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-steps.css" />
+<section class="rs-steps" >
+	<div class="rs-steps__container">
+		<div class="rs-steps__wrapper" data-animate="fadeInUp" data-animate-duration="0.5">		
+
+			<div class="rs-steps__content">
+        <div class="bd-left"></div>
+        <div class="bd-right"></div>
+        <div class="bd-center"></div>
+
+        <div class="rs-steps__items" data-animate-stager="fadeInUp" data-animate-duration="0.2" data-animate-delay="0.3">
+          <div class="rs-steps__entry">
+            <div class="rs-steps__head">
+              
+<div class="section-title ">
+	
+	<span>схема работы</span>
+	
+	<h2 class="tlt ">Как мы выполняем проекты</h2>	
+	
+</div>
+
+            </div>
+          </div>
+          
+            <div class="rs-steps__entry">
+<article class="steps-item">  
+  <span>[01]</span>
+	<h4>Получение заявки</h4>
+  <p>Связываемся с клиентом, чтобы подробнее понять потребности и цели</p>
+</article>
+</div>
+          
+            <div class="rs-steps__entry">
+<article class="steps-item">  
+  <span>[02]</span>
+	<h4>Обсуждение деталей проекта</h4>
+  <p>Разрабатываем детальный план работ и согласовываем сроки</p>
+</article>
+</div>
+          
+            <div class="rs-steps__entry">
+<article class="steps-item">  
+  <span>[03]</span>
+	<h4>Выполнение работ</h4>
+  <p>Начинаем работу согласно утвержденному плану, следим за соблюдением сроков и качеством выполнения каждого этапа проекта</p>
+</article>
+</div>
+          
+            <div class="rs-steps__entry">
+<article class="steps-item">  
+  <span>[04]</span>
+	<h4>Контроль качества</h4>
+  <p>Стремимся к высоким стандартам качества и тщательно проверяем каждый аспект проекта</p>
+</article>
+</div>
+          
+            <div class="rs-steps__entry">
+<article class="steps-item">  
+  <span>[05]</span>
+	<h4>Квалификация помещения</h4>
+  <p>Производим и квалифицируем отстроенное чистое&nbsp;помещение</p>
+</article>
+</div>
+          
+        </div>
+        
+			</div>
+			
+		</div>
+	</div>
 </section>
+
+
+
+
+
+
+
+  
+  <!-- rs-video -->
   
 
 
-      </main>
+
+
+<link rel="stylesheet" href="css/block-css/rs-video.css" />
+<section class="rs-video" data-animate="fadeInUp" data-animate-duration="0.5">	
+	<div class="rs-video__container">		
+		<div class="rs-video__wrapper">
+
+			<div class="rs-video__head">
+				
+<div class="section-title ">
+	
+	<span>от идеи к воплощению</span>
+	
+	<h2 class="tlt ">наши профессионалы в действии</h2>	
+	
+</div>
+
+			</div>
+
+			<div class="rs-video__video">
+				<video src="img/video.mp4" poster="img/video-cover.jpg" muted autoplay loop></video>	
+				<button type="button" class="mute">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M5.90738 9.18747H5.0625C4.53745 9.18747 4.27493 9.18747 4.07438 9.28965C3.89798 9.37954 3.75456 9.52296 3.66468 9.69936C3.5625 9.8999 3.5625 10.1624 3.5625 10.6875V13.3125C3.5625 13.8375 3.5625 14.1 3.66468 14.3006C3.75456 14.477 3.89798 14.6204 4.07438 14.7103C4.27493 14.8125 4.53745 14.8125 5.0625 14.8125H5.90738C6.42387 14.8125 6.68212 14.8125 6.92143 14.8769C7.13346 14.9339 7.33383 15.0278 7.5134 15.1541C7.71606 15.2967 7.88139 15.4951 8.21204 15.8919L10.6738 18.8461C11.0823 19.3362 11.2865 19.5813 11.4649 19.6068C11.6194 19.6289 11.7747 19.5726 11.8793 19.4568C12 19.323 12 19.004 12 18.3659V5.63401C12 4.99599 12 4.67697 11.8793 4.54317C11.7747 4.42731 11.6194 4.37107 11.4649 4.39315C11.2865 4.41866 11.0823 4.66373 10.6738 5.15387L8.21204 8.10803C7.88139 8.50481 7.71606 8.7032 7.5134 8.84582C7.33383 8.9722 7.13346 9.06604 6.92143 9.12309C6.68212 9.18747 6.42387 9.18747 5.90738 9.18747Z" fill="#1C313D"/>
+						<path id="mute" d="M15.75 9.65622L20.4375 14.3437M20.4375 9.65622L15.75 14.3437M5.0625 9.18747H5.90738C6.42387 9.18747 6.68212 9.18747 6.92143 9.12309C7.13346 9.06604 7.33383 8.9722 7.5134 8.84582C7.71606 8.7032 7.88139 8.50481 8.21204 8.10803L10.6738 5.15387C11.0823 4.66373 11.2865 4.41866 11.4649 4.39315C11.6194 4.37107 11.7747 4.42731 11.8793 4.54317C12 4.67697 12 4.99599 12 5.63401V18.3659C12 19.004 12 19.323 11.8793 19.4568C11.7747 19.5726 11.6194 19.6289 11.4649 19.6068C11.2865 19.5813 11.0823 19.3362 10.6738 18.8461L8.21204 15.8919C7.88139 15.4951 7.71606 15.2967 7.5134 15.1541C7.33383 15.0278 7.13346 14.9339 6.92143 14.8769C6.68212 14.8125 6.42387 14.8125 5.90738 14.8125H5.0625C4.53745 14.8125 4.27493 14.8125 4.07438 14.7103C3.89798 14.6204 3.75456 14.477 3.66468 14.3006C3.5625 14.1 3.5625 13.8375 3.5625 13.3125V10.6875C3.5625 10.1624 3.5625 9.8999 3.66468 9.69936C3.75456 9.52296 3.89798 9.37954 4.07438 9.28965C4.27493 9.18747 4.53745 9.18747 5.0625 9.18747Z" stroke="#1C313D" stroke-width="1.49254" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</button>
+			</div>
+
+			<div class="rs-video__video mobile">
+				<video src="img/video.mp4" poster="img/video-cover.jpg" loop></video>	
+				<button type="button" class="play">
+					<svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" viewBox="0 0 11 12" fill="none">
+						<path d="M9.62711 4.35601C10.7751 5.15138 10.7751 6.84862 9.6271 7.64399L3.88899 11.6195C2.56259 12.5384 0.75 11.5891 0.75 9.97548L0.750001 2.02451C0.750001 0.410874 2.56259 -0.538433 3.88899 0.380527L9.62711 4.35601Z" fill="#1C313D"/>
+					</svg>
+				</button>
+			</div>
+
+		</div>		
+	</div>
+</section>
+
+  
+  <!-- rs-fos -->
+  
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-fos.css" />
+<section class="rs-fos" data-animate="fadeInUp" data-animate-duration="0.5">	
+	<div class="rs-fos__container">
+		<div class="rs-fos__wrapper">
+			<div class="rs-fos__content">
+				<div class="rs-fos__head">
+					
+<div class="section-title ">
+	
+	<span>Свяжитесь с нами</span>
+	
+	<h2 class="tlt word2">Получите расчет вашего проекта чистого помещения</h2>	
+	
+</div>
+
+				</div>
+				<div class="rs-fos__form">					
+					<div class="form ">
+						<form action="#" id="fosForm">
+							<div class="form-row">
+								<div class="form-group">
+									<input type="text" id="fosName" name="fosName" placeholder="Ваше имя" required />
+								</div>
+								<div class="form-group">
+									<input type="tel" id="fosPhone" name="fosPhone" placeholder="Телефон" maxlength="18" required="" data-tel-input="">
+								</div>
+								<div class="form-group">
+									<input type="email" id="fosMail" name="fosMail" placeholder="E-mail" required="">
+								</div>
+							</div>
+							<div class="form-group">
+								<textarea id="fosMessage" name="fosMessage" placeholder="Ваше сообщение" required></textarea>
+							</div>
+
+							<div class="form-group">
+								<div class="file-upload">
+									<label for="fosFile">Прикрепить файл <span>(.txt, .doc, .docs.) Размер одного файла не более 10 Мб</span></label>
+									<input type="file" id="fosFile" name="fosFile" multiple accept=".txt, .doc, .docx">                
+								</div>
+							</div>   
+
+							<div class="form-submit">
+								<p>Нажимая на кнопку «Получить расчет», вы подтверждаете согласие на обработку персональных данных и соглашаетесь с нашей <a href="#">политикой конфиденциальности.</a></p>
+								<button type="submit" class="btn-color"><span>Получить расчет</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</section>
+
+
+
+  
+  <!-- rs-gallery -->
+   
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-gallery.css" />
+<div class="rs-gallery" id="gallery" data-animate="fadeIn" data-duration="0.5">
+	<div class="rs-gallery__wrapper">
+		<div class="gallery-slider">
+			<div class="gallery-slider__slider">
+				<div class="gallery-slider__swiper">
+					<div class="gallery-slider__slide"><img src="img/gallery_1.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_2.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_3.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_4.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_5.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_6.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_7.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_8.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_9.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_10.jpg" alt=""></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="gallery-slider gallery-slider_rev">
+			<div class="gallery-slider__slider">
+				<div class="gallery-slider__swiper">
+					<div class="gallery-slider__slide"><img src="img/gallery_1.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_2.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_3.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_4.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_5.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_6.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_7.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_8.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_9.jpg" alt=""></div>
+					<div class="gallery-slider__slide"><img src="img/gallery_10.jpg" alt=""></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+      </div>
+
+      <footer>
+        
+
+
+
+
+
+ 
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-footer.css" />
+<section class="rs-footer">	
+	<div class="rs-footer__container">
+		<div class="rs-footer__wrapper">
+
+			<div class="rs-footer__info">				
+				<p class="tlt word5 word6">Подпишитесь на рассылку и получите информацию о новых изделиях</p>
+				
+<a href="#" class="btn-color " data-text="Подписаться">	
+	<span class="text"><span>Подписаться</span></span>
+</a>
+
+			</div>
+
+			<div class="rs-footer__contacts">
+				
+<div class="footer-contacts">	
+
+	<div class="footer-contacts__item">
+		<div class="footer-title">Контакты</div>
+		<ul>
+			<li><a href="tel:+74956461382">+7 (495) 646-13-82</a></li>
+			<li><a href="mailto:info@mtxclean.ru">info@mtxclean.ru</a></li>
+			<li><p>Пн-Пт с 9:00 до 18:00</p></li>
+		</ul>
+		<a href="#" class="btn-social"><img src="img/icons/VK.svg" alt=""></a>	
+	</div>		
+
+	<div class="footer-contacts__item address">
+		<div class="footer-title">Производство</div>
+		<p>40009, Московская обл., Люберецкий р-н, д. Машково, Новомарусинский проезд, д. 2</p>
+	</div>
+
+	<div class="footer-contacts__item address">
+		<div class="footer-title">Офис</div>			
+		<p>109544, Москва, ул. Рабочая, <br> д. 93, стр. 1, оф. 319</p>
+	</div>
+
+</div>
+
+			</div>
+
+			<div class="rs-footer__menu">
+				<div class="footer-title" data-spoller>Меню</div>
+				<div class="footer-wrapper">
+					
+<nav class="footer-menu "> 
+  <ul class="footer-menu__list">
+    
+    <li><a href="#" class="tilt"><span>Новости</span></a></li>
+    
+    <li><a href="#" class="tilt"><span>Вакансии</span></a></li>
+       
+  </ul>
+</nav>
+
+				</div>				
+			</div>
+
+			<div class="rs-footer__bottom">
+				<p>© ООО «МТех» 2023. Все права защищены.</p>
+				<a href="#">Разработано в Россайт</a>
+			</div>
+
+		</div>
+
+	</div>
+</section>
+
+      </footer>
       
-    </div>
+    </div>   
     
   </body>
 </html>
