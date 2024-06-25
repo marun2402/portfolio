@@ -1,0 +1,207 @@
+.rs-category {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.rs-category__breadcrumbs {
+    margin-bottom: 15px;
+}
+
+.rs-category__filter {
+    margin-bottom: 34px;
+}
+
+.rs-category__head {
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 30px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.rs-category__sort {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    gap: 10px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.rs-category__items {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+}
+
+.rs-category__footer {
+    margin-top: 40px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.rs-category .filter-form .filter-block {
+    display: grid;
+    gap: 10px;
+}
+
+.rs-category .filter-form .filter-block_line {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-items: start;
+}
+
+.rs-category .filter-form .filter-block .checkbox {
+    margin: 0;
+    cursor: pointer;
+}
+
+.rs-category .filter-form .filter-block .checkbox > input {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.rs-category .filter-form .filter-block .checkbox span {
+    border-radius: 53px;
+    background: var(--seryy-fon-gotovye-resheniya);
+    padding: 7px 20px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--chernyy-shrit);
+}
+
+.rs-category .filter-form .filter-block .checkbox input:checked + span {
+    background: var(--rozovyy-akcent);
+    color: var(--belyy);
+}
+
+.rs-category .sort-form {
+    position: relative;
+    white-space: nowrap;
+}
+
+.rs-category .sort-form__head {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    background: var(--seryy-fon-gotovye-resheniya);
+    border-radius: 34px;
+    padding: 7px 20px;
+}
+
+.rs-category .sort-form__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    letter-spacing: 0.03em;
+    color: var(--chernyy-shrit);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.rs-category .sort-form__current {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    letter-spacing: 0.03em;
+    color: var(--rozovyy-akcent);
+    display: inline-block;
+}
+
+.rs-category .sort-form__dropdown {
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: calc(100% + 10px);
+    display: none;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 13px 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 24px 37px 0px rgba(20, 82, 67, 0.1);
+}
+
+.rs-category .sort-form__dropdown.active {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.rs-category .sort-form__option {
+    color: #05251d;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 160%;
+    transition-duration: 0.3s;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.rs-category .sort-form__option.active {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .rs-category__footer {
+        margin-top: 20px;
+    }
+
+    .rs-category .filter-form .filter-block .checkbox span {
+        font-size: 11px;
+    }
+
+    .rs-category .sort-form__title {
+        font-size: 13px;
+    }
+
+    .rs-category .sort-form__current {
+        font-size: 13px;
+    }
+
+    .rs-category .sort-form__option {
+        font-size: 11px;
+    }
+}
+
+@media (any-hover: hover) {
+    .rs-category .sort-form__option:hover {
+        color: var(--zelnyy);
+    }
+}
