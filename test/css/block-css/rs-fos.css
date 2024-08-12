@@ -1,0 +1,31 @@
+.rs-fos {
+    position: relative;
+    background: url("../../img/fos_bg.jpg") center/cover no-repeat;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    border-radius: 50px;
+}
+
+.rs-fos__wrapper {
+    max-width: 854px;
+    margin: 0 auto;
+}
+
+.rs-fos__head {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 165%;
+    text-align: center;
+    color: #1a1a1a;
+}
+
+.rs-fos__form {
+    margin-top: 30px;
+}
+
+@media (max-width: 767.98px) {
+    .rs-fos {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
