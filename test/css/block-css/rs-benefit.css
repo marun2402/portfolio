@@ -1,11 +1,21 @@
 .rs-benefit {
     position: relative;
-    padding-top: 130px;
-    padding-bottom: 110px;
+    padding-top: 50px;
+    padding-bottom: 100px;
 }
 
-.rs-benefit__head {
-    margin-bottom: 60px;
+.rs-benefit__title {
+    position: relative;
+}
+
+.rs-benefit__subtitle {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: var(--fluid-24-40);
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    color: var(--seryy-zagolovki);
+    margin-bottom: 1.1em;
 }
 
 .rs-benefit__items {
@@ -16,42 +26,58 @@
 
 .rs-benefit .benefit-card {
     position: relative;
+    height: 100%;
+    background: var(--belyy);
+    border-radius: var(--fluid-10-20);
+    padding: var(--fluid-10-20);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    overflow: hidden;
 }
 
 .rs-benefit .benefit-card__icon {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 }
 
 .rs-benefit .benefit-card__title {
     font-family: var(--second-family);
     font-weight: 600;
-    font-size: clamp(16px, 13.4px + 0.3378vw, 19px);
-    line-height: 110%;
-    color: #000;
-    margin-bottom: 5px;
+    font-size: var(--fluid-13-16);
+    letter-spacing: 0.03em;
+    color: var(--seryy-zagolovki);
+    margin-top: auto;
+    margin-bottom: 8px;
 }
 
 .rs-benefit .benefit-card__text {
     font-weight: 400;
-    font-size: clamp(16px, 13.4px + 0.3378vw, 19px);
-    line-height: 165%;
-    color: #1a1a1a;
+    font-size: var(--fluid-13-16);
+    letter-spacing: 0.03em;
+    color: var(--seryy-zagolovki);
+}
+
+@media (min-width: 767.98px) {
+    .rs-benefit__item {
+        min-height: 187px;
+    }
 }
 
 @media (max-width: 1023.98px) {
     .rs-benefit__items {
-        grid-template-columns: 1fr 1fr;
+        gap: 15px;
     }
 }
 
 @media (max-width: 767.98px) {
     .rs-benefit {
-        padding-top: 55px;
-        padding-bottom: 55px;
-    }
-
-    .rs-benefit__head {
-        margin-bottom: 25px;
+        padding-top: 25px;
+        padding-bottom: 50px;
     }
 
     .rs-benefit__items {

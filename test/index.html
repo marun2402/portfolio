@@ -3,9 +3,11 @@
   <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Source</title>
+	<title>Алтек</title>
 
 	<script src="js/jquery-2.1.3.min.js" defer></script>
+
+	
 	
 
 	
@@ -13,8 +15,6 @@
 
 	<script src="js/swiper-bundle.min.js" defer></script>
 	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
-
-	<script src="js/validate/jquery.validate.min.js" defer></script>
 
 	<script src="js/gsap/gsap.min.js" defer></script>
 	<script src="js/gsap/ScrollTrigger.min.js" defer></script>
@@ -31,7 +31,10 @@
 
   <body class="page-type-default">
     
-    
+    <div class="globals">
+      
+      <div class="custom-cursor">Подробнее</div>
+    </div>
 
     <div class="site-wrapper">      
 
@@ -44,13 +47,17 @@
 
 <link rel="stylesheet" href="css/block-css/rs-header.css" />
 <div class="rs-header">	
-		<div class="rs-header__wrapper">
+		<div class="rs-header__container">
+			<div class="rs-header__wrapper">
 			
-			<div class="rs-header__pane">
-				<div class="rs-header__holder">
-					<div class="rs-header__logo"><a href="#"><img src="img/logo.svg" alt="" /></a></div>
-					
-
+				<div class="rs-header__main">
+					<div class="header-main">
+						<div class="header-main__wrapper">
+							<a href="#" class="header-main__logo">
+								<img class="main-logo" src="img/logo_header.png" alt="">
+								<img class="dark-logo" src="img/logo_dark.png" alt="">
+							</a>
+							
 
 
 
@@ -58,506 +65,270 @@
 
 	<div class="menu-wrapper">
 		<ul class="menu__list">
-			<li><a href="#"><span>О нас</span></a></li>		
+			<li><a href="#"><span>Главная</span></a></li>				
 			<li class="menu__dropdown">
-				<a href="#"><span>Продукция</span></a>
+				<a href="#"><span>Каталог</span></a>
 				<button type="button" class="menu__dropdown-arrow"></button>
 				<ul class="menu__dropdown-list">
-					<li class="switch-back">Продукция</li>
+					<li class="switch-back">Каталог</li>
 					<li class="menu__dropdown">
-						<a href="#"><span>Насосы</span></a>
+						<a href="#"><span>Средства ручного контроля</span></a>
 						<button type="button" class="menu__dropdown-arrow"></button>
 						<ul class="menu__dropdown-list">
-							<li class="switch-back">Насосы</li>
-							<li><a href="#"><span>Насосы типа OH1 по API 610</span></a></li>
-							<li><a href="#"><span>Насосы типа OH2 по API 610</span></a></li>
-							<li><a href="#"><span>Насосы типа OH3 по API 610</span></a></li>
-							<li><a href="#"><span>Насосы типа BB1 по API 610</span></a></li>
-							<li><a href="#"><span>Насосы типа BB2 по API 610</span></a></li>
-							<li><a href="#"><span>Насосы типа BB3 по API 610</span></a></li>
-							<li><a href="#"><span>Насосы типа BB4 по API 610</span></a></li>
-							<li><a href="#"><span>Насосы типа BB5 по API 610</span></a></li>
-							<li><a href="#"><span>Вертикальный насос VS4</span></a></li>
-							<li><a href="#"><span>Вертикальный насос VS6</span></a></li>
-							<li><a href="#"><span>Осевой насос</span></a></li>	
+							<li class="switch-back">Средства ручного контроля</li>
+							<li><a href="#"><span>Дефектоскопы</span></a></li>
+							<li><a href="#"><span>Толщиномеры</span></a></li>
 						</ul>
 					</li>
+					<li><a href="#"><span>Автоматизированные комплексы</span></a></li>
+					<li><a href="#"><span>Устройства сканирования</span></a></li>
+					<li><a href="#"><span>Комплектующие</span></a></li>
 				</ul>
-			</li>
-			<li><a href="#"><span>Сферы применения</span></a></li>
-			<li><a href="#"><span>Поддержка заказчика</span></a></li>
-			<li><a href="#"><span>Сервисные центры</span></a></li>
-			<li><a href="#"><span>Наши проекты</span></a></li>
-			<li><a href="#"><span>контакты</span></a></li>			
+			</li>			
+			<li><a href="#"><span>Услуги</span></a></li>
+			<li><a href="#"><span>О компании</span></a></li>
+			<li><a href="#"><span>Новости</span></a></li>
+			<li><a href="#"><span>Полезная информация</span></a></li>
+			<li><a href="#"><span>Контакты</span></a></li>
 		</ul>
 	</div>
 
-	<div class="mobile-menu-button">
+	<div class="mobile-menu-contacts">
 		<div class="menu-wrapper">		
-			
-<a href="#" class="btn-color " data-title="Заказать расчёт">
-	<span>Заказать расчёт</span>
-</a>
-	
+			<div class="mobile-menu-contacts__title">Свяжитесь с нами</div>		
+			<ul class="mobile-menu-contacts__list">
+				<li><a href="mailto:altek@altek.ru"><img src="img/icons/mail_mobile_icon.svg" alt="">altek@altek.ru</a></li>
+			</ul>
 		</div>
 	</div>
 
 </nav>
-				</div>
-			</div>
-			
-			<div class="rs-header__act">
-				<a href="tel:+70000000000">+7 (000) 000–00–00</a>
-				
-<a href="#" class="btn-color " data-title="Заказать расчёт">
-	<span>Заказать расчёт</span>
-</a>
 
-			</div>
-			
-			<div class="header-mobile-button">
-				<a href="tel:+70000000000"><img src="img/icons/phone_icon.svg" alt=""></a>
-			</div>
-			<button class="menu-burger">
-  <span>Закрыть</span>
-  <span>Меню</span>
+
+
+							<a href="mailto:altek@altek.ru" class="header-contact">
+								<span class="text">altek@altek.ru</span>
+								<span class="icon"><img src="img/icons/mail_icon.svg" alt=""></span>
+							</a>
+							<a href="#" class="mini-cart-button">
+								<span class="icon"><img src="img/icons/cart_icon.svg" alt=""></span>
+								<span class="text">Корзина</span>
+							</a>
+							<button class="menu-burger">
+  <span><img src="img/icons/close_icon.svg" alt=""> Закрыть</span>
+  <span><img src="img/icons/burger_icon.svg" alt=""> Меню</span>
 </button>
 
-					
+							<div class="rs-header__search"><button class="header-search-open"></button>
+<div class="header-search">
+	<form action="#">		
+		<input type="text" name="headerSearch" placeholder="Введите ваш запрос" />
+		<button type="reset"></button>
+		<button type="submit"><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M14.9459 14.9368L22 22M17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667Z" stroke="black" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+		</svg></button>
+	</form>	
+</div>
+</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
 		</div>
 </div>
-
+ 
       </header>
 
       <div class="main">        
         
 
-  <!-- rs-intro -->
+  <!-- rs-slider -->
   
 
 
 
 
-<link rel="stylesheet" href="css/block-css/rs-intro.css" />
-<div class="rs-intro">
 
-	<div class="rs-intro__wrapper">
+	 
 
-		<div class="rs-intro__bg">
-			<video src="img/intro_des.mp4" poster="img/intro_poster.jpg" autoplay muted loop></video>
-			<img src="img/intro_mob.jpg" alt="">
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-slider.css" />
+<div class="rs-slider">	
+	<div class="rs-slider__bg">
+		<picture>
+			<source media="(max-width: 1023.98px)" srcset="img/slider_bg_min.jpg">
+			<img src="img/slider_bg.jpg" alt="">
+		</picture>
+	</div>
+	<div class="rs-slider__wrapper">		
+
+		<div class="rs-slider__slider">
+			<div class="hero-slider">				
+				<div class="hero-slider__slider">
+					<div class="hero-slider__swiper">							
+						
+							<div class="hero-slider__slide">
+<div class="slide">	
+	<div class="slide__media">
+		<picture>
+			<source media="(max-width: 1023.98px)" srcset="img/slider_1_min.png">
+			<img src="img/slider_1.png" alt="">
+		</picture>
+	</div>
+	<div class="slide__content">		
+		<div class="slide__title">
+			<h2>Лидер в области неразрушающего контроля</h2>
 		</div>
+		<div class="slide__text">
+			<p>Ручные, механизированные и автоматизированные средства ультразвукового и вихретокового контроля от компании АЛТЕК</p>
+			
+<a href="#" class="btn-color ">
+	<span>Перейти в каталог</span>
+</a>
 
-		<div class="intro-content">
-			<span>Source</span>
-			<h1>Поставка технологического оборудования для ключевых отраслей промышленности России</h1>
 		</div>
+	</div>
+</div>
+</div>
+						
+							<div class="hero-slider__slide">
+<div class="slide">	
+	<div class="slide__media">
+		<picture>
+			<source media="(max-width: 1023.98px)" srcset="img/slider_2_min.png">
+			<img src="img/slider_2.png" alt="">
+		</picture>
+	</div>
+	<div class="slide__content">		
+		<div class="slide__title">
+			<h2>Отечественное производство и оперативная поддержка</h2>
+		</div>
+		<div class="slide__text">
+			<p>Головной офис в Санкт-Петербурге и представительства по всей России для быстрой доставки и обслуживания оборудования</p>
+			
+<a href="#" class="btn-color ">
+	<span>Перейти в каталог</span>
+</a>
 
-		<div class="intro-scroll-down">
-			<div class="intro-scroll-down__icon">
-				<a href="#about" data-anchor class="intro-scroll-down__link">
-					<span class="intro-scroll-down__arrow"><img src="img/icons/arrow_down.svg" alt=""></span>
-					<span class="intro-scroll-down__title">подробнее о нас</span> 
-				</a>
+		</div>
+	</div>
+</div>
+</div>
+						
+							<div class="hero-slider__slide">
+<div class="slide">	
+	<div class="slide__media">
+		<picture>
+			<source media="(max-width: 1023.98px)" srcset="img/slider_3_min.png">
+			<img src="img/slider_3.png" alt="">
+		</picture>
+	</div>
+	<div class="slide__content">		
+		<div class="slide__title">
+			<h2>Гарантия качества и безопасности</h2>
+		</div>
+		<div class="slide__text">
+			<p>Строгий контроль на каждом этапе производства оборудования для ультразвукового и вихретокового неразрушающего контроля</p>
+			
+<a href="#" class="btn-color ">
+	<span>Перейти в каталог</span>
+</a>
+
+		</div>
+	</div>
+</div>
+</div>
+												
+					</div>
+				</div>				
+				<div class="hero-slider__nav">
+					<div class="slider-paging"></div>
+					<div class="slider-arrows">
+	<button type="button" class="slider-arrow slider-arrow_prev">
+		<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 12.5V0.5M6 0.5L1 5.5M6 0.5L11 5.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</button>
+	<button type="button" class="slider-arrow slider-arrow_next">
+		<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 0.5V12.5M6 12.5L1 7.5M6 12.5L11 7.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</button>
+</div>
+
+				</div>
 			</div>
-		</div>
-
-		
+		</div>		
 
 	</div>
-
-</div>  
+</div>    
   
-  <!-- rs-about -->
-   
+  <!-- rs-catalog -->
+  
 
 
 
 
 
 
-<link rel="stylesheet" href="css/block-css/rs-about.css" />
-<section class="rs-about" id="about">	
-	<div class="rs-about__container">
-		<div class="rs-about__wrapper">
 
-      <div class="rs-about__body">
-        <div class="rs-about__head" data-animate="fadeInUp">
-          
-<div class="section-title ">
-	
-	<span>Source</span>
-	
-	<h2>Насосное оборудование высокого качества от проверенного производителя</h2>	
-	
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-catalog.css" />
+<section class="rs-catalog">
+	<div class="rs-catalog__container">		
+		<div class="rs-catalog__wrapper section-wrapper">
+			<div class="rs-catalog__title">
+<div class="mini-title">
+	<div class="roller">
+		<h3>Каталог</h3>
+	</div>
+</div>
+</div>
+			<div class="rs-catalog__slider">
+<div class="catalog-slider">
+	<div class="catalog-slider__slider catalog-slider-thumbs">
+		<div class="catalog-slider__swiper">			
+      <div class="catalog-slider-thumbs__slide">Автоматизированные <br> комплексы </div>
+      <div class="catalog-slider-thumbs__slide">Средства ручного контроля</div>
+      <div class="catalog-slider-thumbs__slide">Устройства сканирования</div>
+      <div class="catalog-slider-thumbs__slide">Комплектующие</div>
+		</div>
+	</div>
+	<div class="catalog-slider__slider catalog-slider-main">
+		<div class="catalog-slider__swiper">
+      <div class="catalog-slider-main__slide"><a href="#" data-cursor><img src="img/kt_img.png" alt=""></a></div>
+      <div class="catalog-slider-main__slide"><a href="#" data-cursor><img src="img/kt_img.png" alt=""></a></div>
+      <div class="catalog-slider-main__slide"><a href="#" data-cursor><img src="img/kt_img.png" alt=""></a></div>
+      <div class="catalog-slider-main__slide"><a href="#" data-cursor><img src="img/kt_img.png" alt=""></a></div>
+		</div>
+	</div>
+	<div class="catalog-slider__nav">
+		<div class="slider-paging"></div>
+		<div class="slider-arrows">
+	<button type="button" class="slider-arrow slider-arrow_prev">
+		<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 12.5V0.5M6 0.5L1 5.5M6 0.5L11 5.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</button>
+	<button type="button" class="slider-arrow slider-arrow_next">
+		<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 0.5V12.5M6 12.5L1 7.5M6 12.5L11 7.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</button>
 </div>
 
-          <div class="quote" data-animate="clipUp::600">
-            <div class="quote__wrapper" >
-              <p>Если вы ищете надёжного поставщика насосного оборудования, обращайтесь к нам</p>
-              <div class="quote__buttons">
-<a href="#" class="btn-color " data-title="Начать сотрудничество">
-	<span>Начать сотрудничество</span>
-</a>
+	</div>
 </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="rs-about__content base-content" data-animate-stager="fadeInUp:200::200">
-          <p>Компания «СОРС» уже более 10 лет поставляет технологическое оборудование, включая насосы, для ведущих отраслей промышленности в России. Являемся уникальной командой-правопреемником одного из крупнейших поставщиков насосного оборудования Sulzer.</p>
-          <p>Предлагаем широкий ассортимент продукции, включающий более 50 наименований, соответствующих стандартам API 610, ISO 5199 и ISO 2858. Перед отправкой каждый насос проходит тщательное тестирование, а при необходимости испытания могут быть проведены прямо на глазах у заказчика. В процессе производства корпусных деталей насосов мы используем высококачественное литьё.</p>
-          <p>Наша компания имеет представительства в Санкт-Петербурге и Екатеринбурге, где расположены наши офисы и склады. Кроме того, мы предоставляем услуги сервисных центров по ремонту насосного оборудования и механических уплотнений в Северо-Западном федеральном округе и Сибири.</p>
-        </div>
-      </div>      
-			
-		</div>		
-	</div>	
+</div>	
+		</div>
+	</div>
 </section>
-
-
-  
-  
-  <!-- rs-goods -->
-  
-
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="css/block-css/rs-goods.css" />
-<section class="rs-goods">		
-  <div class="rs-goods__container">
-    <div class="rs-goods__wrapper">
-    
-      <div class="rs-goods__head" data-animate="fadeInUp">
-        
-<div class="section-title ">
-	
-	<span>Продукция</span>
-	
-	<h2>Высококачественные насосы для всех отраслей</h2>	
-	
-</div>
-       
-      </div>
-
-      <div class="rs-goods__slider"  data-animate="fadeInUp::200">
-<div class="goods-slider">
-  <div class="goods-slider__slider">
-    <div class="goods-slider__swiper">
-      
-      <div class="goods-slider__slide">
-<article class="goods-card">
-  <div class="goods-card__photo">
-    <img src="img/goods_1.jpg" alt="">
-  </div>
-  <div class="goods-card__content">
-    <h4>Насосы типа OH1 по API 610</h4>
-    <span>Подробнее</span>
-  </div>
-	<a href="#">Насосы типа OH1 по API 610</a>
-</article>
-</div>
-      
-      <div class="goods-slider__slide">
-<article class="goods-card">
-  <div class="goods-card__photo">
-    <img src="img/goods_2.jpg" alt="">
-  </div>
-  <div class="goods-card__content">
-    <h4>Насосы типа OH2 по API 610</h4>
-    <span>Подробнее</span>
-  </div>
-	<a href="#">Насосы типа OH2 по API 610</a>
-</article>
-</div>
-      
-      <div class="goods-slider__slide">
-<article class="goods-card">
-  <div class="goods-card__photo">
-    <img src="img/goods_3.jpg" alt="">
-  </div>
-  <div class="goods-card__content">
-    <h4>Насосы типа OH3 по API 610</h4>
-    <span>Подробнее</span>
-  </div>
-	<a href="#">Насосы типа OH3 по API 610</a>
-</article>
-</div>
-      
-      <div class="goods-slider__slide">
-<article class="goods-card">
-  <div class="goods-card__photo">
-    <img src="img/goods_4.jpg" alt="">
-  </div>
-  <div class="goods-card__content">
-    <h4>Насосы типа BB1 по API 610</h4>
-    <span>Подробнее</span>
-  </div>
-	<a href="#">Насосы типа BB1 по API 610</a>
-</article>
-</div>
-      
-      <div class="goods-slider__slide">
-<article class="goods-card">
-  <div class="goods-card__photo">
-    <img src="img/goods_1.jpg" alt="">
-  </div>
-  <div class="goods-card__content">
-    <h4>Насосы типа OH1 по API 610</h4>
-    <span>Подробнее</span>
-  </div>
-	<a href="#">Насосы типа OH1 по API 610</a>
-</article>
-</div>
-      
-      <div class="goods-slider__slide">
-<article class="goods-card">
-  <div class="goods-card__photo">
-    <img src="img/goods_2.jpg" alt="">
-  </div>
-  <div class="goods-card__content">
-    <h4>Насосы типа OH2 по API 610</h4>
-    <span>Подробнее</span>
-  </div>
-	<a href="#">Насосы типа OH2 по API 610</a>
-</article>
-</div>
-      
-      <div class="goods-slider__slide">
-<article class="goods-card">
-  <div class="goods-card__photo">
-    <img src="img/goods_3.jpg" alt="">
-  </div>
-  <div class="goods-card__content">
-    <h4>Насосы типа OH3 по API 610</h4>
-    <span>Подробнее</span>
-  </div>
-	<a href="#">Насосы типа OH3 по API 610</a>
-</article>
-</div>
-      
-      <div class="goods-slider__slide">
-<article class="goods-card">
-  <div class="goods-card__photo">
-    <img src="img/goods_4.jpg" alt="">
-  </div>
-  <div class="goods-card__content">
-    <h4>Насосы типа BB1 по API 610</h4>
-    <span>Подробнее</span>
-  </div>
-	<a href="#">Насосы типа BB1 по API 610</a>
-</article>
-</div>
-      
-    </div>
-  </div>
-  <div class="slider-nav">
-    <div class="slider-arrows">
-	<button type="button" class="slider-arrow slider-arrow_prev"><img src="img/icons/slider_arrow_prev.svg" alt=""></button>
-	<button type="button" class="slider-arrow slider-arrow_next"><img src="img/icons/slider_arrow_next.svg" alt=""></button>
-</div>
-
-    <div class="slider-paging"></div>
-  </div>
-</div>
-</div>
-
-    </div>
-  </div>	
-</section>
-
-
-  
-  
-  <!-- rs-scope -->
-   
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="css/block-css/rs-scope.css" />
-<section class="rs-scope">	
-	<div class="rs-scope__container">
-		<div class="rs-scope__wrapper">
-
-      <div class="rs-scope__row">
-
-        <div class="rs-scope__head" data-animate="fadeInUp">
-          <div class="scope-title">
-            
-<div class="section-title section-title_light">
-	
-	<span>Сферы применения</span>
-	
-	<h2>Эффективные решения для ведущих отраслей промышленности</h2>	
-	
-</div>
-
-          </div>
-          <img src="img/scope_main.jpg" alt="">
-        </div>
-        
-        <div class="rs-scope__content" >
-          <div class="rs-scope__items" data-animate-stager="fadeInUp:0:::200">
-            
-            <div class="rs-scope__item">
-<article class="scope-card">
-  <div class="scope-card__wrapper">
-    <div class="scope-card__content">
-      <span>01</span>
-      <h4>Нефтегазовая промышленность</h4>
-    </div>
-    <div class="scope-card__photo"><img src="img/scope_1.jpg" alt=""></div>
-  </div>
-	
-</article>
-</div>
-            
-            <div class="rs-scope__item">
-<article class="scope-card">
-  <div class="scope-card__wrapper">
-    <div class="scope-card__content">
-      <span>02</span>
-      <h4>Производство удобрений</h4>
-    </div>
-    <div class="scope-card__photo"><img src="img/scope_2.jpg" alt=""></div>
-  </div>
-	
-</article>
-</div>
-            
-            <div class="rs-scope__item">
-<article class="scope-card">
-  <div class="scope-card__wrapper">
-    <div class="scope-card__content">
-      <span>03</span>
-      <h4>Энергетика</h4>
-    </div>
-    <div class="scope-card__photo"><img src="img/scope_3.jpg" alt=""></div>
-  </div>
-	
-</article>
-</div>
-            
-            <div class="rs-scope__item">
-<article class="scope-card">
-  <div class="scope-card__wrapper">
-    <div class="scope-card__content">
-      <span>04</span>
-      <h4>Металлургия</h4>
-    </div>
-    <div class="scope-card__photo"><img src="img/scope_4.jpg" alt=""></div>
-  </div>
-	
-</article>
-</div>
-            
-            <div class="rs-scope__item">
-<article class="scope-card">
-  <div class="scope-card__wrapper">
-    <div class="scope-card__content">
-      <span>05</span>
-      <h4>Химическая промышленность</h4>
-    </div>
-    <div class="scope-card__photo"><img src="img/scope_5.jpg" alt=""></div>
-  </div>
-	
-</article>
-</div>
-            
-          </div>
-        </div>
-      </div>      
-			
-		</div>		
-	</div>	
-</section>
-
-
-
-  
-  <!-- rs-article -->
-   
-
-
-
-
-
-
-<link rel="stylesheet" href="css/block-css/rs-article.css" />
-<section class="rs-article">	
-	<div class="rs-article__container">
-		<div class="rs-article__wrapper">
-      
-      <div class="rs-article__row">        
-
-        <div class="rs-article__content base-content" data-animate-stager="fadeInUp:200">
-          
-<div class="section-title ">
-	
-	<span>Сервис оборудования</span>
-	
-	<h2>Гарантийное сервисное обслуживание насосного оборудования</h2>	
-	
-</div>
-
-          <p>Наша компания предлагает гарантийное сервисное обслуживание всего спектра насосного оборудования:</p>
-          <ul>
-            <li>ввод в эксплуатацию;</li>
-            <li>шеф-монтажные и пуско-наладочные работы;</li>
-            <li>аудит насосных станций;</li>
-            <li>энергоаудит;</li>
-            <li>центровка и вибродиагностика;</li>
-            <li>долгосрочные сервисные контракты;</li>
-            <li>разовые работы на ППР;</li>
-            <li>выездной ремонт;</li>
-            <li>ремонт в наших сервисных центрах в Санкт-Петербурге и Екатеринбурге;</li>
-            <li>3D сканирование, с последующим обратным инжинирингом и возможностью изготовления новых деталей.</li>
-          </ul>
-        </div>
-
-        <div class="rs-article__media">
-          <div class="article-photos"  data-animate-stager="clipUp:400">
-            <img src="img/article_1.jpg" alt="">
-            <img src="img/article_2.jpg" alt="">
-          </div>
-          <div class="quote" data-animate="clipUp::800">
-            <div class="quote__wrapper">
-              <p>Обратитесь к нам для получения подробной консультации. Мы готовы предложить оптимальные решения и профессиональное сопровождение для вашего бизнеса.</p>
-              <div class="quote__buttons">
-                
-<a href="#" class="btn-color " data-title="Получить консультацию">
-	<span>Получить консультацию</span>
-</a>
-
-                
-<a href="#" class="btn-border " data-title="Подробнее">
-	<span>Подробнее</span>
-</a>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-			
-		</div>		
-	</div>	
-</section>
-
   
   <!-- rs-services -->
   
@@ -575,138 +346,59 @@
 
 <link rel="stylesheet" href="css/block-css/rs-services.css" />
 <section class="rs-services">
-	<div class="rs-services__container">
-    
-    <div class="rs-services__head" data-animate="fadeInUp">
-      
-<div class="section-title ">
-	
-	<span>Услуги</span>
-	
-	<h2>Индивидуальные решения для каждого</h2>	
-	
-</div>
-
-    </div>
-
-
-		<div class="rs-services__wrapper">					
-
-      <div class="rs-services__content">
-        <div class="services-slider">
-          <div class="services-slider__slider">
-            <div class="services-slider__swiper" data-animate-stager="fadeInUp:250">
-              
-              <div class="services-slider__slide">
-<div class="services-card">
-  <div class="services-card__wrapper">
-    <h4>Мониторинг и диагностика оборудования</h4>
-    <picture>
-      <source media="(max-width: 1023.98px)" srcset="img/service_mobile_1.jpg">
-      <img class="services-card__bg" src="img/service_1.jpg" alt="">
-    </picture>    
-  </div>
-  <div class="button"><span></span></div>
-  <a href="#">Мониторинг и диагностика оборудования</a>	
+	<div class="rs-services__container">		
+		<div class="rs-services__wrapper section-wrapper">
+			<div class="rs-services__title">
+<div class="mini-title">
+	<div class="roller">
+		<h3>Услуги</h3>
+	</div>
 </div>
 </div>
-              <div class="services-slider__slide">
-<div class="services-card">
-  <div class="services-card__wrapper">
-    <h4>Разработка ТЭО</h4>
-    <picture>
-      <source media="(max-width: 1023.98px)" srcset="img/service_mobile_2.jpg">
-      <img class="services-card__bg" src="img/service_2.jpg" alt="">
-    </picture>    
-  </div>
-  <div class="button"><span></span></div>
-  <a href="#">Разработка ТЭО</a>	
-</div>
-</div>
-              <div class="services-slider__slide">
-<div class="services-card">
-  <div class="services-card__wrapper">
-    <h4>Шефмонтаж и запуск <br> оборудования</h4>
-    <picture>
-      <source media="(max-width: 1023.98px)" srcset="img/service_mobile_3.jpg">
-      <img class="services-card__bg" src="img/service_3.jpg" alt="">
-    </picture>    
-  </div>
-  <div class="button"><span></span></div>
-  <a href="#">Шефмонтаж и запуск &lt;br&gt; оборудования</a>	
-</div>
-</div>
-              <div class="services-slider__slide">
-<div class="services-card">
-  <div class="services-card__wrapper">
-    <h4>Сервис жизненного цикла <br> с возможностью продления гарантии</h4>
-    <picture>
-      <source media="(max-width: 1023.98px)" srcset="img/service_mobile_4.jpg">
-      <img class="services-card__bg" src="img/service_4.jpg" alt="">
-    </picture>    
-  </div>
-  <div class="button"><span></span></div>
-  <a href="#">Сервис жизненного цикла &lt;br&gt; с возможностью продления гарантии</a>	
-</div>
-</div>
-              <div class="services-slider__slide">
-<div class="services-card">
-  <div class="services-card__wrapper">
-    <h4>Поставка запчастей</h4>
-    <picture>
-      <source media="(max-width: 1023.98px)" srcset="img/service_mobile_5.jpg">
-      <img class="services-card__bg" src="img/service_5.jpg" alt="">
-    </picture>    
-  </div>
-  <div class="button"><span></span></div>
-  <a href="#">Поставка запчастей</a>	
-</div>
-</div>
-              <div class="services-slider__slide">
-<div class="services-card">
-  <div class="services-card__wrapper">
-    <h4>Сервис механических уплотнений</h4>
-    <picture>
-      <source media="(max-width: 1023.98px)" srcset="img/service_mobile_6.jpg">
-      <img class="services-card__bg" src="img/service_6.jpg" alt="">
-    </picture>    
-  </div>
-  <div class="button"><span></span></div>
-  <a href="#">Сервис механических уплотнений</a>	
-</div>
-</div>
-              <div class="services-slider__slide">
-<div class="services-card">
-  <div class="services-card__wrapper">
-    <h4>Обратный инжиниринг</h4>
-    <picture>
-      <source media="(max-width: 1023.98px)" srcset="img/service_mobile_7.jpg">
-      <img class="services-card__bg" src="img/service_7.jpg" alt="">
-    </picture>    
-  </div>
-  <div class="button"><span></span></div>
-  <a href="#">Обратный инжиниринг</a>	
-</div>
-</div>
-
-            </div>
-          </div>
-          <div class="slider-nav">
-            <div class="slider-arrows">
-	<button type="button" class="slider-arrow slider-arrow_prev"><img src="img/icons/slider_arrow_prev.svg" alt=""></button>
-	<button type="button" class="slider-arrow slider-arrow_next"><img src="img/icons/slider_arrow_next.svg" alt=""></button>
-</div>
-
-            <div class="slider-paging"></div>
-          </div>
-        </div>
-      </div>
+			<div class="rs-services__items">
 				
+				<div class="rs-services__item">
+<div class="services-card">
+	<h4>Гарантийное и постгарантийное обслуживание</h4>
+	<button><span>Подробнее</span></button>
+	<div class="services-card__fake" style="background-image: url('img/service_bg_1.png');">
+		<h4>Гарантийное и постгарантийное обслуживание</h4>
+		<button><span>Подробнее</span></button>
+	</div>
+	<a href="#">Гарантийное и постгарантийное обслуживание</a>
+</div>
+</div>
+				
+				<div class="rs-services__item">
+<div class="services-card">
+	<h4>Метрология</h4>
+	<button><span>Подробнее</span></button>
+	<div class="services-card__fake" style="background-image: url('img/service_bg_2.png');">
+		<h4>Метрология</h4>
+		<button><span>Подробнее</span></button>
+	</div>
+	<a href="#">Метрология</a>
+</div>
+</div>
+				
+				<div class="rs-services__item">
+<div class="services-card">
+	<h4>Нормативная документация</h4>
+	<button><span>Подробнее</span></button>
+	<div class="services-card__fake" style="background-image: url('img/service_bg_3.png');">
+		<h4>Нормативная документация</h4>
+		<button><span>Подробнее</span></button>
+	</div>
+	<a href="#">Нормативная документация</a>
+</div>
+</div>
+				
+			</div>	
 		</div>
 	</div>
 </section>
   
-  <!-- rs-projects -->
+  <!-- rs-scope -->
   
 
 
@@ -717,100 +409,197 @@
 
 
 
-<link rel="stylesheet" href="css/block-css/rs-projects.css" />
-<section class="rs-projects">
-	<div class="rs-projects__container">
-		<div class="rs-projects__wrapper">
 
-			<div class="rs-projects__head" data-animate="fadeInUp">
-				
-<div class="section-title section-title_light">
-	
-	<span>Проекты</span>
-	
-	<h2>Успешные кейсы: как мы решаем задачи клиентов</h2>	
-	
-</div>
 
-			</div>
 
-			<div class="rs-projects__items" data-animate-stager="fadeInUp:200::200">
-				
-				<div class="rs-projects__item">
-<article class="project-card">
-  <div class="project-card__wrapper">
-		<div class="project-card__photo"><img src="img/scope_1.jpg" alt=""></div>
-    <div class="project-card__content">
-      <span>01</span>
-      <h4>Нефтегазовая промышленность</h4>
-    </div>
-  </div>
-	<a href="#">Нефтегазовая промышленность</a>
-</article>
+<link rel="stylesheet" href="css/block-css/rs-scope.css" />
+<section class="rs-scope">
+	<div class="rs-scope__container">		
+		<div class="rs-scope__wrapper section-wrapper">
+			<div class="rs-scope__title">
+<div class="mini-title">
+	<div class="roller">
+		<h3>Отрасли применения</h3>
+	</div>
 </div>
-				
-				<div class="rs-projects__item">
-<article class="project-card">
-  <div class="project-card__wrapper">
-		<div class="project-card__photo"><img src="img/scope_2.jpg" alt=""></div>
-    <div class="project-card__content">
-      <span>02</span>
-      <h4>Производство удобрений</h4>
-    </div>
-  </div>
-	<a href="#">Производство удобрений</a>
-</article>
 </div>
-				
-				<div class="rs-projects__item">
-<article class="project-card">
-  <div class="project-card__wrapper">
-		<div class="project-card__photo"><img src="img/scope_3.jpg" alt=""></div>
-    <div class="project-card__content">
-      <span>03</span>
-      <h4>Энергетика</h4>
-    </div>
-  </div>
-	<a href="#">Энергетика</a>
-</article>
+			<div class="rs-scope__items">				
+				<div class="rs-scope__item">
+<div class="scope-card ">
+	<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_1.svg');"></div>
+	<h4>Вагонное хозяйство</h4>
+	<button><img src="img/icons/scope_icon.svg" alt=""></button>
+	<div class="scope-card__fake">
+		<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_1.svg');"></div>
+		<h4>Вагонное хозяйство</h4>
+		<button><img src="img/icons/scope_icon_white.svg" alt=""></button>
+	</div>
+	<a href="#">Вагонное хозяйство</a>
 </div>
-				
-				<div class="rs-projects__item">
-<article class="project-card">
-  <div class="project-card__wrapper">
-		<div class="project-card__photo"><img src="img/scope_4.jpg" alt=""></div>
-    <div class="project-card__content">
-      <span>04</span>
-      <h4>Металлургия</h4>
-    </div>
-  </div>
-	<a href="#">Металлургия</a>
-</article>
 </div>
-				
-				<div class="rs-projects__item">
-<article class="project-card">
-  <div class="project-card__wrapper">
-		<div class="project-card__photo"><img src="img/scope_6.jpg" alt=""></div>
-    <div class="project-card__content">
-      <span>05</span>
-      <h4>Химическая промышленность</h4>
-    </div>
-  </div>
-	<a href="#">Химическая промышленность</a>
-</article>
+				<div class="rs-scope__item">
+<div class="scope-card ">
+	<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_2.svg');"></div>
+	<h4>Локомотивное хозяйство</h4>
+	<button><img src="img/icons/scope_icon.svg" alt=""></button>
+	<div class="scope-card__fake">
+		<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_2.svg');"></div>
+		<h4>Локомотивное хозяйство</h4>
+		<button><img src="img/icons/scope_icon_white.svg" alt=""></button>
+	</div>
+	<a href="#">Локомотивное хозяйство</a>
 </div>
-				
-			</div>
-
+</div>
+				<div class="rs-scope__item">
+<div class="scope-card ">
+	<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_3.svg');"></div>
+	<h4>Мотор-вагонная</h4>
+	<button><img src="img/icons/scope_icon.svg" alt=""></button>
+	<div class="scope-card__fake">
+		<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_3.svg');"></div>
+		<h4>Мотор-вагонная</h4>
+		<button><img src="img/icons/scope_icon_white.svg" alt=""></button>
+	</div>
+	<a href="#">Мотор-вагонная</a>
+</div>
+</div>
+				<div class="rs-scope__item">
+<div class="scope-card ">
+	<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_4.svg');"></div>
+	<h4>Путевые машины</h4>
+	<button><img src="img/icons/scope_icon.svg" alt=""></button>
+	<div class="scope-card__fake">
+		<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_4.svg');"></div>
+		<h4>Путевые машины</h4>
+		<button><img src="img/icons/scope_icon_white.svg" alt=""></button>
+	</div>
+	<a href="#">Путевые машины</a>
+</div>
+</div>
+				<div class="rs-scope__item">
+<div class="scope-card ">
+	<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_5.svg');"></div>
+	<h4>Рельсовое хозяйство</h4>
+	<button><img src="img/icons/scope_icon.svg" alt=""></button>
+	<div class="scope-card__fake">
+		<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_5.svg');"></div>
+		<h4>Рельсовое хозяйство</h4>
+		<button><img src="img/icons/scope_icon_white.svg" alt=""></button>
+	</div>
+	<a href="#">Рельсовое хозяйство</a>
+</div>
+</div>
+				<div class="rs-scope__item">
+<div class="scope-card ">
+	<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_6.svg');"></div>
+	<h4>Судостроительная отрасль</h4>
+	<button><img src="img/icons/scope_icon.svg" alt=""></button>
+	<div class="scope-card__fake">
+		<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_6.svg');"></div>
+		<h4>Судостроительная отрасль</h4>
+		<button><img src="img/icons/scope_icon_white.svg" alt=""></button>
+	</div>
+	<a href="#">Судостроительная отрасль</a>
+</div>
+</div>
+				<div class="rs-scope__item">
+<div class="scope-card ">
+	<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_7.svg');"></div>
+	<h4>Атомноэнергетическая отрасль</h4>
+	<button><img src="img/icons/scope_icon.svg" alt=""></button>
+	<div class="scope-card__fake">
+		<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_7.svg');"></div>
+		<h4>Атомноэнергетическая отрасль</h4>
+		<button><img src="img/icons/scope_icon_white.svg" alt=""></button>
+	</div>
+	<a href="#">Атомноэнергетическая отрасль</a>
+</div>
+</div>
+				<div class="rs-scope__item">
+<div class="scope-card ">
+	<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_8.svg');"></div>
+	<h4>Подъемно-транспортная отрасль</h4>
+	<button><img src="img/icons/scope_icon.svg" alt=""></button>
+	<div class="scope-card__fake">
+		<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_8.svg');"></div>
+		<h4>Подъемно-транспортная отрасль</h4>
+		<button><img src="img/icons/scope_icon_white.svg" alt=""></button>
+	</div>
+	<a href="#">Подъемно-транспортная отрасль</a>
+</div>
+</div>
+				<div class="rs-scope__item">
+<div class="scope-card ">
+	<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_9.svg');"></div>
+	<h4>Нефтехимическая отрасль</h4>
+	<button><img src="img/icons/scope_icon.svg" alt=""></button>
+	<div class="scope-card__fake">
+		<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_9.svg');"></div>
+		<h4>Нефтехимическая отрасль</h4>
+		<button><img src="img/icons/scope_icon_white.svg" alt=""></button>
+	</div>
+	<a href="#">Нефтехимическая отрасль</a>
+</div>
+</div>
+				<div class="rs-scope__item small">
+<div class="scope-card ">
+	<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_10.svg');"></div>
+	<h4>Теплоэнергетика</h4>
+	<button><img src="img/icons/scope_icon.svg" alt=""></button>
+	<div class="scope-card__fake">
+		<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_10.svg');"></div>
+		<h4>Теплоэнергетика</h4>
+		<button><img src="img/icons/scope_icon_white.svg" alt=""></button>
+	</div>
+	<a href="#">Теплоэнергетика</a>
+</div>
+</div>
+				<div class="rs-scope__item small">
+<div class="scope-card ">
+	<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_11.svg');"></div>
+	<h4>Приемочный контроль</h4>
+	<button><img src="img/icons/scope_icon.svg" alt=""></button>
+	<div class="scope-card__fake">
+		<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_11.svg');"></div>
+		<h4>Приемочный контроль</h4>
+		<button><img src="img/icons/scope_icon_white.svg" alt=""></button>
+	</div>
+	<a href="#">Приемочный контроль</a>
+</div>
+</div>
+				<div class="rs-scope__item small">
+<div class="scope-card ">
+	<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_12.svg');"></div>
+	<h4>Нефтегазовая отрасль</h4>
+	<button><img src="img/icons/scope_icon.svg" alt=""></button>
+	<div class="scope-card__fake">
+		<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_12.svg');"></div>
+		<h4>Нефтегазовая отрасль</h4>
+		<button><img src="img/icons/scope_icon_white.svg" alt=""></button>
+	</div>
+	<a href="#">Нефтегазовая отрасль</a>
+</div>
+</div>
+				<div class="rs-scope__item small">
+<div class="scope-card ">
+	<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_13.svg');"></div>
+	<h4>Метрополитен</h4>
+	<button><img src="img/icons/scope_icon.svg" alt=""></button>
+	<div class="scope-card__fake">
+		<div class="scope-card__icon" style="-webkit-mask-image: url('img/icon_13.svg');"></div>
+		<h4>Метрополитен</h4>
+		<button><img src="img/icons/scope_icon_white.svg" alt=""></button>
+	</div>
+	<a href="#">Метрополитен</a>
+</div>
+</div>
+			</div>	
 		</div>
 	</div>
 </section>
-
-
   
-  <!-- rs-benefit -->
-   
+  <!-- rs-article -->
+  
 
 
 
@@ -819,111 +608,284 @@
 
 
 
-<link rel="stylesheet" href="css/block-css/rs-benefit.css" />
-<section class="rs-benefit">	
-	<div class="rs-benefit__container">
-		<div class="rs-benefit__wrapper">
-      <div class="rs-benefit__head" data-animate="fadeInUp::300">
-        
-<div class="section-title ">
-	
-	<span>Преимущества</span>
-	
-	<h2>Почему выбирают нас</h2>	
-	
-</div>
 
-      </div>
-			<div class="rs-benefit__items" data-animate-stager="fadeInUp:200::300">					
-				
-					<div class="rs-benefit__item">
-<div class="benefit-card">  
-  <div class="benefit-card__icon"><img src="img/benefit_1.png" alt=""></div>
-  <h4 class="benefit-card__title">Наличие представительств</h4>
-  <p class="benefit-card__text">Офисы и склады в Санкт-Петербурге и Екатеринбурге обеспечивают оперативное обслуживание клиентов</p>  
+<link rel="stylesheet" href="css/block-css/rs-article.css" />
+<section class="rs-article">
+	<div class="rs-article__container">		
+		<div class="rs-article__wrapper section-wrapper">
+			<div class="rs-article__title">
+<div class="mini-title">
+	<div class="roller">
+		<h3>Алтек</h3>
+	</div>
 </div>
 </div>
-				
-					<div class="rs-benefit__item">
-<div class="benefit-card">  
-  <div class="benefit-card__icon"><img src="img/benefit_2.png" alt=""></div>
-  <h4 class="benefit-card__title">Собственные сервисные центры</h4>
-  <p class="benefit-card__text">Наличие нескольких сервисных центров гарантирует качественный ремонт и обслуживание оборудования</p>  
-</div>
-</div>
-				
-					<div class="rs-benefit__item">
-<div class="benefit-card">  
-  <div class="benefit-card__icon"><img src="img/benefit_3.png" alt=""></div>
-  <h4 class="benefit-card__title">Большая номенклатура оборудования</h4>
-  <p class="benefit-card__text">Более 50 моделей насосов, соответствующих международным стандартам качества, доступны для заказа</p>  
-</div>
-</div>
-				
-					<div class="rs-benefit__item">
-<div class="benefit-card">  
-  <div class="benefit-card__icon"><img src="img/benefit_4.png" alt=""></div>
-  <h4 class="benefit-card__title">Тестирование перед отгрузкой</h4>
-  <p class="benefit-card__text">Каждый насос проходит строгие испытания до отгрузки, включая возможность проведения проверок в присутствии клиента</p>  
-</div>
-</div>
-				
-			</div>
-		</div>		
-	</div>	
+			<div class="rs-article__content base-content">
+					<div class="row">
+						<div class="column">
+							<h3>О компании </h3>
+							<p>Компания АЛТЕК занимается разработкой и производством средств ультразвукового и вихретокового неразрушающего контроля. Мы являемся одной из крупнейших организаций России и стран СНГ в этой области. В нашем составе есть предприятия по разработке нормативно-технической документации, метрологическая служба, зарегистрированная в Росстандарте, и предприятия по изготовлению мер, внесенных в Реестр СИ РФ для поверки и калибровки средств измерений. </p>
+							<p>Также являемся активным членом Ассоциации промышленных предприятий Санкт-Петербурга (АПП СПб) и принимаем участие в различных рабочих группах и советах по метрологии, стандартизации и неразрушающему контролю.</p>
+						</div>
+						<div class="column">
+							<blockquote><p>Мы гордимся своими профессиональными достижениями и постоянно совершенствуем наши технологии и процессы, чтобы быть на передовой в области неразрушающего контроля.</p></blockquote>
+						</div>
+					</div>
+			</div>	
+		</div>
+	</div>
 </section>
-
   
-  <!-- rs-fos -->
+  <!-- rs-logos -->
   
 
 
 
-<link rel="stylesheet" href="css/block-css/rs-fos.css" />
-<section class="rs-fos">
-	<div class="rs-fos__container">
-		<div class="rs-fos__wrapper" data-animate-stager="fadeInUp:300">
 
-			<div class="rs-fos__head">
-				
-<div class="section-title section-title_light">
-	
-	<span>заявка на расчёт</span>
-	
-	<h2>Оставьте заявку на индивидуальный расчёт оборудования от компании «СОРС»</h2>	
-	
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-logos.css" />
+<section class="rs-logos">
+	<div class="rs-logos__container">		
+		<div class="rs-logos__wrapper section-wrapper">
+			<div class="rs-logos__title">
+<div class="mini-title">
+	<div class="roller">
+		<h3>Наши партнеры</h3>
+	</div>
+</div>
+</div>
+			<div class="rs-logos__slider">
+				<div class="logos-slider">
+					<div class="logos-slider__slider">
+						<div class="logos-slider__swiper">
+							<div class="logos-slider__slide"><img src="img/logo_1.1.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_1.2.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_1.3.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_1.4.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_1.5.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_1.6.png" alt=""></div>
+						</div>
+					</div>
+					<div class="logos-slider__nav">
+						<div class="slider-arrows">
+	<button type="button" class="slider-arrow slider-arrow_prev">
+		<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 12.5V0.5M6 0.5L1 5.5M6 0.5L11 5.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</button>
+	<button type="button" class="slider-arrow slider-arrow_next">
+		<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 0.5V12.5M6 12.5L1 7.5M6 12.5L11 7.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</button>
 </div>
 
-				<p>Заполните форму, чтобы получить персонализированную консультацию по выбору технологического оборудования для вашего бизнеса</p>
-			</div>
-
-			<div class="rs-fos__form">
-				<div class="form">
-					<form action="#" id="fosForm">
-						<div class="form-group">
-							<input type="text" id="fosName" name="fosName" placeholder="ФИО" required />
-						</div>
-						<div class="form-group">
-							<input type="tel" id="fosPhone" name="fosPhone" placeholder="Телефон" maxlength="18" required data-tel-input>
-						</div>
-						<div class="form-group">
-							<input type="email" id="fosMail" name="fosMail" placeholder="E-mail" required />
-						</div>
-						<div class="form-group">
-							<textarea id="fosMessage" name="fosMessage" placeholder="Сообщение" required ></textarea>
-						</div>
-						<div class="form-submit">
-							<p>Нажимая на кнопку «Получить консультацию», вы соглашаетесь на обработку персональных данных в соответствии с <a href="#">пользовательским соглашением</a></p>
-							<button type="submit" class="btn-color" data-title="Получить консультацию"><span>Получить консультацию</span></button>
-						</div>
-					</form>
+						<div class="slider-paging"></div>
+					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 </section>
-              
+  
+  <!-- rs-news -->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-news.css" />
+<section class="rs-news">	
+  <div class="rs-news__container">
+    <div class="rs-news__wrapper section-wrapper">
+      <div class="rs-news__title">
+<div class="mini-title">
+	<div class="roller">
+		<h3>Новости</h3>
+	</div>
+</div>
+</div>
+      <div class="rs-news__items" data-animate-stager="fadeInUp:150">
+        
+        <div class="rs-news__item">
+<article class="news-card">	
+	<div class="news-card__wrapper">
+    <div class="news-card__date">20.04.23</div>
+    <div class="news-card__content">			
+			<h4 class="news-card__title">Компания АЛТЕК приняла участие в выставке <br> NDT-Russia 2023</h4>
+      <p class="news-card__text">Компания АЛТЕК, занимающаяся разработкой и производством оборудования для неразрушающего контроля, приняла участие в выставке NDT-Russia 2023.</p>
+		</div>
+		<div class="news-card__photo">
+			<img src="img/news_1.jpg" alt="">
+		</div>
+	</div>
+	<a href="#">Компания АЛТЕК приняла участие в выставке &lt;br&gt; NDT-Russia 2023</a>
+</article>
+</div>
+        
+        <div class="rs-news__item">
+<article class="news-card">	
+	<div class="news-card__wrapper">
+    <div class="news-card__date">25.04.23</div>
+    <div class="news-card__content">			
+			<h4 class="news-card__title">Компания АЛТЕК успешно завершила выполнение НИОКР с привлечением средств гранта от Фонда содействия инновациям</h4>
+      <p class="news-card__text">Компания АЛТЕК успешно завершила выполнение НИОКР с привлечением средств гранта от Фонда содействия инновациям по теме «Разработка мультисенсорных цифровых устройств и программного обеспечения управления робототехнического комплекса неразрушающего контроля колесных пар вагонов рельсового транспорта».</p>
+		</div>
+		<div class="news-card__photo">
+			<img src="img/news_2.jpg" alt="">
+		</div>
+	</div>
+	<a href="#">Компания АЛТЕК успешно завершила выполнение НИОКР с привлечением средств гранта от Фонда содействия инновациям</a>
+</article>
+</div>
+        
+        <div class="rs-news__item">
+<article class="news-card">	
+	<div class="news-card__wrapper">
+    <div class="news-card__date">03.05.22</div>
+    <div class="news-card__content">			
+			<h4 class="news-card__title">Начало инновационного проекта</h4>
+      <p class="news-card__text">Компания АЛТЕК приступила к реализации инновационного проекта при финансовой поддержке Фонда Содействия Инновациям.</p>
+		</div>
+		<div class="news-card__photo">
+			<img src="img/news_3.jpg" alt="">
+		</div>
+	</div>
+	<a href="#">Начало инновационного проекта</a>
+</article>
+</div>
+        
+        <div class="rs-news__item">
+<article class="news-card">	
+	<div class="news-card__wrapper">
+    <div class="news-card__date">03.05.21</div>
+    <div class="news-card__content">			
+			<h4 class="news-card__title">Участие в выставке NDT-Russia 2021</h4>
+      <p class="news-card__text">Компания АЛТЕК приняла участие в крупнейшей выставке по неразрушающему контролю и промышленной безопасности NDT-Russia 2021, представив новую линейку современного оборудования.</p>
+		</div>
+		<div class="news-card__photo">
+			<img src="img/news_4.jpg" alt="">
+		</div>
+	</div>
+	<a href="#">Участие в выставке NDT-Russia 2021</a>
+</article>
+</div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- rs-logos -->
+  
+
+
+
+
+
+
+
+
+
+<section class="rs-logos">
+	<div class="rs-logos__container">		
+		<div class="rs-logos__wrapper section-wrapper">
+			<div class="rs-logos__title">
+<div class="mini-title">
+	<div class="roller">
+		<h3>Наши дилеры</h3>
+	</div>
+</div>
+</div>
+			<div class="rs-logos__slider">
+				<div class="logos-slider">
+					<div class="logos-slider__slider">
+						<div class="logos-slider__swiper">
+							<div class="logos-slider__slide"><img src="img/logo_2.1.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.2.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.3.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.4.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.5.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.6.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.7.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.8.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.9.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.10.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.11.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.12.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.13.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.14.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.15.png" alt=""></div>
+							<div class="logos-slider__slide"><img src="img/logo_2.16.png" alt=""></div>
+						</div>
+					</div>
+					<div class="logos-slider__nav">
+						<div class="slider-arrows">
+	<button type="button" class="slider-arrow slider-arrow_prev">
+		<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 12.5V0.5M6 0.5L1 5.5M6 0.5L11 5.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</button>
+	<button type="button" class="slider-arrow slider-arrow_next">
+		<svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 0.5V12.5M6 12.5L1 7.5M6 12.5L11 7.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
+	</button>
+</div>
+
+						<div class="slider-paging"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+  
+  <!-- rs-map -->
+  
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/block-css/rs-map.css" />
+<section class="rs-map">
+	<div class="rs-map__container">		
+		<div class="rs-map__wrapper section-wrapper">
+			<div class="rs-map__title">
+<div class="mini-title">
+	<div class="roller">
+		<h3>География дилеров</h3>
+	</div>
+</div>
+</div>
+			<div class="rs-map__content">
+				<iframe src="https://yandex.ru/map-widget/v1/?lang=ru_RU&amp;scroll=false&amp;um=constructor%3Acde4c1928c9d56327dad583fb2450ccf7491a193ab66f9302a1b9db25e69e835&amp;source=constructor" frameborder="0"></iframe>	
+			</div>	
+		</div>
+	</div>
+</section>
 
 
       </div>
@@ -949,83 +911,82 @@
 
 
 
-
-
 <link rel="stylesheet" href="css/block-css/rs-footer.css" />
-<section class="rs-footer" data-spollers="767.98, max" data-one-spoller>		
-	
-	<div class="rs-footer__wrapper" data-animate-stager="fadeInUp:0">
+<section class="rs-footer">			
+	<div class="rs-footer__container">
 
-		<div class="rs-footer__entry">
-<div class="footer-contacts">
-	<h3 class="footer-title" data-spoller>Санкт-Петербург</h3>
-	<ul class="footer-contacts__list">
-		<li><a href="tel:+70000000000">+7 000 000–00–00</a></li>
-		<li><a href="tel:+70000000000">+7 000 000–00–00</a></li>
-		<li><a href="mailto:alexey.zviagin@sourcepump.com">alexey.zviagin@sourcepump.com</a></li>
-		<li><a href="maito:mail@mail.ru">mail@mail.ru</a></li>
-		<li>Пн-Пт: с 09:00 до 21:00</li>
-		<li>Офис: 194352, г. Санкт-Петербург, Придорожная аллея, д. 8, лит. А, офис 710</li>
-		<li>Сервисный центр: 197730, г. Санкт-Петербург, Новое шоссе, д. 53, лит. А</li>
-	</ul>
+		<div class="rs-footer__wrapper">
+			<div class="rs-footer__btn">
+<a href="#top" class="footer-btn" data-anchor><span class="footer-btn__title">В начало</span></a>
 </div>
-</div>
-		<div class="rs-footer__entry">
-<div class="footer-contacts">
-	<h3 class="footer-title" data-spoller>Екатеринбург</h3>
-	<ul class="footer-contacts__list">
-		<li><a href="tel:+78123247427">+7 812 324-74-27</a></li>
-		<li><a href="tel:+70000000000">+7 000 000–00–00</a></li>
-		<li><a href="mailto:info@spinexpumps.com">info@spinexpumps.com</a></li>
-		<li><a href="maito:mail@mail.ru">mail@mail.ru</a></li>
-		<li>Пн-Пт: с 09:00 до 21:00</li>
-		<li>Офис: 620089, г. Екатеринбург, улица Машинная, стр. 42А</li>
-		<li>Сервисный центр: 620142, г. Екатеринбург, улица Щорса, д. 7, лит. Щ</li>
-	</ul>
-</div>
-</div>
-		<div class="rs-footer__entry">
-<nav class="footer-menu"> 
-	<h3 class="footer-title" data-spoller>Меню сайта</h3>
+			<div class="rs-footer__menu">
+<nav class="footer-menu "> 
   <ul class="footer-menu__list">
-		<li><a href="#">Главная</a></li>
-		<li><a href="#">О наc</a></li>
-		<li><a href="#">Продукция</a></li>
-		<li><a href="#">Сферы применения</a></li>
-		<li><a href="#">Поддержка заказчика</a></li>
-		<li><a href="#">Сервисные центры</a></li>
-		<li><a href="#">Наши проекты</a></li>
-		<li><a href="#">Контакты</a></li>
+    
+    <li><a href="#"><span>Главная</span></a></li>
+    
+    <li><a href="#"><span>Каталог</span></a></li>
+    
+    <li><a href="#"><span>Услуги</span></a></li>
+    
+    <li><a href="#"><span>О компании</span></a></li>
+    
+    <li><a href="#"><span>Новости</span></a></li>
+    
+    <li><a href="#"><span>Полезная информация</span></a></li>
+    
+    <li><a href="#"><span>Контакты</span></a></li>
+       
   </ul>
 </nav>
+</div>			
+			<div class="rs-footer__contacts">
+<div class="footer-contacts">
+	<ul class="footer-contacts__list">
+		<li><a href="mailto:altek@altek.ru"><span>altek@altek.ru</span></a></li>
+		<li>
+			<a href="tel:+78123368888 ">+7 (812) 336-88-88</a>
+			<p>(отдел продаж и поддержки ручных средств контроля – 09:30 - 17:30)</p>
+		</li>
+		<li>
+			<a href="tel:+78126767660">+7 (812) 676-76-60</a>
+			<p>(секретариат – 09:30 - 17:30)</p>
+		</li>
+		<li>
+			<a href="tel:+79119200698">+7 (911) 920-06-98</a>
+			<p>(продажа ручных средств контроля – круглосуточный)</p>
+		</li>
+		<li>
+			<a href="tel:+79112550046">+7 (911) 255-00-46</a>
+			<p>(продажа и поддержка автоматизированных средств контроля – круглосуточный)</p>
+		</li>
+	</ul>	
 </div>
-		<div class="rs-footer__entry">
-<div class="footer-acc">
-	<h3 class="footer-title" data-spoller>Реквизиты компании</h3>
-	<ul class="footer-acc__list">
-		<li>ООО «СОРС»</li>
-		<li>ИНН 7802950666 / КПП 780201001</li>
-		<li>ОГРН 1247800022887</li>
-	</ul>
 </div>
+			<div class="rs-footer__info">
+				
+<div class="footer-info">
+	<a href="#" class="footer-info__logo"><img src="img/logo_footer.png" alt=""></a>
+	<a href="#">192029, г.&nbsp;Санкт-Петербург,  пр.&nbsp;Обуховской Обороны, д.&nbsp;86, лит.&nbsp;П, офис&nbsp;4</a>	
 </div>
-		<div class="rs-footer__entry">
+
+				
 <div class="footer-copyright">
-	<p>© ООО «СОРС» 2024. <br> Все права защищены.</p>
-	<a href="#">Разработано в Россайт</a>
+	<p>© АЛТЕК 2024. Все права защищены.</p>
+	<a href="#">Разработано в Россайт</a>
 </div>
-</div>
-		<div class="rs-footer__btn">
-<a href="#top" class="footer-btn" data-anchor>
-	<span class="footer-btn__title">К началу страницы</span>
-	<span class="footer-btn__icon"><img src="img/icons/scroll_top_icon.svg" alt=""></span>
-</a>
-</div>
-		
+
+			</div>
+		</div>		
+
 	</div>
 </section>
 
       </footer>
+
+      
+        
+      
       
     </div>
   </body>
