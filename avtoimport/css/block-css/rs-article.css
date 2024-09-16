@@ -14,11 +14,11 @@
 .rs-article__content {
     position: relative;
     z-index: 2;
-    max-width: 759px;
+    max-width: 749px;
 }
 
 .rs-article__picture {
-    margin-left: -45%;
+    margin-left: -40%;
     -webkit-mask-image: url("../../img/article_mask.png");
     mask-image: url("../../img/article_mask.png");
     -webkit-mask-position: center;

@@ -45,6 +45,14 @@
     align-self: flex-end;
 }
 
+.rs-benefit .benefit-card__num {
+    text-align: right;
+    font-weight: 500;
+    font-size: var(--fluid-25-60);
+    line-height: 109%;
+    color: var(--dop-cvet);
+}
+
 .rs-benefit .benefit-card__title {
     font-weight: 600;
     font-size: var(--fluid-18-26);

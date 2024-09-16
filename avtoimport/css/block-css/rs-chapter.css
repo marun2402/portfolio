@@ -16,8 +16,8 @@
 
 .rs-chapter .chapter-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 88px;
+    grid-template-columns: 42% 1fr;
+    gap: 85px;
 }
 
 .rs-chapter .chapter-content__title {
