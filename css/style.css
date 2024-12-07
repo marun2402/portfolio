@@ -101,6 +101,12 @@ body {
 	padding: 5px 10px;
 	border-radius: 30px;
 	border: 1px solid #000;
+	text-align: center;
+}
+
+.card__content div a:first-child {
+	flex: 1 1 100%;	
+	border: 2px solid #00a7da;
 }
 
 .card__content div a:hover {
