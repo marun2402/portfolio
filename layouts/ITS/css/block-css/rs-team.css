@@ -1,0 +1,104 @@
+.rs-team {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.team__head {
+    padding: 0px 30px;
+}
+
+.team__content {
+    margin-top: 50px;
+}
+
+.team .team-slider {
+    position: relative;
+}
+
+.team .team-slider__slide {
+    padding: 0px 30px;
+}
+
+.team .team-slider__nav {
+    --arrow-color: #000;
+    --bullet: #d9d9d9;
+    --bullet-active: #0036d6;
+    position: relative;
+    margin-top: 50px;
+    height: 67px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 33.3333%;
+}
+
+.team .team-slider__nav .slider-arrows {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.team-card__photo {
+    padding-bottom: 100%;
+    background: url("../../img/img_plug.jpg") center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-card__photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.team-card__name {
+    font-weight: 700;
+    font-size: var(--fluid-14-18);
+    line-height: 145%;
+    text-transform: uppercase;
+    color: var(--zagolovki);
+    margin-top: 16px;
+}
+
+.team-card__job {
+    font-weight: 400;
+    font-size: var(--fluid-13-16);
+    line-height: 145%;
+    color: #616161;
+    margin-top: 4px;
+}
+
+@media (max-width: 1024.98px) {
+    .rs-team {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .team__head {
+        padding: 0px 15px;
+    }
+
+    .team .team-slider__slide {
+        padding: 0px 15px;
+    }
+
+    .team .team-slider__nav {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .team__content {
+        margin-top: 30px;
+    }
+
+    .team .team-slider__nav {
+        margin-top: 30px;
+    }
+}

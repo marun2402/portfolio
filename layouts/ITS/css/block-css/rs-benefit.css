@@ -1,0 +1,123 @@
+.rs-benefit {
+    margin-top: -275px;
+    padding-bottom: 80px;
+}
+
+.benefit {
+    position: relative;
+}
+
+.benefit__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.benefit__head {
+    background: #fff;
+    padding: 40px 30px 62px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.benefit__items {
+    grid-column: 1/-1;
+    display: grid;
+    -ms-flex-align: start;
+    align-items: start;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.benefit__item {
+    padding: 0px 30px;
+}
+
+.benefit__item:nth-child(1) {
+    background: #fff;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.benefit__item:nth-child(3n+2) {
+    margin-top: 165px;
+}
+
+.benefit__item:nth-child(3n+3) {
+    margin-top: 335px;
+}
+
+.benefit .benefit-card {
+    position: relative;
+}
+
+.benefit .benefit-card__num {
+    font-weight: 700;
+    font-size: var(--fluid-15-20);
+    line-height: 145%;
+    text-transform: uppercase;
+    color: var(--akcent);
+}
+
+.benefit .benefit-card__title {
+    font-weight: 700;
+    font-size: var(--fluid-15-20);
+    line-height: 145%;
+    text-transform: uppercase;
+    color: var(--zagolovki);
+    margin-top: 16px;
+}
+
+.benefit .benefit-card__text {
+    font-weight: 400;
+    font-size: var(--fluid-13-16);
+    line-height: 145%;
+    color: #616161;
+    margin-top: 4px;
+}
+
+@media (max-width: 1306px) {
+    .rs-benefit {
+        margin-top: -200px;
+    }
+}
+
+@media (max-width: 1024.98px) {
+    .rs-benefit {
+        margin-top: -140px;
+    }
+
+    .benefit__head {
+        padding: 20px 15px 30px;
+    }
+
+    .benefit__item {
+        padding: 0px 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-benefit {
+        padding-bottom: 30px;
+        margin-top: 0;
+    }
+
+    .benefit__wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit__items {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .benefit__item:nth-child(3n+2) {
+        margin-top: 0;
+    }
+
+    .benefit__item:nth-child(3n+3) {
+        margin-top: 0;
+    }
+
+    .benefit .benefit-card__title {
+        margin-top: 6px;
+    }
+}

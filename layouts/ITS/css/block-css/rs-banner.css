@@ -1,0 +1,49 @@
+.rs-banner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner__wrapper {
+    position: relative;
+    padding-bottom: 57%;
+    overflow: hidden;
+}
+
+.banner__wrapper img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.banner__btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.banner__btn > * {
+    grid-column: -2/-1;
+}
+
+@media (max-width: 1024.98px) {
+    .rs-banner {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .banner__btn > * {
+        grid-column: -3/-1;
+    }
+}

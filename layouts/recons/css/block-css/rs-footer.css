@@ -1,0 +1,75 @@
+.rs-footer {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: -0.02em;
+    color: #000;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.rs-footer__wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0px 70px;
+}
+
+.rs-footer__content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.rs-footer a[href^="mailto:"] {
+    color: #414149;
+}
+
+.rs-footer a[href^="tel:"] {
+    font-size: 40px;
+    line-height: 112%;
+    letter-spacing: -0.03em;
+}
+
+.rs-footer__dev {
+    font-size: 14px;
+    line-height: 129%;
+}
+
+.rs-footer a {
+    transition: color var(--animation-duration) var(--timing-func);
+}
+
+@media (max-width: 1900px) {
+    .rs-footer__wrapper {
+        padding: 0px 15px;
+    }
+}
+
+@media (max-width: 1359.98px) {
+    .rs-footer {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .rs-footer .stripes {
+        display: none;
+    }
+
+    .rs-footer__content {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .rs-footer a[href^="tel:"] {
+        font-size: 30px;
+    }
+}
+
+@media (any-hover: hover) {
+    .rs-footer a:hover {
+        color: var(--primary-color);
+    }
+}

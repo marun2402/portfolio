@@ -1,0 +1,31 @@
+.rs-frame {
+    position: relative;
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.rs-frame__wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.zm-frame {
+    position: relative;
+}
+
+.zm-frame__picture {
+    height: 100svh;
+}
+
+.zm-frame__picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1024.98px) {
+    .rs-frame {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}

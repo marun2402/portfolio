@@ -1,0 +1,149 @@
+.rs-news {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 160px;
+}
+
+.news {
+    position: relative;
+}
+
+.news__head {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.news__head > * {
+    padding: 0px 30px;
+}
+
+.news__body {
+    margin-top: 50px;
+}
+
+.news__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+}
+
+.news__item {
+    padding: 0px 30px;
+}
+
+.news .news-card {
+    position: relative;
+}
+
+.news .news-card > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    font-size: 0;
+}
+
+.news .news-card__photo {
+    padding-bottom: 61%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.news .news-card__photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.news .news-card__photo button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    background: var(--main-bg-color);
+}
+
+.news .news-card__photo button::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: url("../../img/icons/arrow_right_white_icon.svg");
+    mask-image: url("../../img/icons/arrow_right_white_icon.svg");
+    background: var(--akcent);
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.news .news-card__date {
+    font-weight: 700;
+    font-size: var(--fluid-11-14);
+    line-height: 140%;
+    color: var(--akcent);
+    margin-bottom: 3px;
+}
+
+.news .news-card__title {
+    font-weight: 700;
+    font-size: var(--fluid-14-18);
+    line-height: 145%;
+    text-transform: uppercase;
+    color: var(--zagolovki);
+}
+
+.news .news-card .news-card__photo button {
+    transition: background var(--animation-duration) var(--timing-func);
+}
+
+.news .news-card .news-card__photo button:before {
+    transition: background var(--animation-duration) var(--timing-func);
+}
+
+@media (max-width: 1024.98px) {
+    .rs-news {
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+
+    .news__head > * {
+        padding: 0px 15px;
+    }
+
+    .news__item {
+        padding: 0px 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .news__head {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .news__body {
+        margin-top: 30px;
+    }
+
+    .news__items {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (any-hover: hover) {
+    .news .news-card:hover .news-card__photo button {
+        background: var(--akcent);
+    }
+
+    .news .news-card:hover .news-card__photo button:before {
+        background: #fff;
+    }
+}

@@ -1,0 +1,207 @@
+.footer-menu {
+    position: relative;
+}
+
+.footer-menu__list li a {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    color: var(--nabornyy-tekst);
+    transition: color var(--animation-duration) var(--timing-func);
+}
+
+.rs-footer .footer-hover-line {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 3px;
+    height: 23px;
+    background-color: var(--akcent);
+    transition: top 0.3s ease-in-out;
+}
+
+.rs-footer {
+    position: relative;
+    border-top: 1px solid var(--linii);
+    --pdng: 30px;
+}
+
+.rs-footer__wrapper {
+    padding-top: 50px;
+    padding-bottom: 115px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.rs-footer__wrapper > * {
+    padding: 0px var(--pdng);
+}
+
+.rs-footer__copyright {
+    border-top: 1px solid var(--linii);
+}
+
+.rs-footer .footer-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 145%;
+    text-transform: uppercase;
+    color: var(--nabornyy-tekst);
+    margin-bottom: 7px;
+}
+
+.rs-footer .footer-contacts {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    color: var(--nabornyy-tekst);
+}
+
+.rs-footer .footer-contacts p {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.rs-footer .footer-contacts a {
+    display: inline-block;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    transition: color var(--animation-duration) var(--timing-func);
+}
+
+.rs-footer .footer-copyright {
+    position: relative;
+}
+
+.rs-footer .footer-copyright__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.rs-footer .footer-copyright .dev-link {
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-weight: 400;
+    font-size: var(--fluid-11-14);
+    line-height: 145%;
+    color: #424242;
+    opacity: 0.5;
+    padding: 0px var(--pdng);
+}
+
+.rs-footer .footer-copyright p {
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-weight: 400;
+    font-size: var(--fluid-11-14);
+    line-height: 145%;
+    text-align: center;
+    color: var(--nabornyy-tekst);
+    padding: 0px var(--pdng);
+}
+
+.rs-footer .footer-copyright .scroll-top-btn {
+    height: 67px;
+    background: var(--akcent);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: var(--fluid-11-14);
+    line-height: 100%;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0px var(--pdng);
+}
+
+.rs-footer .footer-copyright .scroll-top-btn::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    -webkit-mask-image: url("../../img/icons/arrow_up_white_icon.svg");
+    mask-image: url("../../img/icons/arrow_up_white_icon.svg");
+    background: #fff;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+@media (min-width: 767.98px) {
+    .footer-menu_grid .footer-menu__list {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 78px;
+        -ms-flex-pack: start;
+        justify-content: start;
+        grid-auto-flow: column;
+    }
+}
+
+@media (max-width: 1024.98px) {
+    .rs-footer .footer-hover-line {
+        left: -15px;
+    }
+
+    .rs-footer {
+        --pdng: 15px;
+    }
+
+    .rs-footer__wrapper {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-footer .footer-hover-line {
+        display: none;
+    }
+
+    .rs-footer__wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .rs-footer .footer-copyright {
+        padding-top: 6px;
+    }
+
+    .rs-footer .footer-copyright__container {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .rs-footer .footer-copyright .dev-link {
+        text-align: center;
+    }
+
+    .rs-footer .footer-copyright .scroll-top-btn {
+        height: 47px;
+    }
+}
+
+@media (any-hover: hover) {
+    .footer-menu__list li a:hover {
+        color: var(--primary-color);
+    }
+
+    .rs-footer .footer-contacts a:hover {
+        color: var(--akcent);
+    }
+}

@@ -1,0 +1,110 @@
+.rs-gallery {
+    background: #414149;
+    position: relative;
+}
+
+.rs-gallery__wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+
+.rs-gallery__head {
+    padding: 110px 70px;
+}
+
+.rs-gallery__head .section-title {
+    max-width: 670px;
+}
+
+.rs-gallery__slider {
+    min-width: 0;
+}
+
+.rs-gallery .gallery-slider {
+    position: relative;
+    height: 919px;
+}
+
+.rs-gallery .gallery-slider__slider {
+    height: 100%;
+}
+
+.rs-gallery .gallery-slider__swiper {
+    height: 100%;
+}
+
+.rs-gallery .gallery-slider__nav {
+    position: absolute;
+    right: calc(100% + 35px);
+    bottom: 80px;
+    z-index: 2;
+}
+
+.rs-gallery .gallery-slider__nav .slider-paging {
+    --time: 3.5s !important;
+    --width: 50px !important;
+    --mobWidth: 50px !important;
+    --gap: 12px !important;
+}
+
+.rs-gallery .gallery-slider__slide {
+    height: 100%;
+    position: relative;
+    overflow: visible;
+}
+
+.rs-gallery .gallery-slider__slide.swiper-slide-prev .gallery-slide,
+.rs-gallery .gallery-slider__slide:has(~ .swiper-slide-prev) .gallery-slide {
+    height: 1450px;
+}
+
+.rs-gallery .gallery-slide {
+    position: relative;
+    height: 100%;
+    transition: height var(--animation-duration) var(--timing-func);
+}
+
+.rs-gallery .gallery-slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+@media (min-width: 1023.98px) {
+    .rs-gallery .gallery-slider__slider {
+        overflow: visible;
+    }
+}
+
+@media (max-width: 1359.98px) {
+    .rs-gallery .gallery-slider__slide.swiper-slide-prev .gallery-slide,
+  .rs-gallery .gallery-slider__slide:has(~ .swiper-slide-prev) .gallery-slide {
+        height: 100%;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .rs-gallery__wrapper {
+        grid-template-columns: 1fr;
+        padding-bottom: 70px;
+    }
+
+    .rs-gallery__head {
+        padding: 35px;
+    }
+
+    .rs-gallery .gallery-slider {
+        height: 450px;
+    }
+
+    .rs-gallery .gallery-slider__nav {
+        bottom: -40px;
+        right: 15px;
+    }
+}

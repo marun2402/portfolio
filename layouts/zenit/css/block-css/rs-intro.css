@@ -1,0 +1,232 @@
+@charset "UTF-8";
+
+.rs-intro {
+    position: relative;
+}
+
+.intro {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.intro__wrapper {
+    position: relative;
+    height: 937px;
+}
+
+.intro__pane {
+    position: relative;
+    z-index: 2;
+}
+
+.intro .intro-content {
+    position: relative;
+    z-index: 2;
+}
+
+.intro .intro-content__wrapper {
+    padding-top: 200px;
+}
+
+.intro .intro-content__title {
+    max-width: 1200px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: var(--fluid-25-70);
+    line-height: 110%;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.intro .intro-content__btn {
+    display: grid;
+}
+
+.intro .intro-picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.intro .intro-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro .intro-pane {
+    grid-column: -1/-2;
+    border-radius: 7px;
+    padding: 30px;
+    margin: 0px 30px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    gap: 15px;
+}
+
+.intro .intro-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -ms-flex-align: end;
+    align-items: end;
+    gap: 30px;
+    padding: 15px 0px;
+}
+
+.intro .intro-metrics__title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: var(--fluid-22-30);
+    color: var(--chernyy-shrifty);
+    overflow: hidden;
+}
+
+.intro .intro-metrics__title sup {
+    font-size: var(--fluid-16-20);
+}
+
+.intro .intro-metrics__title > span {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.9s var(--timing-func);
+}
+
+.intro .intro-metrics__title.in-view > span {
+    transform: translateY(0%);
+}
+
+.intro .intro-metrics__text {
+    font-weight: 500;
+    font-size: var(--fluid-11-14);
+    color: var(--temno-seryy);
+    opacity: 0.8;
+}
+
+.intro .video-link {
+    position: relative;
+    overflow: hidden;
+    border-radius: 9px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.intro .video-link img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.intro .video-link::before {
+    content: url("../../img/icons/video_link_icon.svg");
+}
+
+.intro .video-link::after {
+    content: "Смотреть видео";
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.intro .video-link::before,
+.intro .video-link::after {
+    position: relative;
+    z-index: 2;
+}
+
+@media (min-width: 1024.98px) {
+    .intro__pane {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .intro .intro-content__title {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .intro .intro-content__btn {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 25%;
+    }
+}
+
+@media (max-width: 1899.98px) {
+    .intro .intro-pane {
+        padding: 15px;
+        margin: 0px 15px;
+    }
+
+    .intro .intro-metrics {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 1024.98px) {
+    .intro__wrapper {
+        height: 536px;
+    }
+
+    .intro__pane {
+        margin-top: -100px;
+    }
+
+    .intro .intro-content__wrapper {
+        padding-top: 106px;
+    }
+
+    .intro .intro-pane {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 0;
+        border: 1px solid var(--seryy-bordery);
+        border-radius: 7px;
+    }
+
+    .intro .intro-metrics {
+        padding: 0;
+    }
+
+    .intro .video-link {
+        height: 166px;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .intro__pane {
+        padding-left: max(15px, (100% - 768px) / 2);
+        padding-right: max(15px, (100% - 768px) / 2);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .intro__pane {
+        padding-left: max(15px, (100% - 375px) / 2);
+        padding-right: max(15px, (100% - 375px) / 2);
+    }
+
+    .intro .intro-metrics {
+        grid-template-columns: 1fr;
+    }
+}

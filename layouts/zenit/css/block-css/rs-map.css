@@ -1,0 +1,72 @@
+.rs-map {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.ya-map__head {
+    margin-bottom: 50px;
+}
+
+.ya-map__wrapper {
+    position: relative;
+}
+
+.ya-map__content {
+    position: relative;
+    padding-bottom: 42.5%;
+    overflow: hidden;
+}
+
+.ya-map__content > * {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.ya-map .ya-map-pane {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: var(--goluboy);
+    border-radius: 7px;
+    padding: 20px;
+    max-width: 492px;
+    width: calc(100% - 60px);
+}
+
+.ya-map .ya-map-pane__title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: var(--fluid-22-30);
+    color: #fff;
+}
+
+.ya-map .ya-map-pane__text {
+    font-weight: 500;
+    font-size: var(--fluid-11-14);
+    color: #fff;
+    opacity: 0.8;
+}
+
+@media (max-width: 1024.98px) {
+    .rs-map {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .ya-map__head {
+        margin-bottom: 30px;
+    }
+
+    .ya-map__content {
+        padding-bottom: 100%;
+    }
+}

@@ -1,0 +1,129 @@
+.rs-worksheet {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    position: relative;
+}
+
+.documents {
+    position: relative;
+}
+
+.documents__table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+}
+
+.documents__record {
+    padding-right: 30px;
+}
+
+.document-link {
+    display: block;
+    background: var(--sveto-seryy-fon);
+    border-radius: 7px;
+    padding: 20px;
+    min-height: 126px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 40px;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: background var(--animation-duration) var(--timing-func);
+}
+
+.document-link span {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: var(--fluid-15-18);
+    line-height: 150%;
+    color: var(--chernyy-shrifty);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.document-link__icon {
+    width: 86px;
+    height: 86px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 18px;
+}
+
+.document-link__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.document-link__title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: var(--fluid-16-20);
+    color: var(--chernyy-shrifty);
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.document-link__volume {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: var(--fluid-15-18);
+    line-height: 150%;
+    color: var(--chernyy-shrifty);
+}
+
+@media (max-width: 1500px) {
+    .document-link {
+        column-gap: 20px;
+    }
+}
+
+@media (max-width: 1024.98px) {
+    .rs-worksheet {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .documents__table {
+        gap: 30px;
+        grid-template-columns: 1fr;
+    }
+
+    .documents__record {
+        padding-right: 0;
+    }
+
+    .document-link {
+        padding: 10px;
+        column-gap: 10px;
+        min-height: 86px;
+    }
+
+    .document-link__icon {
+        width: 46px;
+        height: 46px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .documents__table {
+        gap: 15px;
+    }
+
+    .document-link span {
+        font-size: 0;
+    }
+}
+
+@media (any-hover: hover) {
+    .document-link:hover {
+        background: var(--primary-color);
+    }
+}
