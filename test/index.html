@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Ar Group | Главная</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Forum&family=Raleway:wght@100..900&display=swap" rel="stylesheet" />
+
+		<script src="libs/jquery/jquery-2.1.3.min.js" defer></script>
+		<script src="libs/jquery-validate/jquery.validate.min.js" defer></script>
+
+		<script src="libs/swiper/swiper-bundle.min.js" defer></script>
+		<link rel="stylesheet" type="text/css" href="libs/swiper/swiper-bundle.min.css" />
+
+		<script src="libs/gsap/gsap.min.js" defer></script>
+		<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/app.js" defer></script>
+	</head>
+
+	<body class="default-layout">
+		<div class="site-wrapper">
+			<header>
+				<span class="menu-overlay" data-js-overlay></span>
+
+				<link rel="stylesheet" href="css/rs-header.css" />
+				<div class="rs-header">
+					<div class="rs-header__wrapper">
+						<a href="index.html" class="rs-header__logo">
+							<img src="img/logo.png" alt="" />
+						</a>
+
+						<nav class="menu" data-spollers="1024.98, max">
+							<div class="menu-wrapper">
+								<ul class="menu__list">
+									<li>
+										<a href="#"><span>Услуги</span></a>
+									</li>
+									<li class="current-menu-item">
+										<a href="#"><span>выиграные дела</span></a>
+									</li>
+									<li>
+										<a href="#"><span>о компании</span></a>
+									</li>
+									<li>
+										<a href="#"><span>отзывы</span></a>
+									</li>
+									<li>
+										<a href="#"><span>Контакты</span></a>
+									</li>
+								</ul>
+
+								<div class="mobile-menu-contacts">
+									<ul>
+										<li><a href="tel:+74951420965">+7 (495) 142-09-65 </a></li>
+										<li><a href="mailto:info@domen.ru">info@domen.ru</a></li>
+									</ul>
+								</div>
+
+								<div class="mobile-menu-btn">
+									<a href="#" class="btn-color">
+										<span>Получить консультацию </span>
+									</a>
+								</div>
+							</div>
+						</nav>
+
+						<ul class="header-contacts-list">
+							<li>
+								<a href="mailto:info@domen.ru ">info@domen.ru <span>e-mail</span></a>
+							</li>
+							<li>
+								<a href="tel:+7 (495) 142-09-65  ">+7 (495) 142-09-65 <span>бесплатно по России</span></a>
+							</li>
+						</ul>
+
+						<div class="rs-header__btn">
+							<a href="#" class="btn-color">
+								<span>Получить консультацию</span>
+							</a>
+						</div>
+
+						<button class="menu-burger">
+							<span><img src="img/icons/z_burger_close_icon.svg" alt="" /> Закрыть</span>
+							<span><img src="img/icons/z_burger_icon.svg" alt="" /> Меню</span>
+						</button>
+					</div>
+				</div>
+			</header>
+
+			<div class="main">
+				<!-- rs-intro -->
+				<link rel="stylesheet" href="css/rs-intro.css" />
+				<section class="rs-intro">
+					<div class="rs-intro__wrapper">
+						<div class="intro">
+							<div class="intro-content">
+								<div class="intro-content__container">
+									<div class="intro-content__wrapper">
+										<div class="intro-content__entry">
+											<h1 class="intro-title">Защитим репутацию вашей компании в ФАС</h1>
+											<div class="intro-btn">
+												<a href="#" class="btn-color btn-color_big">
+													<span
+														>Получить бесплатную <br />
+														консультацию юриста</span
+													>
+												</a>
+											</div>
+										</div>
+										<div class="intro-content__person"><img src="img/intro_person.png" alt="" /></div>
+										<div class="intro-content__adv">
+											<div class="intro-adv">
+												<div class="intro-adv__items">
+													<div class="intro-adv__item">
+														<img src="img/intro_adv_1.png" alt="" />
+														<h6>Окончательная оплата при получении положительного результата</h6>
+													</div>
+													<div class="intro-adv__item">
+														<img src="img/intro_adv_2.png" alt="" />
+														<h6>
+															Более 3 500 <br />
+															выигранных дел
+														</h6>
+													</div>
+													<div class="intro-adv__item">
+														<img src="img/intro_adv_3.png" alt="" />
+														<h6>
+															Работаем по всей <br />
+															России
+														</h6>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="intro-media">
+								<img src="img/intro_bg.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- rs-issues -->
+				<link rel="stylesheet" href="css/rs-issues.css" />
+				<section class="rs-issues">
+					<div class="rs-issues__container">
+						<div class="rs-issues__wrapper">
+							<div class="issues">
+								<div class="issues__wrapper">
+									<div class="issues__head" data-animate="fadeUp">
+										<h2>Решим все вопросы, связанные с&nbsp;антимонопольным законодательством</h2>
+									</div>
+									<div class="issues__content issues-content" data-animate="fadeUp::200">
+										<div id="issuesMainTabs" class="issues-main">
+											<div class="issues-main__wrapper">
+												<div class="issues-main__section" id="issues-main-1">
+													<h3 class="issues-main__title">Защита интересов в ФАС</h3>
+
+													<div id="issuesInnerTabs" class="issues-inner">
+														<div class="issues-inner__wrapper">
+															<div class="issues-inner__section" id="issues-inner-1">
+																<h3 class="issues-inner__title">Защита от РПН</h3>
+																<p>Оказались в ситуации риска включения в РНП? Мы сможем решить эту проблему!</p>
+																<p>
+																	Если ваша компания попадает в реестр недобросовестных поставщиков вы не сможете участвовать в госторгах более 2 лет, возникнут
+																	сложности с получением кредита в банке, придется нарабатывать опыт уже на другую компанию и руководителя, а так же вы рискуете
+																	потерять обеспечение вашего контракта.
+																</p>
+
+																<a href="#" class="btn-color">
+																	<span>Получить консультацию</span>
+																</a>
+
+																<h6>Информационная сводка за 2023 г.:</h6>
+																<ul>
+																	<li>
+																		<img src="img/step_1.png" alt="" />
+																		<p>30 096 обращений о внесении в РНП</p>
+																	</li>
+																	<li>
+																		<img src="img/step_2.png" alt="" />
+																		<p>45% внесено в РНП</p>
+																	</li>
+																	<li>
+																		<img src="img/step_3.png" alt="" />
+																		<p>Официальные данные ФАС России от 19.01.2024 г.</p>
+																	</li>
+																</ul>
+																<blockquote>
+																	Основная часть компаний оказывается в РНП поскольку принимает решение защищать&nbsp;свои интересы в УФАС самостоятельно
+																</blockquote>
+															</div>
+															<div class="issues-inner__section" id="issues-inner-2">
+																<h3 class="issues-inner__title">Жалоба в УФАС</h3>
+																<p>
+																	Система госзакупок несовершенна. Риск ошибок и злоупотребления служебным положениям очень велик. Сегодня стали частыми случаи
+																	незаконного отстранения в конкурсах некоторых заказчиков, признание поданных заявок недействительными, не соответствующими
+																	требованиям учреждения. Отсутствие юридического образования, практики работы с Антимонопольным комитетом, правильного
+																	составления документации усложняет процесс заключения контракта. Тем не менее, каждый субъект имеет право подать жалобу на
+																	госзаказчика.
+																</p>
+
+																<a href="#" class="btn-color">
+																	<span>Получить консультацию</span>
+																</a>
+
+																<h6>Информационная сводка за 2023 г.:</h6>
+																<ul>
+																	<li>
+																		<img src="img/step_1.png" alt="" />
+																		<p>53 955 жалоб от участников госзакупок</p>
+																	</li>
+																	<li>
+																		<img src="img/step_2.png" alt="" />
+																		<p>42,5% признаны обоснованными</p>
+																	</li>
+																	<li>
+																		<img src="img/step_3.png" alt="" />
+																		<p>Официальные данные ФАС России от 19.01.2024 г.</p>
+																	</li>
+																</ul>
+																<blockquote>Для получения нужного результата важно учитывать актуальную практику территориального органа</blockquote>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="issues-main__section" id="issues-main-2">
+													<h3 class="issues-main__title">Защита интересов в Арбитражном суде</h3>
+													<p>
+														В последнее время, распространены случаи недобросовестного поведения государственных заказчиков, которые используют свое право
+														принять односторонний отказ от исполнения контракта при малейших отклонениях поставщика (исполнителя) от прописанных условий.
+														Публикация такого решения несет за собой ряд негативных последствий, а именно: риск включения записи о компании и ее учредителях в
+														Реестр недобросовестных поставщиков, потерю деловой репутации, удержание банковской гарантии, начисление штрафов, пеней и неустойки.
+													</p>
+													<p>
+														Для эффективного решения споров с заказчиками по государственным и муниципальным контрактам важно принимать соответствующие меры с
+														учётом специфики законодательства о контрактной системе в Российской Федерации.
+													</p>
+													<h6>Наши юристы готовы вам с этим помочь!</h6>
+
+													<a href="#" class="btn-color">
+														<span>Получить консультацию</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- rs-quiz -->
+				<link rel="stylesheet" href="css/rs-quiz.css" />
+				<section class="rs-quiz">
+					<div class="rs-quiz__container">
+						<div class="rs-quiz__wrapper">
+							<div class="quiz">
+								<div class="quiz__wrapper">
+									<div class="quiz__head" data-animate="fadeUp">
+										<div class="section-title">
+											<h2 data-split-text>
+												Пройдите наш короткий опрос <br />
+												из 4 вопросов и получите расчет стоимости услуг
+											</h2>
+										</div>
+									</div>
+									<div class="quiz__content" data-animate-stager="fadeUp:200">
+										<div class="quiz__form">
+											<form action="#" class="quiz-form base-form" id="quizForm">
+												<div class="quiz-form__section" id="question-1">
+													<div class="quiz-form__nav-title">Вопрос 1 из 4</div>
+													<h3 class="quiz-form__title">Выберите необходимую услугу:</h3>
+													<div class="form-group">
+														<label class="radio">
+															<input type="radio" name="question-1" value="Защита от РНП при уклонении от заключения контракта" />
+															<span>Защита от РНП при уклонении от заключения контракта</span>
+														</label>
+
+														<label class="radio">
+															<input type="radio" name="question-1" value="Защита от РНП при одностороннем отказе от исполнения контракта" />
+															<span>Защита от РНП при одностороннем отказе от исполнения контракта</span>
+														</label>
+
+														<label class="radio">
+															<input type="radio" name="question-1" value="Представление ваших интересов в ФАС" />
+															<span>Представление ваших интересов в ФАС</span>
+														</label>
+
+														<label class="radio">
+															<input type="radio" name="question-1" value="Подготовка жалобы в ФАС" />
+															<span>Подготовка жалобы в ФАС</span>
+														</label>
+													</div>
+													<div class="quiz-form__btns">
+														<button type="button" class="btn-color" onclick="document.querySelector('[data-id=question-2]').click()">
+															<span>Следующий вопрос</span>
+														</button>
+													</div>
+												</div>
+												<div class="quiz-form__section" id="question-2">
+													<div class="quiz-form__nav-title">Вопрос 2 из 4</div>
+													<h3 class="quiz-form__title">Выберите необходимую услугу:</h3>
+													<div class="form-group">
+														<label class="radio">
+															<input type="radio" name="question-2" value="Защита от РНП при уклонении от заключения контракта" />
+															<span>Защита от РНП при уклонении от заключения контракта</span>
+														</label>
+
+														<label class="radio">
+															<input type="radio" name="question-2" value="Защита от РНП при одностороннем отказе от исполнения контракта" />
+															<span>Защита от РНП при одностороннем отказе от исполнения контракта</span>
+														</label>
+
+														<label class="radio">
+															<input type="radio" name="question-2" value="Представление ваших интересов в ФАС" />
+															<span>Представление ваших интересов в ФАС</span>
+														</label>
+
+														<label class="radio">
+															<input type="radio" name="question-2" value="Подготовка жалобы в ФАС" />
+															<span>Подготовка жалобы в ФАС</span>
+														</label>
+													</div>
+													<div class="quiz-form__btns">
+														<button type="button" onclick="document.querySelector('[data-id=question-1]').click()">
+															<img src="img/icons/arrow_back_icon.svg" alt="" /><span>Предыдущий вопрос</span>
+														</button>
+														<button type="button" class="btn-color" onclick="document.querySelector('[data-id=question-3]').click()">
+															<span>Следующий вопрос</span>
+														</button>
+													</div>
+												</div>
+												<div class="quiz-form__section" id="question-3">
+													<div class="quiz-form__nav-title">Вопрос 3 из 4</div>
+													<h3 class="quiz-form__title">Были ли попытки разрешить спор в досудебном порядке?</h3>
+													<div class="form-group">
+														<label class="radio">
+															<input type="radio" name="question-3" value="Да, уже пытались разрешить" />
+															<span>Да, уже пытались разрешить</span>
+														</label>
+
+														<label class="radio">
+															<input type="radio" name="question-3" value="Нет, не пытались" />
+															<span>Нет, не пытались</span>
+														</label>
+													</div>
+													<div class="quiz-form__btns">
+														<button type="button" onclick="document.querySelector('[data-id=question-2]').click()">
+															<img src="img/icons/arrow_back_icon.svg" alt="" /><span>Предыдущий вопрос</span>
+														</button>
+														<button type="button" class="btn-color" onclick="document.querySelector('[data-id=question-4]').click()">
+															<span>Следующий вопрос</span>
+														</button>
+													</div>
+												</div>
+												<div class="quiz-form__section" id="question-4">
+													<div class="quiz-form__nav-title">Вопрос 4 из 4</div>
+													<h3 class="quiz-form__title">
+														Благодарим за ответы! Наш юрист уже готовит расчет стоимости решения вашего дела. <br /><br />
+														Выберите, куда вам прислать расчет:
+													</h3>
+													<div class="form-row form-row_4">
+														<label class="radio">
+															<input type="radio" name="question-4" value="СМС" />
+															<span>СМС</span>
+														</label>
+
+														<label class="radio">
+															<input type="radio" name="question-4" value="WhatsApp" />
+															<span>WhatsApp</span>
+														</label>
+
+														<label class="radio">
+															<input type="radio" name="question-4" value="Viber" />
+															<span>Viber</span>
+														</label>
+
+														<label class="radio">
+															<input type="radio" name="question-4" value="Telegram" />
+															<span>Telegram</span>
+														</label>
+													</div>
+
+													<input type="tel" id="quizPhone" name="quizPhone" placeholder="Укажите номер телефона" required maxlength="18" data-tel-input />
+
+													<div class="quiz-form__btns">
+														<button type="submit" class="btn-color"><span>Получить расчет стоимости </span></button>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="quiz__info">
+											<div class="quiz-info">
+												<h3 class="quiz-info__title">После прохождения опроса вы получите:</h3>
+												<ul class="quiz-info__list">
+													<li>
+														<img src="img/quiz_icon_1.svg" alt="" />
+														<p>Подробный план действий, разработанный специально для вас, чтобы защитить ваши интересы в рамках рассматриваемого вопроса</p>
+													</li>
+													<li>
+														<img src="img/quiz_icon_2.svg" alt="" />
+														<p>Бесплатную консультацию нашего юриста, который поможет вам разобраться в вашем вопросе</p>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="quiz__metrics">
+										<div class="quiz-metrics" data-animate-stager="fadeUp:300">
+											<div class="quiz-metrics__item">
+												<h6>3 500+</h6>
+												<p>Побед в УФАС</p>
+											</div>
+											<div class="quiz-metrics__item">
+												<h6>87%</h6>
+												<p>
+													Процент побед <br />
+													в УФАС
+												</p>
+											</div>
+											<div class="quiz-metrics__item">
+												<h6>355+</h6>
+												<p>Побед в суде</p>
+											</div>
+											<div class="quiz-metrics__item">
+												<h6>80%</h6>
+												<p>
+													Процент побед <br />
+													в суде
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- rs-about -->
+				<link rel="stylesheet" href="css/rs-about.css" />
+				<section class="rs-about">
+					<div class="rs-about__container">
+						<div class="rs-about__wrapper">
+							<div class="about">
+								<div class="about__wrapper" data-animate-stager="fadeUp:200">
+									<div class="about__photo">
+										<img src="img/about_person_1.jpg" alt="" />
+									</div>
+									<div class="about__content">
+										<h3>Как компании попадают в список недобросовестных поставщиков?</h3>
+										<p>
+											Если подписание контракта или его исполнение стало для поставщика невозможным по объективным причинам, необходимо обеспечить
+											доказательства добросовестности, в том числе – доказательства попыток преодолеть сложившуюся ситуацию.
+										</p>
+										<p>
+											Документальная подготовка, выработка правовой позиции с учетом сложившейся практики ФАС и представительство интересов бизнеса
+											специализированным юристом по закупкам дают надежду на справедливый исход дела и не включение поставщика в РНП.
+										</p>
+										<p>
+											Чем раньше Вы обратитесь за помощью к  юристу по закупкам, тем эффективнее будет помощь. Переписку с заказчиком должен вести специалист в
+											Ваших интересах. Там должны быть нужные для Вашего бизнеса формулировки, аргументация.
+										</p>
+										<p>Профессиональные юристы ArGroup обеспечат защиту Ваших интересов на всех стадиях участия в закупках.</p>
+										<div class="signature">
+											<img src="img/signature.png" alt="" />
+											<p>Арищенков И.В. <span>директор компании</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- rs-benefit -->
+				<link rel="stylesheet" href="css/rs-benefit.css" />
+				<section class="rs-benefit">
+					<div class="rs-benefit__container">
+						<div class="rs-benefit__wrapper">
+							<div class="benefit">
+								<div class="benefit__head" data-animate="fadeUp">
+									<h3>4 причины почему мы лучшие в своем деле</h3>
+								</div>
+								<div class="benefit__items" data-animate-stager="fadeUp:200">
+									<div class="benefit__item">
+										<div class="benefit-card">
+											<div class="benefit-card__icon"><img src="img/benefit_1.png" alt="" /></div>
+											<h4 class="benefit-card__title">Глубокое знание законодательств</h4>
+											<p class="benefit-card__text">
+												Наша компания обладает высокой экспертизой в области законодательства, особенно положений ФЗ-44 и ФЗ-223, всегда в курсе последних
+												трендов и нюансов
+											</p>
+										</div>
+									</div>
+
+									<div class="benefit__item">
+										<div class="benefit-card">
+											<div class="benefit-card__icon"><img src="img/benefit_2.png" alt="" /></div>
+											<h4 class="benefit-card__title">Нам доверяют обучение будущих специалистов</h4>
+											<p class="benefit-card__text">
+												Юристы компании являются лекторами-экспертами на курсах по переподготовке специалистов по торгам в лучших государственных вузах Москвы
+											</p>
+										</div>
+									</div>
+
+									<div class="benefit__item">
+										<div class="benefit-card">
+											<div class="benefit-card__icon"><img src="img/benefit_3.png" alt="" /></div>
+											<h4 class="benefit-card__title">Честность и открытость</h4>
+											<p class="benefit-card__text">
+												Не обманываем клиентов и не предлагаем сомнительные сертификаты, не имеющих юридической силы, всегда говорим все прогнозы и указываем на
+												возможные риски
+											</p>
+										</div>
+									</div>
+
+									<div class="benefit__item">
+										<div class="benefit-card">
+											<div class="benefit-card__icon"><img src="img/benefit_4.png" alt="" /></div>
+											<h4 class="benefit-card__title">Придерживаемся принципа «1 юрист – 1 дело»</h4>
+											<p class="benefit-card__text">
+												Каждому клиенту выделяется юрист, который внимательно изучает ситуацию и разрабатывает индивидуальную стратегию для достижения
+												наилучшего результата
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- rs-results -->
+				<link rel="stylesheet" href="css/rs-results.css" />
+				<section class="rs-results">
+					<div class="rs-results__container">
+						<div class="rs-results__wrapper">
+							<div class="stripes">
+								<div class="stripes__wrapper">
+									<div class="stripes__stripe"></div>
+									<div class="stripes__stripe"></div>
+									<div class="stripes__stripe"></div>
+									<div class="stripes__stripe stripes__stripe_right"></div>
+								</div>
+							</div>
+
+							<div class="results">
+								<div class="results__wrapper">
+									<div class="results__head" data-animate="fadeUp">
+										<div class="section-title section-title_dark">
+											<h2 data-split-text>
+												87% положительных <br />
+												результатов за 6 лет практики
+											</h2>
+										</div>
+									</div>
+									<div class="results__items" data-animate-stager="fadeUp:200">
+										<div class="results__item">
+											<div class="result-blank">
+												<div class="result-blank__title">
+													<h4>ООО «Компания»</h4>
+													<img src="img/result_logo.png" alt="" />
+													<p>Московская область</p>
+												</div>
+												<div class="result-blank__details">
+													<p>Решение УФАС по делу РНП № 123/-/- от&nbsp;01.12.2023&nbsp;г.</p>
+													<h5>Описание спора:</h5>
+													<p>Нарушение Законодательства об осуществлении закупок</p>
+												</div>
+												<div class="result-blank__content">
+													<h5>Результат:</h5>
+													<img src="img/result_document.jpg" alt="" />
+													<p>
+														Решение комиссии Московского УФАС России: сведения в отношении ООО «Компании» в реестр недобросовестных&nbsp;поставщиков не включать
+													</p>
+												</div>
+												<div class="result-blank__footer">
+													<p>С каждым клиентом мы подписываем договор о неразглашении, поэтому вся личная и коммерческая информация скрыта</p>
+												</div>
+											</div>
+										</div>
+										<div class="results__item">
+											<div class="result-blank">
+												<div class="result-blank__title">
+													<h4>ООО «Компания»</h4>
+													<img src="img/result_logo.png" alt="" />
+													<p>Московская область</p>
+												</div>
+												<div class="result-blank__details">
+													<p>Решение УФАС по делу РНП № 123/-/- от&nbsp;01.12.2023&nbsp;г.</p>
+													<h5>Описание спора:</h5>
+													<p>Нарушение Законодательства об осуществлении закупок</p>
+												</div>
+												<div class="result-blank__content">
+													<h5>Результат:</h5>
+													<img src="img/result_document.jpg" alt="" />
+													<p>
+														Решение комиссии Московского УФАС России: сведения в отношении ООО «Компании» в реестр недобросовестных&nbsp;поставщиков не включать
+													</p>
+												</div>
+												<div class="result-blank__footer">
+													<p>С каждым клиентом мы подписываем договор о неразглашении, поэтому вся личная и коммерческая информация скрыта</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="results__btn">
+										<a href="#" class="btn-color">
+											<span>Показать еще</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- rs-callback -->
+				<link rel="stylesheet" href="css/rs-callback.css" />
+				<section class="rs-callback">
+					<div class="rs-callback__container">
+						<div class="rs-callback__wrapper">
+							<div class="callback">
+								<div class="callback__wrapper">
+									<div class="callback__content">
+										<h3>Получите бесплатную консультацию юриста</h3>
+										<p>На первичной консультации вы узнаете о перспективах дела и получите план по защите ваших интересов</p>
+
+										<a href="#" class="btn-color">
+											<span>Получить бесплатную консультацию юриста</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- rs-about -->
+				<section class="rs-about">
+					<div class="rs-about__container">
+						<div class="rs-about__wrapper">
+							<div class="about">
+								<div class="about__wrapper" data-animate-stager="fadeUp:200">
+									<div class="about__photo">
+										<img src="img/about_person_2.jpg" alt="" />
+									</div>
+									<div class="about__content">
+										<h3>Опыт и практика, которые позволяют гарантировать результат</h3>
+										<p>
+											Представляем интересы юридических лиц в управлениях ФАС по всей России с 2018 года. За 6 лет защитили более 3500 компаний от попадания в
+											реестр недобросовестных поставщиков.
+										</p>
+										<p>
+											Наша компания входит в тройку лидеров на рынке оказания юридических услуг в сфере госзаказа ФЗ-44 и ФЗ-223. Каждый специалист компании –
+											эксперт в области закупок, гражданского, арбитражного процессуального и административного права.
+										</p>
+										<blockquote>
+											<p>Благодаря нашему опыту и экспертизе мы можем гарантировать, что разрешим вашу ситуацию и приведем дело к намеченному результату.</p>
+										</blockquote>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- rs-steps -->
+				<link rel="stylesheet" href="css/rs-steps.css" />
+				<section class="rs-steps">
+					<div class="rs-steps__container">
+						<div class="rs-steps__wrapper">
+							<div class="steps">
+								<div class="steps__wrapper">
+									<div class="steps__head" data-animate="fadeUp">
+										<div class="section-title">
+											<h2 data-split-text>
+												5 шагов для защиты репутации <br />
+												вашей компании
+											</h2>
+										</div>
+									</div>
+									<div class="steps__content" data-animate="fadeUp">
+										<div class="steps-slider">
+											<div class="steps-slider-paging"></div>
+											<div class="steps-slider__slider">
+												<div class="steps-slider__swiper">
+													<div class="steps-slider__slide" data-title="Связь">
+														<article class="steps-card">
+															<div class="steps-card__wrapper">
+																<div class="steps-card__content">
+																	<h3 class="steps-card__title">1 этап</h3>
+																	<h4 class="steps-card__subtitile">Связь с клиентом</h4>
+																	<p class="steps-card__text">
+																		После публикации на сайте закупок сведений о расторжении контракта мы связываемся с клиентами или клиенты обращаются к нам
+																	</p>
+																</div>
+																<div class="steps-card__photo">
+																	<img src="img/steps_gallery_1.jpg" alt="" />
+																</div>
+															</div>
+														</article>
+													</div>
+
+													<div class="steps-slider__slide" data-title="Анализ">
+														<article class="steps-card">
+															<div class="steps-card__wrapper">
+																<div class="steps-card__content">
+																	<h3 class="steps-card__title">2 этап</h3>
+																	<h4 class="steps-card__subtitile">Анализ</h4>
+																	<p class="steps-card__text">
+																		Со 100% вероятностью определим потенциал вашего дела, разработаем стратегию защиты и укажем на возможные риски
+																	</p>
+																</div>
+																<div class="steps-card__photo">
+																	<img src="img/steps_gallery_2.jpg" alt="" />
+																</div>
+															</div>
+														</article>
+													</div>
+
+													<div class="steps-slider__slide" data-title="Предоплата">
+														<article class="steps-card">
+															<div class="steps-card__wrapper">
+																<div class="steps-card__content">
+																	<h3 class="steps-card__title">3 этап</h3>
+																	<h4 class="steps-card__subtitile">Заключение договора и предоплата</h4>
+																	<p class="steps-card__text">
+																		Заключаем договор, вы оплачиваете предоплату по договору, а остаток вы оплатите при успешном разрешении вашего дела
+																	</p>
+																</div>
+																<div class="steps-card__photo">
+																	<img src="img/steps_gallery_3.jpg" alt="" />
+																</div>
+															</div>
+														</article>
+													</div>
+
+													<div class="steps-slider__slide" data-title="Подготовка">
+														<article class="steps-card">
+															<div class="steps-card__wrapper">
+																<div class="steps-card__content">
+																	<h3 class="steps-card__title">4 этап</h3>
+																	<h4 class="steps-card__subtitile">Подготовка позиции</h4>
+																	<p class="steps-card__text">
+																		Подготовим все документы и доказательства, необходимые для оспаривания решения о включении в реестр недобросовестных
+																		поставщиков, защитим интересы в УФАС
+																	</p>
+																</div>
+																<div class="steps-card__photo">
+																	<img src="img/steps_gallery_4.jpg" alt="" />
+																</div>
+															</div>
+														</article>
+													</div>
+
+													<div class="steps-slider__slide" data-title="Защита">
+														<article class="steps-card">
+															<div class="steps-card__wrapper">
+																<div class="steps-card__content">
+																	<h3 class="steps-card__title">5 этап</h3>
+																	<h4 class="steps-card__subtitile">Защита</h4>
+																	<p class="steps-card__text">Представим интересы вашей компании в арбитражном суде и добьемся положительного результата</p>
+																</div>
+																<div class="steps-card__photo">
+																	<img src="img/steps_gallery_5.jpg" alt="" />
+																</div>
+															</div>
+														</article>
+													</div>
+												</div>
+												<div class="steps-slider__arrows">
+													<div class="slider-arrows">
+														<button type="button" class="slider-arrow slider-arrow_prev"></button>
+														<button type="button" class="slider-arrow slider-arrow_next"></button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- rs-reviews -->
+				<link rel="stylesheet" href="css/rs-reviews.css" />
+				<section class="rs-reviews">
+					<div class="rs-reviews__container">
+						<div class="rs-reviews__wrapper">
+							<div class="stripes">
+								<div class="stripes__wrapper">
+									<div class="stripes__stripe"></div>
+									<div class="stripes__stripe"></div>
+									<div class="stripes__stripe"></div>
+									<div class="stripes__stripe stripes__stripe_right"></div>
+								</div>
+							</div>
+
+							<div class="reviews">
+								<div class="reviews__head" data-animate="fadeUp">
+									<h2>Что говорят клиенты, которые&nbsp;избежали попадания в РПН</h2>
+								</div>
+								<div class="reviews__content" data-animate="fadeUp">
+									<div class="reviews__letter-slider">
+										<div class="letters-gallery">
+											<div class="letters-gallery__slider">
+												<div class="letters-gallery__swiper">
+													<div class="letters-gallery__slide"><img src="img/letters_1.jpg" alt="" /></div>
+													<div class="letters-gallery__slide"><img src="img/letters_2.jpg" alt="" /></div>
+													<div class="letters-gallery__slide"><img src="img/letters_4.jpg" alt="" /></div>
+													<div class="letters-gallery__slide"><img src="img/letters_3.jpg" alt="" /></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="reviews__main-slider">
+										<div class="reviews-slider">
+											<div class="reviews-slider__slider">
+												<div class="reviews-slider__swiper">
+													<div class="reviews-slider__slide">
+														<div class="reviews-card">
+															<h4 class="reviews-card__title">Благодарственное письмо от ООО&nbsp;«Омолон»</h4>
+															<div class="reviews-card__wrapper">
+																<div class="reviews-card__text">
+																	<p>
+																		ООО «Омолон», в лице генерального директора Пантелеева Николая Анатольевича, выражает юридической компании «ArGroup»
+																		искреннюю благодарность за успешное представление интересов в УФАС и Арбитражном суде г. Москва.
+																	</p>
+																	<p>
+																		Хотим отметить, что сотрудничество с «ArGroup» способствует успешному и профессиональному решению сложных юридических
+																		вопросов благодаря безукоризненной компетентности в знании 44 и 223 ФЗ. Чуткое и человеческое отношение к клиенту создает
+																		исключительные комфортные условия для совместной работы.
+																	</p>
+																	<p>
+																		«ArGroup» зарекомендовало себя как надежный и эффективный партнер, с которым сложные юридические вопросы решаются четко и
+																		последовательно. Мы верим в продолжение наших деловых и дружеских отношений и будем рекомендовать компанию «ArGroup» нашим
+																		коллегам!
+																	</p>
+																</div>
+																<div class="reviews-card__signature"><span>С Уважением, Генеральный директор </span>Н.А. Пантелеев</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="reviews-slider__slide">
+														<div class="reviews-card">
+															<h4 class="reviews-card__title">Благодарственное письмо от ИП&nbsp;Махсудян&nbsp;К.Г.</h4>
+															<div class="reviews-card__wrapper">
+																<div class="reviews-card__text">
+																	<p>
+																		ИП Махсудян Карен Генрихович благодарит сотрудников компании «ArGroup» за представление интересов в Управлении Федеральной
+																		антимонопольной службы по г. Москва. Важно отметить профессиональную юридическую помощь по защите от внесения нашей
+																		организации в реестр недобросовестных поставщиков. Компания «ArGroup» проявила ответственность и заинтересованность в
+																		достижении положительного результата и сделала для этого все возможное. Также хотели бы обратить внимание на оперативное
+																		реагирование сотрудников компании на изменение ситуации и живое участие во всех деталях нашего дела.
+																	</p>
+																	<p>
+																		ИП Махсудян Карен Генрихович рекомендует «ArGroup» как надежного делового партнера в решении сложных юридических вопросов,
+																		связанных с государственными закупками.
+																	</p>
+																</div>
+																<div class="reviews-card__signature"><span>С Уважением, Индивидуальный Предприниматель</span> Махсудян К.Г.</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="reviews-slider__slide">
+														<div class="reviews-card">
+															<h4 class="reviews-card__title">Благодарственное письмо от ООО&nbsp;«Арморек»</h4>
+															<div class="reviews-card__wrapper">
+																<div class="reviews-card__text">
+																	<p>
+																		Общество с ограниченной ответственностью «Арморек» с благодарностью отмечает высокий уровень профессионализма сотрудников
+																		компании «ArGroup».
+																	</p>
+																	<p>
+																		Все задачи были выполнены в срок и с максимальной отдачей. Индивидуальный подход к клиенту, пунктуальность и достойное
+																		знание закона сотрудников данной юридической компании помогли нашей организации справиться со сложными задачами по
+																		представлению нашего дела в УФАС и Арбитражном суде г. Москвы и отстоять наши интересы.
+																	</p>
+																	<p>Желаем компании «ArGroup» дальнейших профессиональных побед и долголетия!</p>
+																</div>
+																<div class="reviews-card__signature"><span>С Уважением, Генеральный директор</span> Д.В. Васюков</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="reviews-slider__slide">
+														<div class="reviews-card">
+															<h4 class="reviews-card__title">Благодарственное письмо от ООО&nbsp;«ТЭЗиС»</h4>
+															<div class="reviews-card__wrapper">
+																<div class="reviews-card__text">
+																	<p>
+																		Общество с ограниченной ответственностью «ТЭЗиС» с благодарностью отмечает высокий уровень профессионализма сотрудников
+																		компании «ArGroup»!
+																	</p>
+																	<p>
+																		Все задачи были выполнены в срок и с максимальной отдачей. Индивидуальный подход к клиенту, пунктуальность и достойное
+																		знание закона сотрудников данной юридической компании помогли нашей организации справиться со сложными задачами по
+																		представлению нашего дела в УФАС и отстоять наши интересы.
+																	</p>
+																	<p>Желаем компании «ArGroup» дальнейших профессиональных побед и долголетия!</p>
+																</div>
+																<div class="reviews-card__signature"><span>С Уважением, Генеральный директор</span> Е.В. Романова</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="reviews-slider__nav">
+												<div class="slider-arrows">
+													<button type="button" class="slider-arrow slider-arrow_prev"></button>
+													<button type="button" class="slider-arrow slider-arrow_next"></button>
+												</div>
+
+												<div class="slider-paging"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							`
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<footer>
+				<link rel="stylesheet" href="css/rs-footer.css" />
+				<section class="rs-footer">
+					<div class="rs-footer__container">
+						<div class="rs-footer__wrapper">
+							<div class="rs-footer__fos">
+								<h4 class="footer-title">Как с нами связаться?</h4>
+
+								<div class="fos">
+									<form action="#" id="fosForm" class="fos-form">
+										<div class="form-group">
+											<input type="text" id="fosName" name="fosName" placeholder="Имя" required />
+										</div>
+										<div class="form-row">
+											<div class="form-group">
+												<input type="tel" id="fosPhone" name="fosPhone" placeholder="Телефон" required maxlength="18" data-tel-input />
+											</div>
+											<div class="form-group">
+												<input type="email" id="fosMail" name="fosMail" placeholder="E-mail" required />
+											</div>
+										</div>
+										<div class="form-group">
+											<textarea id="fosMessage" name="fosMessage" placeholder="Комментарий" required></textarea>
+										</div>
+										<div class="form-submit">
+											<button type="submit" class="btn-color"><span>Отправить</span></button>
+											<p>
+												Нажимая на кнопку «отправить», Вы соглашаетесь на обработку персональных данных в соответствии с
+												<a href="#">пользовательским соглашением.</a>
+											</p>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="rs-footer__holder">
+								<div class="rs-footer__contacts">
+									<div class="footer-contacts">
+										<h4 class="footer-title">контакты:</h4>
+										<ul class="footer-contacts__list">
+											<li>
+												<a href="tel:+74951420965">+7 (495) 142-09-65 <span>(звонок бесплатный по России)</span></a>
+											</li>
+											<li><a href="mailto:info@domen.ru">info@domen.ru</a></li>
+											<li><p class="clock">Пн-Пт: с 09:00 до 18:00</p></li>
+											<li><a href="#" class="telegramm">Telegram</a></li>
+											<li><a href="#" class="whatsapp">Whatsapp</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="rs-footer__copyright">
+									<div class="footer-copyright">
+										<p>© ArGroup 2024. Все права защищены.</p>
+										<a href="#">Разработано в Россайт</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</footer>
+		</div>
+	</body>
+</html>

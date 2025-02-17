@@ -1,0 +1,138 @@
+.rs-intro {
+    position: relative;
+}
+
+.intro {
+    position: relative;
+    overflow: hidden;
+    min-height: 841px;
+    display: grid;
+    padding-top: 100px;
+}
+
+.intro-content {
+    position: relative;
+    z-index: 2;
+}
+
+.intro-content__container {
+    height: 100%;
+}
+
+.intro-content__wrapper {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.intro-content__entry {
+    position: relative;
+    z-index: 2;
+}
+
+.intro-content__person {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    margin-left: -11%;
+    height: 100%;
+}
+
+.intro-content__person img {
+    height: 100%;
+}
+
+.intro-content__adv {
+    padding-top: 27px;
+    -ms-flex: 0 0 18.1%;
+    flex: 0 0 18.1%;
+}
+
+.intro-title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: var(--fluid-90-40);
+    line-height: 90%;
+    color: var(--siniy);
+    margin-bottom: 0.3333333333em;
+}
+
+.intro-adv {
+    position: relative;
+}
+
+.intro-adv__items {
+    display: grid;
+    gap: 40px;
+}
+
+.intro-adv__item {
+    font-weight: 600;
+    font-size: var(--fluid-20-13);
+    text-align: center;
+    color: var(--siniy);
+}
+
+.intro-adv__item img {
+    margin-bottom: 4px;
+    max-width: 100%;
+}
+
+.intro-media {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.intro-media > * {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1250px) {
+    .intro-content__person {
+        margin-right: -70px;
+    }
+}
+
+@media (max-width: 1024.98px) {
+    .intro {
+        min-height: auto;
+    }
+
+    .intro-content__wrapper {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .intro-content__person {
+        margin: 0;
+    }
+
+    .intro-content__adv {
+        background: var(--goluboy);
+        margin-bottom: -90px;
+    }
+
+    .intro-content__adv {
+        display: none;
+    }
+
+    .intro-adv__items {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .intro-content__person img {
+        width: 100%;
+        height: auto;
+    }
+}
