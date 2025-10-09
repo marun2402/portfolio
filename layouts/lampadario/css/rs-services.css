@@ -1,0 +1,35 @@
+.rs-services {
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+.rs-services__head {
+    margin-bottom: 40px;
+}
+
+.rs-services__columns {
+    display: grid;
+    grid-template-columns: 1fr 46%;
+    gap: 60px;
+}
+
+.rs-services__content {
+    max-width: 589px;
+}
+
+.rs-services__content p {
+    text-align: left;
+}
+
+@media (max-width: 1023.98px) {
+    .rs-services {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-services__columns {
+        grid-template-columns: 1fr;
+    }
+}
