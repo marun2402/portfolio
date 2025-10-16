@@ -1,0 +1,204 @@
+.fos {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 58.3%;
+    gap: 30px;
+}
+
+.fos .fos-head h2 {
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: var(--fluid-40-24);
+    line-height: 120%;
+    margin-bottom: 8px;
+}
+
+.fos .fos-head p {
+    font-family: var(--third-family);
+    font-size: var(--fluid-18-14);
+    line-height: 160%;
+}
+
+.fos-form {
+    display: grid;
+    gap: 16px;
+    container-type: inline-size;
+}
+
+.fos-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.fos-form .form-submit {
+    display: grid;
+    gap: 23px;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+}
+
+@container (width < 450px) {
+    .fos-form .form-submit {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fos-form .form-submit__confirm {
+    display: grid;
+    gap: 4px;
+}
+
+.fos-form .form-group {
+    display: grid;
+    position: relative;
+}
+
+.fos-form label.error {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: var(--error-color);
+    position: absolute;
+    bottom: 3px;
+    right: 25px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.fos-form input,
+.fos-form textarea {
+    height: 64px;
+    width: 100%;
+    background: var(--main-bg-color);
+    padding: 0px 26px 0px 26px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--main-text-color);
+    border-radius: 50px;
+}
+
+.fos-form input:-ms-input-placeholder, .fos-form textarea:-ms-input-placeholder {
+    color: var(--main-text-color);
+}
+
+.fos-form input::placeholder,
+.fos-form textarea::placeholder {
+    color: var(--main-text-color);
+}
+
+.fos-form input.error,
+.fos-form textarea.error {
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+}
+
+.fos-form input.valid,
+.fos-form textarea.valid {
+    background-size: auto;
+}
+
+.fos-form textarea {
+    height: 100%;
+    resize: none;
+    min-height: 134px;
+    border-radius: 28px;
+    padding-top: 22px;
+}
+
+.fos-form .checkbox {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.fos-form .checkbox > input {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.fos-form .checkbox__text {
+    text-align: left;
+    display: inline-block;
+    padding-left: 28px;
+    cursor: pointer;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: rgba(29, 30, 33, 0.5);
+    position: relative;
+}
+
+.fos-form .checkbox__text:before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background: var(--main-bg-color);
+    border: 1px solid var(--border-color);
+    transition: background 0.3s ease;
+}
+
+.fos-form .checkbox__text:after {
+    content: url('data:image/svg+xml,<svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.0473 2.09209L6.29733 10.8421C5.97189 11.1675 5.44425 11.1675 5.11882 10.8421L0.952148 6.67542L2.13066 5.49691L5.70807 9.07432L13.8688 0.913574L15.0473 2.09209Z" fill="white" /></svg>');
+    position: absolute;
+    top: 0px;
+    left: 2px;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.fos-form .checkbox input:checked + span:after {
+    transform: scale(1);
+}
+
+.fos-form .checkbox input:checked + span:before {
+    background: var(--bg-color-4);
+    border-color: var(--bg-color-4);
+}
+
+.rs-fos {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.rs-fos__wrapper {
+    border-radius: var(--block-radius);
+    padding: 80px 70px;
+    background: var(--bg-color-2) url("../img/bg_5.png") left/contain no-repeat;
+}
+
+@media (max-width: 1300px) {
+    .rs-fos__wrapper {
+        padding: 35px;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .fos {
+        grid-template-columns: 1fr;
+    }
+
+    .rs-fos {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .fos-form .form-row {
+        grid-template-columns: 1fr;
+    }
+}

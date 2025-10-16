@@ -1,0 +1,127 @@
+.services {
+    position: relative;
+}
+
+.services__head {
+    margin-bottom: 31px;
+}
+
+.services__items {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+.services__item:nth-child(odd) {
+    --card-bg: #f0f6f4;
+}
+
+.services__item:nth-child(even) {
+    --card-bg: #f0ffe8;
+}
+
+.services-card {
+    position: relative;
+    height: 100%;
+    background: var(--card-bg);
+    border-radius: var(--block-radius);
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.services-card > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    font-size: 0;
+}
+
+.services-card__photo {
+    position: relative;
+    padding-bottom: 65.5%;
+    -webkit-mask-image: url("../img/mask_2.png");
+    mask-image: url("../img/mask_2.png");
+    -webkit-mask-position: right bottom;
+    mask-position: right bottom;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    margin-left: 56px;
+}
+
+.services-card__photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.services-card__title {
+    padding: 24px;
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: var(--fluid-20-16);
+    line-height: 120%;
+}
+
+.services-card .services-card__title {
+    transition: color var(--animation-duration) var(--timing-func);
+}
+
+.rs-services {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+@media (min-width: 405px) and (max-width: 767px) {
+    .services__items {
+        margin-right: calc((100vw - 375px) / -2);
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .services__items {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services__items {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 290px;
+        grid-auto-flow: column;
+        grid-auto-columns: 290px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-right: -15px;
+        padding-right: 15px;
+        -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    }
+
+    .services__item {
+        scroll-snap-align: start;
+    }
+
+    .rs-services {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (any-hover: hover) {
+    .services-card:hover .services-card__title {
+        color: var(--primary-color);
+    }
+}
