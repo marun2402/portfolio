@@ -1,0 +1,90 @@
+.billboard__wrapper {
+    position: relative;
+}
+
+.billboard__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.billboard__bg span {
+    background: #001b2e;
+    margin-top: -60px;
+}
+
+.billboard__content {
+    position: relative;
+    padding-bottom: 267px;
+    background: url("../img/about_factory_vec.svg") right bottom/auto 96% no-repeat;
+}
+
+.billboard .billboard-content {
+    max-width: 945px;
+    padding-left: 69px;
+}
+
+.billboard .billboard-content img {
+    margin-bottom: 21px;
+}
+
+.billboard .billboard-content h3 {
+    font-weight: 500;
+    font-size: var(--fluid-50-25);
+    line-height: 95%;
+    color: var(--text-color-2);
+    margin-bottom: 30px;
+}
+
+.billboard .billboard-content h3 span {
+    color: var(--text-color-gray);
+}
+
+.billboard .billboard-content p {
+    font-size: var(--fluid-24-14);
+    line-height: 150%;
+    color: var(--text-color-2);
+}
+
+.rs-billboard {
+    padding-top: 70px;
+    padding-bottom: 65px;
+}
+
+@media (min-width: 1023.98px) {
+    .billboard__bg span:nth-child(1) {
+        margin-top: -240px;
+    }
+
+    .billboard__bg span:nth-child(2) {
+        margin-top: -160px;
+    }
+
+    .billboard__bg span:nth-child(3) {
+        margin-top: -80px;
+    }
+
+    .billboard__bg span:nth-child(4) {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .billboard__content {
+        background-size: contain;
+    }
+
+    .billboard .billboard-content {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .rs-billboard {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+}
