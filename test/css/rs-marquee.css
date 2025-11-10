@@ -12,7 +12,7 @@
     height: 100%;
     white-space: nowrap;
     will-change: transform;
-    animation: marquee 30s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 
 .marquee__content {
