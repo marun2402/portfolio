@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>ООО «ВОЛЬТФУЕЛ» | Аксессуары</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+	
+
+	
+	
+
+	<script src="libs/fancybox/fancybox.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="libs/fancybox/fancybox.css" />
+
+	<script src="libs/swiper/swiper-bundle.min.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="libs/swiper/swiper-bundle.min.css" />
+
+	
+	
+	
+
+	
+	
+
+	<script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	
+	
+	
+	
+	
+	
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="js/app.js" defer></script>
+
+</head>
+
+  <body class="default-layout">
+    
+
+    <div class="globals">
+      <div class="preloader" style="--progress: 0%">
+  <svg width="1920" height="920" viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">		
+		<path d="M502.249 968.677C588.234 920.872 726.573 855.819 862.969 803.047C931.165 776.662 998.86 753.354 1059.27 736.808C1119.7 720.257 1172.77 710.494 1211.74 711.151L1211.74 711.152C1250.6 711.77 1303.15 723.204 1362.82 741.639C1422.47 760.069 1489.17 785.471 1556.31 813.977C1690.59 870.989 1826.58 940.388 1911.39 991.163L1911.39 991.163L2085.28 1095.47C2037.5 1200.49 1953.37 1289.61 1840.39 1342.22L1214.11 1633.86C961.982 1749.73 663.999 1640.98 546.784 1389.27L382.011 1035.43L502.248 968.677L502.249 968.677ZM1267.48 -237.022C1468.31 -265.087 1671.78 -168.441 1774.3 15.1235L1810.75 94.0261L1810.75 94.0305L2093.15 697.974C2136.53 804.226 2140.91 917.384 2112.36 1020.87L1950.4 923.713C1865.6 872.571 1740.64 785.398 1627.42 693.975C1570.81 648.264 1517.15 601.502 1472.91 557.658C1428.66 513.8 1393.89 472.916 1375.02 438.963L1375.02 438.962L1374.23 437.526C1357.62 407.163 1342.96 363.498 1330.24 311.711C1317.32 259.117 1306.42 198.208 1297.49 134.466C1279.69 7.33687 1269.78 -131.007 1267.48 -237.022ZM498.404 96.9432L1124.68 -194.699C1144.69 -204.017 1164.99 -211.905 1185.47 -218.405C1178.85 -112.143 1164.3 21.6061 1142.77 143.358C1121.14 265.718 1092.49 375.792 1057.87 433.729C1037.87 467.064 1001.7 506.831 955.937 549.264C910.185 591.682 854.894 636.714 796.711 680.579C682.159 766.942 556.443 848.748 470.307 897.155L466.235 899.435L349.249 964.304L247.526 745.863C143.199 499.024 252.434 211.485 498.404 96.9432Z" fill="#15256D" stroke="#4F5B91" stroke-width="2"/>
+	</svg>
+	<div class="preloader__wrapper">
+		<div class="preloader__content">
+			<img src="img/logo_preloader.svg" alt="">
+      <img src="img/logo_preloader.svg" alt="">
+			<p>Продажа, установка и цифровое управление зарядными станциями</p>
+		</div>			
+	</div>
+</div>
+      
+    </div>
+    
+    <div class="site">
+      
+      <header>
+        <span class="menu-overlay" data-js-overlay></span>
+         
+
+<link rel="stylesheet" href="css/header.css" />
+<div class="header">	
+
+	<div class="header__top">
+		<div class="header__container">
+			<div class="header__holder">
+
+				<a href="index.html" class="header-logo">
+					<img src="img/logo.svg" alt="" />
+				</a>	
+
+				<div class="header-nav">
+					<ul class="header-nav__icons">
+						<li>
+							<a href="#" class="header-nav-link">
+								<div class="header-nav-link__icon">
+									<svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M9 11C11.396 11 13.575 11.694 15.178 12.672C15.978 13.16 16.662 13.736 17.156 14.362C17.642 14.977 18 15.713 18 16.5C18 17.345 17.589 18.011 16.997 18.486C16.437 18.936 15.698 19.234 14.913 19.442C13.335 19.859 11.229 20 9 20C6.771 20 4.665 19.86 3.087 19.442C2.302 19.234 1.563 18.936 1.003 18.486C0.41 18.01 0 17.345 0 16.5C0 15.713 0.358 14.977 0.844 14.361C1.338 13.736 2.021 13.161 2.822 12.671C4.425 11.695 6.605 11 9 11ZM9 13C6.977 13 5.157 13.59 3.864 14.379C3.217 14.773 2.729 15.201 2.414 15.601C2.09 16.011 2 16.321 2 16.5C2 16.622 2.037 16.751 2.255 16.926C2.504 17.126 2.937 17.333 3.599 17.508C4.917 17.858 6.811 18 9 18C11.19 18 13.083 17.857 14.4 17.508C15.063 17.333 15.496 17.126 15.745 16.926C15.963 16.751 16 16.622 16 16.5C16 16.32 15.91 16.011 15.587 15.601C15.271 15.201 14.783 14.773 14.136 14.379C12.843 13.589 11.023 13 9 13ZM9 0C10.3261 0 11.5979 0.526784 12.5355 1.46447C13.4732 2.40215 14 3.67392 14 5C14 6.32608 13.4732 7.59785 12.5355 8.53553C11.5979 9.47322 10.3261 10 9 10C7.67392 10 6.40215 9.47322 5.46447 8.53553C4.52678 7.59785 4 6.32608 4 5C4 3.67392 4.52678 2.40215 5.46447 1.46447C6.40215 0.526784 7.67392 0 9 0ZM9 2C8.60603 2 8.21593 2.0776 7.85195 2.22836C7.48797 2.37913 7.15726 2.6001 6.87868 2.87868C6.6001 3.15726 6.37913 3.48797 6.22836 3.85195C6.0776 4.21593 6 4.60603 6 5C6 5.39397 6.0776 5.78407 6.22836 6.14805C6.37913 6.51203 6.6001 6.84274 6.87868 7.12132C7.15726 7.3999 7.48797 7.62087 7.85195 7.77164C8.21593 7.9224 8.60603 8 9 8C9.79565 8 10.5587 7.68393 11.1213 7.12132C11.6839 6.55871 12 5.79565 12 5C12 4.20435 11.6839 3.44129 11.1213 2.87868C10.5587 2.31607 9.79565 2 9 2Z" fill="#407BFF" />
+									</svg>
+								</div>
+								<span class="header-nav-link__title">Личный кабинет</span>
+							</a>
+						</li>						
+					</ul>
+				</div>
+
+				<div class="header__top-menu">
+					
+					
+
+
+
+
+
+
+<nav class="menu second-menu">
+
+	<div class="menu-wrapper">
+		<ul class="menu__list">		
+			<li class="menu__dropdown">
+				<a href="#"><span><img src="img/icons/menu_icon_1.svg" alt=""> Для водителей</span></a>
+				<button type="button" class="menu__dropdown-arrow"></button>
+				<ul class="menu__dropdown-list">
+					<li class="switch-back"><a href="#"><span>Для водителей</span></a></li>
+					<li><a href="#"><span>Скачать приложение</span></a></li>					
+					<li class="menu__dropdown">
+						<a href="#"><span>Программа лояльности</span></a>
+						<button type="button" class="menu__dropdown-arrow"></button>
+						<ul class="menu__dropdown-list">
+							<li class="switch-back"><a href="#"><span>База знаний</span></a></li>
+							<li><a href="#"><span>Скачать приложение</span></a></li>
+							<li class="menu__dropdown">
+								<a href="#"><span>Программа лояльности</span></a>
+								<button type="button" class="menu__dropdown-arrow"></button>
+								<ul class="menu__dropdown-list">
+									<li class="switch-back"><a href="#"><span>База знаний</span></a></li>
+									<li><a href="#"><span>Скачать приложение</span></a></li>
+									<li><a href="#"><span>Программа лояльности</span></a></li>
+									<li><a href="#"><span>Аксессуары для зарядки</span></a></li>
+									<li><a href="#"><span>Для ТЦ, ресторанов, отелей, офисов и др. коммерческого бизнеса</span></a></li>
+									<li><a href="#"><span>Для инвесторов в зарядные станции</span></a></li>
+								</ul>
+							<li><a href="#"><span>Аксессуары для зарядки</span></a></li>
+							<li><a href="#"><span>Для ТЦ, ресторанов, отелей, офисов и др. коммерческого бизнеса</span></a></li>
+							<li><a href="#"><span>Для инвесторов в зарядные станции</span></a></li>
+						</ul>
+					</li>
+					<li><a href="#"><span>Аксессуары для зарядки</span></a></li>
+					<li><a href="#"><span>Для ТЦ, ресторанов, отелей, офисов и др. коммерческого бизнеса</span></a></li>
+					<li><a href="#"><span>Для инвесторов в зарядные станции</span></a></li>
+				</ul>
+			</li>				
+			
+			<li><a href="#"><span><img src="img/icons/menu_icon_2.svg" alt=""> Для дома</span></a></li>
+			<li><a href="#"><span><img src="img/icons/menu_icon_3.svg" alt=""> Для компаний</span></a></li>
+		</ul>
+	</div>
+</nav>
+
+				</div>
+
+				<div class="header-nav-contacts">
+					<ul>
+						<li><a href="tel:+74956692111">+7 495 669 21 11 <span>горячая линия</span></a></li>
+					</ul>
+				</div>
+
+				<div class="header__btn">
+					
+<a href="#" class="btn-color btn-color_small">	
+	<span>cвязаться с нами</span>
+	<div class="btn-color__circle">
+		<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-color__icon">
+			<path d="M5.38063 11.4333L5.29096 11.5208L5.38063 11.6082L5.98228 12.1945L6.06923 12.2793L6.15618 12.1945L12.1095 6.39254L12.1992 6.30512L12.1095 6.21771L6.1035 0.364076L6.01655 0.279298L5.92954 0.364076L5.32795 0.950416L5.23821 1.03783L5.32795 1.12525L10.0869 5.76344L0.323167 5.76344L0.199218 5.76344L0.199218 5.88614L0.199219 6.72405L0.199219 6.84674L0.323167 6.84674L10.0868 6.84674L5.38063 11.4333Z" stroke-width="0.4" />
+		</svg>
+	</div>
+</a>
+
+				</div>
+
+
+				<button class="menu-burger">
+  <span>
+    <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1.5L11 11.5M11 1.5L1 11.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    Закрыть
+  </span>
+  <span>
+    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.07703 7.46167H12.9232" stroke="white" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1.07703 3.19263H12.9232" stroke="white" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1.07703 11.7307H12.9232" stroke="white" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+     Меню
+  </span>
+</button>
+
+				
+			</div>
+		</div>	
+	</div>
+
+	<div class="header__wrapper">
+		<div class="header__container">
+			<div class="header__holder">
+
+				
+				
+
+<nav class="menu">
+
+	<div class="menu-wrapper">
+		<ul class="menu__list">		
+			<li><a href="#"><span>Каталог</span></a></li>
+
+			<li class="menu__dropdown">
+				<a href="#"><span>База знаний</span></a>
+				<button type="button" class="menu__dropdown-arrow"></button>
+				<ul class="menu__dropdown-list">
+					<li class="switch-back"><a href="#"><span>База знаний</span></a></li>
+					<li><a href="#"><span>Скачать приложение</span></a></li>					
+					<li class="menu__dropdown">
+						<a href="#"><span>Программа лояльности</span></a>
+						<button type="button" class="menu__dropdown-arrow"></button>
+						<ul class="menu__dropdown-list">
+							<li class="switch-back"><a href="#"><span>База знаний</span></a></li>
+							<li><a href="#"><span>Скачать приложение</span></a></li>
+							<li class="menu__dropdown">
+								<a href="#"><span>Программа лояльности</span></a>
+								<button type="button" class="menu__dropdown-arrow"></button>
+								<ul class="menu__dropdown-list">
+									<li class="switch-back"><a href="#"><span>База знаний</span></a></li>
+									<li><a href="#"><span>Скачать приложение</span></a></li>
+									<li><a href="#"><span>Программа лояльности</span></a></li>
+									<li><a href="#"><span>Аксессуары для зарядки</span></a></li>
+									<li><a href="#"><span>Для ТЦ, ресторанов, отелей, офисов и др. коммерческого бизнеса</span></a></li>
+									<li><a href="#"><span>Для инвесторов в зарядные станции</span></a></li>
+								</ul>
+							<li><a href="#"><span>Аксессуары для зарядки</span></a></li>
+							<li><a href="#"><span>Для ТЦ, ресторанов, отелей, офисов и др. коммерческого бизнеса</span></a></li>
+							<li><a href="#"><span>Для инвесторов в зарядные станции</span></a></li>
+						</ul>
+					</li>
+					<li><a href="#"><span>Аксессуары для зарядки</span></a></li>
+					<li><a href="#"><span>Для ТЦ, ресторанов, отелей, офисов и др. коммерческого бизнеса</span></a></li>
+					<li><a href="#"><span>Для инвесторов в зарядные станции</span></a></li>
+				</ul>
+			</li>				
+			
+			<li><a href="#"><span>Новости</span></a></li>
+			<li><a href="#"><span>О компании</span></a></li>
+			<li><a href="#"><span>Контакты</span></a></li>
+		</ul>
+	</div>
+
+	<div class="menu-footer">
+		
+		<div class="mobile-menu-contacts">
+			<div class="mobile-menu-contacts__title">Свяжитесь с нами</div>
+			<ul class="mobile-menu-contacts__list">
+				<li><a href="tel:+78129882092">+7 (812) 988-20-92</a></li>
+				<li><a href="mailto:filtr_spb@mail.ru">filtr_spb@mail.ru</a></li>
+				<li><p class="location">195279, г. Санкт-Петербург, ул. Коммуны, д. 67</p></li>
+			</ul>
+		</div>		
+	</div>
+
+</nav>
+
+
+
+
+
+
+
+				<div class="header__lang-picker"><div class="lang-picker">
+  <button type="button" class="lang-picker__current">    
+    <span>ru</span>
+  </button>
+  <ul class="lang-picker__dropdown">
+    <li>
+      <a href="#">en</a>
+    </li>
+  </ul>
+</div>
+</div>
+
+				<div class="header__search"><button class="header-search-open">
+	<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M6.37446 1.43765e-08C5.3579 8.66187e-05 4.35611 0.243273 3.45265 0.70927C2.54919 1.17527 1.77028 1.85056 1.18088 2.67882C0.591492 3.50707 0.208715 4.46426 0.0644889 5.47053C-0.0797372 6.47681 0.0187697 7.50298 0.351791 8.46344C0.684813 9.4239 1.24269 10.2908 1.97889 10.9918C2.71508 11.6928 3.60824 12.2076 4.58384 12.4932C5.55945 12.7788 6.58921 12.827 7.58722 12.6337C8.58523 12.4404 9.52254 12.0112 10.321 11.382L13.06 14.121C13.2014 14.2576 13.3909 14.3332 13.5875 14.3315C13.7842 14.3298 13.9723 14.2509 14.1113 14.1119C14.2504 13.9728 14.3293 13.7847 14.331 13.5881C14.3327 13.3914 14.2571 13.202 14.1205 13.0605L11.3815 10.3215C12.1225 9.38146 12.5838 8.2518 12.7128 7.06179C12.8417 5.87179 12.6331 4.66952 12.1106 3.59257C11.5882 2.51562 10.7731 1.60752 9.75868 0.972173C8.74425 0.33683 7.57143 -8.03575e-05 6.37446 1.43765e-08ZM1.49946 6.375C1.49946 5.08207 2.01307 3.84209 2.92731 2.92785C3.84155 2.01361 5.08153 1.5 6.37446 1.5C7.66739 1.5 8.90736 2.01361 9.8216 2.92785C10.7358 3.84209 11.2495 5.08207 11.2495 6.375C11.2495 7.66793 10.7358 8.90791 9.8216 9.82215C8.90736 10.7364 7.66739 11.25 6.37446 11.25C5.08153 11.25 3.84155 10.7364 2.92731 9.82215C2.01307 8.90791 1.49946 7.66793 1.49946 6.375Z" fill="#0A1B2B" />
+	</svg>
+</button>
+<div class="header-search">
+	<form action="#">		
+		<input type="search" name="headerSearch" placeholder="Введите ваш запрос" />
+		<button type="reset"></button>
+		<button type="submit">
+			<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M6.37446 1.43765e-08C5.3579 8.66187e-05 4.35611 0.243273 3.45265 0.70927C2.54919 1.17527 1.77028 1.85056 1.18088 2.67882C0.591492 3.50707 0.208715 4.46426 0.0644889 5.47053C-0.0797372 6.47681 0.0187697 7.50298 0.351791 8.46344C0.684813 9.4239 1.24269 10.2908 1.97889 10.9918C2.71508 11.6928 3.60824 12.2076 4.58384 12.4932C5.55945 12.7788 6.58921 12.827 7.58722 12.6337C8.58523 12.4404 9.52254 12.0112 10.321 11.382L13.06 14.121C13.2014 14.2576 13.3909 14.3332 13.5875 14.3315C13.7842 14.3298 13.9723 14.2509 14.1113 14.1119C14.2504 13.9728 14.3293 13.7847 14.331 13.5881C14.3327 13.3914 14.2571 13.202 14.1205 13.0605L11.3815 10.3215C12.1225 9.38146 12.5838 8.2518 12.7128 7.06179C12.8417 5.87179 12.6331 4.66952 12.1106 3.59257C11.5882 2.51562 10.7731 1.60752 9.75868 0.972173C8.74425 0.33683 7.57143 -8.03575e-05 6.37446 1.43765e-08ZM1.49946 6.375C1.49946 5.08207 2.01307 3.84209 2.92731 2.92785C3.84155 2.01361 5.08153 1.5 6.37446 1.5C7.66739 1.5 8.90736 2.01361 9.8216 2.92785C10.7358 3.84209 11.2495 5.08207 11.2495 6.375C11.2495 7.66793 10.7358 8.90791 9.8216 9.82215C8.90736 10.7364 7.66739 11.25 6.37446 11.25C5.08153 11.25 3.84155 10.7364 2.92731 9.82215C2.01307 8.90791 1.49946 7.66793 1.49946 6.375Z" fill="#0A1B2B" />
+			</svg>
+		</button>
+	</form>	
+</div>
+ </div>
+
+				
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+ 
+      </header>
+      
+      <div class="site-content">
+        <div class="site-wrapper">
+
+          <div class="site-main">
+            
+
+ 
+
+
+
+<div class="page-head site-fullhd">
+  <picture>
+    <source media="(max-width: 767.98px)" srcset="img/ban_min_1.jpg">
+    <img class="page-head__bg" src="img/ban.jpg" alt="">
+  </picture>
+  <div class="page-head__container">
+    <div class="page-head__wrapper">
+      
+<nav class="breadcrumbs " role="navigation" aria-label="breadcrumbs" data-hidescroll>    
+  
+    <a href="#">Главная</a>
+    <span class="breadcrumbs__divider" aria-hidden="true">–</span>
+  
+    <a href="#">Каталог</a>
+    <span class="breadcrumbs__divider" aria-hidden="true">–</span>
+      
+  <span>Аксессуары</span>    
+</nav>
+
+      <div class="page-head__content">
+        <h1>Аксессуары и портативные зарядки <span>для электромобилей</span></span></h1>
+        <p>Комплексные решения под ключ для автопарков, торговых центров, отелей, дилеров и инвесторов</p>
+      </div>
+    </div>
+    <div class="page-head__categories">
+      <nav class="categories-chart-menu">	
+	<ul class="categories-chart-menu-list">    
+    <li>
+      <a href="#">
+        <h6>Все товары</h6>
+        <img src="img/cat_1.png" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h6>Быстрые станции</h6>
+        <img src="img/cat_2.png" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h6>Медленные станции</h6>
+        <img src="img/cat_4.png" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <h6>Аксессуары</h6>
+        <img src="img/cat_3.png" alt="">
+      </a>
+    </li>    
+	</ul>
+</nav>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- rs-category -->
+<link rel="stylesheet" href="css/rs-category.css" />
+<section class="rs-category">
+  <div class="rs-category__container">
+    <div class="rs-category__wrapper">
+       
+ 
+ 
+
+
+
+
+<div class="category">
+
+  <div class="category__head">
+    <div class="aside-title">Фильтры и сортировка</div>
+    <div class="collection-filter">
+      <div class="collection-total-product" data-title="Показано товаров:">10</div>
+      <button class="filter-toggle" data-fancybox data-src="#filterSidebar">
+        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.23077 3.25H7.76923M1 0.75H9M4.07692 5.75H5.92308" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>Фильтры</span>
+      </button>
+      
+    </div>
+  </div>
+  
+  <div class="category__wrapper">
+    
+    <aside class="category__aside">
+      
+        <div class="filter-sidebar" id="filterSidebar">
+          
+          <div class="side-panel">
+            
+ 
+ 
+
+<div class="filters" data-spollers>
+
+  <form class="filters-form" action="#" name="filtersForm" id="filtersForm">
+  
+    <div class="filters-group spollers__item">
+      <div class="filters-title spollers__title" data-spoller>Сортировать по</div>
+      <div class="filters-content spollers__body">
+        <div class="filters-block">
+          
+
+  <label class="radio">
+    <input type="radio" name="radio1" value="Увеличение цены">
+    <span>Увеличение цены</span>
+  </label>
+
+  <label class="radio">
+    <input type="radio" name="radio1" value="Уменьшение цены">
+    <span>Уменьшение цены</span>
+  </label>
+
+  <label class="radio">
+    <input type="radio" name="radio1" value="Новизна">
+    <span>Новизна</span>
+  </label>
+   
+
+        </div>
+      </div>
+    </div>
+
+    <div class="filters-group spollers__item">
+      <div class="filters-title spollers__title" data-spoller>Тип зарядной станции</div>
+      <div class="filters-content spollers__body">
+        <div class="filters-block">
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">AC</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">DC</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">Портативная</span>
+</label>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="filters-group spollers__item">
+      <div class="filters-title spollers__title" data-spoller>Мощность</div>
+      <div class="filters-content spollers__body">
+        <div class="filters-block">
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">7 кВт</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">11 кВт</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">20 кВт</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">22 кВт</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">30 кВт</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">40 кВт</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">60 кВт</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">70 кВт</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">80 кВт</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">90 кВт</span>
+</label>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="filters-group spollers__item">
+      <div class="filters-title spollers__title" data-spoller>Формат установки</div>
+      <div class="filters-content spollers__body">
+        <div class="filters-block">
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">Формат установки 1</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">Формат установки 2</span>
+</label>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="filters-group spollers__item">
+      <div class="filters-title spollers__title" data-spoller>Разъёмы</div>
+      <div class="filters-content spollers__body">
+        <div class="filters-block">
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">Разъёмы 1</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">Разъёмы 2</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">Разъёмы 3</span>
+</label>
+ 
+        </div>
+      </div>
+    </div> 
+
+    <div class="filters-group spollers__item">
+      <div class="filters-title spollers__title" data-spoller>Бренд</div>
+      <div class="filters-content spollers__body">
+        <div class="filters-block">
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">Бренд 1</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">Бренд 2</span>
+</label>
+
+          
+<label class="checkbox">
+  <input type="checkbox" name="chbx">
+  <span class="checkbox__text">Бренд 3</span>
+</label>
+ 
+        </div>
+      </div>
+    </div>
+
+    <div class="filters-group">     
+      <div class="switch">
+        <span class="switch__title">Наличие</span>
+        <label class="switch__btn">
+          <input type="checkbox" name="switch">
+        </label>
+      </div>
+    </div> 
+
+    
+  
+    
+      
+      
+    
+  
+  </form>
+</div>
+          </div>
+          
+        </div>
+      
+    </aside> 
+    
+    <div class="category__content">      
+      
+      <div class="category__grid">
+        
+<article class="product-card">
+  <ul class="product-card__labels">
+    <li class="popular"><img src="img/icons/icon_p1.svg" alt=""> Популярное</li>
+    <!-- <li class="new"><img src="img/icons/icon_p2.svg" alt=""> Новинки</li> -->
+    <!-- <li class="sale"><img src="img/icons/icon_p3.svg" alt=""> -50</li> -->
+    <li class="for"><img src="img/icons/icon_c1.svg" alt=""> Для дома</li>
+    <!-- <li class="for"><img src="img/icons/icon_c2.svg" alt=""> Для водителей</li> -->
+    <!-- <li class="for"><img src="img/icons/icon_c3.svg" alt=""> Для бизнеса</li> -->
+  </ul>
+  <div class="product-card__photo">
+    <img src="img/product.jpg" alt="">    
+  </div>
+  <div class="product-card__content">
+    <h5 class="product-card__title">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</h5>
+    <dl>
+      <div>
+        <dt>мощность:</dt>
+        <dd>8-16 кВт</dd>
+      </div>
+      <div>
+        <dt>разъем:</dt>
+        <dd>GB/T AC</dd>
+      </div>
+    </dl>
+    <div class="product-card__price">
+      <p data-currency="₽">14 990</p>
+      <del data-currency="₽">140 990</del>
+    </div>
+    <span class="product-card__btn"><img src="img/icons/arrow_ne.svg" alt=""></span>
+  </div>  
+  <a href="#">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</a>
+</article>
+
+        
+<article class="product-card">
+  <ul class="product-card__labels">
+    <li class="popular"><img src="img/icons/icon_p1.svg" alt=""> Популярное</li>
+    <!-- <li class="new"><img src="img/icons/icon_p2.svg" alt=""> Новинки</li> -->
+    <!-- <li class="sale"><img src="img/icons/icon_p3.svg" alt=""> -50</li> -->
+    <li class="for"><img src="img/icons/icon_c1.svg" alt=""> Для дома</li>
+    <!-- <li class="for"><img src="img/icons/icon_c2.svg" alt=""> Для водителей</li> -->
+    <!-- <li class="for"><img src="img/icons/icon_c3.svg" alt=""> Для бизнеса</li> -->
+  </ul>
+  <div class="product-card__photo">
+    <img src="img/product.jpg" alt="">    
+  </div>
+  <div class="product-card__content">
+    <h5 class="product-card__title">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</h5>
+    <dl>
+      <div>
+        <dt>мощность:</dt>
+        <dd>8-16 кВт</dd>
+      </div>
+      <div>
+        <dt>разъем:</dt>
+        <dd>GB/T AC</dd>
+      </div>
+    </dl>
+    <div class="product-card__price">
+      <p data-currency="₽">14 990</p>
+      <del data-currency="₽">140 990</del>
+    </div>
+    <span class="product-card__btn"><img src="img/icons/arrow_ne.svg" alt=""></span>
+  </div>  
+  <a href="#">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</a>
+</article>
+
+        
+<article class="product-card">
+  <ul class="product-card__labels">
+    <li class="popular"><img src="img/icons/icon_p1.svg" alt=""> Популярное</li>
+    <!-- <li class="new"><img src="img/icons/icon_p2.svg" alt=""> Новинки</li> -->
+    <!-- <li class="sale"><img src="img/icons/icon_p3.svg" alt=""> -50</li> -->
+    <li class="for"><img src="img/icons/icon_c1.svg" alt=""> Для дома</li>
+    <!-- <li class="for"><img src="img/icons/icon_c2.svg" alt=""> Для водителей</li> -->
+    <!-- <li class="for"><img src="img/icons/icon_c3.svg" alt=""> Для бизнеса</li> -->
+  </ul>
+  <div class="product-card__photo">
+    <img src="img/product.jpg" alt="">    
+  </div>
+  <div class="product-card__content">
+    <h5 class="product-card__title">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</h5>
+    <dl>
+      <div>
+        <dt>мощность:</dt>
+        <dd>8-16 кВт</dd>
+      </div>
+      <div>
+        <dt>разъем:</dt>
+        <dd>GB/T AC</dd>
+      </div>
+    </dl>
+    <div class="product-card__price">
+      <p data-currency="₽">14 990</p>
+      <del data-currency="₽">140 990</del>
+    </div>
+    <span class="product-card__btn"><img src="img/icons/arrow_ne.svg" alt=""></span>
+  </div>  
+  <a href="#">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</a>
+</article>
+
+        
+<article class="product-card">
+  <ul class="product-card__labels">
+    <li class="popular"><img src="img/icons/icon_p1.svg" alt=""> Популярное</li>
+    <!-- <li class="new"><img src="img/icons/icon_p2.svg" alt=""> Новинки</li> -->
+    <!-- <li class="sale"><img src="img/icons/icon_p3.svg" alt=""> -50</li> -->
+    <li class="for"><img src="img/icons/icon_c1.svg" alt=""> Для дома</li>
+    <!-- <li class="for"><img src="img/icons/icon_c2.svg" alt=""> Для водителей</li> -->
+    <!-- <li class="for"><img src="img/icons/icon_c3.svg" alt=""> Для бизнеса</li> -->
+  </ul>
+  <div class="product-card__photo">
+    <img src="img/product.jpg" alt="">    
+  </div>
+  <div class="product-card__content">
+    <h5 class="product-card__title">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</h5>
+    <dl>
+      <div>
+        <dt>мощность:</dt>
+        <dd>8-16 кВт</dd>
+      </div>
+      <div>
+        <dt>разъем:</dt>
+        <dd>GB/T AC</dd>
+      </div>
+    </dl>
+    <div class="product-card__price">
+      <p data-currency="₽">14 990</p>
+      <del data-currency="₽">140 990</del>
+    </div>
+    <span class="product-card__btn"><img src="img/icons/arrow_ne.svg" alt=""></span>
+  </div>  
+  <a href="#">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</a>
+</article>
+
+        
+<article class="product-card">
+  <ul class="product-card__labels">
+    <li class="popular"><img src="img/icons/icon_p1.svg" alt=""> Популярное</li>
+    <!-- <li class="new"><img src="img/icons/icon_p2.svg" alt=""> Новинки</li> -->
+    <!-- <li class="sale"><img src="img/icons/icon_p3.svg" alt=""> -50</li> -->
+    <li class="for"><img src="img/icons/icon_c1.svg" alt=""> Для дома</li>
+    <!-- <li class="for"><img src="img/icons/icon_c2.svg" alt=""> Для водителей</li> -->
+    <!-- <li class="for"><img src="img/icons/icon_c3.svg" alt=""> Для бизнеса</li> -->
+  </ul>
+  <div class="product-card__photo">
+    <img src="img/product.jpg" alt="">    
+  </div>
+  <div class="product-card__content">
+    <h5 class="product-card__title">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</h5>
+    <dl>
+      <div>
+        <dt>мощность:</dt>
+        <dd>8-16 кВт</dd>
+      </div>
+      <div>
+        <dt>разъем:</dt>
+        <dd>GB/T AC</dd>
+      </div>
+    </dl>
+    <div class="product-card__price">
+      <p data-currency="₽">14 990</p>
+      <del data-currency="₽">140 990</del>
+    </div>
+    <span class="product-card__btn"><img src="img/icons/arrow_ne.svg" alt=""></span>
+  </div>  
+  <a href="#">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</a>
+</article>
+
+        
+<article class="product-card">
+  <ul class="product-card__labels">
+    <li class="popular"><img src="img/icons/icon_p1.svg" alt=""> Популярное</li>
+    <!-- <li class="new"><img src="img/icons/icon_p2.svg" alt=""> Новинки</li> -->
+    <!-- <li class="sale"><img src="img/icons/icon_p3.svg" alt=""> -50</li> -->
+    <li class="for"><img src="img/icons/icon_c1.svg" alt=""> Для дома</li>
+    <!-- <li class="for"><img src="img/icons/icon_c2.svg" alt=""> Для водителей</li> -->
+    <!-- <li class="for"><img src="img/icons/icon_c3.svg" alt=""> Для бизнеса</li> -->
+  </ul>
+  <div class="product-card__photo">
+    <img src="img/product.jpg" alt="">    
+  </div>
+  <div class="product-card__content">
+    <h5 class="product-card__title">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</h5>
+    <dl>
+      <div>
+        <dt>мощность:</dt>
+        <dd>8-16 кВт</dd>
+      </div>
+      <div>
+        <dt>разъем:</dt>
+        <dd>GB/T AC</dd>
+      </div>
+    </dl>
+    <div class="product-card__price">
+      <p data-currency="₽">14 990</p>
+      <del data-currency="₽">140 990</del>
+    </div>
+    <span class="product-card__btn"><img src="img/icons/arrow_ne.svg" alt=""></span>
+  </div>  
+  <a href="#">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</a>
+</article>
+
+        
+<article class="product-card">
+  <ul class="product-card__labels">
+    <li class="popular"><img src="img/icons/icon_p1.svg" alt=""> Популярное</li>
+    <!-- <li class="new"><img src="img/icons/icon_p2.svg" alt=""> Новинки</li> -->
+    <!-- <li class="sale"><img src="img/icons/icon_p3.svg" alt=""> -50</li> -->
+    <li class="for"><img src="img/icons/icon_c1.svg" alt=""> Для дома</li>
+    <!-- <li class="for"><img src="img/icons/icon_c2.svg" alt=""> Для водителей</li> -->
+    <!-- <li class="for"><img src="img/icons/icon_c3.svg" alt=""> Для бизнеса</li> -->
+  </ul>
+  <div class="product-card__photo">
+    <img src="img/product.jpg" alt="">    
+  </div>
+  <div class="product-card__content">
+    <h5 class="product-card__title">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</h5>
+    <dl>
+      <div>
+        <dt>мощность:</dt>
+        <dd>8-16 кВт</dd>
+      </div>
+      <div>
+        <dt>разъем:</dt>
+        <dd>GB/T AC</dd>
+      </div>
+    </dl>
+    <div class="product-card__price">
+      <p data-currency="₽">14 990</p>
+      <del data-currency="₽">140 990</del>
+    </div>
+    <span class="product-card__btn"><img src="img/icons/arrow_ne.svg" alt=""></span>
+  </div>  
+  <a href="#">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</a>
+</article>
+
+        
+<article class="product-card">
+  <ul class="product-card__labels">
+    <li class="popular"><img src="img/icons/icon_p1.svg" alt=""> Популярное</li>
+    <!-- <li class="new"><img src="img/icons/icon_p2.svg" alt=""> Новинки</li> -->
+    <!-- <li class="sale"><img src="img/icons/icon_p3.svg" alt=""> -50</li> -->
+    <li class="for"><img src="img/icons/icon_c1.svg" alt=""> Для дома</li>
+    <!-- <li class="for"><img src="img/icons/icon_c2.svg" alt=""> Для водителей</li> -->
+    <!-- <li class="for"><img src="img/icons/icon_c3.svg" alt=""> Для бизнеса</li> -->
+  </ul>
+  <div class="product-card__photo">
+    <img src="img/product.jpg" alt="">    
+  </div>
+  <div class="product-card__content">
+    <h5 class="product-card__title">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</h5>
+    <dl>
+      <div>
+        <dt>мощность:</dt>
+        <dd>8-16 кВт</dd>
+      </div>
+      <div>
+        <dt>разъем:</dt>
+        <dd>GB/T AC</dd>
+      </div>
+    </dl>
+    <div class="product-card__price">
+      <p data-currency="₽">14 990</p>
+      <del data-currency="₽">140 990</del>
+    </div>
+    <span class="product-card__btn"><img src="img/icons/arrow_ne.svg" alt=""></span>
+  </div>  
+  <a href="#">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</a>
+</article>
+
+        
+<article class="product-card">
+  <ul class="product-card__labels">
+    <li class="popular"><img src="img/icons/icon_p1.svg" alt=""> Популярное</li>
+    <!-- <li class="new"><img src="img/icons/icon_p2.svg" alt=""> Новинки</li> -->
+    <!-- <li class="sale"><img src="img/icons/icon_p3.svg" alt=""> -50</li> -->
+    <li class="for"><img src="img/icons/icon_c1.svg" alt=""> Для дома</li>
+    <!-- <li class="for"><img src="img/icons/icon_c2.svg" alt=""> Для водителей</li> -->
+    <!-- <li class="for"><img src="img/icons/icon_c3.svg" alt=""> Для бизнеса</li> -->
+  </ul>
+  <div class="product-card__photo">
+    <img src="img/product.jpg" alt="">    
+  </div>
+  <div class="product-card__content">
+    <h5 class="product-card__title">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</h5>
+    <dl>
+      <div>
+        <dt>мощность:</dt>
+        <dd>8-16 кВт</dd>
+      </div>
+      <div>
+        <dt>разъем:</dt>
+        <dd>GB/T AC</dd>
+      </div>
+    </dl>
+    <div class="product-card__price">
+      <p data-currency="₽">14 990</p>
+      <del data-currency="₽">140 990</del>
+    </div>
+    <span class="product-card__btn"><img src="img/icons/arrow_ne.svg" alt=""></span>
+  </div>  
+  <a href="#">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</a>
+</article>
+
+        
+<article class="product-card">
+  <ul class="product-card__labels">
+    <li class="popular"><img src="img/icons/icon_p1.svg" alt=""> Популярное</li>
+    <!-- <li class="new"><img src="img/icons/icon_p2.svg" alt=""> Новинки</li> -->
+    <!-- <li class="sale"><img src="img/icons/icon_p3.svg" alt=""> -50</li> -->
+    <li class="for"><img src="img/icons/icon_c1.svg" alt=""> Для дома</li>
+    <!-- <li class="for"><img src="img/icons/icon_c2.svg" alt=""> Для водителей</li> -->
+    <!-- <li class="for"><img src="img/icons/icon_c3.svg" alt=""> Для бизнеса</li> -->
+  </ul>
+  <div class="product-card__photo">
+    <img src="img/product.jpg" alt="">    
+  </div>
+  <div class="product-card__content">
+    <h5 class="product-card__title">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</h5>
+    <dl>
+      <div>
+        <dt>мощность:</dt>
+        <dd>8-16 кВт</dd>
+      </div>
+      <div>
+        <dt>разъем:</dt>
+        <dd>GB/T AC</dd>
+      </div>
+    </dl>
+    <div class="product-card__price">
+      <p data-currency="₽">14 990</p>
+      <del data-currency="₽">140 990</del>
+    </div>
+    <span class="product-card__btn"><img src="img/icons/arrow_ne.svg" alt=""></span>
+  </div>  
+  <a href="#">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</a>
+</article>
+
+        
+<article class="product-card">
+  <ul class="product-card__labels">
+    <li class="popular"><img src="img/icons/icon_p1.svg" alt=""> Популярное</li>
+    <!-- <li class="new"><img src="img/icons/icon_p2.svg" alt=""> Новинки</li> -->
+    <!-- <li class="sale"><img src="img/icons/icon_p3.svg" alt=""> -50</li> -->
+    <li class="for"><img src="img/icons/icon_c1.svg" alt=""> Для дома</li>
+    <!-- <li class="for"><img src="img/icons/icon_c2.svg" alt=""> Для водителей</li> -->
+    <!-- <li class="for"><img src="img/icons/icon_c3.svg" alt=""> Для бизнеса</li> -->
+  </ul>
+  <div class="product-card__photo">
+    <img src="img/product.jpg" alt="">    
+  </div>
+  <div class="product-card__content">
+    <h5 class="product-card__title">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</h5>
+    <dl>
+      <div>
+        <dt>мощность:</dt>
+        <dd>8-16 кВт</dd>
+      </div>
+      <div>
+        <dt>разъем:</dt>
+        <dd>GB/T AC</dd>
+      </div>
+    </dl>
+    <div class="product-card__price">
+      <p data-currency="₽">14 990</p>
+      <del data-currency="₽">140 990</del>
+    </div>
+    <span class="product-card__btn"><img src="img/icons/arrow_ne.svg" alt=""></span>
+  </div>  
+  <a href="#">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</a>
+</article>
+
+        
+<article class="product-card">
+  <ul class="product-card__labels">
+    <li class="popular"><img src="img/icons/icon_p1.svg" alt=""> Популярное</li>
+    <!-- <li class="new"><img src="img/icons/icon_p2.svg" alt=""> Новинки</li> -->
+    <!-- <li class="sale"><img src="img/icons/icon_p3.svg" alt=""> -50</li> -->
+    <li class="for"><img src="img/icons/icon_c1.svg" alt=""> Для дома</li>
+    <!-- <li class="for"><img src="img/icons/icon_c2.svg" alt=""> Для водителей</li> -->
+    <!-- <li class="for"><img src="img/icons/icon_c3.svg" alt=""> Для бизнеса</li> -->
+  </ul>
+  <div class="product-card__photo">
+    <img src="img/product.jpg" alt="">    
+  </div>
+  <div class="product-card__content">
+    <h5 class="product-card__title">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</h5>
+    <dl>
+      <div>
+        <dt>мощность:</dt>
+        <dd>8-16 кВт</dd>
+      </div>
+      <div>
+        <dt>разъем:</dt>
+        <dd>GB/T AC</dd>
+      </div>
+    </dl>
+    <div class="product-card__price">
+      <p data-currency="₽">14 990</p>
+      <del data-currency="₽">140 990</del>
+    </div>
+    <span class="product-card__btn"><img src="img/icons/arrow_ne.svg" alt=""></span>
+  </div>  
+  <a href="#">Портативная зарядка в бытовую розетку 220В с кабелем GB/T</a>
+</article>
+
+      </div>
+
+      <div class="category__pagination">
+        <div class="page-pagination">
+  <a href="#" class="prev">
+    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15.5563 8.48513H1.41421" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M8.48528 1.41406L1.41421 8.48513L8.48528 15.5562" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </a>
+  <a href="#">1</a>
+  <span class="current">2</span>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <span class="gap">...</span>
+  <a href="#">20</a>
+  <a href="#" class="next">
+    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">      
+      <path d="M1.41421 8.48513H15.5563" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M8.48528 1.41406L15.5563 8.48513L8.48528 15.5562" stroke="#191919" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </a>
+</div>
+      </div>
+
+    </div>
+  </div>	
+
+
+</div>
+    </div>
+  </div>
+</section>
+<!-- end rs-category -->
+
+<!-- rs-callback -->
+<link rel="stylesheet" href="css/rs-callback.css" />
+<section class="rs-callback site-fullhd">  
+  <div class="rs-callback__wrapper">
+     
+
+     
+
+
+
+<div class="callback">
+	<img src="img/pic_form.jpg" alt="">
+	<div class="callback_bg"></div>
+	<svg width="1920" height="920" viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">		
+		<path d="M502.249 968.677C588.234 920.872 726.573 855.819 862.969 803.047C931.165 776.662 998.86 753.354 1059.27 736.808C1119.7 720.257 1172.77 710.494 1211.74 711.151L1211.74 711.152C1250.6 711.77 1303.15 723.204 1362.82 741.639C1422.47 760.069 1489.17 785.471 1556.31 813.977C1690.59 870.989 1826.58 940.388 1911.39 991.163L1911.39 991.163L2085.28 1095.47C2037.5 1200.49 1953.37 1289.61 1840.39 1342.22L1214.11 1633.86C961.982 1749.73 663.999 1640.98 546.784 1389.27L382.011 1035.43L502.248 968.677L502.249 968.677ZM1267.48 -237.022C1468.31 -265.087 1671.78 -168.441 1774.3 15.1235L1810.75 94.0261L1810.75 94.0305L2093.15 697.974C2136.53 804.226 2140.91 917.384 2112.36 1020.87L1950.4 923.713C1865.6 872.571 1740.64 785.398 1627.42 693.975C1570.81 648.264 1517.15 601.502 1472.91 557.658C1428.66 513.8 1393.89 472.916 1375.02 438.963L1375.02 438.962L1374.23 437.526C1357.62 407.163 1342.96 363.498 1330.24 311.711C1317.32 259.117 1306.42 198.208 1297.49 134.466C1279.69 7.33687 1269.78 -131.007 1267.48 -237.022ZM498.404 96.9432L1124.68 -194.699C1144.69 -204.017 1164.99 -211.905 1185.47 -218.405C1178.85 -112.143 1164.3 21.6061 1142.77 143.358C1121.14 265.718 1092.49 375.792 1057.87 433.729C1037.87 467.064 1001.7 506.831 955.937 549.264C910.185 591.682 854.894 636.714 796.711 680.579C682.159 766.942 556.443 848.748 470.307 897.155L466.235 899.435L349.249 964.304L247.526 745.863C143.199 499.024 252.434 211.485 498.404 96.9432Z" fill="#15256D" stroke="#4F5B91" stroke-width="2"/>
+	</svg>
+	<div class="callback__wrapper">
+		<div class="callback__content">
+			<h2>Не нашли подходящую зарядку?</h2>
+			<p>Оставьте заявку, и мы подберём решение <br> под ваш автомобиль или бизнес</p>
+			
+<a href="#" class="btn-color ">	
+	<span>Оставить заявку</span>
+	<div class="btn-color__circle">
+		<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-color__icon">
+			<path d="M5.38063 11.4333L5.29096 11.5208L5.38063 11.6082L5.98228 12.1945L6.06923 12.2793L6.15618 12.1945L12.1095 6.39254L12.1992 6.30512L12.1095 6.21771L6.1035 0.364076L6.01655 0.279298L5.92954 0.364076L5.32795 0.950416L5.23821 1.03783L5.32795 1.12525L10.0869 5.76344L0.323167 5.76344L0.199218 5.76344L0.199218 5.88614L0.199219 6.72405L0.199219 6.84674L0.323167 6.84674L10.0868 6.84674L5.38063 11.4333Z" stroke-width="0.4" />
+		</svg>
+	</div>
+</a>
+
+		</div>			
+	</div>
+</div>         
+
+
+
+  </div>
+</section>
+<!-- end rs-callback -->
+
+
+          </div>
+
+          <footer>
+             
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/footer.css" />
+<section class="footer">
+	<div class="footer__container">
+
+		<div class="footer__wrapper" data-spollers="1023.98,max" data-one-spoller>
+
+			<div class="footer__row">	
+				
+<div class="footer-contacts spollers__item">
+	<h4 class="footer-contacts__title footer-title spollers__title" data-spoller>Свяжитесь с нами</h4>	
+	<ul class="footer-contacts__list spollers__body">
+		<li>
+			<a href="tel:+74956692111">+7 495 669 21 11</a>
+			<p>горячая линия</p>
+		</li>
+		<li>
+			<a href="tel:+74956692111">+7 495 669 21 11</a>
+			<p>отдел продаж?</p>
+		</li>
+		<li>
+			<a href="mailto:info@voltfuel.ru">info@voltfuel.ru </a>
+			<p>e-mail</p>
+		</li>
+		<li>
+			<p class="location">236040, г. Калининград, <br> ул. Профессора Баранова, д. 45</p>
+			<p class="clock">Пн–Пт с 10:00 до 20:00</p>
+		</li>
+	</ul>	
+</div>	
+
+				
+<div class="store">
+	<div class="store__title">Скачать приложение</div>
+	<ul class="store__list">
+		<li><a href="#"><img src="img/icons/store_apk_icon.png" alt=""></a></li>
+		<li><a href="#"><img src="img/icons/store_app_icon.png" alt=""></a></li>
+		<li><a href="#"><img src="img/icons/store_ru_icon.png" alt=""></a></li>
+		<li><a href="#"><img src="img/icons/store_huawei_icon.png" alt=""></a></li>
+		<li><a href="#"><img src="img/icons/store_get_apps_icon.png" alt=""></a></li>
+		<li><a href="#"><img src="img/icons/store_play_market_icon.png" alt=""></a></li>
+	</ul>
+</div>
+
+			</div>
+
+			<div class="footer__row">									
+				<div class="footer__grid" >
+					
+<div class="footer__menu spollers__item">
+	<h4 class="footer-title spollers__title" data-spoller>Для бизнеса</h4>
+	
+<nav class="footer-menu  spollers__body">  
+  <ul class="footer-menu__list">
+    
+    <li><a href="#"><span>Для автопарков, таксопарков, каршеринга</span></a></li>
+    
+    <li><a href="#"><span>Для автодилеров</span></a></li>
+    
+    <li><a href="#"><span>Для ТЦ, ресторанов, отелей, офисов и др. коммерческого бизнеса</span></a></li>
+    
+    <li><a href="#"><span>Для инвесторов в зарядные станции</span></a></li>
+       
+  </ul>
+</nav>
+
+</div>
+
+					
+<div class="footer__menu spollers__item">
+	<h4 class="footer-title spollers__title" data-spoller>Услуги</h4>
+	
+<nav class="footer-menu  spollers__body">  
+  <ul class="footer-menu__list">
+    
+    <li><a href="#"><span>Каталог зарядных станций</span></a></li>
+    
+    <li><a href="#"><span>Управление станцией</span></a></li>
+    
+    <li><a href="#"><span>Установка станции</span></a></li>
+       
+  </ul>
+</nav>
+
+</div>
+
+					
+<div class="footer__menu spollers__item">
+	<h4 class="footer-title spollers__title" data-spoller>Для водителей</h4>
+	
+<nav class="footer-menu  spollers__body">  
+  <ul class="footer-menu__list">
+    
+    <li><a href="#"><span>Карта станций и цены</span></a></li>
+    
+    <li><a href="#"><span>Программа лояльности</span></a></li>
+    
+    <li><a href="#"><span>Аксессуары для зарядки</span></a></li>
+       
+  </ul>
+</nav>
+
+</div>
+
+					
+<div class="footer__menu spollers__item">
+	<h4 class="footer-title spollers__title" data-spoller>О VOLTFUEL</h4>
+	
+<nav class="footer-menu  spollers__body">  
+  <ul class="footer-menu__list">
+    
+    <li><a href="#"><span>О компании</span></a></li>
+    
+    <li><a href="#"><span>Для СМИ</span></a></li>
+    
+    <li><a href="#"><span>Карьера</span></a></li>
+    
+    <li><a href="#"><span>Реквизиты компании</span></a></li>
+       
+  </ul>
+</nav>
+
+</div>
+
+					
+<div class="footer__menu spollers__item">
+	<h4 class="footer-title spollers__title" data-spoller>Юридическая информация</h4>
+	
+<nav class="footer-menu  spollers__body">  
+  <ul class="footer-menu__list">
+    
+    <li><a href="#"><span>Политика cookies</span></a></li>
+    
+    <li><a href="#"><span>Пользовательское соглашение</span></a></li>
+    
+    <li><a href="#"><span>Пользовательское соглашение об использовании мобильного приложения</span></a></li>
+    
+    <li><a href="#"><span>Политика обработки персональных данных</span></a></li>
+       
+  </ul>
+</nav>
+
+</div>
+
+				</div>
+			</div>
+			
+			<div class="footer__row">
+				<a href="#" class="footer-logo"><img src="img/logo.svg" alt=""></a>
+				
+<div class="footer-copyright">	
+	<p>© ООО «ВОЛЬТФУЕЛ» 2025. Все права защищены.</p>	
+</div>
+
+				
+<div class="site-social">
+	<ul class="site-social__list">
+		<li><a href="#"><img src="img/icons/vk_icon.svg" alt=""></a></li>
+		<li><a href="#"><img src="img/icons/tg_icon.svg" alt=""></a></li>
+	</ul>	
+</div>
+
+			</div>
+		</div>
+		
+
+	</div>
+
+</section>
+
+
+
+          </footer>
+          
+        </div>
+      </div>
+      
+    </div>
+
+    
+    
+  </body>
+</html>
