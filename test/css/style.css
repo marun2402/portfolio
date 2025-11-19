@@ -85,6 +85,7 @@ p {
     --fluid-24-14: clamp(14px, 6.7547169811px + 0.9433962264vw, 24px);
     --fluid-21-16: clamp(16px, 12.3773584906px + 0.4716981132vw, 21px);
     --fluid-21-14: clamp(14px, 8.9283018868px + 0.6603773585vw, 21px);
+    --fluid-20-12: clamp(12px, 6.2037735849px + 0.7547169811vw, 20px);
     --fluid-18-14: clamp(14px, 11.1018867925px + 0.3773584906vw, 18px);
     --fluid-16-13: clamp(13px, 10.8264150943px + 0.2830188679vw, 16px);
     --fluid-14-11: clamp(11px, 8.8264150943px + 0.2830188679vw, 14px);
@@ -741,6 +742,10 @@ header._header-scroll {
     position: relative;
 }
 
+.page-head__btn {
+    margin-top: 24px;
+}
+
 .page-head__wrapper {
     position: relative;
     padding: 80px 0px;
@@ -748,7 +753,6 @@ header._header-scroll {
 
 .page-head__content {
     margin-top: 24px;
-    max-width: 1250px;
 }
 
 .page-head__content h1 {
@@ -768,6 +772,14 @@ header._header-scroll {
     font-size: var(--fluid-24-14);
     line-height: 160%;
     max-width: 892px;
+}
+
+.page-head_dark .breadcrumbs {
+    color: #fff;
+}
+
+.page-head_dark .page-head__content {
+    color: #fff;
 }
 
 .product-card {
@@ -1042,6 +1054,12 @@ header._header-scroll {
     top: 0;
 }
 
+@media (min-width: 767.98px) {
+    .page-head__content {
+        max-width: 68.4%;
+    }
+}
+
 @media (max-width: 1023.98px) {
     .site-content {
         padding-top: 83px;
@@ -1080,6 +1098,10 @@ header._header-scroll {
 
     .page-head {
         margin-top: -53px;
+    }
+
+    .page-head__btn {
+        display: grid;
     }
 
     .page-head__wrapper {

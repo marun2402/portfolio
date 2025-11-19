@@ -8,8 +8,15 @@
 
 .adv__items {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+}
+
+.adv__items[data-columns="4"] {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.adv__items[data-columns="3"] {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .adv-card__title {
@@ -31,7 +38,11 @@
 }
 
 @media (max-width: 1023.98px) {
-    .adv__items {
+    .adv__items[data-columns="4"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .adv__items[data-columns="3"] {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -42,7 +53,11 @@
 }
 
 @media (max-width: 479.98px) {
-    .adv__items {
+    .adv__items[data-columns="4"] {
+        grid-template-columns: 1fr;
+    }
+
+    .adv__items[data-columns="3"] {
         grid-template-columns: 1fr;
     }
 }
