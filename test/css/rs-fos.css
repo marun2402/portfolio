@@ -1,0 +1,196 @@
+.fos {
+    padding-top: 129px;
+    padding-bottom: 140px;
+}
+
+.fos .fos-head {
+    max-width: 1076px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: var(--fluid-28-14);
+    line-height: 140%;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.fos .fos-head p {
+    margin-top: 13px;
+    max-width: 828px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fos-form {
+    max-width: 828px;
+    margin: 0 auto;
+    display: grid;
+    gap: 30px;
+    container-type: inline-size;
+}
+
+.fos-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.fos-form .form-submit {
+    display: grid;
+    gap: 20px;
+}
+
+.fos-form .form-submit__confirm {
+    display: grid;
+    gap: 7px;
+}
+
+.fos-form .form-group {
+    display: grid;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.fos-form label.error {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: var(--error-color);
+    position: absolute;
+    bottom: 3px;
+    right: 25px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.fos-form input,
+.fos-form textarea {
+    height: 54px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0px 16px 0px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--text-color-2);
+    border-radius: 0px;
+}
+
+.fos-form input:-ms-input-placeholder, .fos-form textarea:-ms-input-placeholder {
+    color: var(--text-color-2);
+}
+
+.fos-form input::placeholder,
+.fos-form textarea::placeholder {
+    color: var(--text-color-2);
+}
+
+.fos-form input.error,
+.fos-form textarea.error {
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+}
+
+.fos-form input.valid,
+.fos-form textarea.valid {
+    background-size: auto;
+}
+
+.fos-form textarea {
+    height: 100%;
+    resize: none;
+    min-height: 153px;
+    border-radius: 0px;
+    padding-top: 12px;
+}
+
+.fos-form .checkbox {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: 16px;
+}
+
+.fos-form .checkbox > input {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.fos-form .checkbox__text {
+    text-align: left;
+    display: inline-block;
+    padding-left: 24px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 140%;
+    color: #fff;
+    position: relative;
+}
+
+.fos-form .checkbox__text a {
+    color: var(--primary-color);
+}
+
+.fos-form .checkbox__text:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 0px;
+    background: transparent;
+    border: 1px solid #fff;
+    transition: background 0.3s ease;
+}
+
+.fos-form .checkbox__text:after {
+    content: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.2761 0.942809L4.27614 7.94281C4.01579 8.20316 3.59368 8.20316 3.33333 7.94281L0 4.60948L0.942809 3.66667L3.80474 6.5286L10.3333 0L11.2761 0.942809Z' fill='black' /%3E%3C/svg%3E");
+    position: absolute;
+    top: calc(50% - 9px);
+    left: 2px;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.fos-form .checkbox input:checked ~ span::after {
+    transform: scale(1);
+}
+
+.fos-form .checkbox input:checked ~ span::before {
+    background: #fff;
+}
+
+.rs-fos {
+    padding-top: 65px;
+}
+
+.rs-fos__wrapper {
+    background: url("../img/form.jpg") center/cover no-repeat;
+}
+
+@media (max-width: 1023.98px) {
+    .rs-fos {
+        padding-top: 35px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .fos {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .fos-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
