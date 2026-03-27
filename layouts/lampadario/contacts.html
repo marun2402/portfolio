@@ -3,7 +3,7 @@
   <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Lampadario | Главная</title>
+	<title>Lampadario | Контакты</title>
 
 
 	
@@ -63,29 +63,57 @@
 	<div class="menu-wrapper">
 		<ul class="menu__list">		
 			<li class="menu__dropdown">
-				<a href="#"><span>Каталог</span></a>
-				<button type="button" class="menu__dropdown-arrow"></button>
-				<ul class="menu__dropdown-list">
-					<li class="switch-back">Каталог</li>
-					<li><a href="#"><span>Мебель</span></a></li>
-					<li class="menu__dropdown">
-						<a href="#"><span>Декор</span></a>
-						<button type="button" class="menu__dropdown-arrow"></button>
-						<ul class="menu__dropdown-list">
-							<li class="switch-back">Декор</li>
-							<li><a href="#"><span>Диваны</span></a></li>
-							<li><a href="#"><span>Кресла</span></a></li>
-							<li><a href="#"><span>Пуфы</span></a></li>
-							<li><a href="#"><span>Кровати</span></a></li>
+				<a href="about.html" class="menu__dropdown-arrow"><span>О компании</span></a>
+				<ul class="menu__dropdown-list" style="background-image: url('img/bg_about_menu.jpg');">
+					<li class="menu__dropdown-list-header">
+						<button type="button" class="switch-back"><img src="img/icons/close_icon.svg" alt=""></button>
+					</li>
+					<li><a href="about.html" class="main-link"><span>О компании</span></a></li>
+					<li><a href="team.html"><span>Наша команда</span></a></li>
+					<li><a href="collaboration.html"><span>Сотрудничество</span></a></li>
+					<li><a href="#"><span>Реквизиты</span></a></li>
+				</ul>
+			</li>
+			<li class="menu__dropdown">
+				<a href="#"  class="menu__dropdown-arrow"><span>Каталог</span></a>				
+				<ul class="menu__dropdown-list" style="background-image: url('img/bg_kt_menu.jpg');">
+					<li class="menu__dropdown-list-header">
+						<button type="button" class="switch-back"><img src="img/icons/close_icon.svg" alt=""></button>
+					</li>
+					<li><a href="about.html" class="main-link"><span>Каталог</span></a></li>
+					<li>
+						<a href="#"><span>Мебель</span></a>
+						<ul>
+							<li><a href="#"><span>Мягкая мебель</span></a></li>
+							<li><a href="#"><span>Столы и стулья</span></a></li>
+							<li><a href="#"><span>Шкафы</span></a></li>
+							<li><a href="#"><span>Тумбы</span></a></li>
+							<li><a href="#"><span>Уличная мебель</span></a></li>
 						</ul>
 					</li>
-					<li><a href="#"><span>Светильники</span></a></li>
+					<li>
+						<a href="#"><span>Светильники</span></a>
+						<ul>
+							<li><a href="#"><span>Декоративный свет</span></a></li>
+							<li><a href="#"><span>Технический свет</span></a></li>
+							<li><a href="#"><span>Архитектурный свет</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span>Декор</span></a>
+						<ul>
+							<li><a href="#"><span>Зеркала</span></a></li>
+							<li><a href="#"><span>Вазы</span></a></li>
+							<li><a href="#"><span>Часы</span></a></li>
+							<li><a href="#"><span>Панно</span></a></li>
+							<li><a href="#"><span>Прочее</span></a></li>
+						</ul>
+					</li>
 				</ul>
 			</li>				
-			<li><a href="#"><span>Фабрики</span></a></li>
-			<li><a href="#"><span>Новинки</span></a></li>
-			<li><a href="#"><span>Услуги</span></a></li>
-			<li><a href="#"><span>Статьи</span></a></li>
+			<li><a href="fabricator.html"><span>Производители</span></a></li>
+			<li><a href="projects.html"><span>Проекты</span></a></li>
+			<li><a href="blog.html"><span>Блог</span></a></li>
 			<li><a href="contacts.html"><span>Контакты</span></a></li>
 		</ul>
 	</div>
@@ -267,49 +295,69 @@
 
       </div>
       <div class="contacts-grid__col _span-2">
-        <form action="#" class="contacts-form base-form" id="contactsForm">
-          <div class="form-group">
-             
-   
-<input type="text" id="contactsName" name="contactsName" placeholder="ФИО" required>
+         
 
-          </div>
-          <div class="form-group">
-             
-   
-<input type="email" id="contactsMail" name="contactsMail" placeholder="Почта" required>
+ 
+ 
+ 
 
-          </div>
-          <div class="form-group">
-             
-   
-<input type="tel" id="contactsPhone" name="contactsPhone" placeholder="Телефон" required maxlength="18" data-tel-input>
 
-          </div>
-          <div class="form-group">
-            
-   
-<textarea id="contactsMessage" name="contactsMessage" placeholder="Сообщение" required></textarea>
 
-          </div>
-          <div class="form-submit">
-            <div class="form-submit__confirm">
-              
+
+<div class="callback">		
+	<div class="callback__wrapper">		
+		<div class="callback__head">
+			<h3>Профессиональный подбор мебели и светильников, светотехнический проект – под ваш запрос!</h3>
+			<p>Наш специалист свяжется с вами в ближайшее время.</p>
+		</div>
+		<div class="callback__form">
+				<form action="#" id="callbackForm" class="callback-form base-form">				
+					<div class="form-row">
+						 
+   
+<input type="text" id="callbackName" name="callbackName" placeholder="Имя" required>
+
+						 
+   
+<input type="email" id="callbackMail" name="callbackMail" placeholder="E-mail" required>
+
+						 
+   
+<input type="tel" id="callbackPhone" name="callbackPhone" placeholder="Телефон*" required maxlength="18" data-tel-input>
+
+					</div>
+					<div class="form-submit">
+						
+<div class="file-upload">
+  
+  <div class="file-upload__control">
+    <input type="file" id="callbackFile" name="callbackFile" >
+    
+    <button>Загрузить проект</button>
+  </div>    
+</div>  
+
+						<button type="submit" class="btn-color btn-color_accent"><span>Оставить заявку</span></button>
+					</div>
+					<div class="form-submit__confirm">
+						
 <label class="checkbox">
-  <input type="checkbox" name="confirm1">
+  <input type="checkbox" name="callbackConfirm">
   <span class="checkbox__text">Нажимая на кнопку «Отправить», вы даёте согласие на обработку персональных данных</span>
 </label>
 
-              
+						
 <label class="checkbox">
-  <input type="checkbox" name="confirm2">
+  <input type="checkbox" name="callbackConfirm">
   <span class="checkbox__text">и подтверждаете, что ознакомлены с политикой обработки персональных данных</span>
 </label>
 
-            </div>
-            <button type="submit" class="btn-color btn-color_dark"><span>Отправить</span></button>
-          </div>
-        </form>
+					</div>
+				</form>	
+		</div>
+	</div>
+</div>
+        
       </div>
     </div>
   </div>
@@ -358,44 +406,27 @@
 			</div>
 
 			<div class="footer__column">
-				<div class="footer-content">
-					<div class="footer-content__address">
-<div class="footer-address">
-	<h4 class="footer-title">Адрес и режим работы: </h4>
-	<p>197022, г. Санкт-Петербург, Каменноостровский пр-кт, д. 62</p>
-	<p>Ежедневно с 10:00 до 19:00</p>
-</div>
-</div>
-					<div class="footer-content__contacts">
+				
 <div class="footer-contacts">
-	<h4 class="footer-title">Контакты</h4>	
+	<h4 class="footer-title">Адрес и режим работы: </h4>
 	<ul class="footer-contacts__list">
+		<li><p>197022, г. Санкт-Петербург, <br> Каменноостровский пр-кт, д. 62</p></li>
+		<li><p>Пн-Пт с 10:00 до 19:00 <br> Сб-Вс с 11:00 до 18:00</p></li>
 		<li><a href="tel:+78123088813">+7 (812) 308-88-13</a></li>
 		<li><a href="tel:+79818088813">+7 (981) 808-88-13</a></li>
 		<li><a href="mailto:salon@lampadario.ru">salon@lampadario.ru</a></li>
 	</ul>	
 </div>	
-</div>
-					<div class="footer-content__social">
-<div class="footer-social">
-	<h4 class="footer-title">Мы в социальных сетях</h4>	
-	<ul class="footer-social__list">
-		<li><a href="#"><img src="img/icons/wa_icon.svg" alt=""></a></li>
-		<li><a href="#"><img src="img/icons/tg_icon.svg" alt=""></a></li>
-		<li><a href="#"><img src="img/icons/vk_icon.svg" alt=""></a></li>
-		<li><a href="#"><img src="img/icons/social_icon.svg" alt=""></a></li>
-	</ul>	
-</div>
-</div>
-					<div class="footer-content__menu">
-						
+
+			</div>
+
+			<div class="footer__column">
+				
 <div class="footer__menu">
 	<h4 class="footer-title">Компания:</h4>
 	
 <nav class="footer-menu ">  
   <ul class="footer-menu__list">
-    
-    <li><a href="#"><span>Магазин</span></a></li>
     
     <li><a href="#"><span>Дизайнерам</span></a></li>
     
@@ -410,7 +441,10 @@
 
 </div>
 
-						
+			</div>
+
+			<div class="footer__column">
+				
 <div class="footer__menu">
 	<h4 class="footer-title">Магазин:</h4>
 	
@@ -426,29 +460,28 @@
 
 </div>
 
-						
-<div class="footer__menu">
-	<h4 class="footer-title">На связи:</h4>
+				
+<div class="footer-social">
 	
-<nav class="footer-menu ">  
-  <ul class="footer-menu__list">
-    
-    <li><a href="#"><span>Журнал</span></a></li>
-       
-  </ul>
-</nav>
-
+	<ul class="footer-social__list">
+		<li><a href="#"><img src="img/icons/wa_icon.svg" alt=""></a></li>
+		<li><a href="#"><img src="img/icons/tg_icon.svg" alt=""></a></li>
+		<li><a href="#"><img src="img/icons/vk_icon.svg" alt=""></a></li>
+		<li><a href="#"><img src="img/icons/social_icon.svg" alt=""></a></li>
+	</ul>	
 </div>
 
-					</div>
-					<div class="footer-content__copyright ">
+			</div>
+
+			
+
+
+			<div class="footer__copyright ">
 <div class="footer-copyright">	
 	<p>© Lampadario Interior – интерьерный салон 2025. Все права защищены.</p>	
 	<a href="#">Разработано в Россайт</a>
 </div>
 </div>
-				</div>
-			</div>
 
 		</div>
 		

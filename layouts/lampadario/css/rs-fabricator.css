@@ -1,0 +1,80 @@
+.rs-fabricator {
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+.rs-fabricator__wrapper {
+    position: relative;
+}
+
+.rs-fabricator__nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 54px;
+    background: var(--main-bg-color);
+    padding-top: 40px;
+    padding-bottom: 32px;
+}
+
+.rs-fabricator__nav a {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    color: var(--primary-color);
+    display: inline-block;
+    padding: 6px 2px;
+    border-bottom: 1px dashed currentColor;
+}
+
+.fabricator-list-item {
+    scroll-margin-top: 0px;
+    border-top: 1px solid var(--border-color);
+    padding: 40px 0px;
+}
+
+.fabricator-list-item::before {
+    content: attr(id);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.fabricator-list-item ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 35px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.fabricator-list-item a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--main-text-color);
+    transition: color var(--animation-duration) var(--timing-func);
+}
+
+@media (max-width: 1023.98px) {
+    .rs-fabricator {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+}
+
+@media (any-hover: hover) {
+    .fabricator-list-item a:hover {
+        color: var(--primary-color);
+    }
+}

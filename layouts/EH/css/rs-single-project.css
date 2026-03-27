@@ -1,0 +1,42 @@
+.fbxgrid-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.fbxgrid-gallery .fbxgrid-slide {
+    cursor: pointer;
+}
+
+.fbxgrid-gallery .fbxgrid-slide_wide {
+    grid-column: 1/-1;
+}
+
+.fbxgrid-gallery .fbxgrid-slide img {
+    width: 100%;
+}
+
+.rs-single-project {
+    padding-top: 168px;
+    padding-bottom: 90px;
+}
+
+.rs-single-project__wrapper {
+    margin-top: 40px;
+}
+
+.rs-single-project__head {
+    max-width: 1146px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media (max-width: 767.98px) {
+    .fbxgrid-gallery {
+        gap: 12px;
+    }
+
+    .rs-single-project {
+        padding-top: 95px;
+    }
+}

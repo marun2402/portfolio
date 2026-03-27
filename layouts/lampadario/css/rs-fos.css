@@ -1,0 +1,24 @@
+.fos {
+    position: relative;
+}
+
+.rs-fos {
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+.rs-fos__head {
+    margin-bottom: 40px;
+}
+
+.rs-fos__wrapper {
+    max-width: 1186px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1023.98px) {
+    .rs-fos {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+}

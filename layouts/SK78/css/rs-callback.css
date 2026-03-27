@@ -1,0 +1,161 @@
+.callback {
+    position: relative;
+    padding-left: var(--fluid2-120-15);
+    padding-right: var(--fluid2-120-15);
+    padding-top: 48px;
+    padding-bottom: 48px;
+    min-height: 484px;
+    display: grid;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: clip;
+}
+
+.callback__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.callback__background > img {
+    position: absolute;
+    height: calc(100% + 200px);
+    bottom: 0;
+    left: 50%;
+    object-fit: cover;
+    translate: -50% 0;
+    animation: animatePosition linear both;
+    animation-timeline: view();
+}
+
+.callback__wrapper {
+    position: relative;
+}
+
+.callback__title {
+    font-weight: 600;
+    font-size: var(--fluid-60-36);
+    line-height: 110%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+@keyframes animatePosition {
+    to {
+        translate: -50% 200px;
+    }
+}
+
+.callback-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 10px;
+    margin-bottom: 34px;
+}
+
+.callback-form input {
+    height: 70px;
+    width: 100%;
+    background: #fff;
+    padding: 0px 26px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    color: #3b3b3b;
+}
+
+.callback-form input:-ms-input-placeholder {
+    color: #3b3b3b;
+}
+
+.callback-form input::placeholder {
+    color: #3b3b3b;
+}
+
+.callback-form button[type=submit] {
+    height: 70px;
+}
+
+.callback-form .form-confirm {
+    display: grid;
+    gap: 12px;
+}
+
+.callback-form .checkbox {
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: 16px;
+}
+
+.callback-form .checkbox > input {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.callback-form .checkbox span {
+    text-align: left;
+    display: inline-block;
+    padding-left: 28px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    color: #fff;
+    position: relative;
+}
+
+.callback-form .checkbox span a {
+    text-decoration: underline;
+}
+
+.callback-form .checkbox span:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 0px;
+    background: #fff;
+    border: 1px solid #d6dbe0;
+    transition: background 0.3s ease;
+}
+
+.callback-form .checkbox span:after {
+    content: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.0952 1.17851L5.34518 9.92851C5.01974 10.2539 4.4921 10.2539 4.16667 9.92851L0 5.76184L1.17851 4.58333L4.75592 8.16074L12.9167 0L14.0952 1.17851Z' fill='white' /%3E%3C/svg%3E");
+    position: absolute;
+    top: calc(50% - 5px);
+    left: 3px;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.callback-form .checkbox input:checked ~ span::after {
+    transform: scale(1);
+}
+
+.callback-form .checkbox input:checked ~ span::before {
+    background: var(--primary-clr);
+    border-color: var(--primary-clr);
+}
+
+@media (max-width: 1023.98px) {
+    .callback-form .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-callback__container {
+        display: contents;
+    }
+}

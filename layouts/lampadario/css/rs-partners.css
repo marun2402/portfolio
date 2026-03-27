@@ -46,6 +46,30 @@
     max-width: 100%;
 }
 
+.partners {
+    position: relative;
+}
+
+.partners__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 32px 60px;
+}
+
+.partners__list li a {
+    display: block;
+    width: 223px;
+    height: 160px;
+}
+
+.partners__list li img {
+    width: 100%;
+}
+
 .rs-partners {
     padding-top: 36px;
     padding-bottom: 36px;

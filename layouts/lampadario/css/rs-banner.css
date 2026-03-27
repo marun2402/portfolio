@@ -1,10 +1,50 @@
 .rs-banner {
     height: 386px;
+    position: relative;
+    display: grid;
+    -ms-flex-line-pack: end;
+    align-content: end;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: clamp(15px, (100% - 1720px) / 2, 100px);
+    padding-right: clamp(15px, (100% - 1720px) / 2, 100px);
 }
 
 .rs-banner img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: left;
+}
+
+.rs-banner h1 {
+    position: relative;
+    font-weight: 400;
+    font-size: var(--fluid-80-52);
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.rs-banner_big {
+    height: 767px;
+}
+
+.rs-banner_big img {
+    object-position: center;
+}
+
+@media (max-width: 1023.98px) {
+    .rs-banner {
+        padding-left: max(15px, (100% - 768px) / 2);
+        padding-right: max(15px, (100% - 768px) / 2);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-banner_big {
+        height: 573px;
+    }
 }
