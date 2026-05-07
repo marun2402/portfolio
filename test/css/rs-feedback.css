@@ -1,0 +1,37 @@
+.rs-feedback__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 49%;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.rs-feedback__head {
+    padding-right: 60px;
+    display: grid;
+    gap: 40px;
+    justify-items: start;
+}
+
+.rs-feedback__head p {
+    font-size: var(--fluid-20-16);
+}
+
+.rs-feedback__head .section-title {
+    text-align: left;
+}
+
+.rs-feedback__frame {
+    height: 500px;
+}
+
+@media (max-width: 1023.98px) {
+    .rs-feedback__wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .rs-feedback__head {
+        padding-right: 0;
+        gap: 24px;
+    }
+}

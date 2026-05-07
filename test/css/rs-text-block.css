@@ -1,0 +1,15 @@
+.rs-text-block {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.rs-text-block__content {
+    max-width: 960px;
+}
+
+@media (max-width: 1023.98px) {
+    .rs-text-block {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}

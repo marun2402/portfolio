@@ -1,0 +1,123 @@
+.benefit {
+    position: relative;
+}
+
+.benefit__head {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.benefit__body {
+    margin-top: 40px;
+}
+
+.benefit__footer {
+    text-align: center;
+    margin-top: 17px;
+}
+
+.benefit__items {
+    display: grid;
+    grid-template-columns: 1fr 38% 1fr;
+    gap: 52px 0px;
+}
+
+.benefit__item_bg {
+    align-self: center;
+    grid-row: span 2;
+}
+
+.benefit__item_bg img {
+    width: 100%;
+}
+
+.benefit-card {
+    height: 100%;
+}
+
+.benefit-card__icon {
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    border: 1px solid #d9d9d9;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-bottom: 24px;
+}
+
+.benefit-card__icon img {
+    max-width: 100%;
+}
+
+.benefit-card__title {
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: var(--fluid-28-20);
+    margin-bottom: 8px;
+}
+
+.benefit-card__list {
+    font-weight: 400;
+    font-size: var(--fluid-20-13);
+    list-style-position: outside;
+    list-style-type: disc;
+    padding-left: 32px;
+}
+
+.rs-benefit {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+@media (max-width: 1023.98px) {
+    .rs-benefit {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .benefit__items {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .benefit__item_bg {
+        display: none;
+    }
+
+    .benefit-card {
+        display: grid;
+        justify-items: center;
+    }
+
+    .benefit-card__icon {
+        width: 52px;
+        height: 52px;
+        padding: 10px;
+        margin-bottom: 12px;
+    }
+
+    .benefit-card__title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .benefit__items {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .benefit-card__title {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+}

@@ -1,0 +1,131 @@
+.rs-blog {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.rs-blog__head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 120px;
+}
+
+.rs-blog__column {
+    font-weight: 400;
+    font-size: var(--fluid-20-16);
+}
+
+.rs-blog__column:first-child {
+    padding-top: 40px;
+}
+
+.rs-blog__column h1 {
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: var(--fluid-55-28);
+    line-height: 128%;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.rs-blog__column img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.rs-blog__nav {
+    margin-bottom: 44px;
+}
+
+.rs-blog__nav ul {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 12px;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.rs-blog__nav a {
+    font-weight: 400;
+    font-size: var(--fluid-16-13);
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+    border-radius: 100px;
+    padding: 0px 24px;
+    height: 39px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: var(--bg-clr-2);
+    transition: all var(--animation-duration) var(--timing-func);
+}
+
+.rs-blog__nav .current-menu-item a {
+    background: var(--basic);
+    color: var(--white);
+}
+
+.blog-post {
+    break-inside: avoid-column;
+    border: 1px solid #d4d1d1;
+    border-radius: 24px;
+    padding: 28px;
+    font-weight: 400;
+    font-size: var(--fluid-20-16);
+}
+
+.blog-post:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.blog-post h3 {
+    font-family: var(--third-family);
+    font-weight: 600;
+    font-size: var(--fluid-28-20);
+    margin-bottom: 28px;
+}
+
+.blog-post ul li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.blog-post a {
+    transition: color var(--animation-duration) var(--timing-func);
+}
+
+@media (min-width: 767.98px) {
+    .rs-blog__wrapper {
+        column-count: 2;
+        column-gap: 40px;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .rs-blog {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rs-blog__head {
+        grid-template-columns: 1fr;
+        margin-bottom: 48px;
+    }
+}
+
+@media (any-hover: hover) {
+    .rs-blog__nav a:hover {
+        background: var(--basic);
+        color: var(--white);
+    }
+
+    .blog-post a:hover {
+        color: var(--basic);
+    }
+}
