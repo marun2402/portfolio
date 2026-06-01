@@ -59,6 +59,18 @@
 }
 
 @media (min-width: 767.98px) {
+    .banner .breadcrumbs {
+        color: #fff;
+    }
+
+    .banner .breadcrumbs__current {
+        color: #fff;
+    }
+
+    .banner .breadcrumbs__divider {
+        background: #fff;
+    }
+
     .rs-banner .btn-color {
         display: none;
     }
