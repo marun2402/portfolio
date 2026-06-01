@@ -2,80 +2,59 @@
     position: relative;
 }
 
-.metrics__head {
-    margin: 0px auto;
-    max-width: 940px;
-    text-align: center;
-}
-
-.metrics__head .section-title {
-    margin-top: 24px;
-}
-
-.metrics__founder {
-    margin-bottom: 40px;
-    margin-top: 23px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.metrics__founder img {
-    max-width: 100%;
-}
-
-.metrics__founder p {
-    max-width: 378px;
-    font-weight: 400;
-    font-size: var(--fluid-20-13);
-    text-align: center;
-}
-
 .metrics__items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 50px 40px;
+    gap: 30px;
 }
 
-.metrics__footer {
-    margin-top: 40px;
-    text-align: center;
+.metrics .metrics-item {
+    border-radius: var(--main-chamfer);
+    padding: 0.8333333333em;
+    height: 100%;
+    font-size: var(--fluid-48-24);
+}
+
+.metrics .metrics-item:nth-child(4n+1) {
+    background: var(--fon-zelenyy);
+    --item-clr: var(--lazurnyy-luch);
+}
+
+.metrics .metrics-item:nth-child(4n+2) {
+    background: var(--fon-zheltyy);
+    --item-clr: var(--zheltyy-luch);
+}
+
+.metrics .metrics-item:nth-child(4n+3) {
+    background: var(--fon-siniy);
+    --item-clr: var(--goluboy-luch);
+}
+
+.metrics .metrics-item:nth-child(4n+4) {
+    background: var(--fon-zelenyy);
+    --item-clr: var(--lazurnyy-luch);
 }
 
 .metrics .metrics-item__title {
-    font-family: var(--third-family);
-    font-weight: 600;
-    font-size: var(--fluid-110-45);
-    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 110%;
+    color: var(--item-clr);
 }
 
 .metrics .metrics-item__text {
-    font-weight: 400;
+    font-weight: 500;
     font-size: var(--fluid-20-16);
+    line-height: 130%;
 }
 
 .rs-metrics {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 0;
 }
 
 @media (max-width: 1023.98px) {
     .metrics__items {
-        gap: 40px 24px;
-    }
-
-    .rs-metrics {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .metrics__items {
         grid-template-columns: 1fr 1fr;
+        gap: 16px;
     }
 }

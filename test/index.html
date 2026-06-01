@@ -3,11 +3,11 @@
   <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Origami Tea | Главная</title>
+	<title>Центр медицинской реабилитации «Луч»  | Главная</title>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
 
 	
 
@@ -20,15 +20,15 @@
 	<script src="libs/swiper/swiper-bundle.min.js" defer></script>
 	<link rel="stylesheet" type="text/css" href="libs/swiper/swiper-bundle.min.css" />
 
-	<script src="libs/nouislider/nouislider.js" defer></script>
-	<link rel="stylesheet" type="text/css" href="libs/nouislider/nouislider.css" />
-	<script src="libs/nouislider/wNumb.min.js" defer></script>
-
+	
 	
 	
 
 	
 	
+
+	<script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
 	
 	
 	
@@ -51,16 +51,7 @@
       
     
 
-    <div class="site-promo">
-      <div class="site-promo__container">
-        <a href="#" class="site-promo__link">
-          <p>Скидка на избранные сорта чая — до 15%.</p>
-          <p>Смотреть акции</p>
-        </a>
-      </div>
-    </div>
-
-    <div class="site">
+    <div class="site site-cover">
       <header>
         <span class="menu-overlay" data-js-overlay></span>
          
@@ -85,174 +76,141 @@
 <link rel="stylesheet" href="css/header.css" />
 <div class="header">	
 	
-	<div class="header__inner site-fullwidth">
+	<div class="header__holder">
+
+		
+<a href="index.html" class="header-logo">
+	<img src="img/logo.png" alt="" />
+</a>
+
+		
 		<div class="header__top">
 			
 <div class="header-nav-contacts">
 	<ul>
-		<li><a href="tel:+74993902409">+7 (499) 390-24-09</a></li>
-		<li><a href="tel:+79262564075">+7 (926) 256-40-75</a></li>
-		<li><a href="mailto:Info@origamitea.ru">Info@origamitea.ru</a></li>
+		<li><a href="#" class="location">Ставропольский край,  г. Кисловодск, ул А. Реброва 10-11</a></li>
+		<li><a href="tel:+78793791100">+7 (87937) 9-11-00</a></li>
+		<li><a href="tel:+79651430020">+7 (965) 143-00-20</a></li>
+		
 	</ul>
 </div>
-		
-			 
 
-
-
-
-
-
-
-
-<nav class="menu" data-spollers="1399.98, max">	
-	
-	<div class="menu-wrapper">
-		
-		<ul class="menu__list">			
 			
-			<li><a href="#"><span>Акции</span></a></li>
-			<li><a href="#"><span>Новинки</span></a></li>
-			<li><a href="about.html"><span>О нас</span></a></li>
-			<li class="menu__dropdown spollers__item">
-				<a href="#"><span>Все о японском чае</span></a>
-				<button type="button" class="menu__dropdown-arrow spollers__title" data-spoller data-spoller-close></button>
-				<ul class="menu__dropdown-list spollers__body">
-					<li><a href="#"><span>Основные виды японского чая</span></a></li>
+<div class="header__btn">
+	
+	
+<a href="#" class="btn-color ">	
+	<span class="btn-color__icon">
+		<img src="img/icons/btn_icon.svg" alt="">
+	</span>
+	<span class="btn-color__title">Забронировать</span>
+</a>
+
+</div>
+
+		</div>
+		
+		<div class="header__wrapper">
+			
+<nav class="menu">
+
+	<div class="menu-wrapper">
+		<ul class="menu__list">		
+			<li><a href="#"><span>Главная</span></a></li>
+			<li><a href="#"><span>О центре</span></a></li>
+			<li><a href="#"><span>Лечение</span></a></li>
+			<li><a href="#"><span>Номера</span></a></li>
+			<li><a href="#"><span>Цены</span></a></li>
+
+			<li class="menu__dropdown">
+				<a href="#"><span>Дополнительные услуги</span></a>
+				<button type="button" class="menu__dropdown-arrow"></button>
+				<ul class="menu__dropdown-list">
+					<li class="switch-back"><a href="#"><span>Дополнительные услуги</span></a></li>
+					<li><a href="#"><span>Дополнительные услуги 1</span></a></li>
+
 					
-					<li><a href="#"><span>Церемония</span></a></li>
-					<li><a href="#"><span>Карманный словарь поклонника японского чая</span></a></li>
-					<li><a href="#"><span>Японский чай и здоровье</span></a></li>
-					<li><a href="#"><span>Видео</span></a></li>
+
+					<li><a href="#"><span>Дополнительные услуги 2</span></a></li>
+					<li><a href="#"><span>Дополнительные услуги 3</span></a></li>
+					<li><a href="#"><span>Дополнительные услуги 4</span></a></li>
 				</ul>
-			</li>
-			<li><a href="#"><span>Рецепты</span></a></li>
-			<li><a href="#"><span>Доставка</span></a></li>			
-			<li class="menu__dropdown spollers__item">
-				<a href="#"><span>Контакты</span></a>
-				<button type="button" class="menu__dropdown-arrow spollers__title" data-spoller data-spoller-close></button>
-				<ul class="menu__dropdown-list spollers__body">
-					<li><a href="#"><span>Где купить?</span></a></li>
-				</ul>
-			</li>
-			<li><a href="#"><span>Опт</span></a></li>
-			<li><a href="#"><span>FAQ</span></a></li>
+			</li>							
+			
+			<li><a href="#"><span>Посетителям</span></a></li>
+			<li><a href="#"><span>Контакты</span></a></li>
 		</ul>
 	</div>
 
-	
+	<form action="#" class="mobile-menu-search">
+  <div class="mobile-menu-search__box">
+    <input type="search" name="search" placeholder="Введите текст">
+    <button type="submit">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.3738 12.3876L17 17M14.3333 7.66667C14.3333 11.3486 11.3486 14.3333 7.66667 14.3333C3.98477 14.3333 1 11.3486 1 7.66667C1 3.98477 3.98477 1 7.66667 1C11.3486 1 14.3333 3.98477 14.3333 7.66667Z" stroke="#404040" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+  </div>
+</form>
 	<div class="menu-footer">
 		<div class="mobile-menu-contacts">
-			
+			<div class="mobile-menu-contacts__title">Свяжитесь с нами</div>
 			<ul class="mobile-menu-contacts__list">
-				<li><a href="tel:+74993902409">+7 (499) 390-24-09</a></li>
-				<li><a href="tel:+79262564075">+7 (926) 256-40-75</a></li>
-				<li><a href="mailto:Info@origamitea.ru">Info@origamitea.ru</a></li>
+				<li><a href="tel:+78793791100">+7 (87937) 9-11-00</a></li>
+				<li><a href="tel:+79651430020">+7 (965) 143-00-20</a></li>
+				<li><a href="mailto:luch_market@mail.ru">luch_market@mail.ru</a></li>
+				<li><p class="location">г. Кисловодск, ул. Алексея Реброва, 10–11</p></li>
 			</ul>
-		</div>
-		<div class="mobile-menu-social">
-			<div class="site-nav-social">
-				<h4 class="site-nav-social__title">Давайте дружить</h4>
-				<ul class="site-nav-social__list">
-					<li><a href="#"><img src="img/icons/max_icon.svg" alt=""></a></li>
-					<li><a href="#"><img src="img/icons/tg_icon.svg" alt=""></a></li>
-					<li><a href="#"><img src="img/icons/vk_icon.svg" alt=""></a></li>
-					<li><a href="#"><img src="img/icons/yt_icon.svg" alt=""></a></li>
-				</ul>
-			</div>
-		</div>
-	</div>	
+		</div>				
+	</div>
+
 </nav>
-
-
-
-
-
-
-
-		</div>
-		<div class="header__wrapper">
-			<div class="header__holder">
-				<div class="header-nav-catalog" data-spollers>
-  <div class="header-nav-catalog__menu spollers__item">
-    <button type="button" class="header-nav-catalog__btn spollers__title" data-spoller data-spoller-close>
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5.94 10.1023C6.9975 10.1023 7.845 10.958 7.845 12.023V14.5798C7.845 15.6373 6.9975 16.4998 5.94 16.4998H3.405C2.355 16.4998 1.5 15.6373 1.5 14.5798V12.023C1.5 10.958 2.355 10.1023 3.405 10.1023H5.94ZM14.5951 10.1023C15.6451 10.1023 16.5001 10.958 16.5001 12.023V14.5798C16.5001 15.6373 15.6451 16.4998 14.5951 16.4998H12.0601C11.0026 16.4998 10.1551 15.6373 10.1551 14.5798V12.023C10.1551 10.958 11.0026 10.1023 12.0601 10.1023H14.5951ZM5.94 1.5C6.9975 1.5 7.845 2.3625 7.845 3.42075V5.9775C7.845 7.0425 6.9975 7.8975 5.94 7.8975H3.405C2.355 7.8975 1.5 7.0425 1.5 5.9775V3.42075C1.5 2.3625 2.355 1.5 3.405 1.5H5.94ZM14.5951 1.5C15.6451 1.5 16.5001 2.3625 16.5001 3.42075V5.9775C16.5001 7.0425 15.6451 7.8975 14.5951 7.8975H12.0601C11.0026 7.8975 10.1551 7.0425 10.1551 5.9775V3.42075C10.1551 2.3625 11.0026 1.5 12.0601 1.5H14.5951Z" fill="#456039" />
-      </svg>
-      <span>Каталог товаров</span>          
-    </button>
-    <ul class="header-nav-catalog__list spollers__body" hidden>
-      <li><a href="#">Японский чай матча</a></li>
-      <li class="spollers__item">        
-        <a href="#">Листовой японский чай</a>
-        <button type="button" class="spollers__title" data-spoller data-spoller-close></button>
-        <ul class="spollers__body">
-          <li><a href="#">Листовой японский чай</a></li>
-          <li><a href="#">Листовой японский чай</a></li>
-          <li><a href="#">Листовой японский чай</a></li>
-          <li><a href="#">Листовой японский чай</a></li>
-        </ul>
-      </li> 
-      <li class="spollers__item">        
-        <a href="#">Подарочные наборы чая</a>
-        <button type="button" class="spollers__title" data-spoller data-spoller-close></button>
-        <ul class="spollers__body">
-          <li><a href="#">Подарочные наборы чая</a></li>
-          <li><a href="#">Подарочные наборы чая</a></li>
-          <li><a href="#">Подарочные наборы чая</a></li>
-          <li><a href="#">Подарочные наборы чая</a></li>
-        </ul>
-      </li>     
-      <li><a href="#">Аксессуары для матча</a></li>
-      <li><a href="#">Чайная посуда</a></li>
-      <li><a href="#">Матча-латте, ходзича-латте</a></li>
-    </ul>
-  </div>
+			<button class="header-search-btn header-search-open">
+	<svg class="search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M12.3738 12.3876L17 17M14.3333 7.66667C14.3333 11.3486 11.3486 14.3333 7.66667 14.3333C3.98477 14.3333 1 11.3486 1 7.66667C1 3.98477 3.98477 1 7.66667 1C11.3486 1 14.3333 3.98477 14.3333 7.66667Z" stroke="#1F354F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+	</svg>
+	<svg class="close-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M1 1L13 13M13 1L1 13" stroke="#1F354F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+	</svg>
+	<span>Поиск</span>
+</button>
+<div class="header-search">
+	<form action="#">		
+		<input type="search" name="headerSearch" placeholder="Что вы ищите?" />
+		<button type="reset"></button>
+		<button type="submit">
+			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M13.7983 13.8099L19.0039 19M16.0033 8.49772C16.0033 12.6408 12.6447 15.9993 8.50163 15.9993C4.35859 15.9993 1 12.6408 1 8.49772C1 4.35469 4.35859 0.996094 8.50163 0.996094C12.6447 0.996094 16.0033 4.35469 16.0033 8.49772Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+	</form>	
 </div>
-				<form action="#" class="header-search">		
-  <input type="search" name="headerSearch" placeholder="Поиск" />
-  <button type="submit">
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.51985 0C11.6662 0 15.0389 3.3727 15.0389 7.51907C15.0389 9.47532 14.2882 11.2595 13.0597 12.5986L15.477 15.0109C15.7033 15.2371 15.704 15.6031 15.4778 15.8294C15.3651 15.9436 15.216 16 15.0678 16C14.9203 16 14.7721 15.9436 14.6586 15.8309L12.212 13.3912C10.925 14.4219 9.2932 15.0389 7.51985 15.0389C3.37347 15.0389 0 11.6655 0 7.51907C0 3.3727 3.37347 0 7.51985 0ZM7.51985 1.15821C4.01203 1.15821 1.15821 4.01125 1.15821 7.51907C1.15821 11.0269 4.01203 13.8807 7.51985 13.8807C11.0269 13.8807 13.8807 11.0269 13.8807 7.51907C13.8807 4.01125 11.0269 1.15821 7.51985 1.15821Z" fill="#143109" />
-    </svg>
-  </button>
-</form>
-			</div>
-			
-<a href="index.html" class="header-logo">
-	<img src="img/logo.svg" alt="" />
-</a>
-
-			
-<div class="header-nav">
-	<ul class="header-nav__icons">
-		<li>
-			<a href="#" class="header-nav-link" > 
-				<svg><use xlink:href="img/svg-sprite/sprite.svg#account-icon"></use></svg>
-				<span>Профиль</span>
+ 
+			<a href="#" class="special-version-link" title="Версия для слабовидящих">
+				<svg><use xlink:href="img/svg-sprite/sprite.svg#special-version-icon"></use></svg>
 			</a>
-		</li>
-		<li>
-			<a href="#" class="header-nav-link" >
-				<svg><use xlink:href="img/svg-sprite/sprite.svg#basket-icon"></use></svg>
-				<span class="count">2</span>
-				<span>3.700 ₽</span>
-			</a>
-		</li>
-		
-		
-		
-	</ul>
-</div>
-
 			
 			<button class="menu-burger">
-  <span></span>
-  <span></span>
-  <span></span>
+  <span>
+    <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1.5L11 11.5M11 1.5L1 11.5" stroke="#ff682c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    Закрыть
+  </span>
+  <span>
+    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.07703 7.46167H12.9232" stroke="white" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1.07703 3.19263H12.9232" stroke="white" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M1.07703 11.7307H12.9232" stroke="white" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+     Меню
+  </span>
 </button>
+
 		</div>
+
 	</div>
+	
 </div>
 
 
@@ -265,7 +223,789 @@
           <div class="site-main">
              
 
+<!-- rs-intro -->
+<link rel="stylesheet" href="css/rs-intro.css" />
+<section class="rs-intro">  
+  <div class="rs-intro__wrapper">    
+     
+ 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+<div class="hero-slider">
+  <div class="hero-slider__slider">
+    <div class="hero-slider__swiper">
+      
+        <div class="hero-slider__slide">
+<div class="slide">		
+	<div class="slide__container">
+		<div class="slide__wrapper">
+			<h2 class="slide__title">Санаторно‑курортное лечение и высокотехнологичная медицина в самом сердце Кисловодска</h2>
+			<div class="frame"></div>
+		</div>			
+	</div>
+	<div class="slide__media">
+		<picture>
+			<source media="(max-width: 767.98px)" srcset="img/slider_1mob.jpg">
+			<img src="img/slider_1.jpg" alt="">
+		</picture>
+		<video src="img/video.mp4" autoplay muted loop></video>
+	</div>
+</div>
+</div>
+      
+    </div>
+  </div>	
+	
+</div>      
+  </div>
+</section>
+<!-- end rs-intro -->
+
+<!-- rs-metrics -->
+<link rel="stylesheet" href="css/rs-metrics.css" />
+<section class="rs-metrics">
+  <div class="rs-metrics__container">
+    <div class="rs-metrics__wrapper">
+       
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="metrics">  
+  
+  <div class="metrics__items">
+    
+    
+<div class="metrics-item">
+  <div class="metrics-item__title"><span class="counter">100</span> +</div>
+  <div class="metrics-item__text">лет медицинской истории</div>
+</div>
+
+    
+    
+<div class="metrics-item">
+  <div class="metrics-item__title"><span class="counter">20000</span> +</div>
+  <div class="metrics-item__text">пациентов в год</div>
+</div>
+
+    
+    
+<div class="metrics-item">
+  <div class="metrics-item__title"><span class="counter">80</span> %</div>
+  <div class="metrics-item__text">возвращаются повторно</div>
+</div>
+
+    
+    
+<div class="metrics-item">
+  <div class="metrics-item__title"><span class="counter">150</span> +</div>
+  <div class="metrics-item__text">врачей и специалистов</div>
+</div>
+
+    
+  </div>
+  
+</div>
+    </div>
+  </div>
+</section>
+<!-- end rs-metrics -->
+
+<!-- rs-about -->
+<link rel="stylesheet" href="css/rs-about.css" />
+<section class="rs-about">
+  <div class="rs-about__container">
+    <div class="rs-about__wrapper">
+      
+ 
+ 
+
+
+<div class="about">  
+  <div class="about__wrapper">        
+    <div class="about__column">
+      <div class="about-content base-content">
+        <h3>Федеральное государственное бюджетное учреждение Центр медицинской реабилитации «Луч» Министерства здравоохранения Российской Федерации</h3>
+        <br>
+        <br>
+        <br>
+        <p>Медицинский центр «Луч» занимает особое место среди учреждений региона Кавказских минеральных вод: это одно из немногих мест, где гармонично сочетаются санаторно‑курортное лечение, высокотехнологичная медицина и хирургия.</p>
+        <br>
+        <p>Более чем вековая история центра подтверждает его статус не просто места для отдыха, а полноценного медицинского учреждения нового типа. Располагаясь в самом сердце Кисловодского парка, «Луч» объединяет современные методы лечения, точную высокотехнологичную диагностику и комфорт курортного пребывания.</p>
+        <br>
+        <br>
+        <br>
+        <blockquote>
+          <p>Наши пациенты обращаются к нам с чётким запросом на результат — и получают его: снижение болевых ощущений, восстановление подвижности, заметное улучшение самочувствия и возможность вновь вести активный образ жизни.</p>
+        </blockquote>        
+      </div>      
+    </div> 
+    <div class="about__column">
+      <div class="about-media">
+        
+        
+<div class="pst-gallery">
+  <div class="pst-gallery__slider">
+   <div class="pst-gallery__swiper">
+    
+    <div class="pst-gallery__slide">
+      <div class="pst-slide">
+        <div class="pst-slide__photo"><img src="img/pic_1.jpg" alt=""></div>
+        <span class="pst-slide__label">Наименование отделения</span>
+      </div>
+    </div>
+    
+    <div class="pst-gallery__slide">
+      <div class="pst-slide">
+        <div class="pst-slide__photo"><img src="img/slider_1mob.jpg" alt=""></div>
+        <span class="pst-slide__label">Наименование отделения</span>
+      </div>
+    </div>
+    
+    <div class="pst-gallery__slide">
+      <div class="pst-slide">
+        <div class="pst-slide__photo"><img src="img/pic_1.jpg" alt=""></div>
+        <span class="pst-slide__label">Наименование отделения</span>
+      </div>
+    </div>
+    
+   </div>
+   </div>
+   <div class="pst-gallery__nav">
+     
+<div class="nav-paging"></div>
+
+     
+<div class="nav-arrows">
+	<button type="button" class="arrow arrow_prev">
+		<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 13L1 7L7 1" stroke="#3B3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+	</button>
+	<button type="button" class="arrow arrow_next">
+		<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 13L7 7L0.999999 1" stroke="#3B3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+	</button>	
+</div>
+
+   </div>
+ </div>
+
+        <div class="site-slide-icon"></div>
+      </div>
+    </div>    
+  </div>  
+</div>
+
+
+
+
+    </div>
+  </div>
+</section>
+<!-- end rs-about -->
+
+<!-- rs-services -->
+<link rel="stylesheet" href="css/rs-services.css" />
+<section class="rs-services">
+  <div class="rs-services__container">
+    <div class="rs-services__wrapper">
+       
+ 
+
+
+
+
+
+
+
+
+<div class="services site-padding">
+  <div class="services__head">
+    
+<div class="section-title ">
+	
+	
+	<h2>Профили лечения</h2>	
+	
+	
+</div>
+
+    <div class="site-slide-icon"></div>
+  </div>
+  <div class="services__body">
+    <div class="services__items">
+      
+      <div class="services__item">
+<article class="services-card">	 
+  <img src="img/s_1.jpg" alt="">
+  
+  <h4 class="services-card__title">Сердечно-сосудистые заболевания</h4> 
+	<a href="#">Сердечно-сосудистые заболевания</a>
+  
+</article>
+</div>
+      
+      <div class="services__item">
+<article class="services-card">	 
+  <img src="img/s_2.jpg" alt="">
+  
+  <h4 class="services-card__title">Болезни опорно-двигательного аппарата</h4> 
+	<a href="#">Болезни опорно-двигательного аппарата</a>
+  
+</article>
+</div>
+      
+      <div class="services__item">
+<article class="services-card">	 
+  <img src="img/s_3.jpg" alt="">
+  
+</article>
+</div>
+      
+      <div class="services__item">
+<article class="services-card">	 
+  <img src="img/s_4.jpg" alt="">
+  
+  <h4 class="services-card__title">Болезни периферической нервной системы</h4> 
+	<a href="#">Болезни периферической нервной системы</a>
+  
+</article>
+</div>
+      
+      <div class="services__item">
+<article class="services-card">	 
+  <img src="img/s_5.jpg" alt="">
+  
+  <h4 class="services-card__title">Болезни органов <br> дыхания</h4> 
+	<a href="#">Болезни органов &lt;br&gt; дыхания</a>
+  
+</article>
+</div>
+      
+      <div class="services__item">
+<article class="services-card">	 
+  <img src="img/s_6.jpg" alt="">
+  
+</article>
+</div>
+      
+      <div class="services__item">
+<article class="services-card">	 
+  <img src="img/s_7.jpg" alt="">
+  
+  <h4 class="services-card__title">Медицинская реабилитация взрослых</h4> 
+	<a href="#">Медицинская реабилитация взрослых</a>
+  
+</article>
+</div>
+      
+      <div class="services__item">
+<article class="services-card">	 
+  <img src="img/s_8.jpg" alt="">
+  
+  <h4 class="services-card__title">Нейрохирургическая помощь больным</h4> 
+	<a href="#">Нейрохирургическая помощь больным</a>
+  
+</article>
+</div>
+      
+      <div class="services__item">
+<article class="services-card">	 
+  <img src="img/s_9.jpg" alt="">
+  
+</article>
+</div>
+      
+      <div class="services__item">
+<article class="services-card">	 
+  <img src="img/s_10.jpg" alt="">
+  
+  <h4 class="services-card__title">Косметология</h4> 
+	<a href="#">Косметология</a>
+  
+</article>
+</div>
+      
+      <div class="services__item">
+<article class="services-card">	 
+  <img src="img/s_11.jpg" alt="">
+  
+  <h4 class="services-card__title">Пластическая хирургия</h4> 
+	<a href="#">Пластическая хирургия</a>
+  
+</article>
+</div>
+      
+      <div class="services__item">
+<article class="services-card">	 
+  <img src="img/s_12.jpg" alt="">
+  
+</article>
+</div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+    </div>
+  </div>
+</section>
+<!-- end rs-services -->
+
+<!-- rs-features -->
+<link rel="stylesheet" href="css/rs-features.css" />
+<section class="rs-features">
+  <div class="rs-features__container">
+    <div class="rs-features__wrapper">
+      <div class="rs-features__head">
+        
+<div class="section-title ">
+	
+	
+	<h2>Чем «Луч» отличается от других санаториев Кисловодска</h2>	
+	
+	
+</div>
+
+        <div class="site-slide-icon"></div>
+      </div>
+       
+ 
+
+
+
+
+
+
+
+
+<div class="screen-split">
+	<div class="gallery">
+		
+		<div class="gallery__media">			
+			
+<div class="section-title ">
+	
+	
+	<h2>Чем «Луч» отличается от других санаториев Кисловодска</h2>	
+	
+	
+</div>
+				
+			<div class="desktop-photos">
+				<div class="desktop-photo"><img src="img/p_1.jpg" alt=""></div>
+				<div class="desktop-photo"><img src="img/p_2.jpg" alt=""></div>
+				<div class="desktop-photo"><img src="img/p_3.jpg" alt=""></div>
+				<div class="desktop-photo"><img src="img/p_4.jpg" alt=""></div>
+			</div>	
+		</div>
+	
+		<div class="gallery__content">
+			<div class="desktop-content">
+				<div class="features-holder">
+					
+					
+<article class="features-card">
+	<span>01</span>
+	<h6 class="features-card__title">Хирургия и диагностика — на базе санатория</h6>
+	<p class="features-card__text">МРТ, КТ, операции на позвоночнике, нейрохирурги в штате. Такой уровень медицинской помощи недоступен в большинстве санаториев региона.</p>
+	<div class="features-card__photo"><img src="img/p_1.jpg" alt=""></div>
+</article>
+
+					
+					
+<article class="features-card">
+	<span>02</span>
+	<h6 class="features-card__title">Выход в Национальный парк — прямо с территории</h6>
+	<p class="features-card__text">Терренкур, нарзанный бювет, горный воздух Кисловодска — не поездка, а часть ежедневного маршрута.</p>
+	<div class="features-card__photo"><img src="img/p_2.jpg" alt=""></div>
+</article>
+
+					
+					
+<article class="features-card">
+	<span>03</span>
+	<h6 class="features-card__title">Современное оборудование, не стандартный набор процедур</h6>
+	<p class="features-card__text">Контрпульсация Lunenar, системы лечебного вытяжения Трактайзер и Кинетракт, высокоинтенсивная магнитная стимуляция Salus Talent, аппараты Polaris и Sono Plus. Все назначается врачом индивидуально.</p>
+	<div class="features-card__photo"><img src="img/p_3.jpg" alt=""></div>
+</article>
+
+					
+					
+<article class="features-card">
+	<span>04</span>
+	<h6 class="features-card__title">Федеральный центр Минздрава России</h6>
+	<p class="features-card__text">Государственный контроль качества. Бронирование напрямую — без посредников, туроператоров и дилеров.</p>
+	<div class="features-card__photo"><img src="img/p_4.jpg" alt=""></div>
+</article>
+
+					
+				</div>
+				<div class="features-callback">
+					<p>Расскажете о целях и проблемах - подберём программу оздоровления и поможем с путёвкой</p>
+					<a href="#" class="btn-border btn-border_2">	
+						<span class="btn-border__icon" style="mask-image: url('img/icons/btn3_icon.svg');">
+						</span>
+						<span class="btn-border__title">Оставить заявку</span>
+					</a>					
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	
+
+</div>
+    </div>
+  </div>
+</section>
+<!-- end rs-features -->
+
+<!-- rs-metrics-2 -->
+<link rel="stylesheet" href="css/rs-metrics-2.css" />
+<section class="rs-metrics-2">
+  <div class="rs-metrics-2__container">
+    <div class="rs-metrics-2__wrapper">
+      <div class="rs-metrics-2__head">
+        
+<div class="section-title ">
+	
+	
+	<h2>Полный спектр возможностей: лечение, комфорт, профессионалы</h2>	
+	
+	
+</div>
+
+      </div>
+      <div class="rs-metrics-2__items">
+
+        <div class="metrics-2-item">
+          <h6><span class="counter">6</span></h6>
+          <p>профилей санаторно-курортного лечения</p>
+        </div>
+
+        <div class="metrics-2-item">
+          <img src="img/pic_2.jpg" alt="">
+        </div>
+
+        <div class="metrics-2-item">
+          <div class="site-nav-social">            
+            <ul class="site-nav-social__list">
+              <li><a href="#"><img src="img/icons/vk_icon.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icons/ok_icon.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/icons/tg_icon.svg" alt=""></a></li>
+            </ul>	
+          </div>
+        </div>
+
+        <div class="metrics-2-item">
+          <h6><span class="counter">100</span>+</h6>
+          <p>медицинских услуг, оказываемых амбулаторно</p>
+        </div>
+
+        <div class="metrics-2-item">
+          <h6><span class="counter">150</span>+</h6>
+          <p>специалистов медицинского персонала</p>
+        </div>
+        
+        <div class="metrics-2-item">
+          <h6><span class="counter">500</span>+</h6>
+          <p>комфортабельных номеров</p>
+        </div>
+
+        <div class="metrics-2-item">
+          <img src="img/pic_3.jpg" alt="">
+        </div>
+
+        <div class="metrics-2-item">
+          <img src="img/pic_4.jpg" alt="">
+        </div>   
+
+        <div class="metrics-2-item">
+          <h6><span class="counter">20</span>+</h6>
+          <p>единиц уникального медицинского оборудования</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end rs-metrics-2 --> 
+
+<!-- rs-fos -->
+<link rel="stylesheet" href="css/rs-fos.css" />
+<section class="rs-fos">
+  <div class="rs-fos__container">
+    <div class="rs-fos__wrapper">
+      
+ 
+
+  
+
+<div class="fos" >		
+	<div class="fos__column fos-head">		
+		<h2>Сделайте первый шаг к восстановлению</h2>
+		<p>Мы знаем, как важно найти правильное лечение. Расскажите о своих целях и проблемах — мы подберём для вас оптимальную программу оздоровления и поможем забронировать путёвку без лишних хлопот.</p>
+	</div>
+	<div class="fos__column fos-body">
+		<form action="#" id="fosForm" class="fos-form">
+			<div class="form-row">
+				<div class="form-group"> 
+   
+<input type="text" id="fosName" name="fosName" placeholder="ФИО" required>
+</div>
+				<div class="form-group"> 
+   
+<input type="tel" id="fosPhone" name="fosPhone" placeholder="Телефон" required maxlength="18" data-tel-input>
+</div>
+			</div>
+			
+			<div class="form-group">
+   
+<textarea id="fosMessage" name="fosMessage" placeholder="Сообщение" required></textarea>
+</div>
+			<div class="form-group">
+<div class="input-file">
+  <label for="fosFile">Прикрепить файл <span>Общий вес файлов не более 14 Мб Форматы файлов: jpeg, png, svg</span></label>
+  <input type="file" id="fosFile" name="fosFile" multiple accept=".jpeg, .png, .svg">                
+</div>
+</div>
+			<div class="form-submit">
+				<div class="form-submit__confirm">
+					
+<label class="checkbox">
+  <input type="checkbox" name="fosCofirm"  >
+  <span>Нажимая на кнопку «Отправить сообщение », вы даёте согласие на обработку персональных данных</span>
+</label>
+
+					
+<label class="checkbox">
+  <input type="checkbox" name="fosCofirm"  >
+  <span>и подтверждаете, что ознакомлены с <a href="#">политикой обработки персональных данных</a></span>
+</label>
+
+				</div>
+				<button type="submit" class="btn-color btn-color_2 btn-color_big">
+					<span class="btn-color__icon">
+						<img src="img/icons/submit_btn_icon.svg" alt="">
+					</span>
+					<span class="btn-color__title">Отправить сообщение</span>
+				</button>
+				
+			</div>
+		</form>
+	</div>
+</div>
+              
+    </div>
+  </div>
+</section>
+<!-- end rs-fos -->
+
+<!-- rs-feedback -->
+<link rel="stylesheet" href="css/rs-feedback.css" />
+<section class="rs-feedback">
+  <div class="rs-feedback__container">
+    <div class="rs-feedback__wrapper">
+      <div class="rs-feedback__head">
+        
+<div class="section-title ">
+	
+	
+	<h2>Что говорят наши пациенты</h2>	
+	
+	
+</div>
+
+        
+<a href="#" class="btn-border ">	
+	<span class="btn-border__icon" style="mask-image: url('img/icons/btn2_icon.svg');">
+	</span>
+	<span class="btn-border__title">Все отзывы</span>
+</a>
+
+        <div class="site-slide-icon"></div>
+      </div>
+      <div class="rs-feedback__body">
+        
+ 
+
+
+
+
+
+
+
+
+
+
+
+<div class="content-slider">
+  <div class="content-slider__slider">
+    <div class="content-slider__swiper">
+      
+      <div class="content-slider__slide">
+        
+<article class="feedback-card">	 
+  <div class="feedback-card__content">Приехала в «ЛУЧ» впервые, мне всё понравилось. Хочу особо отметить высокий профессионализм и внимательное отношение лечащего врача - Блок В.В. Назначенные процедуры оказали положительное действие, болевые ощущения значительно снизились. Все сотрудники санатория доброжелательные и отзывчивые.</div>
+  <div class="feedback-card__footer">
+    <div class="feedback-card__logo">
+      
+    </div>
+    <div class="feedback-card__user">Татьяна</div>
+    <div class="feedback-card__date">9 февраля 2026</div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="content-slider__slide">
+        
+<article class="feedback-card">	 
+  <div class="feedback-card__content">Добрый день! С 12 января 2026 г. мы с супругой проходили лечение в Вашем центре, это было наше второе посещение, хочу выразить огромную благодарность ВСЕМУ персоналу центра за Ваше внимание и персональный подход к каждому пациенту</div>
+  <div class="feedback-card__footer">
+    <div class="feedback-card__logo">
+      
+      <img src="img/slider_1mob.jpg" alt="">
+      
+    </div>
+    <div class="feedback-card__user">Вячеслав</div>
+    <div class="feedback-card__date">4 февраля 2026</div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="content-slider__slide">
+        
+<article class="feedback-card">	 
+  <div class="feedback-card__content">Пожалуй, трудно найти слова, чтобы выразить огромную благодарность всему коллективу ЦМР &quot;ЛУЧ&quot; и особенно врачам и медсестрам за высокопрофессиональный подход к лечению и человеческую теплоту в общении</div>
+  <div class="feedback-card__footer">
+    <div class="feedback-card__logo">
+      
+    </div>
+    <div class="feedback-card__user">Владимир</div>
+    <div class="feedback-card__date">4 февраля 2026</div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="content-slider__slide">
+        
+<article class="feedback-card">	 
+  <div class="feedback-card__content">Приехала в «ЛУЧ» впервые, мне всё понравилось. Хочу особо отметить высокий профессионализм и внимательное отношение лечащего врача - Блок В.В. Назначенные процедуры оказали положительное действие, болевые ощущения значительно снизились. Все сотрудники санатория доброжелательные и отзывчивые.</div>
+  <div class="feedback-card__footer">
+    <div class="feedback-card__logo">
+      
+    </div>
+    <div class="feedback-card__user">Татьяна</div>
+    <div class="feedback-card__date">9 февраля 2026</div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="content-slider__slide">
+        
+<article class="feedback-card">	 
+  <div class="feedback-card__content">Добрый день! С 12 января 2026 г. мы с супругой проходили лечение в Вашем центре, это было наше второе посещение, хочу выразить огромную благодарность ВСЕМУ персоналу центра за Ваше внимание и персональный подход к каждому пациенту</div>
+  <div class="feedback-card__footer">
+    <div class="feedback-card__logo">
+      
+    </div>
+    <div class="feedback-card__user">Вячеслав</div>
+    <div class="feedback-card__date">4 февраля 2026</div>
+  </div>
+</article>
+
+      </div>
+      
+      <div class="content-slider__slide">
+        
+<article class="feedback-card">	 
+  <div class="feedback-card__content">Пожалуй, трудно найти слова, чтобы выразить огромную благодарность всему коллективу ЦМР &quot;ЛУЧ&quot; и особенно врачам и медсестрам за высокопрофессиональный подход к лечению и человеческую теплоту в общении</div>
+  <div class="feedback-card__footer">
+    <div class="feedback-card__logo">
+      
+    </div>
+    <div class="feedback-card__user">Владимир</div>
+    <div class="feedback-card__date">4 февраля 2026</div>
+  </div>
+</article>
+
+      </div>
+      
+    </div>
+  </div>
+  <div class="content-slider__footer">
+    <div class="content-slider__nav">
+      
+<div class="nav-paging"></div>
+
+      
+<div class="nav-arrows">
+	<button type="button" class="arrow arrow_prev">
+		<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 13L1 7L7 1" stroke="#3B3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+	</button>
+	<button type="button" class="arrow arrow_next">
+		<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 13L7 7L0.999999 1" stroke="#3B3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+	</button>	
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+      </div>
+      <div class="rs-feedback__footer">        
+        
+<a href="#" class="btn-border ">	
+	<span class="btn-border__icon" style="mask-image: url('img/icons/btn2_icon.svg');">
+	</span>
+	<span class="btn-border__title">Все отзывы</span>
+</a>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end rs-feedback -->
 
 
           </div>
@@ -273,7 +1013,13 @@
           <footer>
              
  
- 
+
+
+
+
+
+
+
 
 
 
@@ -288,72 +1034,78 @@
 
 
 <link rel="stylesheet" href="css/footer.css" />
-<section class="footer">
+<div class="footer">
+	<div class="footer__container">
 
-		<div class="footer__wrapper" >
-			<div class="footer__container">
-		
+		<div class="footer__wrapper" data-spollers="767.98,max" data-one-spoller>
+
+			<div class="footer__column">	
 				
-				<div class="footer__row">
-					<div class="footer__column">
-						<div class="footer-logo"><img src="img/f_logo.svg" alt=""></div>
-						<a href="#" class="footer-catalog-link">
-							<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M4.44 8.60227C5.4975 8.60227 6.345 9.45802 6.345 10.523V13.0798C6.345 14.1373 5.4975 14.9998 4.44 14.9998H1.905C0.855 14.9998 0 14.1373 0 13.0798V10.523C0 9.45802 0.855 8.60227 1.905 8.60227H4.44ZM13.0951 8.60227C14.1451 8.60227 15.0001 9.45802 15.0001 10.523V13.0798C15.0001 14.1373 14.1451 14.9998 13.0951 14.9998H10.5601C9.50257 14.9998 8.65507 14.1373 8.65507 13.0798V10.523C8.65507 9.45802 9.50257 8.60227 10.5601 8.60227H13.0951ZM4.44 0C5.4975 0 6.345 0.8625 6.345 1.92075V4.4775C6.345 5.5425 5.4975 6.3975 4.44 6.3975H1.905C0.855 6.3975 0 5.5425 0 4.4775V1.92075C0 0.8625 0.855 0 1.905 0H4.44ZM13.0951 0C14.1451 0 15.0001 0.8625 15.0001 1.92075V4.4775C15.0001 5.5425 14.1451 6.3975 13.0951 6.3975H10.5601C9.50257 6.3975 8.65507 5.5425 8.65507 4.4775V1.92075C8.65507 0.8625 9.50257 0 10.5601 0H13.0951Z" fill="white" />
-							</svg>
-							<span>Каталог</span>
-						</a>
-					</div>		
-					<div class="footer__column">
-						<div class="footer-payments">
-							<h4 class="footer-title">Принимаем к оплате</h4>
-							<img src="img/icons/payments.png" alt="">
-						</div>
-						<div class="site-nav-social">
-							<h4 class="site-nav-social__title">Давайте дружить</h4>
-							<ul class="site-nav-social__list">
-								<li><a href="#"><img src="img/icons/max_icon.svg" alt=""></a></li>
-								<li><a href="#"><img src="img/icons/tg_icon.svg" alt=""></a></li>
-								<li><a href="#"><img src="img/icons/vk_icon.svg" alt=""></a></li>
-								<li><a href="#"><img src="img/icons/yt_icon.svg" alt=""></a></li>
-							</ul>
-						</div>
-					</div>		
-					<div class="footer__column">
-						
-<div class="footer__menu "> 
+<div class="footer-contacts">
+	<h4 class="footer-title">Контакты</h4>	
 	
+	<ul class="footer-contacts__list">
+		<li><a href="tel:+78793791100">+7 (87937) 9-11-00</a></li>
+		<li><a href="tel:+79651430020">+7 (965) 143-00-20</a></li>
+		<li><a href="mailto:luch_market@mail.ru">luch_market@mail.ru</a></li>
+		<li><p class="location">г. Кисловодск, <br> ул. Алексея Реброва, 10–11</p></li>
+	</ul>
+</div>	
+
+				
+<div class="footer-social site-nav-social">
 	
-<nav class="footer-menu  ">   
+	<ul class="site-nav-social__list">
+		<li><a href="#"><img src="img/icons/vk_icon.svg" alt=""></a></li>
+		<li><a href="#"><img src="img/icons/ok_icon.svg" alt=""></a></li>
+		<li><a href="#"><img src="img/icons/tg_icon.svg" alt=""></a></li>
+	</ul>	
+</div>
+				
+			</div>
+
+			<div class="footer__column">									
+				<div class="footer__grid">
+					
+<div class="footer__menu spollers__item">
+	<h4 class="footer-title spollers__title" data-spoller>Информация</h4>
+	
+<nav class="footer-menu  spollers__body">   
   <ul class="footer-menu__list">
     
-    <li><a href="#"><span>Новинки</span></a></li>
+    <li><a href="#"><span>Противодействие коррупции</span></a></li>
     
-    <li><a href="#"><span>Акции</span></a></li>
+    <li><a href="#"><span>Обратная связь для обращений</span></a></li>
     
-    <li><a href="#"><span>Рецепты</span></a></li>
+    <li><a href="#"><span>Лицензия на медицинскую деятельность</span></a></li>
     
-    <li><a href="#"><span>Все о японском чае</span></a></li>
+    <li><a href="#"><span>Политика конфиденциальности</span></a></li>
        
   </ul>
 </nav>
 
 </div>
 
-					</div>
-					<div class="footer__column">
-						
-<div class="footer__menu ">
+					
+<div class="footer__menu spollers__item">
+	<h4 class="footer-title spollers__title" data-spoller>Меню</h4>
 	
-	
-<nav class="footer-menu  ">   
+<nav class="footer-menu footer-menu_grid spollers__body">   
   <ul class="footer-menu__list">
     
-    <li><a href="#"><span>Доставка и оплата</span></a></li>
+    <li><a href="#"><span>Главная</span></a></li>
     
-    <li><a href="#"><span>Оптовым клиентам</span></a></li>
+    <li><a href="#"><span>Цены</span></a></li>
     
-    <li><a href="#"><span>FAQ</span></a></li>
+    <li><a href="#"><span>О центре</span></a></li>
+    
+    <li><a href="#"><span>Дополнительные услуги</span></a></li>
+    
+    <li><a href="#"><span>Лечение</span></a></li>
+    
+    <li><a href="#"><span>Посетителям</span></a></li>
+    
+    <li><a href="#"><span>Номера</span></a></li>
     
     <li><a href="#"><span>Контакты</span></a></li>
        
@@ -362,47 +1114,30 @@
 
 </div>
 
-					</div>
-				</div>
+					
+<div class="footer-iframe-holder">
+	<iframe src="https://nok.minzdrav.gov.ru/MO/GetBanner/9921/1" border="0" scrolling="no" allowtransparency="true" width="300" height="110" style="border: 0;vertical-align: middle;"></iframe>
+</div>
 
-				<div class="footer__row">
-					<div class="footer__column">
-						<h4 class="footer-title">Позвонить</h4>
-						<a href="tel:+74993902409" class="footer-contact-info">+7 (499) 390-24-09</a>
-					</div>
-					<div class="footer__column">
-						<h4 class="footer-title">связаться с нами</h4>
-						<a href="mailto:service@origamitea.ru" class="footer-contact-info">service@origamitea.ru</a>
-					</div>
-					<div class="footer__column">
-						<h4 class="footer-title">оптовым клиентам</h4>
-						<a href="mailto:head_sales@origamitea.ru" class="footer-contact-info">head_sales@origamitea.ru</a>
-					</div>
-					<div class="footer__column">
-						<h4 class="footer-title">мы работаем</h4>
-						<p class="footer-contact-info">Пн-пт: 9:00-17:00</p>
-					</div>
 				</div>
-
-				<div class="footer__row">
-					<div class="footer__column">
-						<p class="footer-policy">COPYRIGHT ©"ORIGAMI", <br> 2015–2026 ВСЕ ПРАВА ЗАЩИЩЕНЫ. Копирование информации с сайта разрешено только с согласия владельца</p>
-					</div>
-					<div class="footer__column">
-						<a href="#" class="footer-policy">Политика обработки персональных данных</a>
-					</div>
-					<div class="footer__column">
-						<a href="#" class="footer-policy">Соглашение о конфиденциальности</a>
-					</div>
-					<div class="footer__column">
-						<a href="#" class="footer-policy">Публичная оферта</a>
-					</div>
-				</div>
-
+				<div class="footer__copyright">
+<div class="footer-copyright">
+	<a href="#top" class="back-to-top-link">
+		<svg><use xlink:href="img/svg-sprite/sprite.svg#back-to-top-icon"></use></svg>
+		<span>К началу</span>
+	</a>
+	<p>© Федеральное государственное бюджетное учреждение Центр медицинской реабилитации «Луч»&nbsp;Министерства здравоохранения Российской Федерации 2026. Все права защищены.</p>	
+	<a href="#" class="dev-link">Разработано в Россайт</a>
+</div>
+</div>
 			</div>
-		</div>
 
-</section>
+		</div>
+		
+
+	</div>
+
+</div>
 
 
 

@@ -1,108 +1,324 @@
-.catalog {
-    position: relative;
-}
-
-.catalog__items {
+.room-catalog__table {
+    margin-top: 16px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    -ms-flex-align: end;
-    align-items: end;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    gap: 30px;
 }
 
-.catalog__item .catalog-card {
-    aspect-ratio: 0.87;
-}
-
-.catalog__item:nth-child(1), .catalog__item:nth-child(6) {
-    grid-column: span 2;
-}
-
-.catalog__item:nth-child(1) .catalog-card, .catalog__item:nth-child(6) .catalog-card {
-    aspect-ratio: 1.2254;
-}
-
-.catalog-card {
-    position: relative;
-    padding: 32px;
-    border-radius: 20px;
+.room-catalog__pagination {
+    margin-top: 30px;
     display: grid;
+    -ms-flex-pack: end;
+    justify-content: end;
+}
+
+.room-card {
+    border-radius: var(--main-chamfer);
+    padding: 16px;
+    background: #f5f5f5;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    container-type: inline-size;
+}
+
+.room-card__photo {
+    aspect-ratio: 1.4918;
+    border-radius: 8px;
     overflow: hidden;
-    background: var(--bg-clr-2);
 }
 
-.catalog-card > a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 5;
-    font-size: 0;
-}
-
-.catalog-card > img {
-    position: absolute;
+.room-card__photo img {
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
     object-fit: cover;
-    transition: transform var(--animation-duration) var(--timing-func);
 }
 
-.catalog-card__content {
-    position: relative;
-    z-index: 2;
-}
-
-.catalog-card__title {
-    font-family: var(--third-family);
+.room-card__title {
+    display: block;
+    margin-top: 16px;
     font-weight: 600;
-    font-size: var(--fluid-28-16);
+    font-size: var(--fluid-20-16);
+    line-height: 120%;
+    color: var(--zagolovki);
     transition: color var(--animation-duration) var(--timing-func);
 }
 
-.rs-catalog {
-    padding-top: 60px;
-    padding-bottom: 60px;
+.room-card__info {
+    -ms-flex: 1;
+    flex: 1;
+    margin-top: 16px;
+    font-weight: 500;
+    font-size: var(--fluid-14-11);
+    line-height: 140%;
+    color: var(--zagolovki);
 }
 
-@media (min-width: 1023.98px) {
-    .catalog__item:nth-child(1) {
-        margin-bottom: -50%;
-        -ms-flex-item-align: start;
-        align-self: start;
+.room-card__info ul {
+    margin-bottom: 4px;
+    opacity: 0.5;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 8px 24px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.room-card__info ul li {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.room-card__footer {
+    margin-top: 24px;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 8px 16px;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@container (width < 350px) {
+    .room-card__footer .room-card__price {
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+    }
+}
+
+.room-card__price {
+    font-weight: 600;
+    font-size: var(--fluid-20-16);
+    line-height: 120%;
+    margin-right: auto;
+    white-space: nowrap;
+}
+
+.room-card__btn {
+    -ms-flex: 1;
+    flex: 1;
+    border-radius: 51px;
+    padding: 12px 24px;
+    background: #fff;
+    font-weight: 500;
+    font-size: var(--fluid-16-13);
+    line-height: 150%;
+    text-align: center;
+    white-space: nowrap;
+    transition: all var(--animation-duration) var(--timing-func);
+}
+
+.room-card__gallery {
+    display: none;
+}
+
+.room-catalog .filter {
+    border-radius: var(--main-chamfer);
+    padding: 16px 24px;
+    background: #f5f5f5;
+    display: grid;
+    grid-template-columns: 1fr 31.3%;
+    gap: 30px;
+}
+
+.room-catalog .filter p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+}
+
+.filters-form .filters-block {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.filters-form .filters-block:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.filters-form .filters-block h6 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.filters-form .filters-block .checkbox {
+    cursor: pointer;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 51px;
+    padding: 0px 24px;
+    height: 37px;
+    background: #fff;
+}
+
+.filters-form .filters-block .checkbox > input {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.filters-form .filters-block .checkbox span {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+    transition: color var(--animation-duration) var(--timing-func);
+}
+
+.filters-form .filters-block .checkbox:has(input:checked) {
+    background: var(--zheltyy-luch);
+}
+
+.filters-form .filters-block .checkbox:has(input:checked) span {
+    color: #fff;
+}
+
+.room-catalog .filter-toggle {
+    margin-top: 8px;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0px 16px;
+    background: #fff;
+    border-radius: 51px;
+    max-width: 100%;
+    height: 56px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 6px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--zagolovki);
+}
+
+.room-catalog .filter-toggle svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--primary-clr);
+}
+
+.room-catalog .filter-sidebar {
+    width: 100%;
+    display: grid;
+    gap: 24px;
+}
+
+.fancybox__dialog #filterSidebar {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    padding: 38px 16px;
+    background: #f5f5f5;
+    margin-top: auto;
+}
+
+.fancybox__slide:has(#filterSidebar) {
+    padding: 0;
+}
+
+.fancybox__slide:has(#filterSidebar)::before, .fancybox__slide:has(#filterSidebar)::after {
+    display: none;
+}
+
+.fancybox__slide:has(#filterSidebar) .f-button[data-fancybox-close] {
+    top: 12px;
+    right: 12px;
+    color: #9397ad;
+}
+
+@media (min-width: 767.98px) {
+    .room-catalog .filter-toggle {
+        display: none;
+    }
+
+    .room-catalog .filter-sidebar {
+        display: grid !important;
+        padding: 0 !important;
     }
 }
 
 @media (max-width: 1023.98px) {
-    .catalog__items {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .rs-catalog {
-        padding-top: 30px;
-        padding-bottom: 30px;
+    .room-catalog__table {
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     }
 }
 
 @media (max-width: 767.98px) {
-    .catalog__items {
-        gap: 24px;
+    .room-catalog__filter {
+        margin: 0 -15px;
     }
 
-    .catalog-card {
-        padding: 18px;
+    .room-catalog__pagination {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .room-catalog .filter {
+        padding: 24px 16px;
+    }
+
+    .room-catalog .filter {
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+
+    .room-catalog .filter p {
+        font-size: 15px;
+    }
+
+    .filters-form .filters-block h6 {
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+    }
+
+    .filters-form .filters-block .checkbox {
+        padding: 0px 16px;
+    }
+
+    .room-catalog .filter-sidebar {
+        display: none;
+    }
+
+    .rs-catalog {
+        padding-top: 0;
     }
 }
 
 @media (any-hover: hover) {
-    .catalog-card:hover > img {
-        transform: scale(1.05);
+    .room-card__title:hover {
+        color: var(--primary-clr);
     }
 
-    .catalog-card:hover .catalog-card__title {
-        color: var(--basic);
+    .room-card__btn:hover {
+        background: var(--primary-clr);
+        color: #fff;
+    }
+
+    .filters-form .filters-block .checkbox:hover span {
+        color: var(--primary-clr);
     }
 }

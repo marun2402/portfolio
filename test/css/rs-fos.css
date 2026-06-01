@@ -1,0 +1,168 @@
+.fos {
+    display: grid;
+    grid-template-columns: 38.7% 1fr;
+    gap: 30px;
+}
+
+.fos .fos-head h2 {
+    font-weight: 500;
+    font-size: var(--fluid-40-20);
+    line-height: 110%;
+    margin-bottom: 10px;
+}
+
+.fos .fos-head p {
+    font-weight: 400;
+    font-size: var(--fluid-18-15);
+    line-height: 150%;
+}
+
+.fos .fos-body {
+    background: var(--fon-zheltyy);
+    border-radius: 20px;
+    padding: 60px;
+}
+
+.fos-form {
+    display: grid;
+    gap: 8px;
+    container-type: inline-size;
+}
+
+.fos-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+@container (width < 610px) {
+    .fos-form .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fos-form .form-submit {
+    display: grid;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.fos-form .form-submit__confirm {
+    display: grid;
+    gap: 0px;
+}
+
+.fos-form .form-group {
+    display: grid;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.fos-form input,
+.fos-form textarea {
+    height: 72px;
+    width: 100%;
+    background: var(--belyy);
+    padding: 0px 26px 0px 26px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--main-txt-clr);
+    border-radius: 16px;
+}
+
+.fos-form input:-ms-input-placeholder, .fos-form textarea:-ms-input-placeholder {
+    color: var(--main-txt-clr);
+}
+
+.fos-form input::placeholder,
+.fos-form textarea::placeholder {
+    color: var(--main-txt-clr);
+}
+
+.fos-form textarea {
+    height: 100%;
+    resize: none;
+    min-height: 142px;
+    border-radius: 16px;
+    padding-top: 26px;
+}
+
+.fos-form .checkbox {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: 30px;
+}
+
+.fos-form .checkbox > input {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.fos-form .checkbox span {
+    text-align: left;
+    display: inline-block;
+    padding-left: 28px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: var(--fluid-13-10);
+    line-height: 150%;
+    color: #3b3b3b;
+    position: relative;
+}
+
+.fos-form .checkbox span a {
+    text-decoration: underline;
+}
+
+.fos-form .checkbox span:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid var(--border-clr);
+    transition: background 0.3s ease;
+}
+
+.fos-form .checkbox span:after {
+    content: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.0952 1.17851L5.34518 9.92851C5.01974 10.2539 4.4921 10.2539 4.16667 9.92851L0 5.76184L1.17851 4.58333L4.75592 8.16074L12.9167 0L14.0952 1.17851Z' fill='white' /%3E%3C/svg%3E");
+    position: absolute;
+    top: calc(50% - 9px);
+    left: 3px;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.fos-form .checkbox input:checked ~ span::after {
+    transform: scale(1);
+}
+
+.fos-form .checkbox input:checked ~ span::before {
+    background: #f6b221;
+    border-color: #f6b221;
+}
+
+@media (min-width: 1023.98px) {
+    .fos .fos-head {
+        max-width: 520px;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    .fos {
+        grid-template-columns: 1fr;
+    }
+
+    .fos .fos-body {
+        padding: 42px 16px;
+    }
+}
