@@ -97,15 +97,11 @@
 
 			
 <div class="header__btn">
-	
-	
-<a href="#" class="btn-color ">	
-	<span class="btn-color__icon">
-		<img src="img/icons/btn_icon.svg" alt="">
-	</span>
+	<button type="button" class="btn-color" data-fancybox data-src="#callbackModal">
+		<span class="btn-color__icon"><img src="img/icons/btn_icon.svg" alt=""></span>
 	<span class="btn-color__title">Забронировать</span>
-</a>
-
+	</button>
+	
 </div>
 
 		</div>
@@ -1148,7 +1144,81 @@
       
     </div>
 
+    <div class="modals">
+      <div class="modal-dialog" id="callbackModal">
+  <div class="modal-dialog-wrapper">
+    <div class="modal-dialog-header">
+      <h4>Заказать обратный звонок</h4>
+      
+    </div>
+    <div class="modal-dialog-content">
+      
+ 
+ 
+
+<div class="md-fos" >	
+	<div class="md-fos__wrapper">				
+		<form action="#" id="mdFosForm" class="md-fos-form">	
+			<div class="form-group">
+				<input type="text" id="callbackModalName" name="callbackModalName" placeholder="" required />
+				<span class="placeholder">ФИО</span>
+				
+				
+			</div>
+
+			<div class="form-group">
+				<input type="tel" id="callbackModalPhone" name="callbackModalPhone" placeholder="" maxlength="18" required data-tel-input />
+				<span class="placeholder">Телефон</span>
+				
+				
+			</div>
+
+			
+				
+				
+				
+				
+			
+
+			
+				
+				
+				
+				
+			
+
+			<div class="form-submit">
+				<div class="form-submit__confirm">
+					
+<label class="checkbox">
+  <input type="checkbox" name="fosCofirm"  >
+  <span>Нажимая на кнопку «Отправить сообщение », вы даёте согласие на обработку персональных данных</span>
+</label>
+
+					
+<label class="checkbox">
+  <input type="checkbox" name="fosCofirm"  >
+  <span>и подтверждаете, что ознакомлены с <a href="#">политикой обработки персональных данных</a></span>
+</label>
+
+				</div>
+				<button type="submit" class="btn-color btn-color_2 btn-color_big">
+					<span class="btn-color__icon">
+						<img src="img/icons/submit_btn_icon.svg" alt="">
+					</span>
+					<span class="btn-color__title">Отправить сообщение</span>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+              
+    </div>
     
+  </div>
+</div>
+
+    </div>
     
   </body>
 </html>

@@ -1,0 +1,16 @@
+.rs-price {
+    padding-top: 80px;
+}
+
+.rs-price__head {
+    font-weight: 500;
+    font-size: var(--fluid-40-24);
+    line-height: 110%;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 767.98px) {
+    .rs-price {
+        padding-top: 24px;
+    }
+}

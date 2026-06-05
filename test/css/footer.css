@@ -63,7 +63,7 @@
     margin-bottom: 16px;
 }
 
-._spoller-init .spollers__title {
+.footer ._spoller-init .spollers__title {
     margin-bottom: 0;
     display: -ms-flexbox;
     display: flex;
@@ -74,7 +74,7 @@
     gap: 10px;
 }
 
-._spoller-init .spollers__title::after {
+.footer ._spoller-init .spollers__title::after {
     display: inline-block;
     transition: transform var(--animation-duration) var(--timing-func);
     content: "";
@@ -85,7 +85,7 @@
     height: 24px;
 }
 
-._spoller-init .spollers__title._spoller-active::after {
+.footer ._spoller-init .spollers__title._spoller-active::after {
     transform: rotateX(-180deg);
 }
 
